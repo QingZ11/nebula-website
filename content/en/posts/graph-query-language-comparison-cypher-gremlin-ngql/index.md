@@ -30,15 +30,15 @@ Gremlin is Groovy-based, but has many language variants that allow developers to
 
 The language was designed with the power and capability of SQL. The keywords of the Cypher language are not case sensitive, but attributes, labels, relationship types and variables are case sensitive.
 
-**Supported graph databases**: Neo4j and RedisGraph
+**Supported graph databases**: Neo4j, AgensGraph and RedisGraph
 
 ### nGQL
 
-**Nebula Graph** introduces its own query language, [nGQL](https://github.com/vesoft-inc/nebula/blob/master/docs/manual-CN/1.overview/1.concepts/2.nGQL-overview.md), which is a declarative, textual query language like SQL, but designed for graphs.
+**Nebula Graph** introduces its own query language, [nGQL](https://github.com/vesoft-inc/nebula/blob/master/docs/manual-EN/1.overview/1.concepts/2.nGQL-overview.md), which is a declarative, textual query language like SQL, but designed for graphs.
 
 The keywords of the nGQL language are case sensitive and it support statement composition so that there's no need for statement embedding.
 
-**Support graph databases: **Nebula Graph
+**Support graph databases**: Nebula Graph
 
 ## Terms Comparison
 
@@ -298,7 +298,7 @@ GO FROM <vid>  OVER <edge> REVERSELY
 
 #### Traverse edges bidirectionally
 
-If the edge direction is [irrelevant](https://www.google.com/search?q=irrelevant&spell=1&sa=X&ved=2ahUKEwjR1fPGovvnAhUsIDQIHXSzDRIQkeECKAB6BAgOECs) (either direction is acceptable),  Gremlin uses `bothE()`, Cypher use `-[]-`, and nGQL use keyward `BIDIRECT` .
+If the edge direction is [irrelevant](https://www.google.com/search?q=irrelevant&spell=1&sa=X&ved=2ahUKEwjR1fPGovvnAhUsIDQIHXSzDRIQkeECKAB6BAgOECs) (either direction is acceptable),  Gremlin uses `bothE()`, Cypher use `-[]-`, and nGQL use keyword `BIDIRECT` .
 
 ```shell
 # Traverse edges reversely with specified vertices Gremlin
@@ -512,7 +512,7 @@ cypher> MATCH (src:character) WHERE src.age > 100 RETURN src.name
       └───────────┘
 ```
 
-### Find who are pluto's cohabitants, excluding pluto himself
+### Find who are Pluto's cohabitants, excluding Pluto himself
 
 ```bash
 # nGQL
