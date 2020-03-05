@@ -50,7 +50,7 @@ Each edge in **Nebula Graph** is modeled as two independent key-values. One is s
 There may be multiple edge types or multiple edges with the same edge type between two vertices. For example, define an edge type 'transfer', user A may transfer money to user B multiple times, thus a field `rank` is added to distinguish the transfer records between the two. Edge key format is shown in Picture Three:
 
 ---
-![image](https://user-images.githubusercontent.com/42762957/71571055-6a89a500-2b13-11ea-8953-e5c6d2588b16.png)
+![image](https://user-images.githubusercontent.com/38887077/75969929-9c9bf680-5f0a-11ea-83bc-ff26e472095a.png)
 
 Pict.3 Edge Key Format
 
@@ -60,20 +60,20 @@ Pict.3 Edge Key Format
 - `Part ID`: three bytes, used to indicate the sharding partition. This field can be used to **scan the partition data based on the prefix when re-balancing the partition**
 - `Vertex ID`: eight bytes, used to indicate source vertex ID in out-edge, dest vertex ID in in-edge
 - `Edge Type`: four bytes, used to indicate edge type, greater than zero means out-edge, less than zero means in-edge
-- `Rank`: four bytes, used to indicate multiple edges in one edge type. Users can set the field based on needs and store weight such as _transaction time_, _transaction number_ and _weight of a certain order_
+- `Rank`: eight bytes, used to indicate multiple edges in one edge type. Users can set the field based on needs and store weight such as _transaction time_, _transaction number_ and _weight of a certain order_
 - `Vertex ID` : eight bytes, used to indicate dest vertex ID in out-edge, source vertex ID in in-edge
 - `Timestamp`: eight bytes, not available to users, used in MVCC in the future
 
 If the value of an edge type is greater than zero, the corresponding edge key format is shown in Picture Four; otherwise if the value is less than zero, the corresponding edge key format is shown in Picture Five.
 
 ---
-![image](https://user-images.githubusercontent.com/42762957/71571153-e8e64700-2b13-11ea-9d96-ff7ac74db609.png)
+![image](https://user-images.githubusercontent.com/38887077/75969938-9f96e700-5f0a-11ea-8469-027fe7ff08c3.png)
 
 Pict.4 Out-key format
 
 ---
 
-![image](https://user-images.githubusercontent.com/42762957/71571168-01eef800-2b14-11ea-8c86-c0696b966162.png)
+![image](https://user-images.githubusercontent.com/38887077/75969944-a160aa80-5f0a-11ea-99ed-f4a8807b1828.png)
 
 Pict.5 In-key format
 
