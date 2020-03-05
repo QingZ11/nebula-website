@@ -53,10 +53,18 @@
     width: 150px;
   }
 
+  .navbar-default .nav > li>a {
+    font-size: 16px;
+  }
+
   .navbar-nav .github-star {
     height: 50px;
     display: flex;
     align-items: center;
+  }
+
+  .github-star > span {
+    height: 28px;
   }
 }
 
