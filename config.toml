@@ -84,7 +84,7 @@ defaultContentLanguageInSubdir = false
       [languages.en.params.header]
         # To change the background of the header section, replace the 'header.jpg' at './static/img' with your own.
         slogan     = "Nebula Graph"
-        subtitle   = "A truly distributed, linear scalable, lighting-fast graph database."
+        subtitle   = "A truly distributed, linearly scalable, lightning-fast graph database."
         buttonText = "Get Started"
 
       # Footer section
@@ -188,7 +188,7 @@ defaultContentLanguageInSubdir = false
           [[languages.en.params.features.list]]
             pic = "feature5.png"
             title = "Scalable"
-            description = "With shared-nothing distributed architecture, Nebula Graph offers linear scalability."
+            description = "With shared-nothing distributed architecture, Nebula Graph offers linearly scalability."
 
           [[languages.en.params.features.list]]
             pic = "feature6.png"
