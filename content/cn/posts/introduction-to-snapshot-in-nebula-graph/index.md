@@ -22,7 +22,7 @@ Snapshot 功能需要预先提供集群在某个时间点 snapshot 的创建功
 
 - **StorageEngine**：Nebula Graph 的最小物理存储单元，目前支持 RocksDB 和 HBase，在本文中只针对 RocksDB。
 - **Partition**：Nebula Graph 的最小逻辑存储单元，一个 StorageEngine 可包含多个 Partition。Partition 分为 leader 和 follower 的角色，Raftex 保证了 leader 和 follower 之间的数据一致性。
-- **GraphSpace**：每个 GraphSpace 是一个独立的业务 Graph  单元，每个 GraphSpace 有其独立的 tag 和 edge 集合。一个 Nebula Graph 集群中可包含多个 GraphShpace。
+- **GraphSpace**：每个 GraphSpace 是一个独立的业务 Graph  单元，每个 GraphSpace 有其独立的 tag 和 edge 集合。一个 Nebula Graph 集群中可包含多个 GraphSpace。
 - **checkpoint**：针对 StorageEngine 的一个时间点上的快照，checkpoint 可以作为全量备份的一个 backup 使用。checkpoint files是 sst files 的一个硬连接。
 - **snapshot**：本文中的 snapshot 是指 Nebula Graph 集群的某个时间点的快照，即集群中所有 StorageEngine 的 checkpoint 的集合。通过 snapshot 可以将集群恢复到某个 snapshot 创建时的状态。
 - **wal**：Write-Ahead Logging ，用 raftex 保证 leader 和 follower 的一致性。
