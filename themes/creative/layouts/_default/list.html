@@ -38,5 +38,8 @@
             {{ end }}
         </ul>
     </div>
+    {{ if .Site.Params.footer }}
+        {{ partial "footer.html" . }}
+    {{ end }}
 </main>
 {{ end }}

@@ -48,6 +48,9 @@
         <div id='discourse-comments'></div>
       </section>
     </div>
+    {{ if .Site.Params.footer }}
+      {{ partial "footer.html" . }}
+    {{ end }}
   </main>
 {{ end }}
 
@@ -55,7 +58,7 @@
   {{ if not .Site.IsServer }}
     <script type="text/javascript">
       DiscourseEmbed = { discourseUrl: 'https://discuss.nebula-graph.io/',
-                        discourseEmbedUrl: '{{ .Permalink }}' };
+                        discourseEmbedUrl: window.location };
 
       (function() {
         var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
