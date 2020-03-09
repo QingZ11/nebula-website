@@ -58,7 +58,7 @@
   {{ if not .Site.IsServer }}
     <script type="text/javascript">
       DiscourseEmbed = { discourseUrl: 'https://discuss.nebula-graph.io/',
-                        discourseEmbedUrl: window.location };
+                        discourseEmbedUrl: "{{.Permalink}}" };
 
       (function() {
         var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
