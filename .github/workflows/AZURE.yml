@@ -31,6 +31,4 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER_NAME }}
           password: ${{ secrets.PASSWORD }}
-          privateKey: ${{ secrets.KEY }}
-          passphrase: ${{ secrets.PHRASE }}
           concurrency: 20
