@@ -50,7 +50,7 @@ defaultContentLanguageInSubdir = false
           title = "Solutions"
           [[languages.en.params.navigation.links.links]]
             title = "Why Nebula Graph"
-            link = "/en/#advantage"
+            link = "/en/#features"
           [[languages.en.params.navigation.links.links]]
             title = "Get Started"
             link = "https://docs.nebula-graph.io/manual-EN/1.overview/2.quick-start/1.get-started/#batch-inserting"
@@ -258,9 +258,9 @@ defaultContentLanguageInSubdir = false
           link = "/"
         [[languages.cn.params.navigation.links]]
           title = "了解"
-          # [[languages.cn.params.navigation.links.links]]
-          #   title = "Nebula Graph"
-          #   link = "/#advantage"
+          [[languages.cn.params.navigation.links.links]]
+            title = "Nebula 特性"
+            link = "/cn/#features"
           [[languages.cn.params.navigation.links.links]]
             title = "开始尝试"
             link = "https://docs.nebula-graph.io/manual-EN/1.overview/2.quick-start/1.get-started/#batch-inserting"
