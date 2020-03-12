@@ -47,7 +47,7 @@ $(document).ready(function () {
                 var vH1Index = 0;
                 var vH2Index = 0;
                 var vH3Index = 0;
-                $("body").find(vH1Tag + (vH2Tag != null ? (',' + vH2Tag) : '') + (vH3Tag != null ? (',' + vH3Tag) : '')).each(function (i, item) {
+                $wrapper.find(vH1Tag + (vH2Tag != null ? (',' + vH2Tag) : '') + (vH3Tag != null ? (',' + vH3Tag) : '')).each(function (i, item) {
                         var id = '';
                         var name = '';
                         var tag = $(item).get(0).tagName.toLowerCase();
