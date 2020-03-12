@@ -34,7 +34,7 @@ Taking the above into consideration, **Nebula Graph** now supports indexing f
 
 This post gives a detailed introduction to the design of **Nebula Graph **indexing.
 
-If you prefer to the implementation part, feel free to skip the chapters in between and go directly to [Nebula Graph indexing in practice](#nebula-graph-indexing-in-practice) section. 
+If you prefer to the implementation part, feel free to skip the chapters in between and go directly to [Nebula Graph indexing in practice](#wow1_6) section. 
 
 ## Core concepts to understand Nebula Graph indexing
 
@@ -103,18 +103,18 @@ The index structure of vertex is shown in the table above, below is detailed exp
 
 **IndexId**: The identier of an index. You can get the meta data of a specified index through indexId, for example, the TagId associated with the index, and the information of the column where index is located.
 
-**Index binary**: The core storage structure of an index. It is the byte encoding of the values of all index related columns. Detailed structure will be explained in the [Index Binary](#index-binary) section.
+**Index binary**: The core storage structure of an index. It is the byte encoding of the values of all index related columns. Detailed structure will be explained in the [Index Binary](#wow1_5_2) section.
 
-**VertexId**: The identifier of a vertedx. In real use, a vertex may have multiple lines of data due to different versions. **However, there is no version for index. Index always ****maps to**** the**** tag of the latest Version**.
+**VertexId**: The identifier of a vertedx. In real use, a vertex may have multiple lines of data due to different versions. However, there is no version for index. **Index always maps to the tag of the latest Version**.
 
 Let's explain the storage structure with an example.
 
 Assume that:
 
-- _PartitionId_ is 100
-- TagId are _tag_1 and _tag_2
-- tag_1_ contains three properties: col_t1_1, col_t1_2 and col_t1_3_
-- tag_2_ contains two properties: col_t2_1 and col_t2_2.
+- PartitionId is 100
+- TagId are tag_1 and tag_2
+- tag_1 contains three properties: col_t1_1, col_t1_2 and col_t1_3_
+- tag_2 contains two properties: col_t2_1 and col_t2_2.
 
 Now let's create an index:
 

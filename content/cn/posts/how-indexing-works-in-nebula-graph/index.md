@@ -80,7 +80,7 @@ Vertex 的索引结构如上表所示，下面来详细地讲述下字段：
 
 上面讲完字段，我们来简单地实践分析一波：
 
-假设 _PartitionId_ 为 _100，TagId 有 tag_1 _和_ tag_2，_其中 _tag_1_ 包含三列 ：col_t1_1、col_t1_2、col_t1_3，_tag_2_ 包含两列：col_t2_1、col_t2_2。
+假设 _PartitionId_ 为 100，TagId 有 tag_1 和 tag_2，_其中 tag_1 包含三列 ：col_t1_1、col_t1_2、col_t1_3，tag_2 包含两列：col_t2_1、col_t2_2。
 
 现在我们来创建索引：
 
