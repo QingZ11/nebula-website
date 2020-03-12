@@ -32,7 +32,7 @@ A database index allows efficient data retrieval from databases. Despite of the 
 
 Taking the above into consideration, **Nebula Graph** now supports indexing for more efficient retrieves on properties.
 
-This post gives a detailed introduction to the design of **Nebula Graph **indexing.
+This post gives a detailed introduction to the design of **Nebula Graph** indexing.
 
 If you prefer to the implementation part, feel free to skip the chapters in between and go directly to [Nebula Graph indexing in practice](#wow1_6) section. 
 
@@ -214,7 +214,7 @@ After one or more columns of the Tag / Edge are indexed, if a Tag / Edge write o
 
 When inserting vertex / edge, the insertProcessor first determines whether the inserted data contains the same property of a Tag / Edge index. If there is no associated property column index, a new version is generated and the data is put to the Storage Engine; if such an property column index already exists, data and index are written atomically.
 
-Nebula Graph** then evaluates wether there are staled property values in the current vertex / edge. If so, the staled values are deleted in the atomic operation.
+**Nebula Graph** then evaluates wether there are staled property values in the current vertex / edge. If so, the staled values are deleted in the atomic operation.
 
 ##### Deleting
 
