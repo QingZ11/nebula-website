@@ -6,7 +6,7 @@ description: "天津某百货大楼内部相继出现 5 例新冠肺炎确诊病
 
 # 从天津百货大楼 5 病例“迷局”见新冠病毒传播路径
 
-![nCov.png](https://user-images.githubusercontent.com/56643819/74227656-e887c100-4cf9-11ea-94a0-8043e0bfc1be.png)
+![nCov.png](https://nebula-blog.azureedge.net/nebula-blog/nCoV01.png)
 
 天津某百货大楼内部相继出现 5 例新冠肺炎确诊病例，从起初的 3 个病例来看，似乎找不到任何流行病学上的关联性。在这种背景之下，作为技术人员可以通过什么技术来找寻病例之间的联系呢？
 
@@ -31,13 +31,13 @@ Usr1 信息:
 
 以我们现有的资料显示，本次 nCoV 的传播路径为人传人（图 Demo1），即一个点通过特定访问路径连接到一个点。单个节点看来传播路径为一个树形结构（图 Demo2）——确诊病人 A 感染 B，B 再感染 C，C 再感染 D…。根据现在疫情传播情况，存在多个确诊病人，所以整个传播链路呈网状结构（图 Demo3）。而无论是树形结构还是网状结构都很适合用图（网络）这种数据结构来存储、查询和分析。
 
-![demo.png](https://user-images.githubusercontent.com/56643819/74227857-49af9480-4cfa-11ea-8ebb-00d7c3746701.png)
+![demo.png](https://nebula-blog.azureedge.net/nebula-blog/nCoV02.png)
 
 ## 图模型
 
 在建模之前我们需要清楚人和人之间的关系载体是什么？根据现有的病例信息，我们知道 A 和 B 会的接触场景最常见的是：**同一个时间段逗留在某个相同的空间。**这也是本次疫情筛选需隔离人群的重要指标：是否和确诊 / 疑似病例在酒店、火车、超市有过密切接触。
 
-![modle.png](https://user-images.githubusercontent.com/56643819/74227904-62b84580-4cfa-11ea-80ac-c3a98513421d.png)
+![modle.png](https://nebula-blog.azureedge.net/nebula-blog/nCoV03.png)
 
 可见最小模型中有两类节点 `Person` 和 `Space` ，关系为 `stay` 。最小模型有了，那么我们需要 Person 和 Space 的什么信息呢？
 
@@ -53,7 +53,7 @@ Space 类型节点的属性：
 - _ID_：Space ID，用来唯一标识 space
 - _Address_：space 地址
 
-![model.png](https://user-images.githubusercontent.com/56643819/74227963-7fed1400-4cfa-11ea-9fef-6deeb3a93eb5.png)
+![model.png](https://nebula-blog.azureedge.net/nebula-blog/nCoV04.png)
 
 我们构建完 Person 和 Space 的模型之后，再构建人和位置之间的关系：
 
@@ -65,7 +65,7 @@ Space 类型节点的属性：
 
 整个模型的示意如下：
 
-![model.png](https://user-images.githubusercontent.com/56643819/74228071-b0cd4900-4cfa-11ea-8364-5427731183eb.png)
+![model.png](https://nebula-blog.azureedge.net/nebula-blog/nCoV05.png)
 
 ### 数据录入
 
@@ -214,7 +214,7 @@ YIELD $$.person.ID
 
 上面这段分析过程，也可以使用图形化界面的方式来交互分析，这样更加直观。
 
-![Studio.png](https://user-images.githubusercontent.com/56643819/74228131-ce021780-4cfa-11ea-80c8-d4ea65af42dc.png)
+![Studio.png](https://nebula-blog.azureedge.net/nebula-blog/nCoV06.png)
 
 当然，如果有非常大批量的关注点（例如上千万离开湖北的潜在人员和他们的二次三次传播轨迹），通过批量程序查询的方式会更加高效。
 
@@ -228,8 +228,8 @@ YIELD $$.person.ID
 
 在天津这个案例中，只选取了少数几个病例和场所作为示意，我们相信如果能够结合前述数据体系，并通过采用新的大数据和人工智能技术，能够极大提高定位和隔离疑似患者的速度，大大减少各种“有效人传人”和“超级毒王”的发生，减少一线医疗和社区工作人员的压力。也能降低全社会的全面隔离时间，尽快恢复经济活动。
 
-![table](https://user-images.githubusercontent.com/56643819/74228177-e5d99b80-4cfa-11ea-8b7b-0e1f43d8e79d.png)
-![news](https://user-images.githubusercontent.com/56643819/74228183-ea9e4f80-4cfa-11ea-93b8-708d6c323d6e.png)
+![table](https://nebula-blog.azureedge.net/nebula-blog/nCoV07.png)
+![news](https://nebula-blog.azureedge.net/nebula-blog/nCoV08.png)
 
 ## 参考资料
 - 堪比推理小说！天津百货大楼5病例“迷局”： [http://www.bjd.com.cn/a/202002/03/WS5e37d067e4b002ffe994092e.html](http://www.bjd.com.cn/a/202002/03/WS5e37d067e4b002ffe994092e.html)

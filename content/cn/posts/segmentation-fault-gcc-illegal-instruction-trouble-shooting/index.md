@@ -6,7 +6,7 @@ description: "笔者最近在重新整理和编译 Nebula Graph 的第三方依�
 
 # Dev 日志 | 一次 Segmentation Fault 和 GCC Illegal Instruction 编译问题排查
 
-![image](https://user-images.githubusercontent.com/56643819/72509207-0a6c6000-3882-11ea-8b25-33f31ca10809.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/GCC01.png)
 
 ## 摘要
 
@@ -137,4 +137,4 @@ bash> cd nebula && ./build_dep.sh N
 - 知乎：[zhihu.com/org/nebulagraph/posts](https://www.zhihu.com/org/nebulagraph/posts)
 - 微博：[weibo.com/nebulagraph](https://weibo.com/nebulagraph)
 
-![关注公众号](https://user-images.githubusercontent.com/56643819/70311267-499f9e00-184c-11ea-86ac-42d4bc384794.png)
+![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)

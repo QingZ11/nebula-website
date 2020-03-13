@@ -5,7 +5,7 @@ description: "索引是数据库系统中不可或缺的一个功能，数据库
 ---
 # 分布式图数据库 Nebula Graph 的 Index 实践
 
-![image](https://user-images.githubusercontent.com/38887077/76482821-4ec64780-6450-11ea-862e-da506f5cdae2.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/Index01.png)
 
 ## 导读
 索引是数据库系统中不可或缺的一个功能，数据库索引好比是书的目录，能加快数据库的查询速度，其实质是数据库管理系统中一个排序的数据结构。不同的数据库系统有不同的排序结构，目前常见的索引实现类型如 B-Tree index、B+-Tree index、B*-Tree index、Hash index、Bitmap index、Inverted index 等等，各种索引类型都有各自的排序算法。
@@ -45,7 +45,7 @@ Nebula Graph 是一个图数据库系统，查询场景一般是由一个点出�
 
 ### 图数据库 Nebula Graph 存储架构
 
-![image](https://user-images.githubusercontent.com/38887077/76482853-6c93ac80-6450-11ea-8f9d-824adfa30c72.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/Index02.png)
 
 从架构图可以看到，每个Storage Server 中可以包含多个 Storage Engine, 每个 Storage Engine中可以包含多个Partition, 不同的Partition之间通过 Raft 协议进行一致性同步。每个 Partition 中既包含了 data，也包含了 index，同一个点或边的 data 和 index 将被存储到同一个 Partition 中。
 
@@ -59,11 +59,11 @@ Nebula Graph 是一个图数据库系统，查询场景一般是由一个点出�
 
 ##### 点的 Data 结构
 
-![image](https://user-images.githubusercontent.com/38887077/76483833-08261c80-6453-11ea-964b-da781448c3b5.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/Index03.png)
 
 ##### 点的 Index 结构
 
-![image](https://user-images.githubusercontent.com/38887077/76483856-15dba200-6453-11ea-9377-dc765ec46959.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/Index04.png)
 
 Vertex 的索引结构如上表所示，下面来详细地讲述下字段：
 
@@ -101,11 +101,11 @@ INSERT VERTEX tag_1(col_t1_1, col_t1_2, col_t1_3), tag_2(col_t2_1, col_t2_2) \
 
 **此时点的 Data 结构**
 
-![image](https://user-images.githubusercontent.com/38887077/76483873-24c25480-6453-11ea-8200-41b5bcd61268.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/Index05.png)
 
 **此时点的 Index 结构**
 
-![image](https://user-images.githubusercontent.com/38887077/76483895-39065180-6453-11ea-8819-820a72c69cc0.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/Index06.png)
 
 说明：index 中 row 和 key 是一个概念，为索引的唯一标识；
 
@@ -115,15 +115,15 @@ INSERT VERTEX tag_1(col_t1_1, col_t1_2, col_t1_3), tag_2(col_t2_1, col_t2_2) \
 
 ##### 边的 Data 结构
 
-![image](https://user-images.githubusercontent.com/38887077/76483912-48859a80-6453-11ea-9621-6211ede38953.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/Index07.png)
 
 ##### 边的 Index 结构
 
-![image](https://user-images.githubusercontent.com/38887077/76483933-53d8c600-6453-11ea-9027-daeae58be38d.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/Index08.png)
 
 ### Index binary 介绍
 
-![image](https://user-images.githubusercontent.com/38887077/76483941-589d7a00-6453-11ea-967f-8cb07f74ead2.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/Index09.png)
 
 Index binary 是 index 的核心字段，在 index binary 中区分定长字段和不定长字段，int、double、bool 为定长字段，string 则为不定长字段。由于** index binary 是将所有 index column 的属性值编码连接存储**，为了精确地定位不定长字段，Nebula Graph 在 index binary 末尾用 int32 记录了不定长字段的长度。
 
@@ -140,7 +140,7 @@ index1 (c1:int, c2:string, c3:string)
 - length = sizeof("abc") = 3
 - length = sizeof("here") = 4
 
-![image](https://user-images.githubusercontent.com/38887077/76482902-9056f280-6450-11ea-8cb6-f18c0c779f8b.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/Index10.png)
 
 所以 index1 该 row 对应的 key 则为 23abchere34；
 
@@ -157,11 +157,11 @@ index2 (c1:string, c2:string, c3:string)
 - row1 : ("ab", "ab", "ab")
 - row2: ("aba", "ba", "b")
 
-![image](https://user-images.githubusercontent.com/38887077/76482907-93ea7980-6450-11ea-9b94-0c029e079d41.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/Index11.png)
 
 可以看到这两行的 prefix（上图红色部分）是相同，都是 "ababab"，这时候怎么区分这两个 row 的 index binary 的 key 呢？别担心，我们有 `Variable-length field lenght` 。
 
-![image](https://user-images.githubusercontent.com/38887077/76482914-9947c400-6450-11ea-8e96-e97bdc541dad.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/Index12.png)
 
 若遇到 where c1 == "ab" 这样的条件查询语句，在 Variable-length field length 中可直接根据顺序读取出 c1 的长度，再根据这个长度取出 row1 和 row2 中 c1 的值，分别是 "ab" 和 "aba" ，这样我们就精准地判断出只有 row1 中的 "ab" 是符合查询条件的。
 

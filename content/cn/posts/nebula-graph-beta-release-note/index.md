@@ -6,7 +6,7 @@ description: "在 Beta 版本中我们支持了集群部署、新增 Java import
 
 #  图数据库 Nebula Graph v.1.0.0-beta 已上线
 
-![beta](https://user-images.githubusercontent.com/56643819/72507383-c2980980-387e-11ea-850e-0ab644f464c7.png)
+![beta](https://nebula-blog.azureedge.net/nebula-blog/Beta01.png)
 
 > [Nebula Graph](https://github.com/vesoft-inc/nebula "Nebula Graph")：一个开源的分布式图数据库。作为唯一能够存储万亿个带属性的节点和边的在线图数据库，Nebula Graph 不仅能够在高并发场景下满足毫秒级的低时延查询要求，还能够实现服务高可用且保障数据安全性。
 

@@ -10,23 +10,23 @@ description: "从图数据库是什么讲起，到图数据库的设计思路，
 
 第三期 nMeetup( nMeetup 全称：Nebula Graph Meetup，为由开源的分布式图数据库 Nebula Graph 发起的面向图数据库爱好者的线下沙龙) 活动于 2019 年 8 月 3 日在上海陆家嘴的汇丰银行大楼举办，我司 CEO -- Sherman 在活动中发表《 Nebula Graph Internals 》主题演讲 。本篇文章是根据此次演讲所整理出的技术干货，全文阅读需要 30 分钟，我们一起打开图数据库的知识大门吧~
 
-![image](https://user-images.githubusercontent.com/56643819/72505714-77c8c280-387b-11ea-9905-5ad656544eb2.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design01.png)
 
 大家好，非常感谢大家今天能够来我们这个线下沙龙，天气很热，刚又下了暴雨，说明大家对图数据库的热情要比夏天温度要高。今天我们准备了几个 topic，一个就是介绍一下我们产品——Nebula 的一些设计思路，今天不讲介绍性东西，主要讲 Nebula 内部的思考——为什么会去做 Nebula，怎么样去做，以及为什么会采取这样的设计思路。
 
-![image](https://user-images.githubusercontent.com/56643819/72505744-84e5b180-387b-11ea-8945-7be1171c642f.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design02.png)
 
-![image](https://user-images.githubusercontent.com/56643819/72505770-8e6f1980-387b-11ea-9369-61e6b4fe29f0.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design03.png)
 
 这个就是 Nebula。先从 overview 介绍图数据库到底是个什么东西，然后讲我们对图数据库的一些思考。最后具体介绍两个模块， Nebula 的 Query Service 和 Storage Service。后面两部分会稍微偏技术一些，在这个过程当中如果大家遇到什么问题，欢迎随时提出。
 
 ## 图数据库是什么
 
-![image](https://user-images.githubusercontent.com/56643819/72505817-a5ae0700-387b-11ea-98d3-16ef2f18ab0f.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design04.png)
 
 ### 图领域的 OLAP & OLTP 场景
 
-![image](https://user-images.githubusercontent.com/56643819/72505820-a8a8f780-387b-11ea-93a1-d4d4d2a16c5a.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design05.png)
 
 对于图计算或者图数据库本身我们是这么理解的，它跟传统数据库很类似，也分为 OLAP 和 OLTP 两个方向。
 
@@ -40,7 +40,7 @@ description: "从图数据库是什么讲起，到图数据库的设计思路，
 
 ### 图数据库及其他数据库的关注度增长趋势
 
-![image](https://user-images.githubusercontent.com/56643819/72505865-bd858b00-387b-11ea-8b4c-a1fcd3a2d4a1.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design06.png)
 
 这张图是从 DB-Engines.com 上截下来的，反应了从 2013 年到 2019 年 7 月，所有类型数据库的趋势。这个趋势是怎么计算出来的？DB-Engines 通过到各大网站上去爬取内容，查看所有用户，包括开发人员和业务人员的情况下统计某类数据库被提及的次数将其转化为分数，分数越高，表示这种类型的数据库的关注度越高。所以说这是一个关注度的趋势。
 
@@ -50,7 +50,7 @@ description: "从图数据库是什么讲起，到图数据库的设计思路，
 
 ### 图数据存储计算什么数据
 
-![image](https://user-images.githubusercontent.com/56643819/72505875-c1191200-387b-11ea-8ef6-5402b3d5176c.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design07.png)
 
 今天我们谈数据库肯定离不开数据，因为数据库只是一个载体，一个存储和计算的载体，它里面的数据到底是什么呢？就是我们平时说的图。这里列出了几个目前为止比较常见的多对多的关系数据。
 
@@ -65,7 +65,7 @@ description: "从图数据库是什么讲起，到图数据库的设计思路，
 
 最后就是这几年热门的 IoT（Internet of Things）领域，随着近年智能设备的增长，预计以后 IoT 设备数量会远超过人口数量，现在我们每个人身边佩带的智能设备已不止一个，比如说智能手机、智能手表，它们之间组成一个庞大的关系网络，虽然具体应用有待后续开发，但这个领域在未来会有很大的应用空间。
 
-![image](https://user-images.githubusercontent.com/56643819/72505934-db52f000-387b-11ea-9e88-7a07a5567e2a.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design08.png)
 
 #### 图数据库的应用场景
 
@@ -88,7 +88,7 @@ description: "从图数据库是什么讲起，到图数据库的设计思路，
 
 ### 图数据库面临的挑战
 
-![image](https://user-images.githubusercontent.com/56643819/72505959-e73eb200-387b-11ea-888d-30132bb0e9b9.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design09.png)
 
 回到图数据库，做图数据库到底有哪些挑战。和所有的 OLTP 系统一样：
 
@@ -106,7 +106,7 @@ description: "从图数据库是什么讲起，到图数据库的设计思路，
 
 ### 图数据库模型：原生图数据库 vs 多模数据库
 
-![image](https://user-images.githubusercontent.com/56643819/72505979-f160b080-387b-11ea-8841-a2a5d618bc26.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design10.png)
 
 说完技术挑战，还有个概念我想特别澄清下。大家如果网上搜图数据库，可能有 20 个自称图数据库的产品。我认为这些产品可以分成两类，一种就是**原生**的，还有一类是**多模**的。
 
@@ -116,13 +116,13 @@ description: "从图数据库是什么讲起，到图数据库的设计思路，
 
 ### 图数据库——Nebula Graph：一个开源的分布式图数据库
 
-![image](https://user-images.githubusercontent.com/56643819/72505995-fb82af00-387b-11ea-83e3-0feb60580ac2.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design11.png)
 
 上面是我们对行业的一些思考。这里是我们在做的图数据库，它是一个开源的分布式的项目——[Nebula Graph](https://github.com/vesoft-inc/nebula)。
 
 #### 存储设计
 
-![image](https://user-images.githubusercontent.com/56643819/72506011-063d4400-387c-11ea-8dbc-f82fcec9d797.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design12.png)
 
 这里我想说下我们在设计 Nebula 时候的一些思考，为什么会这样设计？
 
@@ -138,7 +138,7 @@ Nebula 在设计存储时，采用 share-nothing 的分布式架构，本质上�
 
 #### 计算设计
 
-![image](https://user-images.githubusercontent.com/56643819/72506034-0e957f00-387c-11ea-9bb5-bd1b66dba349.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design13.png)
 
 刚刚是我们对存储引擎的一些思考，这里是我们对计算引擎的思考。
 
@@ -153,7 +153,7 @@ Nebula 在设计存储时，采用 share-nothing 的分布式架构，本质上�
 
 #### 架构设计
 
-![image](https://user-images.githubusercontent.com/56643819/72506050-1ce39b00-387c-11ea-8309-39d4d96569cb.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design14.png)
 
 Overview 这一章节的最后内容是 Nebula 的架构。上图虚线把存储和计算一分为二，上面是整个计算层，每一台机器或者虚拟机是一个节点，它是无状态的，相互之间没有任何通讯，所以计算层要做扩缩容非常容易。
 下面是存储层，有数据存储所以是有状态的。存储层还可以细分，第一层是 Storage Service，从计算层传来的请求带有图语义信息，比如：邻居点、取 property，Storage Service 的作用是把图语义变成了 key-value 语义交给下层的 KV-store，在 Storage Service 和 KV-store 之间是一层分布式 Raft 协议。
@@ -162,26 +162,26 @@ Overview 这一章节的最后内容是 Nebula 的架构。上图虚线把存储
 
 ## 图数据库 Nebula 的查询引擎设计
 
-![image](https://user-images.githubusercontent.com/56643819/72506056-1f45f500-387c-11ea-8d61-8f5c5af1a23a.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design15.png)
 
 上面就是 Nebula 的总体介绍，下面这个部分介绍查询引擎的设计细节。
 
 ### 查询语言——nGQL
 
-![image](https://user-images.githubusercontent.com/56643819/72506098-3258c500-387c-11ea-9fb3-63aafb02febe.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design16.png)
 
 先来介绍下 Nebula 的查询语言 nGQL。nGQL 的子查询有三种组合方式：管道、分号和变量。
 nGQL 支持实时的增删改、图遍历、属性遍历，也支持对属性先做 index 再遍历。此外，你还可以对图上的路径写个正则表达式，查找所有满足这个条件的图路径。
 
 ### 查询引擎架构
 
-![image](https://user-images.githubusercontent.com/56643819/72506104-34bb1f00-387c-11ea-8ee8-40e4a33759a1.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design17.png)
 
 再来介绍下查询引擎的架构，从查询引擎的架构图上来看，和数据库类似：从客户端发起一个请求(statement)，然后 Parser 做词法分析，之后把分析结果传给执行计划（Execution Planner），执行计划会基于这个语句的特点，交给优化器(Optimizer)进行优化，最后将结果交给执行引擎(Execution Engine)去执行。执行引擎会通过 MetaService 获取点和边的 schema，通过存储引擎层获取点和边的数据。
 
 ### 执行计划案例
 
-![image](https://user-images.githubusercontent.com/56643819/72506125-43a1d180-387c-11ea-9a18-07ac77337db4.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design18.png)
 
 这里有个小例子展示了执行计划，下方就是一条语句。首先 use myspace，这里的 space 和数据库里的 database 是一个概念，每个 space 是一个物理隔离的空间，可用来区分敏感数据和非敏感数据，或者说做多租户的支持。分号后面是下一语句—— `INSERT VERTEX` 插入节点， `GO` 是网络拓展， `|` 为 Nebula 的管道用法，这条语句的意思是将第一条 Go 的结果传给第二条 Go，然后再传给第三条，即往外走三步遍历，最后把整个结果做求和运算。这是一种常见的写法，Nebula 还支持其他写法。
 
@@ -189,25 +189,25 @@ nGQL 支持实时的增删改、图遍历、属性遍历，也支持对属性先
 
 ### 执行优化
 
-![image](https://user-images.githubusercontent.com/56643819/72506133-48ff1c00-387c-11ea-8545-33f7dcfe8656.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design19.png)
 
 这一页介绍执行优化。在顺序执行过程中优化器会判断当前语句是否存在相互依赖关系，在没有相互依赖时，执行引擎可并行执行从而加速整个执行过程，降低执行延时。流水线优化，跟处理器 CPU 的流水线优化类似。上面“GO … | GO … | GO … ”例子中，表面上第一个 GO 执行完毕后再把结果发给第二个 GO 执行，但实际执行时，第一个 GO 部分结果出来之后，就可以先传给下一个GO，不需要等全部结果拿到之后再传给下一步，这对提升时延效果明显。当然不是所有情况都能这样优化，里面有很多工作要做。前面已提过计算下沉的优化，即过滤的操作尽量放在存储层，节省通过网络传输的数据量。JIT 优化在数据库里已经比较流行，把一条 query 变成代码直接去执行，这样执行效率会更高。
 
 ## 图数据库 Nebula 的存储引擎设计
 
-![image](https://user-images.githubusercontent.com/56643819/72506165-59af9200-387c-11ea-8b6d-c6c0ccc31a31.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design20.png)
 
 刚才介绍了查询引擎，下面介绍存储引擎。
 
 ### 存储架构
 
-![image](https://user-images.githubusercontent.com/56643819/72506171-5d431900-387c-11ea-861a-d82c0033e29e.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design21.png)
 
 这张图其实是前面整体架构图的下面部分。纵向可理解为一台机器，每台机器最上面是 Storage service，绿色的桶是数据存储，数据被切分成很多个分片 partition，3 台机器上同 id 的 partition 组成一个 group，每个 group 内用 Raft 协议实现多副本一致性。Partition 的数据最后落在 Store Engine 上，Nebula 默认 Store Engine 是 RocksDB。这里再提一下，partition 是个逻辑概念，partition 数量多少不会额外增加内存，所以一般把 partition 数量设置成远大于机器的数量。
 
 ### Schema
 
-![image](https://user-images.githubusercontent.com/56643819/72506217-72b84300-387c-11ea-9b9c-a03947a6ea18.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design22.png)
 
 这一页是 schema，讲的是怎么把图数据变成 KV 存储。这里面的第一个概念是标签（Tag），“标签”表示的是点（Vertex）的类型，一个点可以有多种“标签”或者说“类型”。另一个概念是边类型（Edge Type），一条边需要用起点 ID，终点 ID，边类型和 Ranking 来唯一标识。前面几个字段比较好理解，Ranking 这个字段是留给客户表示额外信息，比如：转账时间。这里补充下说明下 Nebula 顶点 Vertex、标签 Tag、边 Edge、边类型 Edge Type的关系。
 
@@ -218,7 +218,7 @@ Vertex 和 Vertex 之间可以用 Edge 相连，每一条 Edge 都会有类型�
 
 ### 数据分片和 Key 的设计
 
-![image](https://user-images.githubusercontent.com/56643819/72506227-764bca00-387c-11ea-8af9-217ae5d25d02.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design23.png)
 
 刚才有提到过分片（Partition）和键（Key）的设计，这里再详细解释一下。
 
@@ -232,7 +232,7 @@ Edge 的 Key 是由 PartID + SrcID + EdgeType + Ranking + DstID 五元组构成�
 
 ### 多副本和高可用
 
-![image](https://user-images.githubusercontent.com/56643819/72506230-7946ba80-387c-11ea-8791-7c3cbb872f0a.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design24.png)
 
 最后再谈下数据多副本和 Failover 的问题。前面已经提到多副本间是基于 Raft 协议的数据强一致。Nebula 在 Raft 做了些改进，比如，每组 partition 的 leader 都是打散的，这样才可以在多台机器并发操作。此外还增加了 Raft learner 的角色，这个角色不会参与 Raft 协议的投票，只负责从 leader 读数据。这个主要应用于一个数据中心向另外一个数据中心做异步复制场景，也可用于复制到另外第三方存储引擎，比如：HBase。
 
@@ -240,6 +240,6 @@ Edge 的 Key 是由 PartID + SrcID + EdgeType + Ranking + DstID 五元组构成�
 
 Nebula 对于容错或者说高可用的保证，主要依赖于 Raft 协议。这样单机 Crash 对服务是没有影响的，因为用了 3 副本。那要是 Meta Server 挂了，也不会像 HDFS 的 NameNode 挂了影响那么大，这时只是不能新建 schema，但是数据读写没有影响，这样做 meta 的迁移或者扩容也比较方便。
 
-![image](https://user-images.githubusercontent.com/56643819/72506284-8fed1180-387c-11ea-8f7e-3a6c0b5f2018.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Design25.png)
 
 最后是 Nebula 的 GitHub 地址，欢迎大家试用，有什么问题可以向我们提 issue。GitHub 地址：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula)

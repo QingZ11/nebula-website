@@ -6,7 +6,7 @@ description: "本次 RC2 主要新增 GO FROM ... REVERSELY 和 GROUP BY 等�
 
 # 分布式图数据库 Nebula RC2 发布：增强了 CSV Importer 功能 
 
-![r2](https://user-images.githubusercontent.com/56643819/72511389-0cd0b900-3886-11ea-9390-3130dd816d5d.png)
+![r2](https://nebula-blog.azureedge.net/nebula-blog/RC201.png)
 
 > Nebula Graph 是开源的分布式图数据库，可应用于知识图谱、社交推荐、风控、IoT 等场景。
 

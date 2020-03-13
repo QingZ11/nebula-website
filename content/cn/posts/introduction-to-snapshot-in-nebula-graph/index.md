@@ -6,7 +6,7 @@ description: "当集群处于无法启动或数据失效的状态时，重新搭
 
 # 分布式图数据库 Nebula Graph 中的集群快照实践
 
-![image](https://user-images.githubusercontent.com/56643819/72511471-338eef80-3886-11ea-8fff-1d784773db4a.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Snapshot01.png)
 
 ## 1 概述
 
@@ -31,11 +31,11 @@ Snapshot 功能需要预先提供集群在某个时间点 snapshot 的创建功
 
 ### 2.1 系统整体架构
 
-![image](https://user-images.githubusercontent.com/56643819/70290011-89955f80-1811-11ea-8a15-a898ec902fd4.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Snapshot02.png)
 
 ### 2.2 存储系统结构关系
 
-![image](https://user-images.githubusercontent.com/56643819/70290034-99ad3f00-1811-11ea-97dd-f6a814c5624d.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Snapshot03.png)
 
 ### 2.3 存储系统物理文件结构
 
@@ -105,7 +105,7 @@ Snapshot 功能需要预先提供集群在某个时间点 snapshot 的创建功
 
 ### 3.1 逻辑分析
 
-![image](https://user-images.githubusercontent.com/56643819/70290046-a5006a80-1811-11ea-9e4a-3f13118e4442.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Snapshot04.png)
 
 `Create snapshot`  由 `client api`  或 `console`  触发， `graph server`  对 `create snapshot`  的 **AST **进行解析，然后通过 `meta client`  将创建请求发送到 `meta server` 。 `meta server`  接到请求后，首先会获取所有的 `active host` ，并创建 `adminClient`  所需的 `request` 。通过 `adminClient`  将创建请求发送到每个 `StorageEngine` ，`StorageEngine`  收到 create 请求后，会遍历指定 space 的全部 StorageEngine，并创建 `checkpoint` ，随后对 `StorageEngine`  中的全部 `partition`  的 **wal 做 hardlink**。在创建 checkpoint 和 wal hardlink 时，因为已经**提前向所有 leader partition 发送了 write blocking 请求**，所以**此时数据库是只读状态**的。
 
@@ -113,11 +113,11 @@ Snapshot 功能需要预先提供集群在某个时间点 snapshot 的创建功
 
 ### 3.2 Create Snapshot
 
-![image](https://user-images.githubusercontent.com/56643819/70290076-c1040c00-1811-11ea-88dd-d66eb2e47ddf.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Snapshot05.png)
 
 ### 3.3 Create Checkpoint
 
-![image](https://user-images.githubusercontent.com/56643819/70290079-c3fefc80-1811-11ea-86e3-fbe0ddcf3d19.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/Snapshot06.png)
 
 ## 4 关键代码实现
 
@@ -288,4 +288,4 @@ Got 3 rows (Time spent: 907/1495 us)
 
 最后，附上 Nebula Graph GitHub 地址：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) 如果你在使用 Nebula Graph 过程中遇到任何问题，欢迎 GitHub 联系我们或者加入微信交流群，请联系微信号：NebulaGraphbot 
 
-![关注公众号](https://user-images.githubusercontent.com/56643819/70290134-e8f36f80-1811-11ea-91fc-8254e82fbc42.png)
+![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)

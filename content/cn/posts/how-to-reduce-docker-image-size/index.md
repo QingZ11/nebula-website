@@ -6,7 +6,7 @@ description: "本文主要来讲述下开源的分布式图数据库 Nebula Grap
 
 # 前端 Docker 镜像体积优化
 
-![Docker](https://user-images.githubusercontent.com/56643819/74205747-8dcb7680-4cb3-11ea-97c0-7c8bf36dd0e1.png)
+![Docker](https://nebula-blog.azureedge.net/nebula-blog/DockerImage01.png)
 
 如果 2019 年技术圈有十大流行词，**容器化**肯定占有一席之地，随着 Docker 的风靡，前端领域应用到 Docker 的场景也越来越多，本文主要来讲述下开源的分布式图数据库 Nebula Graph 是如何将 Docker 应用到可视化界面中。
 
