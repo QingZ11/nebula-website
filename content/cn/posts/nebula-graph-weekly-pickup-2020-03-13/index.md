@@ -25,8 +25,13 @@ description: "本周看点：支持蓄水池算法，实现 User Manager，集�
 
 Pick of the Week 每周会从 GitHub issue 及 pr 中选取重要的产品动态和大家分享，欢迎阅读本文的你关注我们的 GitHub：[https://github.com/vesoft-inc/nebula](https://0x7.me/zhihu2github) 及时了解产品新动态~
 
+<<<<<<< HEAD
 - 实现 User Manager， `CREATE USER`  创建用户，目前有 `GOD` , `ADMIN` , `DBA` , `GUEST` 等四种角色权限。 `GRANT ROLE`  赋予某用户某权限， `REVOKE ROLE`  撤销已赋予给某用户的权限 ,   标签： `权限` ，pr 参见：[https://github.com/vesoft-inc/nebula/pull/1842](https://github.com/vesoft-inc/nebula/pull/1842)
 - 支持离线 rebuild index，可以对数据库中已有数据建立索引，标签： `INDEX` ，示例如下，pr 参见链接：[https://github.com/vesoft-inc/nebula/pull/1566](https://github.com/vesoft-inc/nebula/pull/1566)
+=======
+- 实现 User Manager， `CREATE USER`  创建用户，目前有 `GOD` , `ADMIN` , `DBA` , `GUEST` 等四种角色权限。 `GRANT ROLE`  赋予某用户某权限， `REVOKE ROLE`  撤销已赋予给某用户的权限 ,   标签： `权限` ，示，pr 参见：[https://github.com/vesoft-inc/nebula/pull/1842](https://github.com/vesoft-inc/nebula/pull/1842)
+- 支持离线 rebuild index，可以对数据库中已有数据建立索引，标签： `INDEX` ，pr 参见链接：[https://github.com/vesoft-inc/nebula/pull/1566](https://github.com/vesoft-inc/nebula/pull/1566)
+>>>>>>> upstream/master
 
 ```bash
 REBUILD {TAG | EDGE} INDEX <index_name> [OFFLINE]
@@ -47,7 +52,11 @@ Pick of the Week 每周会从官方论坛、微博、知乎、微信群、微信
 
 ![](https://nebula-blog.azureedge.net/nebula-blog/PotW201103.png)
 
+<<<<<<< HEAD
 **Nebula**： `LOOKUP` 语法使用是正确的，但 LOOKUP 之前需要创建索引，如果你未创建索引的话是查询不到结果的。创建好索引之后，可使用`SHOW TAG INDEXES` 查看索引是否创建成功。
+=======
+>**Nebula**： `LOOKUP` 语法使用是正确的，但 LOOKUP 之前需要创建索引，如果你未创建索引的话是查询不到结果的。创建好索引之后，可使用`SHOW TAG INDEXES` 查看索引是否创建成功。
+>>>>>>> upstream/master
 
 - @王伟 提问
 > Nebula 支持插入部分属性值吗？
