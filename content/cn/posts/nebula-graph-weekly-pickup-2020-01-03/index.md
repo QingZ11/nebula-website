@@ -6,7 +6,7 @@ description: "本周看点：Nebula 嘉年华直播视频发布，DB-Engine 图�
 
 # Pick of the Week'20 | 第 1 周看点--Nebula Graph 上 DB-Engine 图数据库榜单
 
-![每周看点](https://user-images.githubusercontent.com/56643819/70311350-75bb1f00-184c-11ea-9af9-b5fa2e38a225.png)
+![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW.png)
 
 > 每周五 Nebula 为你播报每周看点，每周看点由本周大事件、用户问答、Nebula 产品动态和推荐阅读构成。
 
@@ -28,7 +28,7 @@ Nebula Graph 第一次参加“打榜”暂列图数据库表单第 28 名，整
 
 提示：DB-Engine 的分值主要由搜索引擎搜索量、对应产品 LinkedIn 上员工数，对外招聘职位，社交媒体讨论度，Stack Overflow 讨论度构成。
 
-![image](https://user-images.githubusercontent.com/56643819/71713708-ccb11580-2e45-11ea-959f-17550fc25490.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW200101.png)
 
 ### Nebula 产品动态
 Pick of the Week 每周会从 GitHub issue 及 pr 中选取重要的产品动态和大家分享，欢迎阅读本文的你关注我们的 GitHub：[https://github.com/vesoft-inc/nebula](https://0x7.me/zhihu2github) 及时了解产品新动态~
@@ -36,7 +36,7 @@ Pick of the Week 每周会从 GitHub issue 及 pr 中选取重要的产品动态
 - 极大的简化了编译流程，支持 2.6.32 以上内核的绝大部分 Linux 系统，比如：CentOS 6/7/8、Debian 7/8/9 和 Ubuntu 16.04/18.04/19.04，标签： `编译`  ，pr 参见链接： [https://github.com/vesoft-inc/nebula/pull/1332](https://github.com/vesoft-inc/nebula/pull/1332)
 - dump_tool 支持导出数据库中指定条件的点/边数据，标签： `Tools` ，示例如下，pr 参见链接： [https://github.com/vesoft-inc/nebula/pull/1479](https://github.com/vesoft-inc/nebula/pull/1479)
 
-![image](https://user-images.githubusercontent.com/56643819/71713712-cfac0600-2e45-11ea-89e7-f37beecd60a0.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW200102.png)
 
 - 配置支持更改 heartbeat_interval_secs，Meta 客户端上报心跳的时间间隔，标签： `配置` ，pr 参见链接： [https://github.com/vesoft-inc/nebula/pull/1540](https://github.com/vesoft-inc/nebula/pull/1540)
 - 支持通过 curl http://ip:port/status 获取 git_info_sha，binary 包的 commitID，标签： `FAQ` ，pr 参见链接： [https://github.com/vesoft-inc/nebula/pull/1573](https://github.com/vesoft-inc/nebula/pull/1573)
@@ -55,7 +55,7 @@ Pick of the Week 每周会从微博、知乎、微信群、微信公众号及 CS
 
 Nebula：给定 srcID，edgetype 找目的点，可以直接获取目的点 ID，参考 key 存储格式。
 
-![image](https://user-images.githubusercontent.com/56643819/71713716-d2a6f680-2e45-11ea-92e2-025af468912c.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW200103.png)
 
 - @小头针 提问
 > 请问一下，nebula 目前是只支持命令行操作么
@@ -79,7 +79,7 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《 The Orion Nebula in Infrared from WISE：WISE 卫星拍摄的猎户座红外光影像》
 
-![image](https://user-images.githubusercontent.com/56643819/71713719-d5095080-2e45-11ea-9277-a8b8d7f61d8d.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW2001Nebula.png)
 
 猎户座大星云是一个很有趣的天体。肉眼即可见的猎户座大星云，外观像是猎户座里的一片模糊小光斑。这张合成自广域红外线巡天卫星(WISE)四个红外光波段数据的影像，证实猎户座星云是一个熙攘喧嚣的区域，蜂拥着最近形成的恒星、炙热气体及黝黑尘埃。
 
@@ -88,4 +88,4 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 🎊🎊欢迎你关注 GitHub：[https://github.com/vesoft-inc/nebula](https://0x7.me/zhihu2github) 了解我们更多动态~
 
-![关注公众号](https://user-images.githubusercontent.com/56643819/70311267-499f9e00-184c-11ea-86ac-42d4bc384794.png)
+![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)

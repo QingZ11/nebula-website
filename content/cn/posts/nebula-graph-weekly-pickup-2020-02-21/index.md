@@ -5,7 +5,7 @@ description: "本周看点：索引和属性查询已上线，可根据属性查
 ---
 # Pick of the Week'20 | 第 8 周看点--索引、属性查询已上线
 
-![每周看点](https://user-images.githubusercontent.com/56643819/69411498-0ae7ef00-0d48-11ea-87fd-d0ddad4dcdf4.png)
+![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW.png)
 
 > 每周五 Nebula 为你播报每周看点，每周看点由本周大事件、用户问答、Nebula 产品动态和推荐阅读构成。
 
@@ -17,14 +17,14 @@ description: "本周看点：索引和属性查询已上线，可根据属性查
 
 根据属性查询符合条件的点，pr 参见链接：[https://github.com/vesoft-inc/nebula/pull/1705](https://github.com/vesoft-inc/nebula/pull/1705)
 
-![image](https://user-images.githubusercontent.com/38887077/75142051-36a2b880-572d-11ea-9090-e1d423cf90a9.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW200801.png)
 
 ## Nebula 产品动态
 Pick of the Week 每周会从 GitHub issue 及 pr 中选取重要的产品动态和大家分享，欢迎阅读本文的你关注我们的 GitHub：[https://github.com/vesoft-inc/nebula](https://0x7.me/zhihu2github) 及时了解产品新动态~
 
 - 新增 job manager，管理长时间运行任务。目前已经支持 flush 和 compact 任务。支持 start/stop/list/recover job，其中 `recover job` 可将失败的任务重新添加到执行队列中，标签： `任务调度` ，示例如下图，pr 参见链接： [https://github.com/vesoft-inc/nebula/pull/1424](https://github.com/vesoft-inc/nebula/pull/1424)
 
-![image](https://user-images.githubusercontent.com/38887077/75142058-3a363f80-572d-11ea-9636-a31e9119813b.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW200802.png)
 
 - 当 `Drop Index` 命令执行后，由 compaction 完成 GC。标签： `index` ，pr 参见链接：[https://github.com/vesoft-inc/nebula/pull/1776](https://github.com/vesoft-inc/nebula/pull/1776)
 
@@ -41,7 +41,7 @@ Pick of the Week 每周会从微博、知乎、微信群、微信公众号及 CS
 
 **Nebula**：partition 是个逻辑概念，主要目的是为了一个 partition 内的数据可以一起迁移到另外一台机器。partition 数量是由创建图空间时指定的 partition_num 确立。而单副本 partition 的分布规则如下
 
-![image](https://user-images.githubusercontent.com/38887077/75142078-3e625d00-572d-11ea-8eb1-ffc186de87a7.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW200803.png)
 
 通过算子：partID%engine_size，而多副本的情况，原理类似，follower 在另外两个机器上。
 
@@ -68,11 +68,11 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《Reflections on vdB 9 反射星雲》
 
-![image](https://user-images.githubusercontent.com/38887077/75142141-6782ed80-572d-11ea-9e32-6b3e81d27554.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW2008Nebula.png)
 
 在这幅取景佳妙的天体静物画里，美丽泛蓝的 vdB 9，是范登伯(Sidney van den Bergh)在 1966 年编录的反射星云表之第九号天体。在这张涵盖大约 2 个满月宽度天空的望远镜影像里，它有北天仙后座里的恒星和不透光暗尘埃云为伴。由于尘埃反射来自炽热恒星仙后座 SU(SU Cas)的大量蓝光，让 vdB 9 带着反射星云的特征泛蓝色泽
 
 资料来源 | Robert Nemiroff (MTU) & Jerry Bonnell (UMCP), Phillip Newman (NASA);
 图片来源 | Astronomy Picture of the Day | 2019 February 21
 
-![关注公众号](https://user-images.githubusercontent.com/56643819/69411505-0de2df80-0d48-11ea-88c0-444d157926f1.png)
+![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)

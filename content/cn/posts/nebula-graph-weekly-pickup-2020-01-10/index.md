@@ -5,7 +5,7 @@ description: "本周看点：Nebula Graph UI 1.0 版本内测中、Index 支持�
 ---
 # Pick of the Week'20 | 第 2 周看点--Nebula Graph UI 内测中
 
-![每周看点](https://user-images.githubusercontent.com/56643819/69411498-0ae7ef00-0d48-11ea-87fd-d0ddad4dcdf4.png)
+![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW.png)
 
 > 每周五 Nebula 为你播报每周看点，每周看点由本周大事件、用户问答、Nebula 产品动态和推荐阅读构成。
 
@@ -16,11 +16,11 @@ description: "本周看点：Nebula Graph UI 1.0 版本内测中、Index 支持�
 ### Nebula Graph UI 1.0 版本内测中
 在本版本中你可以使用 GUI 来连接图数据库 Nebula Graph 服务，进行创建 Schema，数据导入并进行图探索。内测体验地址：[https://github.com/vesoft-inc/nebula-web-docker](https://github.com/vesoft-inc/nebula-web-docker)，搭配使用文档使用更佳：[https://github.com/vesoft-inc/nebula-web-docker/blob/master/nebula-graph-studio-user-guide.md](https://github.com/vesoft-inc/nebula-web-docker/blob/master/nebula-graph-studio-user-guide.md)
 
-![image](https://user-images.githubusercontent.com/56643819/72133198-d1cd1200-33bb-11ea-896c-0da428c48538.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW200201.png)
 
-![image](https://user-images.githubusercontent.com/56643819/72133205-d5609900-33bb-11ea-9b4d-65aa5a3b6e55.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW200203.png)
 
-![image](https://user-images.githubusercontent.com/56643819/72133211-d7c2f300-33bb-11ea-8707-db76f9a0dc9c.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW200202.png)
 
 BTW，欢迎联系 Nebula 小助手参与测试哟 😊 
 
@@ -28,7 +28,7 @@ BTW，欢迎联系 Nebula 小助手参与测试哟 😊 
 
 Index Storage、Query Engine 已实现，支持对点边的属性建立索引，**显示所有索引**，**查看索引详情**、**删除索引**等操作，索引使用见下图，pr 参见 [https://github.com/vesoft-inc/nebula/pull/1360](https://github.com/vesoft-inc/nebula/pull/1360)、[https://github.com/vesoft-inc/nebula/pull/1459](https://github.com/vesoft-inc/nebula/pull/1459)、[https://github.com/vesoft-inc/nebula/pull/1598](https://github.com/vesoft-inc/nebula/pull/1598)，BTW，如果你试用 Index 过程中遇到任何问题，欢迎联系 nbot（Wechat：NebulaGraphbot ），我们会第一时间解决的~  
 
-![image](https://user-images.githubusercontent.com/56643819/72133229-e1e4f180-33bb-11ea-95a2-79e3466bb5f4.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW200204.png)
 
 ## Nebula 产品动态
 
@@ -80,11 +80,11 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《Astronomy Picture of the Day：船帆座超新星遗迹》
 
-![image](https://user-images.githubusercontent.com/56643819/72133284-fb863900-33bb-11ea-9873-a4a3d95e0122.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW2002Nebula.jpeg)
 
 在这幅 16 度宽视野，由 200 张照片拼贴成，远眺船帆座西北缘缤纷恒星的影像，中心处有船帆座超新星遗迹的明亮云气丝，而这团气体是一颗大质量恒星爆炸死亡后所留下的扩张碎片云。产生船帆座遗迹的超新星爆炸亮闪，大约在 11,000 年前传到地球。这次的爆炸，除了激震出明亮的云气丝之外，也产生了一颗无比致密、高速旋转名为船帆座波霎的恒星核。
 
 资料来源 | Robert Nemiroff (MTU) & Jerry Bonnell (UMCP), Phillip Newman (NASA);
 图片来源 | Astronomy Picture of the Day | 2019 January 10
 
-![关注公众号](https://user-images.githubusercontent.com/56643819/69411505-0de2df80-0d48-11ea-88c0-444d157926f1.png)
+![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)

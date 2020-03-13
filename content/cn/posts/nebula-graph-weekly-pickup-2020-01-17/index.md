@@ -5,7 +5,7 @@ description: "本周看点：Index 支持获取给定点的所有属性，Spark 
 ---
 # Pick of the Week'20 | 第 3 周看点--Nebula Graph Studio 来了
 
-![每周看点](https://user-images.githubusercontent.com/56643819/70311350-75bb1f00-184c-11ea-9af9-b5fa2e38a225.png)
+![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW.png)
 
 > 每周五 Nebula 为你播报每周看点，每周看点由本周大事件、用户问答、Nebula 产品动态和推荐阅读构成。
 
@@ -94,7 +94,8 @@ nebula> GO FROM 1 OVER e1 YIELD e1._dst AS id, e1.prop1 AS left_1, $$.tag.prop2 
 
 - @菜鸡Freamer 提问
 > 你好，我有几个问题想请教一下：1. 客户端查询结束后打印的两个时间点分别是什么时间；2. 最短路径算法的实现方式是否就是根据谷歌 Pregel 模式实现的
-![image](https://user-images.githubusercontent.com/56643819/72602244-eaa46d00-3951-11ea-899e-37fd414791b1.png)
+
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW200301.png)
 
 **Nebula**：前面一个参数 718 是指 query engine 收到 console 这条命令开始到存储获取数据并进行一系列计算之后再回复 console 之前整条链路花的时间，后面一个参数 1354 是 console 发送请求前到收到响应并将结果输出到控制台的时间。例子参考这篇文章：[https://zhuanlan.zhihu.com/p/98515952](https://zhuanlan.zhihu.com/p/98515952)。第二个问题，Nebula Graph 的最短路径算法实现是双向搜索的 floyd，后续会进行优化，最短路径以及全路径进行针对性实现。比如最短路径实现双向 BFS，双向 Dijkstra 等。
 
@@ -116,13 +117,13 @@ nebula> GO FROM 1 OVER e1 YIELD e1._dst AS id, e1.prop1 AS left_1, $$.tag.prop2 
 
 本文星云图讲解--《IC 342:The Hidden Galaxy 隐藏的星系》
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/208152/1579230010431-c44427f7-6975-4877-8ea8-c90e7a41e454.png#align=left&display=inline&height=799&name=image.png&originHeight=799&originWidth=1024&size=1526559&status=done&style=none&width=1024)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW2003Nebula.png)
 
 大小和我们附近的明亮大螺旋星系相当的 IC 342，位于有长长脖子的鹿豹座之内，距离我们只有 1 千万光年远。IC 342 是个庞大的宇宙岛，所以本来应是我们夜空中一个很吸睛的星系，但因为受到银河系盘面的恒星、云气和尘埃之遮掩，只能隐约一窥其芳踪。
 
 资料来源 | Robert Nemiroff (MTU) & Jerry Bonnell (UMCP), Phillip Newman (NASA);
 图片来源 | Astronomy Picture of the Day | 2019 January 16
 
-![关注公众号](https://user-images.githubusercontent.com/56643819/70311267-499f9e00-184c-11ea-86ac-42d4bc384794.png)
+![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)
 
 
