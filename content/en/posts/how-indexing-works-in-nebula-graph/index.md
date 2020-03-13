@@ -101,11 +101,11 @@ The index structure of vertex is shown in the table above, below is detailed exp
 1. When scanning the index, the vertex data in the same partition can be quickly obtained via the index key, so that any property values of this vertex can be easily obtained, even if the property does not belong to the index.
 1. Currently edges are stored by hashing the ID of its starting vertex, meaning that the location of each outgoing edge is determined by its starting vertex Id. If a vertex and its outgoing edge are stored in the same partition, the  index scan can quickly locate all outgoing edges of that vertex.
 
-**IndexId**: The identier of an index. You can get the meta data of a specified index through indexId, for example, the TagId associated with the index, and the information of the column where index is located.
+**IndexId**: The identifier of an index. You can get the meta data of a specified index through indexId, for example, the TagId associated with the index, and the information of the column where index is located.
 
 **Index binary**: The core storage structure of an index. It is the byte encoding of the values of all index related columns. Detailed structure will be explained in the [Index Binary](#wow1_5_2) section.
 
-**VertexId**: The identifier of a vertedx. In real use, a vertex may have multiple lines of data due to different versions. However, there is no version for index. **Index always maps to the tag of the latest Version**.
+**VertexId**: The identifier of a vertex. In real use, a vertex may have multiple lines of data due to different versions. However, there is no version for index. **Index always maps to the tag of the latest Version**.
 
 Let's explain the storage structure with an example.
 
@@ -263,7 +263,7 @@ If you have any questions regarding the query language syntaxes, please submit 
 (user@127.0.0.1:6999) [(none)]> USE my_space;
 -- create a graph vertex tag
 (user@127.0.0.1:6999) [my_space]> CREATE TAG lookup_tag_1(col1 string, col2 string, col3 string);
--- creat index for col1, col2, col3
+-- create index for col1, col2, col3
 (user@127.0.0.1:6999) [my_space]> CREATE TAG INDEX t_index_1 ON lookup_tag_1(col1, col2, col3);
 ```
 
@@ -277,7 +277,7 @@ Execution succeeded (Time spent: 4.147/5.192 ms)
 
 ### REBUILD index
 
-Like most databases,  you can load a bulk of records (vertices and edges) without any index, and rebuild the indices offline after the load, to improve the batch load performance. **Nebula Graph** uses the following command to force the storage rebuild indices again. As you can imagine, this rebuild is a heavy IO opertion, and we suggest you not to do it at online serving (at least your system load is low).
+Like most databases,  you can load a bulk of records (vertices and edges) without any index, and rebuild the indices offline after the load, to improve the batch load performance. **Nebula Graph** uses the following command to force the storage rebuild indices again. As you can imagine, this rebuild is a heavy IO operation, and we suggest you not to do it at online serving (at least your system load is low).
 
 ```cpp
 REBUILD {TAG | EDGE} INDEX <index_name> [OFFLINE]
