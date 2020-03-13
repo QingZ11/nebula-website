@@ -6,7 +6,7 @@ description: "Nebula Graph 的技术总监作客开源中国线上问答——�
 
 # Nebula Graph 技术总监陈恒：图数据库怎么和深度学习框架进行结合？
 
-![online](https://user-images.githubusercontent.com/56643819/72513780-7b167b00-3888-11ea-973e-bf3da5ba881e.png)
+![online](https://nebula-blog.azureedge.net/nebula-blog/Online01.png)
 
 Nebula Graph 的技术总监在 09.24 - 09.30 期间同 [开源中国·高手问答](https://www.oschina.net/question/4105562_2311761) 的小伙伴们以「图数据库的设计和实践」为切入点展开讨论，包括：「图数据库的存储设计」、「图数据库的计算设计」、「图数据库的架构设计」等方面内容，本文整理于他和开源中国小伙伴对图数据库的讨论内容~
 

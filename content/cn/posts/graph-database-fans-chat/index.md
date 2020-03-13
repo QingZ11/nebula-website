@@ -6,15 +6,13 @@ description: "本次分享主要介绍了 Nebula Graph 的特性，以及新上�
 
 # 图数据库爱好者的聚会在谈论什么？
 
-![graph database](https://user-images.githubusercontent.com/56643819/72513987-da748b00-3888-11ea-89cc-481fb2b9cd6f.png)
+![graph database](https://nebula-blog.azureedge.net/nebula-blog/FansChat01.png)
 
 > [Nebula Graph](https://github.com/vesoft-inc/nebula)：一个开源的分布式图数据库。作为唯一能够存储万亿个带属性的节点和边的在线图数据库，Nebula Graph 不仅能够在高并发场景下满足毫秒级的低时延查询要求，还能够实现服务高可用且保障数据安全性。
 
 ### 聚会概述
 
 在上周六的聚会中，Nebula Graph Committer 吴敏给爱好者们介绍了整体架构和特性，并随后被各位大佬~~轮番蹂躏~~（划掉）。
-
-[image.png](https://cdn.nlark.com/yuque/0/2019/png/208152/1568086393610-faa49b7c-868b-47cb-b357-e20f5a14adae.png#align=left&display=inline&height=348&name=image.png&originHeight=695&originWidth=1044&size=1333625&status=done&width=522)
 
 本次分享主要介绍了 Nebula Graph 的特性，以及新上线的[《使用 Docker 构建 Nebula Graph》](https://zhuanlan.zhihu.com/p/81316517)功能。
 

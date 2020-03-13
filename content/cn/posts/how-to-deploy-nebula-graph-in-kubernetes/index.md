@@ -10,7 +10,8 @@ description: "数据库容器化是最近的一大热点，Kubernetes 能给数�
 Kubernetes 是一个开源的，用于管理云平台中多个主机上的容器化的应用，Kubernetes 的目标是让部署容器化的应用简单并且高效，Kubernetes 提供了应用部署，规划，更新，维护的一种机制。<br />Kubernetes 在设计结构上定义了一系列的构建模块，其目的是为了提供一个可以**部署、维护和扩展应用程序的机制**，组成 Kubernetes 的组件设计概念为**松耦合**和**可扩展**的，这样可以使之满足多种不同的工作负载。可扩展性在很大程度上由 Kubernetes
 API 提供，此 API 主要被作为扩展的内部组件以及 Kubernetes 上运行的容器来使用。
 
-![](https://oscimg.oschina.net/oscnet/up-69f689e312c8968a3cbef1a5cb7d2075f0d.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/k8s01.png)
+
 Kubernetes 主要由以下几个核心组件组成：
 
 - `etcd`  保存了整个集群的状态
@@ -397,7 +398,7 @@ nebula-storaged-2                                1/1     Running            0   
 
 Ingress-controller 是 Kubernetes 的一个 Add-Ons。Kubernetes 通过 ingress-controller 将 Kubernetes 内部署的服务暴露给外部用户访问。Ingress-controller 还提供负载均衡的功能，可以将外部访问流量平摊给 k8s 中应用的不同的副本。
 
-![](https://oscimg.oschina.net/oscnet/up-c65947ff5c4972dfc8b8eadddc9178a01a8.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/k8s02.png)
 
 ### 选择一个节点部署 Ingress-controller
 
@@ -721,7 +722,8 @@ NAME            STATUS   ROLES    AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   O
 
 >  如何搭建一套 Kubernetes 集群？
 
-搭建高可用的 Kubernetes 可以参考社区文档：[https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/)<br />
+搭建高可用的 Kubernetes 可以参考社区文档：[https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/)
+
 你也可以通过 minikube 搭建本地的 Kubernetes 集群，参考文档：[https://kubernetes.io/docs/setup/learning-environment/minikube/](https://kubernetes.io/docs/setup/learning-environment/minikube/)
 
 > 如何调整 nebula 集群的部署参数?

@@ -6,7 +6,7 @@ description: "本文整理于图数据库 Nebula Graph 交流群中对图数据�
 
 # 聊聊图数据库和图数据库的小知识
 
-![graph database vol01](https://user-images.githubusercontent.com/56643819/72512854-61c0ff00-3887-11ea-87da-8c10ec4b3f83.png)
+![graph database vol01](https://nebula-blog.azureedge.net/nebula-blog/Knowledge0101.png)
 
 > [图数据库 - 维基百科](https://zh.wikipedia.org/wiki/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93)：在计算机科学中，**图数据库**（英语：graph database，**GDB**）是一个使用[图结构](https://zh.wikipedia.org/w/index.php?title=Graph_(data_structure)&action=edit&redlink=1)进行[语义查询](https://zh.wikipedia.org/w/index.php?title=Semantic_query&action=edit&redlink=1)的[数据库](https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E5%BA%93)，它使用[节点](https://zh.wikipedia.org/wiki/%E9%A1%B6%E7%82%B9_(%E5%9B%BE%E8%AE%BA))、[边](https://zh.wikipedia.org/wiki/%E5%9B%BE%E8%AE%BA%E6%9C%AF%E8%AF%AD)和属性来表示和存储数据。该系统的关键概念是**图**，它直接将存储中的数据项，与数据**节点**和节点间表示关系的**边**的集合相关联。这些关系允许直接将存储区中的数据链接在一起，并且在许多情况下，可以通过一个操作进行检索。图数据库将数据之间的关系作为优先级。查询图数据库中的关系很快，因为它们永久存储在数据库本身中。可以使用图数据库直观地显示关系，使其对于高度互连的数据非常有用。
 

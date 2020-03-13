@@ -6,7 +6,7 @@ description: "作为 C/ C++ 工程师，在开发过程中会遇到各类问题�
 
 # 应用 AddressSanitizer 发现程序内存错误
 
-![AddressSanitizer.png](https://user-images.githubusercontent.com/56643819/74794701-d829a480-52fe-11ea-8fe7-6bd98a95dc39.png)
+![AddressSanitizer.png](https://nebula-blog.azureedge.net/nebula-blog/AddressSanitizer01.png)
 
 作为 C/ C++ 工程师，在开发过程中会遇到各类问题，最常见便是**内存使用问题**，比如，**越界**，**泄漏**。过去常用的工具是 Valgrind，但使用 Valgrind 最大问题是它会极大地降低程序运行的速度，初步估计会降低 10 倍运行速度。而 Google 开发的 [AddressSanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer) 这个工具很好地解决了 Valgrind 带来性能损失问题，它非常快，只拖慢程序 2 倍速度。
 
@@ -142,7 +142,7 @@ if (ShadowIsPoisoned(shadow_address)) {
 ### AddressSanitizer 和其他内存检测工具对比
 [下图](https://github.com/google/sanitizers/wiki/AddressSanitizerComparisonOfMemoryTools#summary)是 AddressSanitizer 与其他的一些内存检测工具的对比:
 
-![image](https://user-images.githubusercontent.com/38887077/74824227-f1544480-5342-11ea-8986-8eb88adaa1b3.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/AddressSanitizer02.png)
 
 参数说明：
 

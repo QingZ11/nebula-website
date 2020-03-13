@@ -6,7 +6,7 @@ description: "由于 Nebula Graph 依赖较多，为了方便开发者本地编�
 
 # 使用 Docker 构建 Nebula Graph 源码
 
-![Docker](https://user-images.githubusercontent.com/56643819/72507702-58cc2f80-387f-11ea-8dd4-b0578730afb7.jpg)
+![Docker](https://nebula-blog.azureedge.net/nebula-blog/Docker01.jpg)
 
 ### Nebula Graph 介绍
 

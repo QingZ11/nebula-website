@@ -6,7 +6,7 @@ description: "开源社特访吴敏来分享下图数据库主题内容，从图
 
 # COSCon'19 | 如何设计新一代的图数据库 Nebula
 
-![image](https://user-images.githubusercontent.com/56643819/72508908-7ac6b180-3881-11ea-8df2-e0d9567211de.png)
+![image](https://nebula-blog.azureedge.net/nebula-blog/COSCon01.png)
 
 11 月 2 号 - 11 月 3 号，以“大爱无疆，开源无界”为主题的 2019 中国开源年会（COSCon'19）正式启动，大会以开源治理、国际接轨、社区发展和开源项目为切入点同全球开源爱好者们共同交流开源。
 
