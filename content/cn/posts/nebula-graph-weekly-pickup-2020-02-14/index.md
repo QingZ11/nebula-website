@@ -5,7 +5,7 @@ description: "本周看点：Nebula 官方论坛上线、支持 ttl，指定数�
 ---
 # Pick of the Week'20 | 第 7 周看点--Nebula 论坛上线
 
-![每周看点](https://user-images.githubusercontent.com/56643819/69411498-0ae7ef00-0d48-11ea-87fd-d0ddad4dcdf4.png)
+![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW.png)
 
 > 每周五 Nebula 为你播报每周看点，每周看点由本周大事件、用户问答、Nebula 产品动态和推荐阅读构成。
 
@@ -15,7 +15,7 @@ description: "本周看点：Nebula 官方论坛上线、支持 ttl，指定数�
 
 - [Nebula 论坛上线](https://discuss.nebula-graph.io/)
 
-![discuss](https://user-images.githubusercontent.com/56643819/74516826-1106f980-4f4c-11ea-88cc-be4be529800f.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW200701.png)
 
 Nebula Graph 官方论坛已上线，你可以在论坛里提 `使用问题` 、 `意见反馈` ，也可以在论坛上读到我们最新的 `技术文章` ，了解 `产品动态` 。
 
@@ -26,7 +26,7 @@ Pick of the Week 每周会从 GitHub issue 及 pr 中选取重要的产品动态
 - 新增 `Nebula Stats Exporter` ，采集 Nebula 集群监控和性能指标信息给 Prometheus，使用 Grafana 作为可视化组件，标签： `监控` ，pr 参见链接： [https://github.com/vesoft-inc/nebula-stats-exporter/pull/2](https://github.com/vesoft-inc/nebula-stats-exporter/pull/2)
 - 支持 ttl，指定数据的有效期，标签： `TTL` ，示例见下图，pr 参见链接：[https://github.com/vesoft-inc/nebula/pull/1584](https://github.com/vesoft-inc/nebula/pull/1584)、[https://github.com/vesoft-inc/nebula/pull/422](https://github.com/vesoft-inc/nebula/pull/422)
 
-![ttl](https://user-images.githubusercontent.com/56643819/74516959-4dd2f080-4f4c-11ea-9641-8ab967c4a542.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW200702.png)
 
 - 新增 Spark 对接 Nebula Graph 的示例，标签： `OLAP` ，pr 参见链接：[https://github.com/vesoft-inc/nebula-java/pull/56](https://github.com/vesoft-inc/nebula-java/pull/56)
 
@@ -73,7 +73,7 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《IC 1805: The Heart Nebula 心脏星云》
 
-![nebula](https://user-images.githubusercontent.com/56643819/74516975-53c8d180-4f4c-11ea-8aa5-3256bdbe35aa.png)
+![](https://nebula-blog.azureedge.net/nebula-blog/PotW2007Nebula.jpeg)
 
 心脏星云最明亮的部分（右方区域）另外编号为 NGC 896，因为该区域是心脏星云最早被观测到的部分。
 
@@ -82,4 +82,4 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 资料来源 | Robert Nemiroff (MTU) & Jerry Bonnell (UMCP), Phillip Newman (NASA);
 图片来源 | Astronomy Picture of the Day | 2009 February 14
 
-![关注公众号](https://user-images.githubusercontent.com/56643819/69411505-0de2df80-0d48-11ea-88c0-444d157926f1.png)
+![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)

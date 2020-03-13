@@ -1,7 +1,7 @@
 ---
 title: "Pick of the Week'20 | 第 11 周看点--图数据库的蓄水池"
 date: 2020-03-13
-description: "本周看点：Hacker News 热帖：Graph query languages: Cypher vs. Gremlin vs. nGQL，产品方面：GO  支持关键词 BIDIRECT  进行双向遍历提供。"
+description: "本周看点：支持蓄水池算法，实现 User Manager，集成了 coverage testing tool..."
 ---
 # Pick of the Week'20 | 第 10 周看点--Hacker News 热烈讨论的图查询语言
 
