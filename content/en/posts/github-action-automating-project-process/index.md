@@ -38,7 +38,7 @@ Feel free to let us know if you find other benefits. :)
 
 ### Source Analysis
 
-Since [Nebula Graph](https://github.com/vesoft-inc/nebula) is an open source graph database hosted on GitHub, it's natural for us to use the free Action to manage workflows like **continuos integration**. And front-end release is no exception.
+Since [Nebula Graph](https://github.com/vesoft-inc/nebula) is an open source graph database hosted on GitHub, it's natural for us to use the free Action to manage workflows like **continuous integration**. And front-end release is no exception.
 
 For example, the Nebula Graph [official site](https://nebula-graph.io) templates are modified by developers while the contents on the site are maintained by the marketing team. The updates and maintenance are so frequent that it's a hassle to do that manually. Therefore, we need to automatically deploy the site. This is a typical Github Actions scenario.
 
