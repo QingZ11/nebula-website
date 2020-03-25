@@ -129,9 +129,6 @@ runner 就是执行配置工作流的环境，是由 GitHub 免费提供给用�
 
 通过项目下的一个个工作流，能从各个方面避免重复琐碎的工作，让我们更专注于实现逻辑本身，我想这是工程师最希望达到的状态。希望这里的简短介绍能给各位带来帮助，另外欢迎大家关注和使用我们的 [Nebula开源图数据库](https://github.com/vesoft-inc/nebula)，谢谢🤝
 
-> 作者有话说：Hi，我是 Jerry，是图数据 Nebula Graph 前端工程师，在前端平台工具开发及工程化方面有些小心得，希望写的经验分享能给大家带来帮助，如有不当之处也希望能帮忙纠正，谢谢~
-
-
 ## 附录
 
 - Nebula Graph：一个开源的分布式图数据库
@@ -139,3 +136,5 @@ runner 就是执行配置工作流的环境，是由 GitHub 免费提供给用�
 - 官方论坛：[https://discuss.nebula-graph.io](https://discuss.nebula-graph.io)
 - 知乎：[zhihu.com/org/nebulagraph/posts](https://www.zhihu.com/org/nebulagraph/posts)
 - 微博：[weibo.com/nebulagraph](https://weibo.com/nebulagraph)
+
+> 作者有话说：Hi，我是 Jerry，是图数据 Nebula Graph 前端工程师，在前端平台工具开发及工程化方面有些小心得，希望写的经验分享能给大家带来帮助，如有不当之处也希望能帮忙纠正，谢谢~
