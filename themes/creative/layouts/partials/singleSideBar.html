@@ -1,7 +1,10 @@
 <div class="single-side-bar">
     {{ partial "tags.html" . }}
     {{ partial "carousel.html" . }}
-    <div class="J-blog-anchor"></div>
+    <div class="blog-anchors">
+        <h3>{{ .Site.Params.blog.title }}</h3>
+        {{ .TableOfContents }}
+    </div>
     <div class="social-share">
       <h3>{{.Site.Params.share.title }}</h3>
       <div class="nebula-share-buttons">
