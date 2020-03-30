@@ -2,8 +2,9 @@
 title: "How Nebula Graph Automatically Cleans Stale Data with TTL"
 date: 2020-03-24
 description: "Stored procedures and events are commonly used to clean outdated data in databases. Nebula Graph has adopted a more efficient way, i.e. TTL, to automatically clean stale data. This post explains TTL in detail."
+author: "Pandasheep"
+tags: ["Features"]
 ---
-# How Nebula Graph Automatically Cleans Stale Data with TTL
 
 ![image](https://user-images.githubusercontent.com/38887077/77512987-09256800-6eaf-11ea-9b41-e8b87ab51fe8.png)
 

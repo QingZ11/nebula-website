@@ -2,8 +2,9 @@
 title: "图数据库 Nebula Graph TTL 特性"
 date: 2020-03-24
 description: "如何提高数据中有效数据的利用率、将无效的过期数据清洗掉，是数据库领域的一个热点话题。在本文中我们将着重讲述如何在数据库中处理过期数据这一问题。"
+tags: ["特性讲解"]
+author: pandasheep
 ---
-# 图数据库 Nebula Graph TTL 特性
 
 ![](https://nebula-blog.azureedge.net/nebula-blog/TTL01.png)
 
@@ -245,4 +246,9 @@ edge 同 tag 的逻辑一样，这里就不在详述了。
 TTL 的介绍就到此为止了，如果你对图数据库 Nebula Graph 的 TTL 有改进想法或其他要求，欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：[https://discuss.nebula-graph.io/](https://discuss.nebula-graph.io/) 的 `Feedback`  分类下提建议 👏
 
 > 作者有话说：Hi，我是 panda sheep，是图数据库 Nebula Graph 研发工程师，对数据库领域非常感兴趣，也有自己的一点点心得，希望写的经验分享能给大家带来帮助，如有不当之处也希望能帮忙纠正，谢谢~
+
+## 推荐阅读
+
+- [分布式图数据库 Nebula Graph 的 Index 实践](https://nebula-graph.io/cn/posts/how-indexing-works-in-nebula-graph/)
+- [分布式图数据库 Nebula Graph 中的集群快照实践](https://nebula-graph.io/cn/posts/introduction-to-snapshot-in-nebula-graph/)
 
