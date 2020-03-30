@@ -1,14 +1,67 @@
 header {
-  background-image: url('../../img/header.png');
+  background-image: url('../../img/index_banner_bg.png');
+  background-repeat:no-repeat;
+  background-size: 597px 830px;
+  background-position: 97% 80px;  
+  background-color: #000;
+  height: 640px;
+  font-weight: 400;
 }
-
-header .header-content .header-content-inner h1 {
+header a{
+  text-decoration: none;
+}
+.header-content{
+  transform: translateY(0)
+}
+.header-content .header-content-inner{
+  max-width: 960px !important;
+  text-align: left;
+}
+.header-content-inner a{
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0;
+  line-height: 40px;
+  height: 40px;
+  width: 160px;
+}
+header .header-content #title {
+  max-width: 88.75%;
   text-transform: none;
+  font-size:48px;
+  font-weight: 600;
+  color:rgba(255, 255, 255, 1);
+  line-height: 54px;
+  letter-spacing:2px;
+  text-align: left;
+  font-family:"MicrosoftSansSerif";
+  margin: 0 ;
+}
+header .header-content #subtitle {
+  max-width: 56.97% ;
+  text-transform: none;
+  font-size: 18px ;
+  color: rgba(255, 255, 255, 1);
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: left;
+  font-family: "MicrosoftSansSerif";
+  margin: 36px 0 80px;
+}
+header .get-start {
+  background: #037FFF;
+}
+header #download{
+  background: #fff;
+  background-image: url('../../img/download-cat.png');
+  background-repeat:no-repeat;
+  background-position: 6px 4px;
+  color:rgba(0, 128, 255, 1);
+  margin-left: 60px;
+  padding:0 40px;
 }
 
-header .get-start {
-  background: #7bb5e4;
-}
 
 header .get-start:hover {
   background: #2884ee;
@@ -97,5 +150,30 @@ header .get-start:hover {
 @media(max-width: 768px) {
   .BlogAnchor{
     display: none;
+  }
+  header {
+      background-image: url('../../img/index_banner_bg.png');
+      background-repeat: no-repeat;
+      background-size: 30.8rem 42.5rem;
+      background-position: 95% 35%;
+      background-color: #000;
+  }
+  header .header-content #title {
+      max-width: 88.75% ;
+      font-size: 24px;
+      line-height: 32px;
+  }
+  .header-content-inner a{
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  #subtitle {
+    margin-bottom: 10px !important;
+  }
+  #download{
+    margin-left: 0 !important;
+  }
+  .get-start{
+    margin-right: 10px;
   }
 }

@@ -1,0 +1,254 @@
+################ 中文配置 ################
+contentDir = "content/cn"
+[params]
+  # You can use Markdown syntax for urls [text](//url.to/source) for
+  # most longer texts.
+
+  # All icons using Fontawesome's icon font. Look at http://fontawesome.io/icons/
+  # for more icons. The icons are represented by their corresponding
+  # CSS class.
+
+  # All projects of the portfolio are defined in their own files.
+  # You can find example projects at 'exampleSite/data/projects'. Copy the 'projects'
+  # folder into the 'data' directory at the root of this Hugo site.
+  # For more information take a look at the README.
+
+  # To provide some metadata for search engines feel free to add some
+  # information about you and your website.
+  description = "水平扩展特性，强数据一致性，高可用，类SQL查询语言。Nebula让你洞察数据之间的联系。赶快免费使用它吧。"
+  name = "Nebula Graph"
+
+  # The path must be relative to the static folder
+  favicon = "favicon.ico"
+  blogTitle = "Nebula Graph 博客"
+  postsTitle = "最新 Nebula Graph 博文"
+  readAll ="阅读全文"
+
+  backBlogs = "返回到博客页"
+
+  # Navigation
+  [params.navigation]
+    brand = "NebulaGraph"
+
+    [[params.navigation.links]]
+      title = "文档"
+      link = "https://docs.nebula-graph.io/"
+    [[params.navigation.links]]
+      title = "博客"
+      link = "/cn/posts"
+      # [[params.navigation.links.links]]
+      # 	title = "Use cases"
+    # [[params.navigation.links]]
+    # 	title = "Customers"
+    [[params.navigation.links]]
+      title = "论坛"
+      link = "https://discuss.nebula-graph.io/"
+    [[params.navigation.links]]
+      title = "联系我们"
+      id = "#contact_us"
+    [[params.navigation.links]]
+      icon = "glyphicon glyphicon-globe"
+        [[params.navigation.links.links]]
+          title = "English"
+          link = "/en"
+        [[params.navigation.links.links]]
+          title = "中文"
+          link = "/cn"
+    [[params.navigation.links]]
+      title = "开始尝试"
+      link = "https://docs.nebula-graph.io/manual-EN/1.overview/2.quick-start/1.get-started/#batch-inserting"
+      calss= "navbar-right"
+
+      target = "_blank"
+
+  # Hero section
+  [params.header]
+    # To change the background of the header section, replace the 'header.jpg' at './static/img' with your own.
+    slogan     = "一个可靠的分布式、线性扩容、性能高效的图数据库"
+    subtitle   = "世界上唯一能够容纳千亿个顶点和万亿条边，并提供毫秒级查询延时的图数据库解决方案"
+    buttonText = "开始尝试"
+    downloadText = "下载"
+
+  # Footer section
+  [params.footer]
+    name = "contact_us"
+    [params.footer.social]
+      title = "关注我们"
+      [[params.footer.social.links]]
+          title = "Twitter"
+          pic = "twitter.png"
+          class = "icon fa fa-twitter"
+          link = "https://twitter.com/NebulaGraph"
+          target = "_blank"
+      [[params.footer.social.links]]
+          title = "微博"
+          pic = "weibo.png"
+          class = "icon fa fa-weibo"
+          link = "https://weibo.com/nebulagraph"
+          target = "_blank"
+      [[params.footer.social.links]]
+          title = "LinkedIn"
+          pic = "linkedin.png"
+          class = "icon fa fa-linkedin"
+          link = "https://www.linkedin.com/company/vesoft-nebula-graph/"
+          target = "_blank"
+      [[params.footer.social.links]]
+          title = "YouTube"
+          pic = "youtube.png"
+          class = "icon fa fa-youtube"
+          link = "https://www.youtube.com/channel/UC73V8q795eSEMxDX4Pvdwmw"
+          target = "_blank"
+      [[params.footer.social.links]]
+          title = "FaceBook"
+          pic = "facebook.png"
+          class = "icon fa fa-facebook"
+          link = "https://www.facebook.com/NebulaGraph/"
+          target = "_blank"
+      [[params.footer.social.links]]
+          title = "微信公众号"
+          class = "icon fa fa-wechat"
+          pic = "gongzhonghao.png"
+          id = "#myGongzhonghaoModal"
+          target = "_blank"
+    [[params.footer.community]]
+      title = "社区"
+      [[params.footer.community.links]]
+          title = "GitHub"
+          pic = "github.png"
+          link = "https://github.com/vesoft-inc/nebula"
+          target = "_blank"
+      [[params.footer.community.links]]
+          title = "论坛"
+          pic = "forum.png"
+          link = "https://discuss.nebula-graph.io/"
+          target = "_blank"
+      [[params.footer.community.links]]
+          title = "Slack"
+          pic = "slack.png"
+          link = "https://join.slack.com/t/nebulagraph/shared_invite/enQtNjIzMjQ5MzE2OTQ2LTM0MjY0MWFlODg3ZTNjMjg3YWU5ZGY2NDM5MDhmOGU2OWI5ZWZjZDUwNTExMGIxZTk2ZmQxY2Q2MzM1OWJhMmY#"
+          target = "_blank"
+    [[params.footer.company]]
+      title = "公司"
+      [[params.footer.company.links]]
+          title = "关于"
+          link = "https://github.com/vesoft-inc/nebula"
+          target = "_blank"
+      [[params.footer.company.links]]
+          title = "新闻"
+          link = "https://weibo.com/nebulagraph"
+          target = "_blank"
+      [[params.footer.company.links]]
+          title = "联系"
+          link = "https://www.linkedin.com/company/vesoft-nebula-graph/"
+          target = "_blank"
+      [[params.footer.company.links]]
+          title = "招聘"
+          link = "https://www.linkedin.com/company/vesoft-nebula-graph/"
+          target = "_blank"
+    
+      [[params.footer.contactus]]
+      title = "Contact Us"
+      [[params.footer.contactus.links]]
+          title = "(+86) 0571-28120658"
+          link = ""
+          pic = "iphone.png"
+          target = "_blank"
+      [[params.footer.contactus.links]]
+          title = "info@vesoft.com"
+          link = ""
+          pic = "email.png"
+          target = "_blank"
+      [[params.footer.contactus.links]]
+          title = "微信个人助理"
+          link = ""
+          pic = "weixin.png"
+          id = "#myModal"
+          target = "_blank"
+  # About section
+  # [params.advantage]
+  #   headline    = "Why Nebula"
+  #   description = "blablablabla..."
+
+  # Service section
+  [params.features]
+        headline = "Nebula Graph 特性"
+
+          [[params.features.list]]
+            pic = "feature1.png"
+            title = "开源"
+            link = "https://discuss.nebula-graph.io/"
+            description1 = "我们致力于与"
+            description2 = "社区合作"
+            description3 = "普及及促进图数据库的发展。"
+
+          [[params.features.list]]
+            pic = "feature2.png"
+            title = "高性能"
+            description1 = "Nebula Graph 在维持高吞吐量的同时依旧能做到低时延的读写。"
+
+          [[params.features.list]]
+            pic = "feature3.png"
+            title = "类SQL查询"
+            link = "https://github.com/vesoft-inc/nebula/blob/master/docs/manual-CN/1.overview/1.concepts/2.nGQL-overview.md"
+            description1 = "Nebula Graph的"
+            description2 = "类 SQL 查询语言"
+            description3 = "不仅易于理解，同时能满足各类复杂业务需求。"
+
+          [[params.features.list]]
+            pic = "feature4.png"
+            title = "安全"
+            description1 = "具有基于角色的权限控制，授权才能访问。"
+
+          [[params.features.list]]
+            pic = "feature5.png"
+            title = "扩容"
+            link = "https://nebula-graph.io/cn/posts/nebula-graph-architecture-overview/"
+            description1 = "基于shared-nothing"
+            description2 = "分布式架构"
+            description3 = "，Nebula Graph 支持线性扩容。"
+
+          [[params.features.list]]
+            pic = "feature6.png"
+            title = "扩展性"
+            link = "https://nebula-graph.io/cn/posts/nebula-graph-storage-engine-overview/"
+            description1 = "Nebula Graph 支持多种类型"
+            description2 = "存储引擎"
+            description3 = "。查询语言也可以拓展支持新的算法。"
+ 
+          [[params.features.list]]
+            pic = "feature7.png"
+            title = "事务性"
+            description1 = "采用分布式 ACID 事务支持，以确保数据完整性。"
+
+          [[params.features.list]]
+            pic = "feature8.png"
+            link = "https://nebula-graph.io/cn/posts/introduction-to-snapshot-in-nebula-graph/"
+            title = "高可用"
+            description1 = "Nebula Graph 支持多种类型"
+            description2 = "快照"
+            description3 = "方式实现数据恢复，保证在局部失败的情况下服务的高可用性。"
+
+  # [params.portfolio.modal]
+  #       client = "Client"
+  #       date = "Date"
+  #       category = "Category"
+  #       buttonText = "Close"
+  # blog section
+  [params.blog]
+    title = "目录"
+
+  # Tags
+  [params.tags]
+    title = "标签"
+    all = "全部"
+
+  [[params.links]]
+    text = "去 Github 点 star"
+    link = "https://github.com/vesoft-inc/nebula"
+    image = "/images/good.png"
+  [[params.links]]
+    text = "订阅 RSS"
+    link = "https://nebula-graph.io/en/posts/index.xml"
+    image = "/images/rss.png"
+  [params.share]
+    title = "分享"
