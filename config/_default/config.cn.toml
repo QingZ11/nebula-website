@@ -250,7 +250,7 @@ contentDir = "content/cn"
     image = "/images/good.png"
   [[params.links]]
     text = "订阅 RSS"
-    link = "https://nebula-graph.io/en/posts/index.xml"
+    link = "https://nebula-graph.io/cn/posts/index.xml"
     image = "/images/rss.png"
   [params.share]
     title = "分享"

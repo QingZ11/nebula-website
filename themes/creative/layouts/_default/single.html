@@ -66,7 +66,7 @@
               {{ if .Params.tags }}
                   <div class="tags meta">
                       <img src="/images/tag.png" width="16px" height="16px">
-                      {{ range .Params.tags }}<a href="{{"/" | relLangURL}}/tags/{{.}}">{{.}}</a>{{ end }}
+                      {{ range .Params.tags }}<a href="{{"/" | relLangURL}}/tags/{{. | urlize}}">{{. | lower }}</a>{{ end }}
                   </div>
               {{ end }}
           </div>
