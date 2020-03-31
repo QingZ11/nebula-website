@@ -9,12 +9,13 @@
     </li>
     {{ range $key, $value := .Site.Taxonomies.tags }}
       <li>
+        {{ $urlKey := urlize $key }}
         <a
           href="{{ "/" | relLangURL}}tags/{{ $key | urlize}}"
           class="
-            {{if in $.Permalink $key}}
+            {{if in $.Permalink $urlKey}}
               active
-            {{ else if in $.Params.tags $key }}
+            {{ else if in $.Params.tags $urlKey}}
               active
             {{end}}
           "

@@ -1,7 +1,7 @@
 ---
 title: "Graph Query Language Comparison Series - Gremlin vs Cypher vs nGQL"
 date: 2020-03-03
-description: "Graph users have to learn different graph query languages using different graph databases due to the lack of international standard of the graph query language. Check this post out for a comparison of the basic operations among Cypher, Gremlin, and nGQL."
+description: "Graph users have to learn different graph query languages due to the lack of international standard like SQL. This post compares the basic ops among Cypher, Gremlin, and nGQL."
 author: "Steam, Amber, Jude"
 tags: ["Graph-Database", "Graph-Query-Language"]
 ---
