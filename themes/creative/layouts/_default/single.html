@@ -45,12 +45,105 @@
 {{ end }}
 
 {{ define "main" }}
-  <main class="blog-detail">
+  <main id="top" class="blog-detail">
     <div class="wrapper">
-      <section class="blog-content">
-        {{- .Content }}
-        <div id='discourse-comments'></div>
-      </section>
+      <div class="inner">
+        <section class="blog-content">
+          <h1>{{ .Title }}</h1>
+          <div class="blog-metas">
+              {{ with .Params.author }}
+                  <div class="meta">
+                      <img src="/images/writer.png" width="16px" height="16px">
+                      <span>{{.}}</span>
+                  </div>
+              {{ end }}
+              {{ with .Params.date }}
+                  <div class="meta">
+                      <img src="/images/calendar.png" width="16px" height="16px">
+                      <span>{{dateFormat "2006-01-02" .}}</span>
+                  </div>
+              {{ end }}
+              {{ if .Params.tags }}
+                  <div class="tags meta">
+                      <img src="/images/tag.png" width="16px" height="16px">
+                      {{ range .Params.tags }}<a href="{{"/" | relLangURL}}/tags/{{.}}">{{.}}</a>{{ end }}
+                  </div>
+              {{ end }}
+          </div>
+          {{- .Content }}
+          <blockquote class="star-ads">
+            {{ if eq $.Site.Language.Lang "en" }}
+              <span>Do you like this post? If yes, just give me a</span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span>star:</span>
+              <a href="https://github.com/vesoft-inc/nebula">https://github.com/vesoft-inc/nebula</a>
+            {{ else }}
+              <span>你喜欢这篇文章吗? 喜欢的话，给我们点个</span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span>star 吧:</span>
+              <a href="https://github.com/vesoft-inc/nebula">https://github.com/vesoft-inc/nebula</a>
+            {{ end }}
+          </blockquote>
+          <ul class="blog-footer">
+              {{ with $.Params.tags }}
+                <li>
+                  <img src="/images/tag.png" /> 
+                  {{ range $.Params.tags }}
+                    <a href="{{"/" | relLangURL}}tags/{{.}}">{{.}}</a>
+                  {{ end }}
+                </li>
+              {{ end }}
+              <li class="nebula-share st-btn">
+                <img src="/images/share.png" />
+                <span>{{$.Site.Params.share.title}}</span>
+                <ul class="blog-footer-share-links">
+                  {{ if eq $.Site.Language.Lang "en"}}
+                    <li class="st-custom-button" data-network="twitter">
+                      <img alt="twitter-white sharing button" src="https://platform-cdn.sharethis.com/img/twitter-white.svg">
+                      <span class="st-label">Twitter</span>
+                    </li>
+                    <li class="st-custom-button" data-network="linkedin">
+                      <img alt="twitter-white sharing button" src="https://platform-cdn.sharethis.com/img/linkedin-white.svg">
+                      <span class="st-label">Linkedin</span>
+                    </li>
+                    <li class="st-custom-button" data-network="facebook">
+                      <img alt="twitter-white sharing button" src="https://platform-cdn.sharethis.com/img/facebook-white.svg">
+                      <span class="st-label">Facebook</span>
+                    </li>
+                    <li class="st-custom-button" data-network="sharethis" >
+                      <img alt="twitter-white sharing button" src="https://platform-cdn.sharethis.com/img/sharethis-white.svg">
+                      <span class="st-label">Others</span>
+                    </li>
+                  {{ else }}
+                    <li class="st-custom-button" data-network="wechat">
+                      <img alt="wechat-white sharing button" src="https://platform-cdn.sharethis.com/img/wechat-white.svg">
+                      <span class="st-label">微信</span>
+                    </li>
+                    <li class="st-custom-button" data-network="weibo">
+                      <img alt="weibo-white sharing button" src="https://platform-cdn.sharethis.com/img/weibo-white.svg">
+                      <span class="st-label">微博</span>
+                    </li>
+                    <li class="st-custom-button" data-network="sharethis">
+                      <img alt="sharethis-white sharing button" src="https://platform-cdn.sharethis.com/img/sharethis-white.svg">
+                      <span class="st-label">其他</span>
+                    </li>
+                  {{ end }}
+                </ul>
+              </li>
+              <li onclick="location.href='{{"/"|relLangURL}}posts'">
+                <img src="/images/blog.png" />
+                <a href="{{"/"|relLangURL}}posts">{{$.Site.Params.backBlogs}}</a>
+              </li>
+              <li onclick="location.href='https:\/\/nebula-graph.io/{{$.Site.Language.Lang}}/posts/index.xml'">
+                <img src="/images/rss.png" />
+                <a onclick="window.open('https:\/\/nebula-graph.io/{{$.Site.Language.Lang}}/posts/index.xml')" href="">RSS</a>
+              </li>
+            </ul>
+          <div id='discourse-comments'></div>
+        </section>
+        {{ partial "singleSideBar.html" .}}
+      </div>
+      <img onclick="location.href='#top'" class="go-ahead" src="/images/up.png" >
     </div>
     {{ if .Site.Params.footer }}
       {{ partial "footer.html" . }}
@@ -71,4 +164,5 @@
       })();
     </script>
   {{ end }}
+  <!-- <script src="{{ "js/anchor.js" | relURL }}"></script> -->
 {{ end }}

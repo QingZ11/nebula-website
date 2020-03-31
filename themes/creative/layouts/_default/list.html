@@ -1,42 +1,95 @@
 {{ define "main" }}
-<main class="blog-list">
+<main id="top" class="blog-list">
     <div class="wrapper">
-        <h3>{{ .Site.Params.blogTitle }}</h3>
-        <ul class="list">
-            {{ range .Pages }}
-                <li class="blog-summary">
-                    <a class="row" href="{{.Permalink}}">
-                        <div class="col-xs-4 col-md-3 picture">
-                            {{ with .Resources }}
-                                {{ with .GetMatch "{*.jpg,*.png,*.jpeg}" }}
-                                    {{ $cover := .Resize "600x" }}
-                                    {{ with $cover }}
-                                        <img src="{{ .Permalink }}"/>      
-                                    {{ end }} 
-                                {{ else }}
-                                    {{ with .GetMatch "{thumbnail.png}" }}
+        <div class="inner">
+            <ul class="list">
+                {{ range (.Paginator 10).Pages }}
+                    <li class="blog-summary" onclick="location.href='{{.Permalink}}';">
+                        <h3 href="{{.Permalink}}">{{.Title}}</h3>
+                        <div class="content">
+                            <div class="blog-thumbnail">
+                                {{ with .Resources }}
+                                    {{ with .GetMatch "{*.jpg,*.png,*.jpeg}" }}
                                         {{ $cover := .Resize "600x" }}
                                         {{ with $cover }}
-                                            <img src="{{ .Permalink }}"/>      
+                                            <img src="{{ .Permalink }}" height="100%"/>      
+                                        {{ end }} 
+                                    {{ else }}
+                                        {{ with .GetMatch "{thumbnail.png}" }}
+                                            {{ $cover := .Resize "600x" }}
+                                            {{ with $cover }}
+                                                <img src="{{ .Permalink }}" height="100%"/>      
+                                            {{ end }}
                                         {{ end }}
                                     {{ end }}
                                 {{ end }}
-                            {{ end }}
+                            </div>
+                            <div class="text">
+                                <div class="row blog-metas">
+                                    {{ with .Params.author }}
+                                        <div class="meta">
+                                            <img src="/images/writer.png" width="16px" height="16px">
+                                            <span>{{.}}</span>
+                                        </div>
+                                    {{ end }}
+                                    {{ with .Params.date }}
+                                        <div class="meta">
+                                            <img src="/images/calendar.png" width="16px" height="16px">
+                                            <span>{{dateFormat "2006-01-02" .}}</span>
+                                        </div>
+                                    {{ end }}
+                                    {{ if .Params.tags }}
+                                        <div class="tags meta">
+                                            <img src="/images/tag.png" width="16px" height="16px">
+                                            {{ range .Params.tags }}
+                                                <a href="{{"/" | relLangURL}}/tags/{{.}}">{{.}}</a>
+                                            {{ end }}
+                                        </div>
+                                    {{ end }}
+                                </div>
+                                {{ with .Description }}
+                                    <p class="pc-content">{{ . | truncate 200 }}</p>
+                                    <p class="mobile-content">{{ . | truncate 200 }}</p>
+                                {{ else }}
+                                    <p class="pc-content">{{ .Summary | truncate 200 }}</p>
+                                    <p class="mobile-content">{{ .Summary | truncate 200 }}</p>
+                                {{ end }}
+                            </div>
                         </div>
-                        <div class="col-xs-8 col-md-9 text">
-                            <h3 href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</h3>
-                            {{ with .Description }}
-                                <p class="pc-content">{{ . | truncate 200 }}</p>
-                                <p class="mobile-content">{{ . | truncate 50 }}</p>
-                            {{ else }}
-                                <p class="pc-content">{{ .Summary | truncate 200 }}</p>
-                                <p class="mobile-content">{{ .Summary | truncate 50 }}</p>
+                    </li>
+                {{ end }}
+                {{ if (gt $.Paginator.TotalPages 1) }}
+                    <ul class="pagination">
+                        {{ with .Paginator.Prev }}
+                            <li>
+                                <a href="{{.URL}}" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                        {{ end }}
+                        {{ range (.Paginator 10).Pagers }}
+                            {{ $sub := (sub $.Paginator.PageNumber .PageNumber) }}
+                            {{ if and (le $sub 2) (ge $sub -2) }}
+                                {{ if  (eq $sub 0) }}
+                                    <li class="active"><a href="{{.URL}}">{{ .PageNumber }}</a></li>
+                                {{ else }}
+                                    <li><a href="{{.URL}}">{{ .PageNumber }}</a></li>
+                                {{ end }}
                             {{ end }}
-                        </div>
-                    </a>
-                </li>
-            {{ end }}
-        </ul>
+                        {{ end }}
+                        {{ with .Paginator.Next }}
+                            <li>
+                                <a href="{{.URL}}" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                {{ end }}
+            </ul>
+            {{ partial "listSideBar.html" .}}
+        </div>
+        <img onclick="location.href='#top'" class="go-ahead" src="/images/up.png" >
     </div>
     {{ if .Site.Params.footer }}
         {{ partial "footer.html" . }}
