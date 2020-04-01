@@ -38,7 +38,8 @@
                             <!-- <a class="page-scroll" href="#about">{{ .title }}</a> -->
                         </li>
                     {{ else }}
-                        <li id="{{.calss}}" class="{{if in $.Permalink .link}}active{{end}}">
+                        {{ $blogLink := replace $.Permalink "/tags/" "/posts/"}}
+                        <li id="{{.calss}}" class="{{if (or (in $.Permalink .link) (in $blogLink .link)) }}active{{end}}">
                           {{if .link}}
                             <a href={{.link}} target="{{.target}}" >{{.title}}</a>
                           {{else}}
