@@ -83,12 +83,6 @@ contentDir = "content/cn"
           link = "https://twitter.com/NebulaGraph"
           target = "_blank"
       [[params.footer.social.links]]
-          title = "微博"
-          pic = "weibo.png"
-          class = "icon fa fa-weibo"
-          link = "https://weibo.com/nebulagraph"
-          target = "_blank"
-      [[params.footer.social.links]]
           title = "LinkedIn"
           pic = "linkedin.png"
           class = "icon fa fa-linkedin"
@@ -107,11 +101,18 @@ contentDir = "content/cn"
           link = "https://www.facebook.com/NebulaGraph/"
           target = "_blank"
       [[params.footer.social.links]]
+          title = "微博"
+          pic = "weibo.png"
+          class = "icon fa fa-weibo"
+          link = "https://weibo.com/nebulagraph"
+          target = "_blank"
+      [[params.footer.social.links]]
           title = "微信公众号"
           class = "icon fa fa-wechat"
           pic = "gongzhonghao.png"
           id = "#myGongzhonghaoModal"
           target = "_blank"
+
     [[params.footer.community]]
       title = "社区"
       [[params.footer.community.links]]
@@ -206,16 +207,16 @@ contentDir = "content/cn"
             title = "扩容"
             link = "https://nebula-graph.io/cn/posts/nebula-graph-architecture-overview/"
             description1 = "基于shared-nothing"
-            description2 = "分布式架构"
-            description3 = "，Nebula Graph 支持线性扩容。"
+            description2 = "分布式架构，"
+            description3 = "Nebula Graph 支持线性扩容。"
 
           [[params.features.list]]
             pic = "feature6.png"
             title = "扩展性"
             link = "https://nebula-graph.io/cn/posts/nebula-graph-storage-engine-overview/"
             description1 = "Nebula Graph 支持多种类型"
-            description2 = "存储引擎"
-            description3 = "。查询语言也可以拓展支持新的算法。"
+            description2 = "存储引擎。"
+            description3 = "查询语言也可以拓展支持新的算法。"
  
           [[params.features.list]]
             pic = "feature7.png"
@@ -243,7 +244,7 @@ contentDir = "content/cn"
   [params.tags]
     title = "标签"
     all = "全部"
-
+    pic = "LabelTagIcon.png"
   [[params.links]]
     text = "去 Github 点 star"
     link = "https://github.com/vesoft-inc/nebula"
