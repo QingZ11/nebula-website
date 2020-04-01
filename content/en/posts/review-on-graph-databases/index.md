@@ -247,7 +247,11 @@ Neo4j is one of the best known graph database, and widely adopted in industry su
 
 #### Native graph processing
 
+<<<<<<< HEAD
 A graph database has native processing capabilities if it exhibits a property called [**index-free adjacency**](https://en.wikipedia.org/wiki/Graph_database). A database engine that utilizes index-free adjacency is one in which each node maintains direct reference to its adjacent nodes and each node will therefore act as a micro-index for other nearby nodes, which is much cheaper than using global indexes. It means that query times are independent of the total size of the graph, and are instead simply proportional to the amount of the graph searched.
+=======
+A graph database has native processing capabilities if it exhibits a property called [**index-free adjacency**](https://en.wikipedia.org/wiki/Graph_database)**.**<br />**<br />A database engine that utilizes index-free adjacency is one in which each node maintains direct reference to its adjacent nodes and each node will therefore act as a micro-index for other nearby nodes, which is much cheaper than using global indexes. It means that query times are independent of the total size of the graph, and are instead simply proportional to the amount of the graph searched.
+>>>>>>> upstream/master
 
 In simple word, index-lookups could be O(logN) in algorithmic complexity versus O(1) for lookup immediately from key-value relationship and traverse m steps. 
 
@@ -393,6 +397,5 @@ A graph database may have many different infrastructure implementation but they 
 [10] Netflix Content Data Management talk [https://www.slideshare.net/RoopaTangirala/polyglot-persistence-netflix-cde-meetup-90955706#86](https://www.slideshare.net/RoopaTangirala/polyglot-persistence-netflix-cde-meetup-90955706#86)
 
 [11] Harnessing the Power of Neo4j for Overhauling Legacy Systems at Adobe [https://neo4j.com/graphconnect-2018/session/overhauling-legacy-systems-adobe](https://neo4j.com/graphconnect-2018/session/overhauling-legacy-systems-adobe)
-
 
 > Johhan is currently working at Nebula Graph as Software Engineer Intern, researching and implementing large-scale graph query engine and storage engine components. As a contributor of Nebula Graph database, he aims to contribute openly available learning resources about databases, distributed systems and AI through blogs.
