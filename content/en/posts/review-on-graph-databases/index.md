@@ -137,8 +137,8 @@ The open source graph benchmarking has **billions of nodes and edge**s listed be
 
 With such a big table challenge normal SQL operation can cause huge penalty on query performances:**[4]**
 
-1. **JOIN operations.** As we see in the query language above, a huge number of JOIN operations are used to find the exact result we want. However, join-intensive query performance deteriorates as the dataset gets bigger. That is because of the spatial localization in the essence of our data which is only a small proportional under the whole dataset but the JOIN operation intent to traverse through the whole dataset which is unacceptable. <br />
-1. **Reciprocal queries cost much as you thought. **Here the cost of subordinate employees ruled by certain manager has few costs, however, if we do query reversely, such as get the manager of certain people which will introduce prohibitively high expense to the reversed one. It may not be an issue for current problem, but if we change the relationship from manager-employee to customer-products, it will make one recommendation system stay in stale.
+1. **JOIN operations.** As we see in the query language above, a huge number of JOIN operations are used to find the exact result we want. However, join-intensive query performance deteriorates as the dataset gets bigger. That is because of the spatial localization in the essence of our data which is only a small proportional under the whole dataset but the JOIN operation intent to traverse through the whole dataset which is unacceptable. 
+1. **Reciprocal queries cost much as you thought**. Here the cost of subordinate employees ruled by certain manager has few costs, however, if we do query reversely, such as get the manager of certain people which will introduce prohibitively high expense to the reversed one. It may not be an issue for current problem, but if we change the relationship from manager-employee to customer-products, it will make one recommendation system stay in stale.
 
 One unofficial benchmarking listed in here as we can see as level go up, the cost of this operation rise exponentially (based on a social network containing 1,000,000 people with approximately 50 friends for each one):**[4]**
 
@@ -166,7 +166,7 @@ It is a widely used architecture named **lookaside cache architecture**.  Here i
 
 The assumption behind the architecture is that the user consumes much more contents than they create, thus using memcached which serve just like hashtable with CRUD operations can serve as a building block and process billions of requests per second.
 
-The basic workflow is that when a web server needs data, it first request on cache and if it is not cached, it will look for SQL database, and for write requests, client will delete key in memcached which put the data in stale and then update database**.[5]** 
+The basic workflow is that when a web server needs data, it first request on cache and if it is not cached, it will look for SQL database, and for write requests, client will delete key in memcached which put the data in stale and then update database.**[5]** 
 
 However, such an architecture will introduce several fundamental problems:**[6]**
 
@@ -326,7 +326,7 @@ The usage of graph database is in digital asset management. Entities such as Ass
 
 The current stats is that there are 200 M nodes in PROD cluster, hundred queries and updates per minute, 70 asset types and test clusters with over 200 M nodes.
 
-Plus, they also adopted graph database in authorization, distrubuted tracing, and visualize the netflix infra and relations like how code gets committed to stash, built on jenkins, deployed by spinnaker.
+Plus, they also adopted graph database in authorization, distributed tracing, and visualize the netflix infra and relations like how code gets committed to stash, built on jenkins, deployed by spinnaker.
 
 ### Adobe **[11]**
 
@@ -340,7 +340,7 @@ Here people can share their creative works to millions of daily visitors.
 
 ![review08](https://user-images.githubusercontent.com/38887077/78017585-121aab80-737f-11ea-8562-fbce814b4a8f.png)
 
-Such a large legacy system was built upon Mongodb and Cassandra and due to historical design problems, there are some dauting facts need to be fixed.
+Such a large legacy system was built upon Mongodb and Cassandra and due to historical design problems, there are some daunting facts need to be fixed.
 
 Mongo has very slow reads because of data model and Cassadra either because of the fan-outs design policies and large overhead in web infrastructure. Plus, Cassandra needs babysitting by a huge number of ops team. As the original infra shown below, fan-out to feed new project message to followers needs a huge number of writes which will hamper performance tremendously:
 
@@ -375,11 +375,11 @@ A graph database may have many different infrastructure implementation but they 
 
 [1] An Overview Of Neo4j And The Property Graph Model Berkeley, CS294, Nov 2015 [https://people.eecs.berkeley.edu/~istoica/classes/cs294/15/notes/21-neo4j.pdf](https://people.eecs.berkeley.edu/~istoica/classes/cs294/15/notes/21-neo4j.pdf)
 
-[2] several original data sources from talk made by Duen Horng (Polo) Chau (Geogia tech) [www.selectscience.net](www.selectscience.net)、[www.phonedog.com](www.phonedog.com)、[www.mediabistro.com](www.mediabistro.com)、[www.practicalecommerce.com/](www.practicalecommerce.com/)
+[2] several original data sources from talk made by Duen Horng (Polo) Chau (Geogia tech) [www.selectscience.net](www.selectscience.net), [www.phonedog.com](www.phonedog.com), [www.mediabistro.com](www.mediabistro.com), [www.practicalecommerce.com/](www.practicalecommerce.com/)
 
 [3] Graphs / Networks Basics, how to build & store graphs, laws, etc. Centrality, and algorithms you should know   Duen Horng (Polo) Chau(Georgia tech)
 
-[4] Graph databases, 2nd Edition: New Oppotunities for Connected Data
+[4] Graph databases, 2nd Edition: New opportunities for Connected Data
 
 [5] R. Nishtala, H. Fugal, S. Grimm, M. Kwiatkowski, H. Lee, H. C.Li, R. McElroy, M. Paleczny, D. Peek, P. Saab, D. Stafford, T. Tung, and V. Venkataramani. Scaling Memcache at Facebook. In Proceedings of the 10th USENIX conference on Networked Systems Design and Implementation, NSDI, 2013.
 
