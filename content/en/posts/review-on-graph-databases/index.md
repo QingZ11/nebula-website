@@ -247,7 +247,7 @@ Neo4j is one of the best known graph database, and widely adopted in industry su
 
 #### Native graph processing
 
-A graph database has native processing capabilities if it exhibits a property called [**index-free adjacency**](https://en.wikipedia.org/wiki/Graph_database)**.**<br />**<br />A database engine that utilizes index-free adjacency is one in which each node maintains direct reference to its adjacent nodes and each node will therefore act as a micro-index for other nearby nodes, which is much cheaper than using global indexes. It means that query times are independent of the total size of the graph, and are instead simply proportional to the amount of the graph searched.
+A graph database has native processing capabilities if it exhibits a property called [**index-free adjacency**](https://en.wikipedia.org/wiki/Graph_database). A database engine that utilizes index-free adjacency is one in which each node maintains direct reference to its adjacent nodes and each node will therefore act as a micro-index for other nearby nodes, which is much cheaper than using global indexes. It means that query times are independent of the total size of the graph, and are instead simply proportional to the amount of the graph searched.
 
 In simple word, index-lookups could be O(logN) in algorithmic complexity versus O(1) for lookup immediately from key-value relationship and traverse m steps. 
 
@@ -370,19 +370,29 @@ Graph database have many low hanging fruits for big data era. Using graph databa
 
 A graph database may have many different infrastructure implementation but they all support graph modeling which interconnect different components with their associations. As we discussed before, such change in data modeling will be an extremely simple and straightforward solution for many daily system scenario with much faster throughput and lesser DevOps requirement.
 
-## Reference
+## References
 
-- [1] An Overview Of Neo4j And The Property Graph Model Berkeley, CS294, Nov 2015 [https://people.eecs.berkeley.edu/~istoica/classes/cs294/15/notes/21-neo4j.pdf](https://people.eecs.berkeley.edu/~istoica/classes/cs294/15/notes/21-neo4j.pdf)
-- [2] several original data sources from talk made by Duen Horng (Polo) Chau(Geogia tech )www.selectscience.net www.phonedog.com www.mediabistro.com www.practicalecommerce.com/
-- [3] Graphs / Networks Basics, how to build & store graphs, laws, etc. Centrality, and algorithms you should know   Duen Horng (Polo) Chau(Georgia tech)
-- [4] Graph databases, 2nd Edition: New Oppotunities for Connected Data
-- [5] R. Nishtala, H. Fugal, S. Grimm, M. Kwiatkowski, H. Lee, H. C.Li, R. McElroy, M. Paleczny, D. Peek, P. Saab, D. Stafford, T. Tung, and V. Venkataramani. Scaling Memcache at Facebook. In Proceedings of the 10th USENIX conference on Networked Systems Design and Implementation, NSDI, 2013.
-- [6] Nathan Bronson, Zach Amsden, George Cabrera, Prasad Chakka, Peter Dimov Hui Ding, Jack Ferris, Anthony Giardullo, Sachin Kulkarni, Harry Li, Mark Marchukov Dmitri Petrov, Lovro Puzar, Yee Jiun Song, Venkat Venkataramani  TAO: Facebook's Distributed Data Store for the Social Graph USENIX 2013
-- [7] Janus Graph Architecture [https://docs.janusgraph.org/getting-started/architecture/](https://docs.janusgraph.org/getting-started/architecture/)
-- [8] Nebula Graph Architecture — A Bird's View [https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
-- [9] database engine trending [https://db-engines.com/en/ranking_categories](https://db-engines.com/en/ranking_categories)
-- [10] Netflix Content Data Management talk [https://www.slideshare.net/RoopaTangirala/polyglot-persistence-netflix-cde-meetup-90955706#86](https://www.slideshare.net/RoopaTangirala/polyglot-persistence-netflix-cde-meetup-90955706#86)
-- [11] Harnessing the Power of Neo4j for Overhauling Legacy Systems at Adobe [https://neo4j.com/graphconnect-2018/session/overhauling-legacy-systems-adobe](https://neo4j.com/graphconnect-2018/session/overhauling-legacy-systems-adobe)
+[1] An Overview Of Neo4j And The Property Graph Model Berkeley, CS294, Nov 2015 [https://people.eecs.berkeley.edu/~istoica/classes/cs294/15/notes/21-neo4j.pdf](https://people.eecs.berkeley.edu/~istoica/classes/cs294/15/notes/21-neo4j.pdf)
+
+[2] several original data sources from talk made by Duen Horng (Polo) Chau (Geogia tech) [www.selectscience.net](www.selectscience.net)、[www.phonedog.com](www.phonedog.com)、[www.mediabistro.com](www.mediabistro.com)、[www.practicalecommerce.com/](www.practicalecommerce.com/)
+
+[3] Graphs / Networks Basics, how to build & store graphs, laws, etc. Centrality, and algorithms you should know   Duen Horng (Polo) Chau(Georgia tech)
+
+[4] Graph databases, 2nd Edition: New Oppotunities for Connected Data
+
+[5] R. Nishtala, H. Fugal, S. Grimm, M. Kwiatkowski, H. Lee, H. C.Li, R. McElroy, M. Paleczny, D. Peek, P. Saab, D. Stafford, T. Tung, and V. Venkataramani. Scaling Memcache at Facebook. In Proceedings of the 10th USENIX conference on Networked Systems Design and Implementation, NSDI, 2013.
+
+[6] Nathan Bronson, Zach Amsden, George Cabrera, Prasad Chakka, Peter Dimov Hui Ding, Jack Ferris, Anthony Giardullo, Sachin Kulkarni, Harry Li, Mark Marchukov Dmitri Petrov, Lovro Puzar, Yee Jiun Song, Venkat Venkataramani  TAO: Facebook's Distributed Data Store for the Social Graph USENIX 2013
+
+[7] Janus Graph Architecture [https://docs.janusgraph.org/getting-started/architecture/](https://docs.janusgraph.org/getting-started/architecture/)
+
+[8] Nebula Graph Architecture — A Bird's View [https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
+
+[9] database engine trending [https://db-engines.com/en/ranking_categories](https://db-engines.com/en/ranking_categories)
+
+[10] Netflix Content Data Management talk [https://www.slideshare.net/RoopaTangirala/polyglot-persistence-netflix-cde-meetup-90955706#86](https://www.slideshare.net/RoopaTangirala/polyglot-persistence-netflix-cde-meetup-90955706#86)
+
+[11] Harnessing the Power of Neo4j for Overhauling Legacy Systems at Adobe [https://neo4j.com/graphconnect-2018/session/overhauling-legacy-systems-adobe](https://neo4j.com/graphconnect-2018/session/overhauling-legacy-systems-adobe)
 
 
 > Johhan is currently working at Nebula Graph as Software Engineer Intern, researching and implementing large-scale graph query engine and storage engine components. As a contributor of Nebula Graph database, he aims to contribute openly available learning resources about databases, distributed systems and AI through blogs.
