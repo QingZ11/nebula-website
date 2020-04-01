@@ -176,10 +176,6 @@ But such self-report mechanism is inefficient and unreliable, especially there 
 Fortunately, the development of big data has facilitated the construction of the data system in security, transportation, medical departments. In the above Tianjin case, we used a few cases to demonstrate how graph database helps to locate suspicious cases and decrease the risk of infection.
 
 
-![table](https://user-images.githubusercontent.com/56643819/74228177-e5d99b80-4cfa-11ea-8b7b-0e1f43d8e79d.png)
-![news](https://user-images.githubusercontent.com/56643819/74228183-ea9e4f80-4cfa-11ea-93b8-708d6c323d6e.png)
-
-
 ## References
 
 - [News on the Tianjin case](http://www.bjd.com.cn/a/202002/03/WS5e37d067e4b002ffe994092e.html)
