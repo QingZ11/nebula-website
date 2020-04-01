@@ -247,11 +247,7 @@ Neo4j is one of the best known graph database, and widely adopted in industry su
 
 #### Native graph processing
 
-<<<<<<< HEAD
 A graph database has native processing capabilities if it exhibits a property called [**index-free adjacency**](https://en.wikipedia.org/wiki/Graph_database). A database engine that utilizes index-free adjacency is one in which each node maintains direct reference to its adjacent nodes and each node will therefore act as a micro-index for other nearby nodes, which is much cheaper than using global indexes. It means that query times are independent of the total size of the graph, and are instead simply proportional to the amount of the graph searched.
-=======
-A graph database has native processing capabilities if it exhibits a property called [**index-free adjacency**](https://en.wikipedia.org/wiki/Graph_database)**.**<br />**<br />A database engine that utilizes index-free adjacency is one in which each node maintains direct reference to its adjacent nodes and each node will therefore act as a micro-index for other nearby nodes, which is much cheaper than using global indexes. It means that query times are independent of the total size of the graph, and are instead simply proportional to the amount of the graph searched.
->>>>>>> upstream/master
 
 In simple word, index-lookups could be O(logN) in algorithmic complexity versus O(1) for lookup immediately from key-value relationship and traverse m steps. 
 
@@ -277,7 +273,8 @@ JanusGraph can use Cassandra, HBase and Berkeley DB as its storage adapter and u
 
 Broadly speaking, applications can interact with JanusGraph in two ways: 
 
-- Embed JanusGraph inside the application executing [Gremlin](https://tinkerpop.apache.org/docs/3.4.4/reference#graph-traversal-steps) queries directly against the graph within the same JVM. Query execution, JanusGraph's caches, and transaction handling all happen in the same JVM as the application while data retrieval from the storage backend may be local or remote.<br />
+- Embed JanusGraph inside the application executing [Gremlin](https://tinkerpop.apache.org/docs/3.4.4/reference#graph-traversal-steps) queries directly against the graph within the same JVM. Query execution, JanusGraph's caches, and transaction handling all happen in the same JVM as the application while data retrieval from the storage backend may be local or remote.
+
 - Interact with a local or remote JanusGraph instance by submitting Gremlin queries to the server. JanusGraph natively supports the Gremlin Server component of the [Apache TinkerPop](https://tinkerpop.apache.org/) stack.
 
 ![review05](https://user-images.githubusercontent.com/38887077/78017571-0c24ca80-737f-11ea-970e-2f579546d7fc.png)
