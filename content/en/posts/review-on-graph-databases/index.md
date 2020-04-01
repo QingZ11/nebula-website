@@ -1,5 +1,5 @@
 ---
-title: "The Review on Graph database"
+title: "The Review on Graph Database"
 date: 2020-03-31
 description: "This post will discuss the ideas and considerations behind graph databases such as their use cases, advantages and the trends behind this database model with several real-world case example."
 tags: ["graph-database","query-language"]
