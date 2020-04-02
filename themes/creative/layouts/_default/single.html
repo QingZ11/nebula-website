@@ -87,7 +87,7 @@
                 <li>
                   <img src="/images/tag.png" /> 
                   {{ range $.Params.tags }}
-                    <a href="{{"/" | relLangURL}}tags/{{.}}">{{.}}</a>
+                    <a href="{{"/" | relLangURL}}tags/{{. | urlize}}">{{. | lower}}</a>
                   {{ end }}
                 </li>
               {{ end }}
