@@ -6,7 +6,7 @@ author: "Sherman"
 tags: ["Architecture"]
 ---
 
-Nebula Graph is an [open-source](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=11&cad=rja&uact=8&ved=2ahUKEwjzv7Lz1I7oAhWIF6YKHf0GACMQFjAKegQIAxAB&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FOpen-source_software&usg=AOvVaw3nuNCAdMBWuqtIiKIk4wRU) distributed graph database solution. So as an open-source project, we'd like those who are interested in graph databases to know as much as possible how Nebula Graph is designed and why it is a highly performant database.
+Nebula Graph is an [open-source](https://en.wikipedia.org/wiki/Open-source_software) distributed graph database solution. So as an open-source project, we'd like those who are interested in graph databases to know as much as possible how Nebula Graph is designed and why it is a highly performant database.
 
 That's how this series of architecture articles have come into play. We are going to cover the following three areas in this series:
 
@@ -78,15 +78,17 @@ Each query engine takes the request from the client, parses the statement, and g
 
 Below is a flow chart of how Nebula Graph's query engine works.
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/570133/1583735687478-5fa774fc-d8a3-494d-b371-881c3be62e0f.png#align=left&display=inline&height=2456&name=image.png&originHeight=2456&originWidth=1128&size=273422&status=done&style=none&width=1128)<br />For a detailed explanation, please refer to [the introduction to the query engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/).
+![image](https://user-images.githubusercontent.com/38887077/78201029-28318480-74c3-11ea-90ed-03e9c2ca25d4.png)
+
+For a detailed explanation, please refer to [the introduction to the query engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/).
 
 ### Shared-nothing Distributed Storage Layer
 
-![Storage service diagram.png](https://cdn.nlark.com/yuque/0/2020/png/570133/1583737841037-6197825a-bab8-4e1e-8337-15a6f8fbecdd.png#align=left&display=inline&height=622&name=Storage%20service%20diagram.png&originHeight=622&originWidth=1622&size=219570&status=done&style=none&width=1622)
+![image](https://user-images.githubusercontent.com/38887077/78201059-3a132780-74c3-11ea-95a0-61249c1566a4.png)
 
-The Storage Service is designed to be a [shared-nothing distributed architecture](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=8&cad=rja&uact=8&ved=2ahUKEwiL6PP244zoAhWsKqYKHYTcAuwQFjAHegQIERAG&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FShared-nothing_architecture&usg=AOvVaw0G_g2cF507bZFtmozux0Ua). Each storage host has multiple local key/value stores as the physical data storage.
+The Storage Service is designed to be a [shared-nothing distributed architecture](https://en.wikipedia.org/wiki/Shared-nothing_architecture). Each storage host has multiple local key/value stores as the physical data storage.
 
-A quorum consensus protocol (we chose [RAFT](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiojOrR5IzoAhWqxIsBHeqHDbUQFjAAegQIARAB&url=https%3A%2F%2Fraft.github.io%2F&usg=AOvVaw0gbPkPuRwWu0Kd74PJmOzK) over paxos due to its simplicity) is built on top of the key/value stores. Together, they provide a distributed key/value store.
+A quorum consensus protocol (we chose [RAFT](https://raft.github.io/) over paxos due to its simplicity) is built on top of the key/value stores. Together, they provide a distributed key/value store.
 
 On top of this distributed key/value store, a graph semantic layer is provided to translate the graph operations into key/value operations.
 
@@ -100,6 +102,6 @@ This post aims to provide a bird's view on Nebula Graph's architecture so that y
 For detailed introduction to the major components of the system, please refer to:
 
 - [An introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
-- [An Introduction to Nebula Graph's Query Engine](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiojOrR5IzoAhWqxIsBHeqHDbUQFjAAegQIARAB&url=https%3A%2F%2Fraft.github.io%2F&usg=AOvVaw0gbPkPuRwWu0Kd74PJmOzK)
+- [An Introduction to Nebula Graph's Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)
 
 If you have anything to share about distributed systems or graph databases, please feel free to leave us a comment below. We look forward to hear from you.
