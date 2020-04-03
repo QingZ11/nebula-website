@@ -21,6 +21,7 @@ contentDir = "content/en"
   name = "Nebula Graph"
 
   # The path must be relative to the static folder
+
   favicon = "favicon.ico"
 
   blogTitle = "Nebula Graph Blog"
