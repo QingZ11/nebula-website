@@ -88,3 +88,8 @@ Data matters. And we hope this simple GitHub Stats tool can bring you the insigh
 Submit an issue if you find any valuable metric is missing in the tool. Here's the project repo again: [https://vesoft-inc.github.io/github-statistics/](https://vesoft-inc.github.io/github-statistics/)
 
 Enjoy!
+
+## You might also like
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
+1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)

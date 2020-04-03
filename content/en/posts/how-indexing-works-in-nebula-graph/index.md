@@ -307,4 +307,9 @@ YIELD lookup_tag_1.col1, lookup_tag_1.col2, lookup_tag_1.col3;
 ```
 
 
-This brings the end of the index post. Raise us an issue on [GitHub](https://github.com/vesoft-inc/nebula) or give us your feedback on our [forum](https://discuss.nebula-graph.io/) if you have any suggestions or requirements
+This brings the end of the index post. Raise us an issue on [GitHub](https://github.com/vesoft-inc/nebula) or give us your feedback on our [forum](https://discuss.nebula-graph.io/) if you have any suggestions or requirements.
+
+## You might also like
+1. [How Nebula Graph Automatically Cleans Stale Data with TTL](https://nebula-graph.io/en/posts/clean-stale-data-with-ttl-in-nebula-graph/)
+1. [Storage Balance and Data Migration](https://nebula-graph.io/en/posts/nebula-graph-storage-banlancing-data-migration/)
+1. [An Introduction to Snapshot in Nebula Graph](https://nebula-graph.io/en/posts/nebula-graph-snapshot-introduction/)

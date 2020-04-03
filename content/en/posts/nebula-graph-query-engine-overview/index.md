@@ -47,3 +47,8 @@ At the end, the final plan can look dramatically different from the original pla
 The last step in the query engine is to execute the optimized execution plan. It's done by the Execution Framework. Each executor will process one execution plan at a time. Actions in the plan will be executed one by one. The executor will do limited local optimization as well, such as deciding whether to run in parallel.
 
 Depending on the action, the executor will communicate with the Meta Service or the Storage Engine via their clients.
+
+## You might also like
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
+1. [The Review on Graph Database](https://nebula-graph.io/en/posts/review-on-graph-databases/)

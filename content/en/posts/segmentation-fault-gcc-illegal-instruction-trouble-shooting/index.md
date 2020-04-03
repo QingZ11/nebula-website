@@ -131,3 +131,7 @@ To solve the issue, you can try to override two files in the GMP source tree, i.
 - To balance compability and performance, you need to do some extra work. For example, select and bind a specific instance for gllibc when it is running.
 
 Finally, if you are interested in compiling the source code of Nebula Graph, please refer to [here]([https://github.com/vesoft-inc/nebula/blob/master/docs/manual-EN/3.build-develop-and-administration/1.build/1.build-source-code.md](https://github.com/vesoft-inc/nebula/blob/master/docs/manual-EN/3.build-develop-and-administration/1.build/1.build-source-code.md))
+
+## You might also like
+1. [Automating Your Project Processes with Github Actions](https://nebula-graph.io/en/posts/github-action-automating-project-process/)
+1. [Dev Log | How to Release jar Package to the Maven Central Repository](https://nebula-graph.io/en/posts/maven/)
