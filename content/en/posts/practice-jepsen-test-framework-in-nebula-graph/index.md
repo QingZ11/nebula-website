@@ -249,3 +249,7 @@ Currently, we are using Jepsen to test Nebula Graph on daily basis. We release t
 - [The Raft Consensus Algorithm](https://raft.github.io/)
 - Nebula Graph GitHub: [https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula)
 
+## You might also like
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
+1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)

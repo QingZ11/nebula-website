@@ -139,3 +139,8 @@ The above is my experience of using GitHub Action in daily front-end development
 Workflows free us from the tedious and repetitive jobs so that we can dedicate ourselves to development. This is the ideal situation for me as an engineer. I hope my post can help you.
 
 Welcome to try our open source graph database [Nebula Graph](https://github.com/vesoft-inc/nebula).
+
+## You might also like
+1. [Compiling Trouble Shooting: Segmentation Fault and GCC Illegal Instruction](https://nebula-graph.io/en/posts/segmentation-fault-gcc-illegal-instruction-trouble-shooting/)
+1. [Dev Log | How to Release jar Package to the Maven Central Repository](https://nebula-graph.io/en/posts/maven/)
+1. [How to Reduce Docker Image Size](https://nebula-graph.io/en/posts/how-to-reduce-docker-image-size/)

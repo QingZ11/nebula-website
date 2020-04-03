@@ -92,10 +92,7 @@ We received a lot of feedback from the commenters, positive or not, they are rea
 
 It felt so thrilling to be seen and accepted by a tech community. I hope our experience could encourage you to move forward and create something innovative to share with the community as well, especially when you think you are new. Because the community is nice.
 
-
- 
-
-
-
-
-
+## You might also like
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
+1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)

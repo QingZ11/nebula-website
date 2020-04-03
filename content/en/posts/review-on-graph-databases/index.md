@@ -396,3 +396,8 @@ A graph database may have many different infrastructure implementation but they 
 [11] Harnessing the Power of Neo4j for Overhauling Legacy Systems at Adobe [https://neo4j.com/graphconnect-2018/session/overhauling-legacy-systems-adobe](https://neo4j.com/graphconnect-2018/session/overhauling-legacy-systems-adobe)
 
 > Johhan is currently working at Nebula Graph as Software Engineer Intern, researching and implementing large-scale graph query engine and storage engine components. As a contributor of Nebula Graph database, he aims to contribute openly available learning resources about databases, distributed systems and AI through blogs.
+
+## You might also like
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
+1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)

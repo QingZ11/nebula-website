@@ -105,3 +105,7 @@ For detailed introduction to the major components of the system, please refer to
 - [An Introduction to Nebula Graph's Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)
 
 If you have anything to share about distributed systems or graph databases, please feel free to leave us a comment below. We look forward to hear from you.
+
+## You might also like
+1. [The Review on Graph Database](https://nebula-graph.io/en/posts/review-on-graph-databases/)
+1. [Graph Query Language Comparison Series - Gremlin vs Cypher vs nGQL](https://nebula-graph.io/en/posts/graph-query-language-comparison-cypher-gremlin-ngql/)

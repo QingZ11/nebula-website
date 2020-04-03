@@ -118,6 +118,10 @@ For  goals in 2020, we have the following in mind:
 
 Wish you all a happy new year!
 
+## You might also like
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
+1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)
 
 
  

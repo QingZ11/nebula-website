@@ -248,4 +248,9 @@ You must drop the TTL value first, then alter the field.
 
 Here comes to the end of the TTL introduction. Share your thought on TTL by raising us an [issue](https://github.com/vesoft-inc/nebula) or post your feedback on our official [forum](https://discuss.nebula-graph.io/).
 
+## You might also like
+1. [How Indexing Works in Nebula Graph](https://nebula-graph.io/en/posts/how-indexing-works-in-nebula-graph/)
+1. [Storage Balance and Data Migration](https://nebula-graph.io/en/posts/nebula-graph-storage-banlancing-data-migration/)
+1. [An Introduction to Snapshot in Nebula Graph](https://nebula-graph.io/en/posts/nebula-graph-snapshot-introduction/)
+
 

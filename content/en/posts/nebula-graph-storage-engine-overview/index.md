@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Nebula Graph Storage Engine"
+title: "An Introduction to Nebula Graph's Storage Engine"
 date: 2019-12-26
 description: "This article introduces to you the storage design of Nebula Graph, an open-source distributed graph database."
 author: "Heng Chen"
@@ -146,3 +146,8 @@ Graph semantics interfaces are translated into kv operations in this layer. In o
 ## Meta Service
 
 On the kv store interface, **Nebula Graph** encapsulates a set of meta-related interfaces. Meta service supports CRUD on schema, cluster management and user management. Meta service supports single-machine deployment, and multiple replicas to ensure data security.
+
+## You might also like
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)
+1. [The Review on Graph Database](https://nebula-graph.io/en/posts/review-on-graph-databases/)

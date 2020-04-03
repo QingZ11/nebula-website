@@ -240,3 +240,8 @@ Now the deletes snapshot is not in the show snapshots list.
 - The current version does not support automatic garbage collection for the failed snapshots in creation. We will develop cluster checker in meta server to check the cluster state via asynchronous threads and automatically collect the garbage files in failure snapshot creation.
 - The current version does not support customized snapshot directory. The snapshots are created in the `data_path/nebula` directory by default.
 - The current version does not support snapshot restore. Users need to write a shell script based on their actual productions to restore snapshots. The implementation logic is rather simple, you copy the snapshots of the engine servers to the specified folder, set this folder to `data_path/`, then start the cluster.
+
+## You might also like
+1. [How Nebula Graph Automatically Cleans Stale Data with TTL](https://nebula-graph.io/en/posts/clean-stale-data-with-ttl-in-nebula-graph/)
+1. [How Indexing Works in Nebula Graph](https://nebula-graph.io/en/posts/how-indexing-works-in-nebula-graph/)
+1. [Storage Balance and Data Migration](https://nebula-graph.io/en/posts/nebula-graph-storage-banlancing-data-migration/)

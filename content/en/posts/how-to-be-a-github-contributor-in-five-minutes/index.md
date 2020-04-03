@@ -144,3 +144,8 @@ The above picture shows the change log of the doc. You can add details, fix erro
 Please refer to the [Documentation Toc](https://github.com/vesoft-inc/nebula/blob/master/docs/manual-EN/README.md) to see all the **Nebula Graph** docs.
 
 Last but not least, you are welcome to try **Nebula Graph** at our [GitHub Repository](https://github.com/vesoft-inc/nebula). If you have any problems or suggestions please raise us an issue.
+
+## You might also like
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
+1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)

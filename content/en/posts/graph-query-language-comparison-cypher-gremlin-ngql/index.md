@@ -566,3 +566,7 @@ RETURN bro.name, dst.name
 ```
 
 In addition to the basic operations in the three graph query languages, we will work on another piece of comparison of advanced operations in these languages. Stay tuned!
+
+## You might also like
+1. [The Review on Graph Database](https://nebula-graph.io/en/posts/review-on-graph-databases/)
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)

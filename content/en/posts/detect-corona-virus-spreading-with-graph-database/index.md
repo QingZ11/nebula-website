@@ -180,3 +180,8 @@ Fortunately, the development of big data has facilitated the construction of th
 
 - [News on the Tianjin case](http://www.bjd.com.cn/a/202002/03/WS5e37d067e4b002ffe994092e.html)
 - [Graph DB Nebula Graph](https://github.com/vesoft-inc/nebula)
+
+## You might also like
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
+1. [The Review on Graph Database](https://nebula-graph.io/en/posts/review-on-graph-databases/)
+1. [Graph Query Language Comparison Series - Gremlin vs Cypher vs nGQL](https://nebula-graph.io/en/posts/graph-query-language-comparison-cypher-gremlin-ngql/)

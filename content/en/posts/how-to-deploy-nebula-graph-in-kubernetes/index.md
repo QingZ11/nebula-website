@@ -761,3 +761,8 @@ Please refer to the [Storage Classes](https://kubernetes.io/zh/docs/concepts/sto
 - [Helm Quickstart Guide](https://helm.sh/docs/intro/quickstart/)
 - [Traefik & Kubernetes](https://docs.traefik.io/providers/kubernetes-ingress/)
 - GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula)
+
+## You might also like
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
+1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)

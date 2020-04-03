@@ -452,3 +452,8 @@ Tips: Modification and deletion are not supported in the published releases.
 ## GitHub Repository
 
 More details on **Nebula Graph** please refer to our GitHub [Repository](https://github.com/vesoft-inc/nebula). We appreciate your issues or prs. If you like us, please give us a star.
+
+
+## You might also like
+1. [Automating Your Project Processes with Github Actions](https://nebula-graph.io/en/posts/github-action-automating-project-process/)
+1. [Compiling Trouble Shooting: Segmentation Fault and GCC Illegal Instruction](https://nebula-graph.io/en/posts/segmentation-fault-gcc-illegal-instruction-trouble-shooting/)
