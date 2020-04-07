@@ -15,7 +15,7 @@
           class="
             {{if in $.Permalink $urlKey}}
               active
-            {{ else if in $.Params.tags $urlKey}}
+            {{ else if in $.Params.tags $key }}
               active
             {{end}}
           "
