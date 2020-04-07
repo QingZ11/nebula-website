@@ -13,10 +13,14 @@
         <a
           href="{{ "/" | relLangURL}}tags/{{ $key | urlize}}"
           class="
-            {{if in $.Permalink $urlKey}}
-              active
-            {{ else if in $.Params.tags $key }}
-              active
+            {{ with $.Params.tags }}
+              {{ if in . $key }}
+                active
+              {{ end }}
+            {{ else }}
+              {{if in $.Permalink $urlKey}}
+                 active
+              {{ end }}
             {{end}}
           "
         >{{ $key }}</a>
