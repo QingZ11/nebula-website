@@ -3,7 +3,7 @@ title: "An Introduction to Nebula Graph's Storage Engine"
 date: 2019-12-26
 description: "This article introduces to you the storage design of Nebula Graph, an open-source distributed graph database."
 author: "Heng Chen"
-tags: ["Architecture"]
+tags: ["architecture"]
 ---
 
 ## Abstract

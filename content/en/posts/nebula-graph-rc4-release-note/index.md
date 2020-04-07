@@ -3,7 +3,7 @@ title: "Nebula Graph RC4 Release Note"
 date: 2020-04-02
 description: "In this release we have added new features such as indexing and enhanced access management. Check this article out for a detailed list of features and changes and steps to upgrade to RC4."
 author: "Jude"
-tags: ["Release-Notes"]
+tags: ["release-notes"]
 ---
 
 ![rc4](https://user-images.githubusercontent.com/38887077/78220212-ad349200-74f3-11ea-9f01-d056e70058b0.png)

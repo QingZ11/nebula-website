@@ -4,7 +4,7 @@ date: 2019-12-05
 tags: [ "tool" ]
 description: "This post introduces a React based tool to help you get the stats of GitHub metrics like stars, forks, commits, etc. so that you can make an informed decision which project to follow."
 author: "Jamie"
-tags: ["Tools"]
+tags: ["tools"]
 ---
 
 If you have project code hosted on GitHub, chances are you might be interested in checking some numbers and stats such as stars, commits and rull requests.
