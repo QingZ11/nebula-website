@@ -216,6 +216,6 @@ Jepsen 本身也存在一些不足，比如测试无法长时间运行，因为�
 
 ## 推荐阅读
 
-- [应用 AddressSanitizer 发现程序内存错误(https://nebula-graph.io/cn/posts/introduction-to-google-memory-detect-tool-addresssanitizer/)
+- [应用 AddressSanitizer 发现程序内存错误](https://nebula-graph.io/cn/posts/introduction-to-google-memory-detect-tool-addresssanitizer/)
 
 
