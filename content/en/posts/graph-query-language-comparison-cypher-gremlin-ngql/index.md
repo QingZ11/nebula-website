@@ -3,7 +3,7 @@ title: "Graph Query Language Comparison Series - Gremlin vs Cypher vs nGQL"
 date: 2020-03-03
 description: "Graph users have to learn different graph query languages due to the lack of international standard like SQL. This post compares the basic ops among Cypher, Gremlin, and nGQL."
 author: "Steam, Amber, Jude"
-tags: ["Graph-Database", "query-language"]
+tags: ["graph-database", "query-language"]
 ---
 
 In September 2019, [Graph Query Language](https://www.gqlstandards.org/home) is accepted as a new database query language in a vote by the International SQL Standards Committee, the unification of GQL takes time.  

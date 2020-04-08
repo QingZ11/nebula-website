@@ -238,7 +238,7 @@ contentDir = "content/en"
   # Tags
   [params.tags]
     title = "Tags"
-    all = "All"
+    all = "all"
     pic = "LabelTagIcon.png"
   [[params.links]]
     text = "Star us"

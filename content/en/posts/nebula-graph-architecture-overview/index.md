@@ -3,7 +3,7 @@ title: "Nebula Graph Architecture — A Bird’s View"
 date: 2019-12-24
 description: "Nebula Graph is an open-source, distributed, highly performant graph database. This article explains its technical architecture in detail."
 author: "Sherman"
-tags: ["Architecture"]
+tags: ["architecture"]
 ---
 
 Nebula Graph is an [open-source](https://en.wikipedia.org/wiki/Open-source_software) distributed graph database solution. So as an open-source project, we'd like those who are interested in graph databases to know as much as possible how Nebula Graph is designed and why it is a highly performant database.

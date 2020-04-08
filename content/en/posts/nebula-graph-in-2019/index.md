@@ -3,7 +3,7 @@ title: "Nebula Graph in 2019: It’s Worth the Effort"
 date: 2019-12-23
 description: "This post looks back to Nebula Graph in 2019, with the achievements we have proudly made as a one-year old baby. It also looks forward to what's ahead in the coming 2020."
 author: "Jamie"
-tags: ["Community"]
+tags: ["community"]
 ---
 
 ![2020](https://user-images.githubusercontent.com/56643819/72578182-4ea64180-3910-11ea-809e-eeb6ab537d89.png)
