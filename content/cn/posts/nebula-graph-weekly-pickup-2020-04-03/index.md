@@ -38,7 +38,7 @@ Pick of the Week 每周会从官方论坛、微博、知乎、微信群、微信
 
 - @wadeliuyi 提问
 > 为什么 index 编码的时候不用 tlv 格式把每个列都区分开来，这样前缀匹配的时候是不是效率更高？如果把长度和 type 信息直接放到 column1 的前面，这样从 RocksDB 查询的时候就可以只查到 row1 的值，为什么要把 length 放在后面呢？
-> ![手机壁纸.png](![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW201402.png)
+> ![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW201402.png)
 
 **Nebula**：之所以这样做，是因为 index 结构是基于 prefix scan 的，如果把 length 放到前边的话无法范围查询。举个例子：
 
