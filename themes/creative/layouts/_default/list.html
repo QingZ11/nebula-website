@@ -42,7 +42,7 @@
                                         <div class="tags meta">
                                             <img src="/images/tag.png" width="16px" height="16px">
                                             {{ range .Params.tags }}
-                                                <a href="{{"/" | relLangURL}}/tags/{{. | urlize}}">{{.|lower}}</a>
+                                                <a href="{{"/" | relLangURL}}/tags/{{. | urlize}}">{{.}}</a>
                                             {{ end }}
                                         </div>
                                     {{ end }}
