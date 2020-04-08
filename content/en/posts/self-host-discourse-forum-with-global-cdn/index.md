@@ -6,7 +6,7 @@ author: "George"
 tags: ["tool"]
 ---
 
-![image](https://user-images.githubusercontent.com/57335825/78754651-6d195780-79aa-11ea-9889-5a80ef550295.png)
+![How to Deploy Self-Host Discourse Forum with Global CDN](https://user-images.githubusercontent.com/57335825/78754651-6d195780-79aa-11ea-9889-5a80ef550295.png)
 
 Discourse is an open source forum software developed by Jeff Atwood, the co-founder of Stack Overflow. The application is written with Ruby on Rails. 
 
@@ -31,7 +31,8 @@ As mentioned above, Discourse provides hosting service, but we decided to self-h
 
 1. Unstable access in China
 1. Limited plugin modification
-1. Not able to customize the internet settings.
+1. Not able to customize the internet settings
+
 
 
 We have customized the internet settings and modified some plugins on the self-hosted forum so that our community members across the globe get to access it faster.
@@ -39,10 +40,10 @@ We have customized the internet settings and modified some plugins on the self-h
 ### Self-Hosting Prerequisites
 Below is a list of what's required for self-host a Discourse forum:
 
-- Linux servers with more than 2G memory, if your server memory is 1G, you need to enable the SWAP partition.
-- A domain with full control, which we will use when registering for mail and CDN services.
-- A Cloudflare account, which helps speed up your site and improve security.
-- An available SMTP mail service.
+- Linux servers with more than 2G memory, if your server memory is 1G, you need to enable the SWAP partition
+- A domain with full control, which we will use when registering for mail and CDN services
+- A Cloudflare account, which helps speed up your site and improve security
+- An available SMTP mail service
 
 ### Self Host a Discourse Forum with Cloudflare CDN
 
@@ -56,9 +57,11 @@ Compared with other CDN service providers, Cloudflare  provides  qualified servi
 
 Add DNS records first, which will reduce the possibility of being rejected by the _Let's encrypt_ certificate in your first deployment. In the Cloudflare dashboard, click the the DNS app, add Type A record and point it to the server IP.
 
-![image](https://user-images.githubusercontent.com/57335825/78754993-ff216000-79aa-11ea-992e-ce8c1047f3b5.png)
+![Add DNS records for Cloudflare](https://user-images.githubusercontent.com/57335825/78763342-9987a080-79b7-11ea-9a47-39428e0cd149.png)
+
 
 **Takeaway:**
+
 Don't set the Proxy status option as Proxied because that will result in inaccessibility due to too many redirects. Enable the Proxy status setting after all configuration is finished correctly.
 
 #### Step 2: Configure Cloudflare SSL/TLS
@@ -67,13 +70,15 @@ _**Full**_ and _**Flexible**_ are the most commonly used SSL types in Cloudflare
 
 Select mode _**Full**_ in the SSL/TLS dashboard. **_Full_** ensures a secure connection between both the visitor and your Cloudflare domain and between Cloudflare and your web server.
 
-![image](https://user-images.githubusercontent.com/57335825/78755298-7bb43e80-79ab-11ea-8bf7-8918b2590afc.png)
+![Configure Cloudflare SSL/TLS](https://user-images.githubusercontent.com/57335825/78763496-cb006c00-79b7-11ea-83e5-f7006490ca64.png)
+
 
 Then click the Origin Server tab to create a certificate. Select RSA in the Private key type. RSA is the most compatible certificate type while ECDSA has better performance.
 
 Select your forum domain in the hostname list protected by the certificate. In our case, we select discuss.nebula-graph.io. Select the certificate validity to 1 year. Click next to get your certificate public key and private key, each saved as `ssl.crt` and `ssl.key` respectively. Keep your keys properly because we will use them in the following steps.
 
-![image](https://user-images.githubusercontent.com/57335825/78755540-eb2a2e00-79ab-11ea-83a0-0086457d2d21.png)
+![Configure Cloudflare SSL/TLS - Domain](https://user-images.githubusercontent.com/57335825/78763658-03a04580-79b8-11ea-991c-30f43d53fd93.png)
+
 
 #### Step 3: Configure and deploy Discourse
 
@@ -111,7 +116,7 @@ Please be noted that if the DNS records have not been propagated to the DNS serv
 
 About 10 minutes later, you can visit your own Discourse forum via the domain set previously. If you get 502 error on the first visit, this is because the service has not been fully initialized. You just wait and retry.
 
-![image](https://user-images.githubusercontent.com/57335825/78755775-4c520180-79ac-11ea-8a7f-c7cdab5b958f.png)
+![Install Discourse](https://user-images.githubusercontent.com/57335825/78763841-3fd3a600-79b8-11ea-94ce-6a275186daf3.png)
 
 #### Step 5: Configure Discourse
 
@@ -144,6 +149,7 @@ While ensuring that you can pass the Discourse sending test, you also need to se
 One is the notification mail under the Setting-Required in the forum. You need to configure the email here the same as the SMTP login email. The other one is the disable emails, which is usually set to non-staff after forum migration and backup recovery. Set it to no to recover email sending.
 
 **Set SSL and CDN**
+
 Introduce two template files: `templates/cloudflare.template.yml` and `templates/web.ssl.template.yml` to your `app.yml` file. Log in to Cloudflare again, change the DNS record from DNS only to Proxied and wait for the validation.
 
 ```
@@ -158,6 +164,7 @@ Introduce two template files: `templates/cloudflare.template.yml` and `templates
 Put the certificate file created in step 2 in `/var/discourse/shared/standalone/ssl`.
 
 **Add new plugins (optional)**
+
 There are a large number of Discourse plugins available. Just pick the ones that are useful to you. For example, if you are reaching a global audience, then you might need a translation plugin to help people understand posts written in different languages.
 
 Configure links that can be fetched by git in the hooks field in file `app.yml`. When the Discourse Docker container is re-created, your new plugins are installed.
