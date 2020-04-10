@@ -33,7 +33,7 @@ Below is a list of features and tools in detail:
 ## Tools
 
 -  Support Deploying Nebula Graph on Kubernetes with Helm [#1473](https://github.com/vesoft-inc/nebula/pull/1473)
--  Introduce `Nebula Stats Exporter` (for Prometheus) to collect database metrics and expose metrics to Prometheus. And Grafana is integrated for metrics Visualization and Alerting**. **[https://github.com/vesoft-inc/nebula-stats-exporter/pull/2](https://github.com/vesoft-inc/nebula-stats-exporter/pull/2)
+-  Introduce `Nebula Stats Exporter` (for Prometheus) to collect database metrics and expose metrics to Prometheus. And Grafana is integrated for metrics Visualization and Alerting. [https://github.com/vesoft-inc/nebula-stats-exporter/pull/2](https://github.com/vesoft-inc/nebula-stats-exporter/pull/2)
 
 ## Changes
 
