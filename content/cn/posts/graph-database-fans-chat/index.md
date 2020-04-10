@@ -14,7 +14,7 @@ author: 吴敏
 
 在上周六的聚会中，Nebula Graph Committer 吴敏给爱好者们介绍了整体架构和特性，并随后被各位大佬~~轮番蹂躏~~（划掉）。
 
-本次分享主要介绍了 Nebula Graph 的特性，以及新上线的[《使用 Docker 构建 Nebula Graph》](https://zhuanlan.zhihu.com/p/81316517)功能。
+本次分享主要介绍了 Nebula Graph 的特性，以及新上线的[《使用 Docker 构建 Nebula Graph》](https://nebula-graph.io/cn/posts/build-nebula-graph-source-code-with-docker/)功能。
 
 下面是现场的 Topic ( 以下简称：T ) & Discussion ( 以下简称：D ) 速记：
 

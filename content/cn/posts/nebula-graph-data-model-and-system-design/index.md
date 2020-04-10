@@ -29,7 +29,7 @@ Nebula Graph 采用易理解的有向属性图来建模，也就是说，在逻�
 
 在 Nebula Graph 中边由类型和边属性构成，而 Nebula Graph 中边均是有向边，有向边表明一个顶点（ 起点 `src` ）指向另一个顶点（ 终点 `dst` ）的**关联关系**。此外，在 Nebula Graph 中我们将边类型称为 `edgetype` ，每一条边**只有一种**`edgetype` ，每种 `edgetype` 相应定义了这种边上属性的 `schema` 。
 
-回到上面的图例，图中有两种类型的边，一种为 player 指向 player 的 **like **关系，属性为** likeness **(double)；另一种为 player 指向 team 的** serve** 关系，两个属性分别为 start_year (int) 和 end_year (int)。
+回到上面的图例，图中有两种类型的边，一种为 player 指向 player 的 **like** 关系，属性为 **likeness** (double)；另一种为 player 指向 team 的 **serve** 关系，两个属性分别为 start_year (int) 和 end_year (int)。
 
 > 需要说明的是，起点1 和终点2 之间，可以同时存在多条相同或者不同类型的边。
 
@@ -85,7 +85,8 @@ MetaService 层为有状态的服务，其状态持久化方法与 Storage 层�
 ![image](https://nebula-blog.azureedge.net/nebula-blog/DataModel07.png)
 
 #### 计算层 Query Engine & Query Language(nGQL)
-计算层对应的进程是 `nebula-graphd` ，它由完全对等无状态无关联的计算节点组成，计算节点之间相互无通信。**Query Engine **层的主要功能，是解析客户端发送 nGQL 文本，通过词法解析 `Lexer` 和语法解析 `Parser` 生成执行计划，并通过优化后将执行计划交由执行引擎，执行引擎通过 MetaService 获取图点和边的 schema，并通过存储引擎层获取点和边的数据。**Query Engine** 层的主要优化有：
+
+计算层对应的进程是 `nebula-graphd` ，它由完全对等无状态无关联的计算节点组成，计算节点之间相互无通信。**Query Engine** 层的主要功能，是解析客户端发送 nGQL 文本，通过词法解析 `Lexer` 和语法解析 `Parser` 生成执行计划，并通过优化后将执行计划交由执行引擎，执行引擎通过 MetaService 获取图点和边的 schema，并通过存储引擎层获取点和边的数据。**Query Engine** 层的主要优化有：
 
 1. 异步和并发执行：由于 IO 和网络均为长时延操作，需采用异步及并发操作。此外，为避免单个长 query 影响后续 query，Query Engine 为每个 query 设置单独的资源池以保证服务质量 QoS。
 1. 计算下沉：为避免存储层将过多数据回传到计算层占用宝贵的带宽，条件过滤 `where` 等算子会随查询条件一同下发到存储层节点。
