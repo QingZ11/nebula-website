@@ -91,7 +91,7 @@ Nebula KVStore 主要采用 RocksDB 作为本地的存储引擎，对于多硬�
 ### Multi Raft Group
 
 由于 Raft 的日志不允许空洞，几乎所有的实现都会采用 Multi Raft Group 来缓解这个问题，因此 partition 的数目几乎决定了整个 Raft Group 的性能。但这也并不是说 Partition 的数目越多越好：每一个 Raft Group 内部都要存储一系列的状态信息，并且每一个 Raft Group 有自己的 WAL 文件，因此 Partition 数目太多会增加开销。此外，当 Partition 太多时， 如果负载没有足够高，batch 操作是没有意义的。比如，一个有 1w tps 的线上系统单机，它的单机 partition 的数目超过 1w，可能每个 Partition 每秒的 tps 只有 1，这样 batch 操作就失去了意义，还增加了 CPU 开销。
-实现 Multi Raft Group 的最关键之处有两点，** 第一是共享 Transport 层**，因为每一个 Raft Group 内部都需要向对应的 peer  发送消息，如果不能共享 Transport 层，连接的开销巨大；**第二是线程模型**，Mutli Raft Group 一定要共享一组线程池，否则会造成系统的线程数目过多，导致大量的 context switch 开销。
+实现 Multi Raft Group 的最关键之处有两点，**第一是共享 Transport 层**，因为每一个 Raft Group 内部都需要向对应的 peer  发送消息，如果不能共享 Transport 层，连接的开销巨大；**第二是线程模型**，Mutli Raft Group 一定要共享一组线程池，否则会造成系统的线程数目过多，导致大量的 context switch 开销。
 
 ### Batch
 

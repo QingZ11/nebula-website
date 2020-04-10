@@ -113,7 +113,7 @@ INSERT VERTEX tag_1(col_t1_1, col_t1_2, col_t1_3), tag_2(col_t2_1, col_t2_2) \
 
 #### 边的存储结构
 
-边的索引结构和点索引结构原理类似，这里不再赘述。但有一点需要说明，为了使索引 key 的唯一性成立，索引的 key 的生成借助了不少 data 中的元素，例如 VertexId、SrcVertexId、Rank 等，这也是为什么点索引中并没有 TagId 字段（边索引中也没有 EdgeType 字段），这是因为** IndexId 本身带有 VertexId 等信息可直接区分具体的 tagId 或 EdgeType**。
+边的索引结构和点索引结构原理类似，这里不再赘述。但有一点需要说明，为了使索引 key 的唯一性成立，索引的 key 的生成借助了不少 data 中的元素，例如 VertexId、SrcVertexId、Rank 等，这也是为什么点索引中并没有 TagId 字段（边索引中也没有 EdgeType 字段），这是因为 **IndexId 本身带有 VertexId 等信息可直接区分具体的 tagId 或 EdgeType**。
 
 ##### 边的 Data 结构
 
@@ -127,7 +127,7 @@ INSERT VERTEX tag_1(col_t1_1, col_t1_2, col_t1_3), tag_2(col_t2_1, col_t2_2) \
 
 ![](https://nebula-blog.azureedge.net/nebula-blog/Index09.png)
 
-Index binary 是 index 的核心字段，在 index binary 中区分定长字段和不定长字段，int、double、bool 为定长字段，string 则为不定长字段。由于** index binary 是将所有 index column 的属性值编码连接存储**，为了精确地定位不定长字段，Nebula Graph 在 index binary 末尾用 int32 记录了不定长字段的长度。
+Index binary 是 index 的核心字段，在 index binary 中区分定长字段和不定长字段，int、double、bool 为定长字段，string 则为不定长字段。由于 **index binary 是将所有 index column 的属性值编码连接存储**，为了精确地定位不定长字段，Nebula Graph 在 index binary 末尾用 int32 记录了不定长字段的长度。
 
 举个例子：
 

@@ -33,7 +33,7 @@ author: 陈恒
 
 在图数据库 Nebula Graph 中， Balance 主要用来 balance leader 和 partition，**只涉及 leader 和 partition 在机器之间转移，不会增加或者减少 leader 和 partition 的数量**。
 
-上线新机器并启动相应的 Nebula 服务后，storage 会自动向 meta 注册。Meta 会计算出一个新的 partition 分布，然后通过 **remove partition **和 **add partition** 逐步将数据从老机器搬迁到新的机器上。这个过程所对应的命令是 `BALANCE DATA` ，通常数据搬迁是个比较漫长的过程。
+上线新机器并启动相应的 Nebula 服务后，storage 会自动向 meta 注册。Meta 会计算出一个新的 partition 分布，然后通过 **remove partition** 和 **add partition** 逐步将数据从老机器搬迁到新的机器上。这个过程所对应的命令是 `BALANCE DATA` ，通常数据搬迁是个比较漫长的过程。
 
 但 BALANCE DATA 仅改变了数据和副本在机器之间的均衡分布，leader（和对应的负载） 是不会改变的，因此还需要通过命令`BALANCE LEADER`来实现负载的均衡。这个过程也是通过 meta 实现的。
 
