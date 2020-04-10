@@ -66,7 +66,7 @@
               {{ if .Params.tags }}
                   <div class="tags meta">
                       <img src="/images/tag.png" width="16px" height="16px">
-                      {{ range .Params.tags }}<a href="{{"/" | relLangURL}}/tags/{{. | urlize}}">{{. | lower }}</a>{{ end }}
+                      {{ range .Params.tags }}<a href="{{"/" | relLangURL}}/tags/{{. | urlize}}">{{.}}</a>{{ end }}
                   </div>
               {{ end }}
           </div>
@@ -77,7 +77,6 @@
               <a href="https://github.com/vesoft-inc/nebula"> https://github.com/vesoft-inc/nebula</a>
             {{ else }}
               <span>你喜欢这篇文章吗? 喜欢的话，给我们点个</span>
-              <span class="glyphicon glyphicon-star"></span>
               <span>star 吧:</span>
               <a href="https://github.com/vesoft-inc/nebula">https://github.com/vesoft-inc/nebula</a>
             {{ end }}
@@ -87,7 +86,7 @@
                 <li>
                   <img src="/images/tag.png" /> 
                   {{ range $.Params.tags }}
-                    <a href="{{"/" | relLangURL}}tags/{{. | urlize}}">{{. | lower}}</a>
+                    <a href="{{"/" | relLangURL}}tags/{{. | urlize}}">{{.}}</a>
                   {{ end }}
                 </li>
               {{ end }}

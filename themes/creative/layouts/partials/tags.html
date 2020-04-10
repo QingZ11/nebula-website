@@ -14,7 +14,7 @@
           href="{{ "/" | relLangURL}}tags/{{ $key | urlize}}"
           class="
             {{ with $.Params.tags }}
-              {{ if in . $key }}
+              {{ if in . $value.Page.Title }}
                 active
               {{ end }}
             {{ else }}
@@ -23,7 +23,7 @@
               {{ end }}
             {{end}}
           "
-        >{{ $key }}</a>
+        >{{ $value.Page.Title }}</a>
       </li>
     {{ end }}
   </ul>
