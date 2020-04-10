@@ -3,7 +3,7 @@ title: "How to Deploy Self-Hosted Discourse Forum With Global CDN"
 date: 2020-04-08
 description: "This article explains in detail how Nebula Graph self-hosts our Discourse forum with global CDN to ensure decent access speed for global users."
 author: "George"
-tags: ["tool"]
+tags: ["tools"]
 ---
 
 ![How to Deploy Self-Host Discourse Forum with Global CDN](https://user-images.githubusercontent.com/57335825/78754651-6d195780-79aa-11ea-9889-5a80ef550295.png)
