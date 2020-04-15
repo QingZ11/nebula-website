@@ -1,5 +1,5 @@
 ---
-title: "How Nebula Graph Uses Jepsen to Detect Data Consistency Issues in Raft Implementing"
+title: "How Nebula Graph Uses Jepsen to Detect Data Consistency Issues in Raft Implementation"
 date: 2020-04-14
 description: "In this post, we will explain how to verify data consistency of the distributed Nebula Graph kv stores with the Jepsen test framework."
 author: "critical27"
@@ -7,8 +7,8 @@ tags: ["dev-log","features"]
 ---
 ![How Nebula Graph Uses Jepsen to Detect Data Consistency Issues in Raft Implementing](https://user-images.githubusercontent.com/57335825/79218578-3b5d3080-7e83-11ea-9b39-82a6ecb5dffb.png)
 
-Data consistent is a global issue for all distributed systems. Nebula Graph is no execption as a distributed graph database.<br />
-Thanks to the separation between query and storage layers, Nebula Graph only exposes simple kv interfaces in the storage layer. Using RocksDB as as a backend kv library, Nebula Graph [ensures strong data consistency](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/) among multiple replicas via the Raft protocol.<br />
+Data consistency is a global issue for all distributed systems. Nebula Graph is no execption as a distributed graph database.<br />
+Thanks to the separation between query and storage layers, Nebula Graph only exposes simple kv interfaces in the storage layer. Using RocksDB as a backend kv library, Nebula Graph [ensures strong data consistency](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/) among multiple replicas via the Raft protocol.<br />
 Although Raft is easier to understand than Paxos, implenting the protocol in a distributed system is another story which requires patience and practice.<br />
 In addition to the data consistency issue, how to test a Raft-based distributed system is a disturbing problem too. Currently, Nebula Graph verifies data consistency with Jepsen. In our previous post [Practice Jepsen Test Framework in Nebula Graph](https://nebula-graph.io/en/posts/practice-jepsen-test-framework-in-nebula-graph/), we have introduced in detail how Jepsen test framework works, you may take a look at it to gain some basic understanding about Jepsen.<br />
 In this post, we will explain how to verify data consistency of the distributed Nebula Graph kv stores.<br />
