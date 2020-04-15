@@ -134,7 +134,7 @@ runner 就是执行配置工作流的环境，是由 GitHub 免费提供给用�
 
 - Nebula Graph：一个开源的分布式图数据库
 - GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula)
-- 官方论坛：[https://discuss.nebula-graph.io](https://discuss.nebula-graph.io)
+- 官方论坛：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/)
 - 知乎：[zhihu.com/org/nebulagraph/posts](https://www.zhihu.com/org/nebulagraph/posts)
 - 微博：[weibo.com/nebulagraph](https://weibo.com/nebulagraph)
 

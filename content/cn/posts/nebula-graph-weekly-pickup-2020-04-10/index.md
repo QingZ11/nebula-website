@@ -22,9 +22,9 @@ Nebula Graph Studio 是一款可视化的图数据库 Web 应用，集构图、�
 
 ![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW201501.png)
 
-- [你在使用什么图查询语言](https://discuss.nebula-graph.io/t/topic/433)
+- [你在使用什么图查询语言](https://discuss.nebula-graph.com.cn/t/topic/433)
 
-在本周的 Nebula Graph 论坛有个主题贴：你所使用的图查询语言是什么？目前来看 Cypher 领先 Gremlin，如果你想给 Gremlin 投一票或者站队 Cypher 可以前往：[https://discuss.nebula-graph.io/t/topic/433](https://discuss.nebula-graph.io/t/topic/433) 给你使用的图查询语言投个票~
+在本周的 Nebula Graph 论坛有个主题贴：你所使用的图查询语言是什么？目前来看 Cypher 领先 Gremlin，如果你想给 Gremlin 投一票或者站队 Cypher 可以前往：[https://discuss.nebula-graph.com.cn/t/topic/433](https://discuss.nebula-graph.com.cn/t/topic/433) 给你使用的图查询语言投个票~
 
 ![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW201502.png)
 
@@ -75,7 +75,7 @@ Pick of the Week 每周会从官方论坛、微博、知乎、微信群、微信
   - [Pick of the Week'20 | 第 13 周看点--GitHub上的 defect-p2 标签](https://nebula-graph.io/cn/posts/nebula-graph-weekly-pickup-2020-03-27/)
   - [Pick of the Week'20 | 第 12 周看点--csv 数据导入你该知道的事项](https://nebula-graph.io/cn/posts/nebula-graph-weekly-pickup-2020-03-20/)
 
-本期 Pick of the Week 就此完毕，如果你对本周看点或 Nebula Graph 有任何建议，欢迎前去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) 或者官方论坛：[https://discuss.nebula-graph.io/](https://discuss.nebula-graph.io/) 向我们提出。若你想加入图数据库交流群，请添加 Nebula 小助手微信：NebulaGraphbot 
+本期 Pick of the Week 就此完毕，如果你对本周看点或 Nebula Graph 有任何建议，欢迎前去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) 或者官方论坛：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/) 向我们提出。若你想加入图数据库交流群，请添加 Nebula 小助手微信：NebulaGraphbot 
 
 ## 星云·小剧场
 

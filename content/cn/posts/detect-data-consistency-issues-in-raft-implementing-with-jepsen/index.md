@@ -70,7 +70,7 @@ Nebula Graph 是一个高性能、高可用、强一致的分布式图数据库�
 
 对于一个分布式系统，很多问题需要长时间的压力测试和故障模拟才能发现，通过 Jepsen 能够在不同注入故障的情况下验证分布式系统。之后我们也会考虑采用其他混沌工程工具来验证 Nebula Graph，在保证数据高可靠的前提下不断提高性能。
 
-本文中如有错误或疏漏欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：https://discuss.nebula-graph.io/ 的 `Feedback` 分类下提建议 👏；加入 Nebula Graph 交流群，请联系 Nebula Graph 官方小助手微信号：[NebulaGraphbot](https://nebula-blog.azureedge.net/nebula-blog/nbot.png)
+本文中如有错误或疏漏欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：https://discuss.nebula-graph.com.cn/ 的 `建议反馈` 分类下提建议 👏；加入 Nebula Graph 交流群，请联系 Nebula Graph 官方小助手微信号：[NebulaGraphbot](https://nebula-blog.azureedge.net/nebula-blog/nbot.png)
 
 ## 推荐阅读
 

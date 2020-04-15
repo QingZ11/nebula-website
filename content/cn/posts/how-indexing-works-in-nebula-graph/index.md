@@ -214,7 +214,7 @@ lookup on tag where tag.col1 > 1 and tag.col2 == 1
 
 ## 实操一下图数据库 Nebula Graph 索引
 
-在这部分我们就不具体讲解某个语句的用途是什么了，如果你对语句不清楚的话可以去图数据库 Nebula Graph 的官方论坛进行提问：[https://discuss.nebula-graph.io/](https://discuss.nebula-graph.io/)
+在这部分我们就不具体讲解某个语句的用途是什么了，如果你对语句不清楚的话可以去图数据库 Nebula Graph 的官方论坛进行提问：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/)
 
 ### CREATE——索引的创建
 
@@ -288,7 +288,7 @@ Got 1 rows (Time spent: 3.679/4.657 ms)
 Thu Feb 20 12:50:36 2020
 ```
 
-索引的介绍就到此为止了，如果你对图数据库 Nebula Graph 的索引有更多的功能要求或者建议反馈，欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：[https://discuss.nebula-graph.io/](https://discuss.nebula-graph.io/) 的 `Feedback`  分类下提建议 👏
+索引的介绍就到此为止了，如果你对图数据库 Nebula Graph 的索引有更多的功能要求或者建议反馈，欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/) 的 `建议反馈`  分类下提建议 👏
 
 ## 推荐阅读
 
