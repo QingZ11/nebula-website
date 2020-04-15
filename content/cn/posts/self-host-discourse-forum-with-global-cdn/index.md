@@ -8,7 +8,7 @@ author: George
 
 ![image](https://nebula-blog.azureedge.net/nebula-blog/cdn01.png)
 
-### Discourse 介绍
+## Discourse 介绍
 
 Discourse 是一款由 Stack Overflow 的联合创始人——Jeff Atwood，基于 Ruby on Rails 开发的开源论坛。相较于传统论坛，Discourse 从他全面开放的开源态度、简介明了的页面风格到其特有的内容运作体系都在证明自己是一款为下一个 10 年的互联网而设计的产品。现在，诸如 Car Talk 等国外知名产品都采用 Discourse 为论坛方案。
 

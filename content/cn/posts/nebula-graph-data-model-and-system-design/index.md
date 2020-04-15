@@ -10,13 +10,13 @@ author: 吴敏
 
 本篇主要介绍 Nebula Graph 的数据模型和系统架构设计。
 
-### 有向属性图 DirectedPropertyGraph
+## 有向属性图 DirectedPropertyGraph
 
 Nebula Graph 采用易理解的有向属性图来建模，也就是说，在逻辑上，图由两种图元素构成：顶点和边。
 
 ![image](https://nebula-blog.azureedge.net/nebula-blog/DataModel01.png)
 
-#### 顶点 Vertex
+### 顶点 Vertex
 
 在 Nebula Graph 中顶点由标签 `tag` 和对应 `tag` 的属性组构成， `tag` 代表顶点的类型，属性组代表 `tag` 拥有的一种或多种属性。一个顶点必须至少有一种类型，即标签，也可以有多种类型。每种标签有一组相对应的属性，我们称之为 `schema` 。
 
@@ -25,7 +25,7 @@ Nebula Graph 采用易理解的有向属性图来建模，也就是说，在逻�
 和 Mysql 一样，Nebula Graph 是一种强 schema 的数据库，属性的名称和数据类型都是在数据写入前确定的。
 
 
-#### 边 Edge
+### 边 Edge
 
 在 Nebula Graph 中边由类型和边属性构成，而 Nebula Graph 中边均是有向边，有向边表明一个顶点（ 起点 `src` ）指向另一个顶点（ 终点 `dst` ）的**关联关系**。此外，在 Nebula Graph 中我们将边类型称为 `edgetype` ，每一条边**只有一种**`edgetype` ，每种 `edgetype` 相应定义了这种边上属性的 `schema` 。
 
@@ -33,13 +33,13 @@ Nebula Graph 采用易理解的有向属性图来建模，也就是说，在逻�
 
 > 需要说明的是，起点1 和终点2 之间，可以同时存在多条相同或者不同类型的边。
 
-### 图分割 GraphPartition
+## 图分割 GraphPartition
 
 由于超大规模关系网络的节点数量高达百亿到千亿，而边的数量更会高达万亿，即使仅存储点和边两者也远大于一般服务器的容量。因此需要有方法将图元素切割，并存储在不同逻辑分片 `partition` 上。Nebula Graph 采用边分割的方式，默认的分片策略为**哈希散列**，partition 数量为静态设置并不可更改。
 
 ![image](https://nebula-blog.azureedge.net/nebula-blog/DataModel02.png)
 
-### 数据模型 DataModel
+## 数据模型 DataModel
 
 在 Nebula Graph 中，每个顶点被建模为一个 `key-value` ，根据其 vertexID（或简称 vid）哈希散列后，存储到对应的 partition 上。
 
@@ -51,13 +51,13 @@ Nebula Graph 采用易理解的有向属性图来建模，也就是说，在逻�
 
 关于数据模型的详细设计会在后续的系列文章中介绍。
 
-### 系统架构 Architecture
+## 系统架构 Architecture
 
 Nebula Graph 包括四个主要的功能模块，分别是**存储层**、**元数据服务**、**计算层**和**客户端**。
 
 ![image](https://nebula-blog.azureedge.net/nebula-blog/DataModel05.png)
 
-#### 存储层 Storage
+### 存储层 Storage
 
 在 Nebula Graph 中存储层对应进程是 `nebula-storaged` ，其核心为基于 Raft（用来管理日志复制的一致性算法） 协议的分布式 `Key-valueStorage` 。目前支持的主要存储引擎为「Rocksdb」和「HBase」。Raft 协议通过 `leader/follower` 的方式，来保持数据之间的一致性。Nebula Storage 主要增加了以下功能和优化：
 
@@ -68,7 +68,7 @@ Nebula Graph 包括四个主要的功能模块，分别是**存储层**、**元�
 
 ![image](https://nebula-blog.azureedge.net/nebula-blog/DataModel06.png)
 
-#### 元数据服务层 Metaservice
+### 元数据服务层 Metaservice
 
 Metaservice 对应的进程是 `nebula-metad` ，其主要的功能有：
 
@@ -84,7 +84,7 @@ MetaService 层为有状态的服务，其状态持久化方法与 Storage 层�
 
 ![image](https://nebula-blog.azureedge.net/nebula-blog/DataModel07.png)
 
-#### 计算层 Query Engine & Query Language(nGQL)
+### 计算层 Query Engine & Query Language(nGQL)
 
 计算层对应的进程是 `nebula-graphd` ，它由完全对等无状态无关联的计算节点组成，计算节点之间相互无通信。**Query Engine** 层的主要功能，是解析客户端发送 nGQL 文本，通过词法解析 `Lexer` 和语法解析 `Parser` 生成执行计划，并通过优化后将执行计划交由执行引擎，执行引擎通过 MetaService 获取图点和边的 schema，并通过存储引擎层获取点和边的数据。**Query Engine** 层的主要优化有：
 
@@ -94,7 +94,7 @@ MetaService 层为有状态的服务，其状态持久化方法与 Storage 层�
 
 ![image](https://nebula-blog.azureedge.net/nebula-blog/DataModel08.png)
 
-#### 客户端 API & Console
+### 客户端 API & Console
 
 Nebula Graph 提供 C++、Java、Golang 三种语言的客户端，与服务器之间的通信方式为 RPC，采用的通信协议为 Facebook-Thrift。用户也可通过 Linux 上 console 实现对 Nebula Graph 操作。Web 访问方式目前在开发过程中。
 
