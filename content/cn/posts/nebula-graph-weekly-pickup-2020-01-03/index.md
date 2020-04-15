@@ -12,7 +12,7 @@ author: 清蒸
 
 这是 2020 年第 1 个工作周的周五，🌝 美好的 2020 （2020 = 1024 + 996 & 2020 = 404 + 404 + 404 + 404 + 404）从这周开始。来和 Nebula 看下本周图数据库和 Nebula 有什么新看点~~
 
-### 本周大事件
+## 本周大事件
 
 - [Nebula Graph 嘉年华活动回顾【视频实录】](https://space.bilibili.com/472621355/channel/detail?cid=96904)
 
@@ -30,7 +30,7 @@ Nebula Graph 第一次参加“打榜”暂列图数据库表单第 28 名，整
 
 ![](https://nebula-blog.azureedge.net/nebula-blog/PotW200101.png)
 
-### Nebula 产品动态
+## Nebula 产品动态
 Pick of the Week 每周会从 GitHub issue 及 pr 中选取重要的产品动态和大家分享，欢迎阅读本文的你关注我们的 GitHub：[https://github.com/vesoft-inc/nebula](https://0x7.me/zhihu2github) 及时了解产品新动态~
 
 - 极大的简化了编译流程，支持 2.6.32 以上内核的绝大部分 Linux 系统，比如：CentOS 6/7/8、Debian 7/8/9 和 Ubuntu 16.04/18.04/19.04，标签： `编译`  ，pr 参见链接： [https://github.com/vesoft-inc/nebula/pull/1332](https://github.com/vesoft-inc/nebula/pull/1332)
@@ -41,7 +41,7 @@ Pick of the Week 每周会从 GitHub issue 及 pr 中选取重要的产品动态
 - 配置支持更改 heartbeat_interval_secs，Meta 客户端上报心跳的时间间隔，标签： `配置` ，pr 参见链接： [https://github.com/vesoft-inc/nebula/pull/1540](https://github.com/vesoft-inc/nebula/pull/1540)
 - 支持通过 curl http://ip:port/status 获取 git_info_sha，binary 包的 commitID，标签： `FAQ` ，pr 参见链接： [https://github.com/vesoft-inc/nebula/pull/1573](https://github.com/vesoft-inc/nebula/pull/1573)
 
-### 社区问答
+## 社区问答
 
 Pick of the Week 每周会从微博、知乎、微信群、微信公众号及 CSDN 等技术社区选取 3 - 5 个用户问题同你分享，欢迎阅读本文的你通过知乎、微信公众号后台或者添加 Nebula 小助手微信号：NebulaGraphbot 进群交流。
 
@@ -65,7 +65,7 @@ Nebula：有不同语言的客户端，可以在代码里调用，一月份我�
 
 本期 Pick of the Week 就此完毕，如果你对本周看点有任何建议，欢迎在本文或者公众号后台及添加 Nebula 小助手微信号加群：NebulaGraphbot 
 
-### 星云·小剧场
+## 星云·小剧场
 **为什么给图数据库取名 Nebula ？**
 
 Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云小姐姐。对了，Nebula的发音是：[ˈnɛbjələ]
