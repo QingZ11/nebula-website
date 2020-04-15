@@ -243,7 +243,7 @@ Execution succeeded (Time spent: 5.945/7.492 ms)
 
 edge 同 tag 的逻辑一样，这里就不在详述了。
 
-TTL 的介绍就到此为止了，如果你对图数据库 Nebula Graph 的 TTL 有改进想法或其他要求，欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：[https://discuss.nebula-graph.io/](https://discuss.nebula-graph.io/) 的 `Feedback`  分类下提建议 👏
+TTL 的介绍就到此为止了，如果你对图数据库 Nebula Graph 的 TTL 有改进想法或其他要求，欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/) 的 `建议反馈`  分类下提建议 👏
 
 > 作者有话说：Hi，我是 panda sheep，是图数据库 Nebula Graph 研发工程师，对数据库领域非常感兴趣，也有自己的一点点心得，希望写的经验分享能给大家带来帮助，如有不当之处也希望能帮忙纠正，谢谢~
 

@@ -44,7 +44,7 @@ contentDir = "content/cn"
     # 	title = "Customers"
     [[params.navigation.links]]
       title = "论坛"
-      link = "https://discuss.nebula-graph.io/"
+      link = "https://discuss.nebula-graph.com.cn/"
       target = "_blank"
     [[params.navigation.links]]
       title = "联系我们"
@@ -124,7 +124,7 @@ contentDir = "content/cn"
       [[params.footer.community.links]]
           title = "论坛"
           pic = "forum.png"
-          link = "https://discuss.nebula-graph.io/"
+          link = "https://discuss.nebula-graph.com.cn/"
           target = "_blank"
       [[params.footer.community.links]]
           title = "Slack"
@@ -180,7 +180,7 @@ contentDir = "content/cn"
           [[params.features.list]]
             pic = "feature1.png"
             title = "开源"
-            link = "https://discuss.nebula-graph.io/"
+            link = "https://discuss.nebula-graph.com.cn/"
             description1 = "我们致力于与"
             description2 = "社区合作"
             description3 = "普及及促进图数据库的发展。"

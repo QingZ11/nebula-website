@@ -16,7 +16,7 @@ author: 清蒸
 
 - 2020 H1 RoadMap
 
-图数据库 Nebula Graph 2020 上半年 Roadmap 发布，现已同步到官方论坛 `Announcements` 板块。
+图数据库 Nebula Graph 2020 上半年 Roadmap 发布，现已同步到官方论坛 `公告` 板块。
 
 ![](https://nebula-blog.azureedge.net/nebula-blog/PotW200901.png)
 
@@ -24,7 +24,7 @@ author: 清蒸
 
 两周前的 Pick of the Week（简称 PotW）我们宣布 Nebula Graph 论坛上线，经过 2 周的公测之后我们正式上线了，在论坛默认页、分类等方面做了优化。
 
-此外，Nebula Graph 论坛在正式上线之后 7*24 有专门的 Dev 来第一时间解答你的提问，如果你有使用方面的问题，欢迎去 `Users` 分类下向我们的 Dev 们提问，在 `Announcements` 下你可以看最新的产品动态及 Roadmap，在 `Blog` 分类下可以读到我们 Dev 最新力作，Enjoy it~ Link：[https://discuss.nebula-graph.io/](https://discuss.nebula-graph.io/)
+此外，Nebula Graph 论坛在正式上线之后 7*24 有专门的 Dev 来第一时间解答你的提问，如果你有使用方面的问题，欢迎去 `用户问答` 分类下向我们的 Dev 们提问，在 `公告` 下你可以看最新的产品动态及 Roadmap，在 `博客` 分类下可以读到我们 Dev 最新力作，Enjoy it~ Link：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/)
 
 ![](https://nebula-blog.azureedge.net/nebula-blog/PotW200902.png)
 

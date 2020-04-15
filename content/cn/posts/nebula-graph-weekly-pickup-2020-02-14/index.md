@@ -14,7 +14,7 @@ author: 清蒸
 
 ## 本周大事件
 
-- [Nebula 论坛上线](https://discuss.nebula-graph.io/)
+- [Nebula 论坛上线](https://discuss.nebula-graph.com.cn/)
 
 ![](https://nebula-blog.azureedge.net/nebula-blog/PotW200701.png)
 

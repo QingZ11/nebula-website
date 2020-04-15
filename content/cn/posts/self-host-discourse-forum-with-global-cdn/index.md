@@ -61,7 +61,7 @@ Full 和 Flexible 是 Cloudflare 上最常用的两种 SSL 模式，在�
 
 然后进入 Origin Server 标签，进行创建证书的操作，在私钥类型中选择 RSA，BTW，这是最具兼容性的证书类型，ECDSA 则具有更好的性能。
 
-在被证书保护的域名列表中输入论坛的域名，例如 Nebula Graph 论坛地址为：[discuss.nebula-graph.io](discuss.nebula-graph.io)，证书有效期选择 1 年即可。点击 Next 后将会获取到证书的公钥和私钥，分别保存为“ssl.crt”和“ssl.key”将其妥善保存，我们将在后续的步骤中用到他们。
+在被证书保护的域名列表中输入论坛的域名，例如 Nebula Graph 论坛地址为：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/)，证书有效期选择 1 年即可。点击 Next 后将会获取到证书的公钥和私钥，分别保存为“ssl.crt”和“ssl.key”将其妥善保存，我们将在后续的步骤中用到他们。
 
 ![image](https://nebula-blog.azureedge.net/nebula-blog/cdn04.png)
 
@@ -104,7 +104,7 @@ Let's Encrypt account email? (ENTER to skip) [me@example.com]: [自动更新证�
 
 ##### 论坛启动
 
-大约等待 10 分钟后，可通过之前设定的域名：[discuss.nebula-graph.io](https://www.yuque.com/nebulagraph/ngnb/discuss.nebula-graph.io) 访问自己的 Discourse 论坛。如果首次访问时出现了 502 错误，这是由于服务还未完全初始化，通常情况下稍等片刻即可。 
+大约等待 10 分钟后，可通过之前设定的域名：[https://discuss.nebula-graph.com.cn/](https://www.yuque.com/nebulagraph/ngnb/discuss.nebula-graph.com.cn/) 访问自己的 Discourse 论坛。如果首次访问时出现了 502 错误，这是由于服务还未完全初始化，通常情况下稍等片刻即可。 
 
 ![image](https://nebula-blog.azureedge.net/nebula-blog/cdn05.png)
 
@@ -185,7 +185,7 @@ hooks:
 
 ## 结语
 
-以上是我们为 Nebula Graph 部署 Discourse 论坛服务的一点小小的心得，本文中如有错误或疏漏还请多指教。最后，欢迎大家前往 [discuss.nebula-graph.io](discuss.nebula-graph.io) 参与图数据库及开源的讨论~
+以上是我们为 Nebula Graph 部署 Discourse 论坛服务的一点小小的心得，本文中如有错误或疏漏还请多指教。最后，欢迎大家前往 [https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/) 参与图数据库及开源的讨论~
 
 > 作者有话说：Hi，我是 George，是 Nebula Graph 的实施工程师，在运维领域有一些心得体会，希望能为图数据库领域带来一些自己的贡献。希望本文对你有所帮助，如果有错误或不足也请与我交流，不甚感激！
 

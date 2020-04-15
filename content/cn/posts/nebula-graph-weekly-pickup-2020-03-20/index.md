@@ -16,7 +16,7 @@ author: 清蒸
 
 - Nebula csv 数据导入（go-importer) 你该知道的事项 
 
-Nebula Graph 根据社区用户在数据导入这块遇到的问题，整理了一份数据导入 Tips 清单以便其他社区用户导入的时候使用，可有效防止踩坑 👏。论坛帖子地址：[https://discuss.nebula-graph.io/t/nebula-csv-go-importer/361](https://discuss.nebula-graph.io/t/nebula-csv-go-importer/361)
+Nebula Graph 根据社区用户在数据导入这块遇到的问题，整理了一份数据导入 Tips 清单以便其他社区用户导入的时候使用，可有效防止踩坑 👏。论坛帖子地址：[https://discuss.nebula-graph.com.cn/t/nebula-csv-go-importer/361](https://discuss.nebula-graph.com.cn/t/nebula-csv-go-importer/361)
 
 ![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW201201.png)
 
@@ -62,7 +62,7 @@ Pick of the Week 每周会从官方论坛、微博、知乎、微信群、微信
   - [Pick of the Week'20 | 第 10 周看点--HN 热烈讨论的图查询语言](https://nebula-graph.io/cn/posts/nebula-graph-weekly-pickup-2020-03-06/)
   - [Pick of the Week'20 | 第 9 周看点--2020 H1 RoadMap 发布](https://nebula-graph.io/cn/posts/nebula-graph-weekly-pickup-2020-02-28/)
 
-本期 Pick of the Week 就此完毕，如果你对本周看点或 Nebula Graph 有任何建议，欢迎前去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) 或者官方论坛：[https://discuss.nebula-graph.io/](https://discuss.nebula-graph.io/) 向我们提出。若你想加入图数据库交流群，请添加 Nebula 小助手微信：NebulaGraphbot 
+本期 Pick of the Week 就此完毕，如果你对本周看点或 Nebula Graph 有任何建议，欢迎前去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) 或者官方论坛：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/) 向我们提出。若你想加入图数据库交流群，请添加 Nebula 小助手微信：NebulaGraphbot 
 
 ## 星云·小剧场
 
