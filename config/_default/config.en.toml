@@ -249,7 +249,7 @@ contentDir = "content/en"
   [[params.links]]
     text = "Subscribe RSS"
     link = "https://nebula-graph.io/en/posts/index.xml"
-    image = "/images/rss.png"
+    image = "/images/rss1.png"
     onclick = "gtag('event', 'Link Click', { event_category: 'Engagement', event_label: 'RSS on sidebar'})"
   [params.share]
     title = "Share"
