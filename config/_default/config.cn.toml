@@ -70,7 +70,7 @@ contentDir = "content/cn"
     slogan     = "一个可靠的分布式、线性扩容、性能高效的图数据库"
     subtitle   = "世界上唯一能够容纳千亿个顶点和万亿条边，并提供毫秒级查询延时的图数据库解决方案"
     buttonText = "开始尝试"
-    downloadText = "下载"
+    downloadText = "前往 GitHub"
 
   # Footer section
   [params.footer]

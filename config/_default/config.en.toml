@@ -73,7 +73,7 @@ contentDir = "content/en"
     slogan     = "A distributed, scalable, lightning-fast graph database"
     subtitle   = "Nebula Graph is an open-source graph database capable of hosting super large scale graphs with dozens of billions of vertices (nodes) and trillions of edges, with milliseconds of latency."
     buttonText = "Get Started"
-    downloadText = "DOWNLOAD"
+    downloadText = "VIEW ON GITHUB"
     class = "download"
 
   # Footer section
