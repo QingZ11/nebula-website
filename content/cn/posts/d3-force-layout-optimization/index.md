@@ -146,5 +146,6 @@ export function setLinkNumbers(group) {
 
 最后，你可以通过访问图数据库 Nebula Graph Studio：[Nebula-Graph-Studio](https://github.com/vesoft-inc/nebula-web-docker)，体验下 D3.js 是如何呈现关系的。本文中如有任何错误或疏漏欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/) 的 `建议反馈` 分类下提建议 👏；加入 Nebula Graph 交流群，请联系 Nebula Graph 官方小助手微信号：[NebulaGraphbot](https://nebula-blog.azureedge.net/nebula-blog/nbot.png)
 
+
 > 作者有话说：Hi，我是 Nico，是 Nebula Graph 的前端工程师，对数据可视化比较感兴趣，分享一些自己的实践心得，希望这次分享能给大家带来帮助，如有不当之处，欢迎帮忙纠正，谢谢~
 
