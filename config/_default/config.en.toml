@@ -75,6 +75,7 @@ contentDir = "content/en"
     buttonText = "Get Started"
     downloadText = "VIEW ON GITHUB"
     class = "download"
+    link = "https://docs.nebula-graph.io/manual-EN/1.overview/2.quick-start/1.get-started/#batch-inserting"
 
   # Footer section
   [params.footer]
