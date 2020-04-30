@@ -144,7 +144,7 @@ export function setLinkNumbers(group) {
 
 好了，以上便是笔者使用 D3.js 力导向图实现关系网的优化思路和方法。其实要构建一个复杂的关系网，需要考虑的问题很多，需要优化的地方也很多，今天给大家分享两个最容易遇到的新节点呈现、多边处理问题，后续我们会继续产出 D3.js 优化系列文，欢迎订阅 Nebula Graph 博客。
 
-最后，你可以通过访问图数据库 Nebula Graph Studio：[Nebula-Graph-Studio](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fvesoft-inc%2Fnebula-web-docker)，体验下 D3.js 是如何呈现关系的。本文中如有任何错误或疏漏欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://0x7.me/zhihu2github) issue 区向我们提 issue 或者前往官方论坛：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/) 的 `建议反馈` 分类下提建议 👏；加入 Nebula Graph 交流群，请联系 Nebula Graph 官方小助手微信号：[NebulaGraphbot](https://nebula-blog.azureedge.net/nebula-blog/nbot.png)
+最后，你可以通过访问图数据库 Nebula Graph Studio：[Nebula-Graph-Studio](https://github.com/vesoft-inc/nebula-web-docker)，体验下 D3.js 是如何呈现关系的。本文中如有任何错误或疏漏欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/) 的 `建议反馈` 分类下提建议 👏；加入 Nebula Graph 交流群，请联系 Nebula Graph 官方小助手微信号：[NebulaGraphbot](https://nebula-blog.azureedge.net/nebula-blog/nbot.png)
 
 > 作者有话说：Hi，我是 Nico，是 Nebula Graph 的前端工程师，对数据可视化比较感兴趣，分享一些自己的实践心得，希望这次分享能给大家带来帮助，如有不当之处，欢迎帮忙纠正，谢谢~
 
