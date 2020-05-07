@@ -12,7 +12,7 @@ tags: ["features", "dev-log"]
 
 [D3.js](https://d3js.org/) is an open-source JavaScript library for producing dynamic, interactive data visualizations in web browsers using SVG, HTML and CSS.
 
-In addition to D3, there are  other popular and powerful libraries such as [ECharts](https://echarts.apache.org/examples/zh/index.html) and [Chart.js](http://chartjs.cn/). However, they are **highly encapsulated, **leaving too little room for customization.
+In addition to D3, there are  other popular and powerful libraries such as [ECharts](https://echarts.apache.org/examples/zh/index.html) and [Chart.js](http://chartjs.cn/). However, they are **highly encapsulated**,leaving too little room for customization.
 
 In the contrary, D3 is highly customizable thanks to its support for **event handling for SVG elements**. It can bind arbitrary data to the document object model (DOM) or directly operate [W3C DOM API](https://www.w3.org/DOM/DOMTR) on the DOM.
 
@@ -53,7 +53,6 @@ The code above generates a graph as below:
 
 ![force-directed graph in Nebula Graph Studio](https://user-images.githubusercontent.com/57335825/81265424-a8747800-9075-11ea-88fe-3f7a21de77d0.png)
 
-
 ### Graph Exploration Layout Optimization
 
 The graph above displays only one-hop relationships from the starting nodes. How about two- or three-hop relationships? The answer is the D3.js [enter()](https://www.d3indepth.com/enterexit/#enter) API.
@@ -71,7 +70,7 @@ There are two problems in the above process:
 1. Adding a new node would result in the entire graph's constant moving
 1. It takes a relatively long time to be stable
 
-However, this is how the the enter() API is designed. 
+However, this is how the the enter() API is designed.
 
 One solution is to process  new nodes and the existing ones separately, which means each node rendering requires traverse to determine whether it's new or existing. Not a performant solution, especially when the quantity is large.
 
@@ -94,11 +93,12 @@ addVertexes.map(d => {
 If there's no source node, then the new node appears at the center of the graph. This will pose less effect on the existing nodes thus is worth considering.
 
 ### Layout Optimization of Multiple Edges Display Between Two Nodes
+
 When there are multiple edges between two nodes, the following problems occur:
 
 1. The default straight line will overwrite each other. Therefore,  curve is a better choice under such circumstances.
 1. How to define the curvature of the curve to ensure there are no overwritten?
-1. When you have multiple curves, how to make sure the average semi-circular arc is not on a certain semi-circular? 
+1. When you have multiple curves, how to make sure the average semi-circular arc is not on a certain semi-circular?
 
 Below is how we solve the above problems:
 
@@ -107,7 +107,7 @@ Below is how we solve the above problems:
 
 Refer to the following code for better understanding:
 
-```
+```typescript
   const linkGroup = {};
   // Set the edges between two nodes as the same key based on their name property. 
   // Then add the key to the linkGroup, making all edges a group
@@ -132,7 +132,7 @@ Refer to the following code for better understanding:
   });
 ```
 
-```
+```typescript
 // Divide the edges into linkA and linkB based on their directions.
 // Then allocate two kinds of linknum to control the upper and lower elliptical arc.
 
@@ -179,5 +179,3 @@ Try Nebula Graph with [Nebula Graph Studio](https://github.com/vesoft-inc/nebula
 
 - [Automating Your Project Processes with Github Actions](https://nebula-graph.io/en/posts/github-action-automating-project-process/)
 - [How to Reduce Docker Image Size](https://nebula-graph.io/en/posts/how-to-reduce-docker-image-size/)
-
-
