@@ -63,7 +63,7 @@ From the perspective of API, this is definitely understandable. But the newly ad
 
 The coordinates assigned by d3.forceSimulation().node() are random, so are the locations of the explored nodes. Together with the collied and link parameter, nodes associated with the new ones are close to each other under the influence of tractive force.  Also, there are collisions among other nodes in the process of approaching. When there are nodes on the force-directed graph, these newly added nodes will make the entire graph collide under the effect of the collision and traction until each node finds its own place. That means the movement only stops when the collision and traction both meet the requirement. Does it look like the Big Bang?
 
-![force-directed graph movement](https://user-images.githubusercontent.com/57335825/81265549-dfe32480-9075-11ea-8a75-ccf6da408ed5.png)
+![force-directed graph movement](https://user-images.githubusercontent.com/57335825/81270806-d9f14180-907d-11ea-8aa1-cda0a3f8b1ef.gif)
 
 There are two problems in the above process:
 
@@ -107,7 +107,7 @@ Below is how we solve the above problems:
 
 Refer to the following code for better understanding:
 
-```typescript
+```javascript
   const linkGroup = {};
   // Set the edges between two nodes as the same key based on their name property. 
   // Then add the key to the linkGroup, making all edges a group
@@ -132,7 +132,7 @@ Refer to the following code for better understanding:
   });
 ```
 
-```typescript
+```javascript
 // Divide the edges into linkA and linkB based on their directions.
 // Then allocate two kinds of linknum to control the upper and lower elliptical arc.
 
