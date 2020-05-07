@@ -33,7 +33,7 @@ contentDir = "content/cn"
 
     [[params.navigation.links]]
       title = "文档"
-      link = "https://docs.nebula-graph.io/"
+      link = "https://docs.nebula-graph.com.cn/"
       target = "_blank"
     [[params.navigation.links]]
       title = "博客"
@@ -71,6 +71,7 @@ contentDir = "content/cn"
     subtitle   = "世界上唯一能够容纳千亿个顶点和万亿条边，并提供毫秒级查询延时的图数据库解决方案"
     buttonText = "开始尝试"
     downloadText = "前往 GitHub"
+    link = "https://docs.nebula-graph.com.cn/manual-CN/1.overview/2.quick-start/1.get-started/"
 
   # Footer section
   [params.footer]

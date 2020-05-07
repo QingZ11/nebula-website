@@ -8,13 +8,11 @@
             {{ with .Site.Params.header.subtitle }}
                 <p id="subtitle">{{ . | markdownify }}</p>
             {{ end }}
-            {{ with .Site.Params.header.buttonText }}
-                <a
-                    href="https://docs.nebula-graph.io/manual-EN/1.overview/2.quick-start/1.get-started/#batch-inserting"
-                    target="_blank" class="btn btn-primary btn-xl page-scroll get-start"
-                    onclick="gtag('event', 'Button Click', { event_category: 'Engagement', event_label: 'Get Started'})"
-                >{{ . }}</a>
-            {{ end }}
+            <a
+                href={{.Site.Params.header.link}}
+                target="_blank" class="btn btn-primary btn-xl page-scroll get-start"
+                onclick="gtag('event', 'Button Click', { event_category: 'Engagement', event_label: 'Get Started'})"
+            >{{ .Site.Params.header.buttonText }}</a>
             {{ with .Site.Params.header.downloadText }}
                 <a 
                     href="https://github.com/vesoft-inc/nebula"
