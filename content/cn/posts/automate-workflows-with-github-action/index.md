@@ -1,10 +1,3 @@
----
-title: "Nebula Graph 使用 GitHub Action 的自动化实践"
-date: 2020-05-07
-description: "在讲 Action 实践之前还需先讲下 Nebula Graph 的需求：首要目标比较明确就是自动化测试，分为单元测试和集成测试，顺带再解决一下 PM 小姐姐的发布需求，构建起来了第一版的 CI/CD 流程。"
-tags: ["开发日志"]
-author: Yee
----
 
 ![image](https://nebula-blog.azureedge.net/nebula-blog/auto01.jpeg)
 
@@ -364,9 +357,9 @@ make 本身即支持多个源文件的并行编译，在编译时配置 `-j $(np
 
 ## One More Thing...
 
-~~1.0 GA 快要发布啦。欢迎大家来围观。~~
+~~图数据库 Nebula Graph 1.0 GA 快要发布啦。欢迎大家来围观。~~
 
 本文中如有任何错误或疏漏欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/) 的 `建议反馈` 分类下提建议 👏；加入 Nebula Graph 交流群，请联系 Nebula Graph 官方小助手微信号：[NebulaGraphbot](https://nebula-blog.azureedge.net/nebula-blog/nbot.png)
 
-> 作者有话说：Hi，我是 Yee，是图数据 Nebula Graph 研发工程师，对数据库查询引擎有浓厚的兴趣，希望本次的经验分享能给大家带来帮助，如有不当之处也希望能帮忙纠正，谢谢~
+> 作者有话说：Hi，我是 Yee，是[图数据 Nebula Graph](https://github.com/vesoft-inc/nebula) 研发工程师，对数据库查询引擎有浓厚的兴趣，希望本次的经验分享能给大家带来帮助，如有不当之处也希望能帮忙纠正，谢谢~
 
