@@ -1,3 +1,4 @@
+
 ---
 title: "Nebula Graph 使用 GitHub Action 的自动化实践"
 date: 2020-05-07
@@ -332,9 +333,11 @@ make 本身即支持多个源文件的并行编译，在编译时配置 `-j $(np
 2. 不能方便地进行本地验证。虽然社区有个开源项目 [act](https://github.com/nektos/act)，但使用下来还是有诸多限制，有时不得不通过在自己仓库中反复提交验证才能确保 action 的修改正确。
 
 3. 目前还缺少比较好的指导规范，当定制的任务较多时，总有种在 YAML 配置中写程序的感受。目前的做法主要有以下三种：
-  1. 根据任务拆分配置文件。
-  1. 定制专属 action，通过 GitHub 的 SDK 来实现想要的功能。
-  1. 编写大的 shell 脚本来完成任务内容，在任务中调用该脚本。
+
+    1. 根据任务拆分配置文件。
+    1. 定制专属 action，通过 GitHub 的 SDK 来实现想要的功能。
+    1. 编写大的 shell 脚本来完成任务内容，在任务中调用该脚本。
+
 
 目前针对尽量多使用小任务的组合还是使用大任务的方式，社区也没有定论。不过小任务组合的方式可以方便地定位任务失败位置以及确定每步的执行时间。
 
@@ -364,9 +367,9 @@ make 本身即支持多个源文件的并行编译，在编译时配置 `-j $(np
 
 ## One More Thing...
 
-~~1.0 GA 快要发布啦。欢迎大家来围观。~~
+~~图数据库 Nebula Graph 1.0 GA 快要发布啦。欢迎大家来围观。~~
 
 本文中如有任何错误或疏漏欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/) 的 `建议反馈` 分类下提建议 👏；加入 Nebula Graph 交流群，请联系 Nebula Graph 官方小助手微信号：[NebulaGraphbot](https://nebula-blog.azureedge.net/nebula-blog/nbot.png)
 
-> 作者有话说：Hi，我是 Yee，是图数据 Nebula Graph 研发工程师，对数据库查询引擎有浓厚的兴趣，希望本次的经验分享能给大家带来帮助，如有不当之处也希望能帮忙纠正，谢谢~
+> 作者有话说：Hi，我是 Yee，是[图数据 Nebula Graph](https://github.com/vesoft-inc/nebula) 研发工程师，对数据库查询引擎有浓厚的兴趣，希望本次的经验分享能给大家带来帮助，如有不当之处也希望能帮忙纠正，谢谢~
 
