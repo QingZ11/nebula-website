@@ -8,16 +8,10 @@
                     <div class="first">
                         {{ with .Resources }}
                             {{ with .GetMatch "{*.jpg,*.png,*.jpeg}" }}
-                                {{ $cover := .Resize "450x" }}
-                                {{ with $cover }}
-                                    <img src="{{ .Permalink }}"/>      
-                                {{ end }} 
+                                <img src="{{ .Permalink }}" style="width: 450px"/>      
                             {{ else }}
                                 {{ with .GetMatch "{thumbnail.png}" }}
-                                    {{ $cover := .Resize "450x" }}
-                                    {{ with $cover }}
-                                        <img src="{{ .Permalink }}"/>      
-                                    {{ end }}
+                                    <img src="{{ .Permalink }}" style="width: 450px"/>      
                                 {{ end }}
                             {{ end }}
                         {{ end }}
