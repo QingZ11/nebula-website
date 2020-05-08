@@ -1,7 +1,7 @@
 ---
-title: "Pick of the Week'20 | 第 17 周看点--字符比较运算符 CONTAINS"
+title: "Pick of the Week'20 | 第 19 周看点--数据库的角色管理"
 date: 2020-05-08
-description: "在本周看点中，我们将对 CONTAINTS 这个可实现任意位置的关键字过滤的特性进行讲解，在社区问答方面，本期主题为 #KV Store 数据批量导入#"
+description: "本周特性讲解部分，讲解员从 Nebula Graph 的 5 种角色切入，讲述了对应相关权限的授予与取消，并附上示例让你更好理解。在大事件中公布了 DB-Engine 5 月排名，而主题问答中你将了解到#查询服务线程的设置#…"
 tags: ["社区","产品动态"]
 author: 清蒸
 ---
