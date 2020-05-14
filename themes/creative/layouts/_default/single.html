@@ -106,7 +106,7 @@
               {{ if .Params.tags }}
                   <div class="tags meta">
                       <img src="/images/tag.png" width="16px" height="16px">
-                      {{ range .Params.tags }}<a href="{{"/" | relLangURL}}/tags/{{. | urlize}}">{{.}}</a>{{ end }}
+                      {{ range .Params.tags }}<a href="{{"/" | relLangURL}}tags/{{. | urlize}}">{{.}}</a>{{ end }}
                   </div>
               {{ end }}
           </div>
@@ -177,11 +177,10 @@
                 <img src="/images/blog.png" />
                 <a href="{{"/"|relLangURL}}posts">{{$.Site.Params.backBlogs}}</a>
               </li>
-
               <li
                 onclick="
                   gtag('event', 'Link Click', { event_category: 'Engagement', event_label: 'RSS via blogbody'});
-                  window.open('https:\/\/nebula-graph.io/{{$.Site.Language.Lang}}/posts/index.xml');
+                  window.open('{{$.Site.Params.rss.link}}');
                 "
               >
                 <img src="/images/rss.png" />

@@ -1,12 +1,11 @@
 (function () {
-  var language = (navigator.browserLanguage || navigator.language).toLowerCase();
-  if (window.location.pathname == '/') {
-    if (language.indexOf('zh') > -1) {
-      window.location.href =  '/cn/'
-    } else {
-      window.location.href = '/en/'
-    }
-  }
+  // if (window.location.pathname == '/') {
+  //   if (window.location.hostname.indexOf('.cn') > -1) {
+  //     window.location.href =  '/cn/'
+  //   } else {
+  //     window.location.href = '/en/'
+  //   }
+  // }
 
   // popup after some time
   // TODO: remove in future

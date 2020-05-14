@@ -40,7 +40,7 @@ contentDir = "content/en"
       target = "_blank"
     [[params.navigation.links]]
       title = "Blog"
-      link = "/en/posts"
+      link = "/posts"
     [[params.navigation.links]]
       title = "Forum"
       link = "https://discuss.nebula-graph.io/"
@@ -56,10 +56,10 @@ contentDir = "content/en"
       pic = "language120x120.png"
         [[params.navigation.links.links]]
           title = "English"
-          link = "/en"
+          link = "/en/"
         [[params.navigation.links.links]]
           title = "中文"
-          link = "/cn"
+          link = "/cn/"
     [[params.navigation.links]]
         title = "Nebula Studio"
         link = "https://github.com/vesoft-inc/nebula-web-docker"
@@ -249,13 +249,11 @@ contentDir = "content/en"
     onclick = "gtag('event', 'Link Click', { event_category: 'Engagement', event_label: 'Star via sidebar'})"
   [[params.links]]
     text = "Subscribe RSS"
-    link = "https://nebula-graph.io/en/posts/index.xml"
+    link = "https://nebula-graph.io/posts/index.xml"
     image = "/images/rss1.png"
     onclick = "gtag('event', 'Link Click', { event_category: 'Engagement', event_label: 'RSS on sidebar'})"
   [params.share]
     title = "Share"
     star = "Like what we do? Star us on GitHub.  https://github.com/vesoft-inc/nebula"
-
-    
-
-
+[params.rss]
+    link = "https://nebula-graph.io/posts/index.xml"

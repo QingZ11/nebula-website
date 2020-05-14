@@ -65,6 +65,9 @@
 
         <p align="left" style="font-size: 16px">
            <img src="/images/VEsoft.png" style="margin-right: 10px"> Copyright &copy;2020 VESoft Inc
+           {{ if eq $.Site.Language.Lang "cn" }}
+               <span>- 浙ICP备20010487号</span>
+           {{ end }}
         </p>
     <!-- modal（公众号） -->
     <div class="modal fade" id="myGongzhonghaoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
