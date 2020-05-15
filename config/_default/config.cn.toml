@@ -37,7 +37,7 @@ contentDir = "content/cn"
       target = "_blank"
     [[params.navigation.links]]
       title = "博客"
-      link = "/cn/posts"
+      link = "/posts"
       # [[params.navigation.links.links]]
       # 	title = "Use cases"
     # [[params.navigation.links]]
@@ -53,10 +53,10 @@ contentDir = "content/cn"
       pic = "language120x120.png"
         [[params.navigation.links.links]]
           title = "English"
-          link = "/en"
+          link = "/en/"
         [[params.navigation.links.links]]
           title = "中文"
-          link = "/cn"
+          link = "/cn/"
     [[params.navigation.links]]
       title = "Nebula Studio"
       link = "https://github.com/vesoft-inc/nebula-web-docker"
@@ -254,8 +254,10 @@ contentDir = "content/cn"
     onclick = "gtag('event', 'Link Click', { event_category: 'Engagement', event_label: 'Star via sidebar'})"
   [[params.links]]
     text = "订阅 RSS"
-    link = "https://nebula-graph.io/cn/posts/index.xml"
+    link = "https://nebula-graph.com.cn/posts/index.xml"
     image = "/images/rss.png"
     onclick = "gtag('event', 'Link Click', { event_category: 'Engagement', event_label: 'RSS on sidebar'})"
   [params.share]
     title = "分享"
+[params.rss]
+    link = "https://nebula-graph.com.cn/posts/index.xml"

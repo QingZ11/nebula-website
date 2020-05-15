@@ -1,11 +1,11 @@
-baseurl = "http://localhost:1313/"
+baseurl = "https://nebula-graph.com.cn"
 title = "Nebula Graph  - An Open Source, Distributed and High Performant Graph Database"
 theme = "creative"
 googleAnalytics = ""
-DefaultContentLanguage = "en"
+DefaultContentLanguage = "cn"
 defaultContentLanguageInSubdir = false
 
 [languages]
 ################ init language Config ################
   [languages.default]
-    contentDir = "content/en"
+    contentDir = "content/cn"
