@@ -6,7 +6,7 @@ tags: ["社区","产品动态"]
 author: 清蒸
 ---
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW.png)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW.png)
 
 > 每周五 Nebula 为你播报每周看点，每周看点由本周大事件、用户问答、Nebula 产品动态和推荐阅读构成。
 
@@ -18,7 +18,7 @@ author: 清蒸
 
 这是图数据库 Nebula Graph 第二次发的帖成为 Hacker News 当日热帖，第一次是我们在 Hacker News 发了 Nebula Graph 的介绍引起了热烈讨论，这一次我们发的图数据库查询语言对比帖再次成为了当日热榜，你可以通过下面的截图感受下国内外研发人员对图数据库查询语言的看法：有人吐槽 Neo4j，有人表达对 Cypher 的爱，有人 diss Gremlin…Hacker News 阅读传送门：[https://news.ycombinator.com/item?id=22482665](https://news.ycombinator.com/item?id=22482665)
 
-![](https://nebula-blog.azureedge.net/nebula-blog/PotW201001.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201001.png)
 
 ## Nebula 产品动态
 Pick of the Week 每周会从 GitHub issue 及 pr 中选取重要的产品动态和大家分享，欢迎阅读本文的你关注我们的 GitHub：[https://github.com/vesoft-inc/nebula](https://0x7.me/zhihu2github) 及时了解产品新动态~
@@ -94,12 +94,12 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《Sharpless 249 and the Jellyfish Nebula 夏普勒斯249与水母星云》
 
-![](https://nebula-blog.azureedge.net/nebula-blog/PotW2010Nebula.jpeg)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2010Nebula.jpeg)
 
 这张迷人的望远镜影像，捕捉到通常黯淡而且难以捉摸的水母星云。在这幅由二张窄波段数据拼接而成的影像里，来自硫、氢和氧等原子的辐射，分别以红、绿及蓝等色泽来呈现，位在影像左上角的发射星云，则是夏普勒斯 249。 水母星云离我们约 5,000 千光年远，以此距离来换算，这幅影像大约涵盖 300 光年的区域。
 
 资料来源 | Robert Nemiroff (MTU) & Jerry Bonnell (UMCP), Phillip Newman (NASA);
 图片来源 | Astronomy Picture of the Day | 2019 March 07
 
-![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)
+![关注公众号](https://www-cdn.nebula-graph.com.cn/nebula-blog/WeChatOffical.png)
 

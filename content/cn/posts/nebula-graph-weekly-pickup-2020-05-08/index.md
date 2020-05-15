@@ -6,7 +6,7 @@ tags: ["社区","产品动态"]
 author: 清蒸
 ---
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW.png)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW.png)
 
 > 每周五 Nebula 为你播报每周看点，每周看点由固定模块：特性讲解、Nebula 产品动态、社区问答、推荐阅读，和随机模块：本周大事件构成。
 
@@ -38,7 +38,7 @@ CHANGE PASSWORD user1 FROM password1 TO password2
 
 - [DB-Engine 5 月排名出炉](https://db-engines.com/en/ranking/graph+dbms)
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/201901.png)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/201901.png)
 
 DB-Engine 5 月排名前十名的变化不大，可以看到排名 Top 5 的 DBMS 在 DB-Engine 得分都有所下降，而 5 月 Nebula Graph 表现不错，排名上升 2 位，而且得分增加了 0.07 分 👏
 
@@ -65,7 +65,7 @@ Pick of the Week 每周会从官方论坛、微博、知乎、微信群、微信
   - [Pick of the Week'20 | 第 16 周看点--中文论坛上线](https://nebula-graph.io/cn/posts/nebula-graph-weekly-pickup-2020-04-17/)
   - [Pick of the Week'20 | 第 15 周看点--Studio v1.0.2-beta 发布](https://nebula-graph.io/cn/posts/nebula-graph-weekly-pickup-2020-04-10/)
 
-本期 Pick of the Week 就此完毕，如果你对本周看点或 Nebula Graph 有任何建议，欢迎前去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) 或者官方论坛：[https://discuss.nebula-graph.com.cn](https://discuss.nebula-graph.com.cn) 向我们提出。若你想加入图数据库交流群，请添加 Nebula 小助手微信：[NebulaGraphbot](https://nebula-blog.azureedge.net/nebula-blog/nbot.png)
+本期 Pick of the Week 就此完毕，如果你对本周看点或 Nebula Graph 有任何建议，欢迎前去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) 或者官方论坛：[https://discuss.nebula-graph.com.cn](https://discuss.nebula-graph.com.cn) 向我们提出。若你想加入图数据库交流群，请添加 Nebula 小助手微信：[NebulaGraphbot](https://www-cdn.nebula-graph.com.cn/nebula-blog/nbot.png)
 
 ## 星云·小剧场
 
@@ -75,7 +75,7 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《船底座大星云》
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/2019Nebula.jpeg)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/2019Nebula.jpeg)
 
 该处的恒星不停的诞生与死亡，织成了一幅壮观的黝黑尘埃织锦。编录号为 NGC 3372 的船底座大星云，宽度超过 300 光年，位在船底座方向约 8,500 光年远之处。位在这团星云中心的活跃恒星海山二，曾是 1830 年代天空最明亮的恒星之一，不过之后亮度已大幅降低。
 
@@ -83,4 +83,4 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 图片来源 | NASA Official
 
 
-![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)
+![关注公众号](https://www-cdn.nebula-graph.com.cn/nebula-blog/WeChatOffical.png)

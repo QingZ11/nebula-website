@@ -6,7 +6,7 @@ tags: ["社区","产品动态"]
 author: 清蒸
 ---
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW.png)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW.png)
 
 > 每周五 Nebula 为你播报每周看点，每周看点由本周大事件、用户问答、Nebula 产品动态和推荐阅读构成。
 
@@ -20,7 +20,7 @@ author: 清蒸
 
 蓄水池算法的使用方法：在 storage 配置文件中设置 `enable_reservoir_sampling`  为 true 打开开关采样开关， `max_edge_returned_per_vertex`  配置采样数，示例如下，pr 参见链接：[https://github.com/vesoft-inc/nebula/pull/1746](https://github.com/vesoft-inc/nebula/pull/1746)
 
-![](https://nebula-blog.azureedge.net/nebula-blog/PotW201101.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201101.png)
 
 ## Nebula 产品动态
 
@@ -36,7 +36,7 @@ REBUILD {TAG | EDGE} INDEX <index_name> [OFFLINE]
 
 - 集成了 coverage testing tool，标签： `CI/CD` ，示例如下，pr 参见链接： [https://github.com/vesoft-inc/nebula/pull/1856](https://github.com/vesoft-inc/nebula/pull/1856)
 
-![](https://nebula-blog.azureedge.net/nebula-blog/PotW201102.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201102.png)
 
 -  利用 Helm 简化了 Nebula 在 Kubernetes 上的部署，标签： `k8s` ，pr 参见链接： [https://github.com/vesoft-inc/nebula/pull/1473](https://github.com/vesoft-inc/nebula/pull/1473)
 
@@ -47,7 +47,7 @@ Pick of the Week 每周会从官方论坛、微博、知乎、微信群、微信
 - @Céline 提问
 > 为什么下面的语言执行失败，查询不到结果？
 
-![](https://nebula-blog.azureedge.net/nebula-blog/PotW201103.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201103.png)
 
 **Nebula**： `LOOKUP` 语法使用是正确的，但 LOOKUP 之前需要创建索引，如果你未创建索引的话是查询不到结果的。创建好索引之后，可使用`SHOW TAG INDEXES` 查看索引是否创建成功。
 
@@ -81,11 +81,11 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《The Central Magnetic Field of the Cigar Galaxy 雪茄星系》
 
-![](https://nebula-blog.azureedge.net/nebula-blog/PotW2011Nebula.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2011Nebula.png)
 
 位于大熊座方向、双筒望远镜可见的雪茄星系，距离我们约 1 千 2 百万光年远。
 
 资料来源 | Robert Nemiroff (MTU) & Jerry Bonnell (UMCP), Phillip Newman (NASA);
 图片来源 | Astronomy Picture of the Day | 2019 March 11
 
-![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)
+![关注公众号](https://www-cdn.nebula-graph.com.cn/nebula-blog/WeChatOffical.png)

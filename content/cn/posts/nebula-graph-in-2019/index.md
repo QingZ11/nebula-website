@@ -6,7 +6,7 @@ tags: ["社区"]
 author: Nebula
 ---
 
-![Nebula in 2019 15 23 54](https://nebula-blog.azureedge.net/nebula-blog/Nebulain201901.png)
+![Nebula in 2019 15 23 54](https://www-cdn.nebula-graph.com.cn/nebula-blog/Nebulain201901.png)
 
 ## 一分钟 2019
 这年，是 21 世纪第 2 个 10 年的最后 1 年，也是 Nebula Graph 诞生年，在 2019 年 5 月，我们开源了，和国内外的图数据库爱好者们分享了我们对图数据库的想法，有了自己的图数据库社区，Nebula Graph 团队也由最开始的 4 人团队发展到了现在 30 人的规模，在社区和团队的努力下，Nebula Graph 经历了从 0 到 1 的过程，从 alpha 到 v1.0.0-rc2 我们一直在变得更好。
@@ -17,7 +17,7 @@ author: Nebula
 
 作为一个企业级产品，Nebula Graph 一开始就选择了走开源路线是很多企业不会走的路，这是我们的原因。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Nebulain201902.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Nebulain201902.png)
 
 DB-Engines 告诉我们，开源数据库增长得快，考虑到数据库漫长的历史，开源数据库才是新出现的 DB 的主流方式。所以对于 Nebula Graph 来说，采用开源这条路是非常正常的。
 
@@ -25,7 +25,7 @@ DB-Engines 告诉我们，开源数据库增长得快，考虑到数据库漫长
 
 ### 又有人问：为何要自研图数据库
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Nebulain201903.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Nebulain201903.png)
 
 由于社交网络、支付网络的兴起，网络（图）的基础设施得到了极大的刺激和发展。但是即使到目前为止，市面上并没有很好的图数据库产品。特别是在 OLTP 这块，主要产品的表现其实都不够好，是不能支撑 5G 时代的大数据量访问的。<br />
 
@@ -87,7 +87,7 @@ It's Worth the Effort，我们只要坚持做正确的事情，分享会带来�
 
 Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云小姐姐。对了，Nebula的发音是：[ˈnɛbjələ]。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Nebulain201904.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Nebulain201904.png)
 
 The Sombrero Galaxy in Infrared -- 红外线下的草帽星系
 

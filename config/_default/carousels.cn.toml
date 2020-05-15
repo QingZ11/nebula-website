@@ -1,8 +1,8 @@
 [[carousels]]
-  banner = "https://nebula-blog.azureedge.net/nebula-blog/TTL01.png"
+  banner = "https://www-cdn.nebula-graph.com.cn/nebula-blog/TTL01.png"
   description = "TTL 特性讲解"
   link = "/cn/posts/clean-stale-data-with-ttl-in-nebula-graph/"
 [[carousels]]
-  banner = "https://nebula-blog.azureedge.net/nebula-blog/Action01.png"
+  banner = "https://www-cdn.nebula-graph.com.cn/nebula-blog/Action01.png"
   description = "Action 自动化发布"
   link = "/cn/posts/github-action-automating-project-process/"

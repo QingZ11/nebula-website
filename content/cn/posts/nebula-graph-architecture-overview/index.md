@@ -6,11 +6,11 @@ tags: ["架构剖析"]
 author: Sherman
 ---
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Architecture0001.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Architecture0001.png)
 
 Nebula Graph 是一个高性能的分布式开源图数据库，本文为大家介绍 Nebula Graph 的整体架构。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Architecture0002.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Architecture0002.png)
 
 一个完整的 Nebula 部署集群包含三个服务，即  Query Service，Storage Service 和 Meta Service。每个服务都有其各自的可执行二进制文件，这些二进制文件既可以部署在同一组节点上，也可以部署在不同的节点上。
 

@@ -6,7 +6,7 @@ tags: ["图数据库知识","查询语言"]
 author: Johhan
 ---
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/review.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/review.png)
 
 > 本文主要讨论图数据库背后的设计思路、原理还有一些适用的场景，以及在生产环境中使用图数据库的具体案例。
 
@@ -14,7 +14,7 @@ author: Johhan
 
 下面这张图是一个社交网络场景，每个用户可以发微博、分享微博或评论他人的微博。这些都是最基本的增删改查，也是大多数研发人员对数据库做的常见操作。而在研发人员的日常工作中除了要把用户的基本信息录入数据库外，还需找到与该用户相关联的信息，方便去对单个的用户进行下一步的分析，比如说：我们发现张三的账户里有很多关于 AI 和音乐的内容，那么我们可以据此推测出他可能是一名程序员，从而推送他可能感兴趣的内容。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/review01.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/review01.png)
 
 这些数据分析每时每刻都会发生，但有时候，一个简单的数据工作流在实现的时候可能会变得相当复杂，此外数据库性能也会随着数据量的增加而锐减，比如说获取某管理者下属三级汇报关系的员工，这种统计查询在现在的数据分析中是一种常见的操作，而这种操作往往会因为数据库选型导致性能产生巨大差异。
 
@@ -24,7 +24,7 @@ author: Johhan
 
 传统解决上述问题最简单的方法就是**建立一个关系模型**，我们可以把每个员工的信息录入表中，存在诸如 MySQL 之类的关系数据库，下图是最基本的关系模型：
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/review02.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/review02.png)
 
 但是基于上述的关系模型，要实现我们的需求，就不可避免地涉及到很多关系数据库 `JOIN` 操作，同时实现出来的查询语句也会变得相当长(有时达到上百行)：
 
@@ -165,7 +165,7 @@ WHERE manager.pid = (SELECT id FROM person WHERE name = "fName lName")
 
 **缓存**：缓存主要是为了解决有**具有空间或者时间局域性**数据的频繁读取带来的性能优化问题。一个比较常见的使用缓存的架构是 **lookaside cache architecture**。下图是之前 Facebook 用 Memcached  + MySQL 的实例（现已被 Facebook 自研的图数据库 TAO 替代）：
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/review03.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/review03.png)
 
 在架构中，设计者假设用户创造的内容比用户读取的内容要少得多，Memcached 可以简单地理解成一个分布式的支持增删改查的哈希表，支持上亿量级的用户请求。基本的使用流程是当客户端需读数据时，先查看一下缓存，然后再去查询 SQL 数据库。而当用户需要写入数据时，客户端先删除缓存中的 key，让数据过期，再去更新数据库。但是这种架构有几个问题：
 - 首先，键值缓存对于图结构数据并不是一个好的操作语句，每次查询一条边，需要从缓存里把节点对应的边全部拿出来；此外，当更新一条边，原来的所有依赖边要被删除，继而需要重新加载所有对应边的数据，这些都是并发的性能瓶颈，毕竟实际场景中一个点往往伴随着几千条边，这种操作带来的时间、内存消耗问题不可忽视。
@@ -185,7 +185,7 @@ WHERE manager.pid = (SELECT id FROM person WHERE name = "fName lName")
 
 根据节点和关联关系，之前的数据可以根据下图所示建模：
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/review04.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/review04.png)
 
 通过图数据库 Nebula Graph 原生 nGQL 图查询语言进行建模，参考如下操作：
 
@@ -249,7 +249,7 @@ JanusGraph 本身并没有关注于去实现存储和分析，而是实现了图
 - 将 JanusGraph 变成应用的一部分进行查询、缓存，并且这些数据交互都是在同一台 JVM 上执行，但数据的来源可能在本地或者在别的地方。
 - 将 JanusGraph 作为一个服务，让客户端与服务端分离，同时客户端提交 Gremlin 查询语句到服务器上执行对应的数据处理操作。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/review05.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/review05.png)
 
 ### Nebula Graph
 
@@ -281,13 +281,13 @@ Storage Service 采用 shared-nothing 的分布式架构设计，每个存储节
 
 同时图数据库在 DB-Ranking 上的排名也呈现出上升最快的趋势，可见需求之迫切：
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/review06.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/review06.png)
 
 ## 图数据库实践：不仅仅是社交网络
 
 ### Netflix 云数据库的工程实践
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/review07.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/review07.png)
 
 Netflix 采用了JanusGraph + Cassandra + ElasticSearch 作为自身的图数据库架构，他们运用这种架构来做数字资产管理。
 节点表示数字产品比如电影、纪录片等，同时这些产品之间的关系就是节点间的边。
@@ -300,22 +300,22 @@ Netflix 采用了JanusGraph + Cassandra + ElasticSearch 作为自身的图数据
 
 这个被大改的系统名字叫 Behance，是 Adobe 在 15 年发布的一个内容社交平台，有大概 1 千万的用户，在这里人们可以分享自己的创作给百万人看。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/review08.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/review08.png)
 
 这样一个巨大的遗留系统本来是通过 Cassandra 和 MongoDB 搭建的，基于历史遗留问题，系统有不少的性能瓶颈不得不解决。
 MongoDB 和 Cassandra 的读取性能慢主要因为原先的系统设计采用了 fan-out 的设计模式——受关注多的用户发表的内容会单独分发给每个读者，这种设计模式也导致了网络架构的大延迟，此外 Cassandra 本身的运维也需要不小的技术团队，这也是一个很大的问题。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/review09.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/review09.png)
 
 在这里为了搭建一个灵活、高效、稳定的系统来提供消息 feeding 并最小化数据存储的规模，Adobe 决定迁移原本的 Cassandra 数据库到 Neo4j 图数据库。
 在 Neo4j 图数据库中采用一种所谓的 **Tiered relationships** 来表示用户之间的关系，这个边的关系可以去定义不同的访问状态，比如：仅部分用户可见，仅关注者可见这些基本操作。
 数据模型如图所示
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/review10.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/review10.png)
 
 使用这种数据模型并使用 Leader-follower 架构来优化读写，这个平台获得了巨大的性能提升：
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/review11.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/review11.png)
 
 1. 运维需求的时长在使用了 Neo4j 以后下降了 300%。
 1. 存储需求降低了 1000 倍， Neo4j 仅需 50G 存储数据， 而 Cassandra 需要 50TB。

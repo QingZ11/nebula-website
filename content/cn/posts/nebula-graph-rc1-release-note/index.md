@@ -6,7 +6,7 @@ tags: ["Release-Note"]
 author: Jude
 ---
 
-![rc1](https://nebula-blog.azureedge.net/nebula-blog/RC101.png)
+![rc1](https://www-cdn.nebula-graph.com.cn/nebula-blog/RC101.png)
 
 > [Nebula Graph](https://github.com/vesoft-inc/nebula)：一个开源的分布式图数据库。作为唯一能够存储万亿个带属性的节点和边的在线图数据库，Nebula Graph 不仅能够在高并发场景下满足毫秒级的低时延查询要求，还能够实现服务高可用且保障数据安全性。
 

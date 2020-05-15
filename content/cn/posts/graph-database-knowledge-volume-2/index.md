@@ -6,7 +6,7 @@ tags: ["图数据库知识"]
 author: 清蒸
 ---
 
-![about graph database](https://nebula-blog.azureedge.net/nebula-blog/Knowledge0201.png)
+![about graph database](https://www-cdn.nebula-graph.com.cn/nebula-blog/Knowledge0201.png)
 
 2010 年前后，对于社交媒体网络研究的兴起带动了图计算的大规模应用。
 2000 年前后热门的是 `信息检索` 和 `分析` ，主要是 Google 的带动，以及 Amazon 的 e-commerce 所用的协同过滤推荐，当时 collaborative filtering也被认为是 information retrieval 的一个细分领域，包括 Google 的 PageRank 也是在信息检索领域研究较多。后来才是 Twitter，Facebook 的崛起带动了网络科学 network science的研究。
@@ -54,7 +54,7 @@ author: 清蒸
 
 【回复】交流群群友 W：主要的云厂商，比如 AWS 的共享存储可以到 64 T，存储应该够，而且这种方式存储内部有多副本。顺便提一句：AWS 的 Neptune 的底层存储用的也是 Aurora 的那个存储。网络这块的优化，可参考阿里云的 Polarstore，基本上网络已经不是什么问题了。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Knowledge0202.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Knowledge0202.png)
 
 此外，“第二步虽然是随机的，但是取第二步数据的时候可以从多台机器并发吧”这个倒是，Nebula 有个 storage server 可以做这个事情，但逻辑上似乎这个应该是 query engine 应该干的。
 
@@ -106,7 +106,7 @@ A：KV 那层。目前只有针对顶点的 Cache，顶点的访问具有随机�
 ### 🔖 如何理解 Nebula Graph Partition
 partition 是个逻辑概念，主要目的是为了一个 partition 内的数据可以一起迁移到另外一台机器。partition 数量是由创建图空间时指定的 partition_num 确立。而单副本 partition 的分布规则如下
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Knowledge0203.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Knowledge0203.png)
 
 通过算子：partID%engine_size，而多副本的情况，原理类似，follower 在另外两个机器上。
 
@@ -123,5 +123,5 @@ A：部署集群时需要设置 Partition 数，比如 1000 个 Partition。插�
 - [Nebula Graph 技术总监陈恒：图数据库怎么和深度学习框架进行结合？](https://nebula-graph.io/cn/posts/integrate-graph-database-with-deep-learning-framework/)
 - [图数据库爱好者的聚会在谈论什么？](https://nebula-graph.io/cn/posts/graph-database-fans-chat/)
 
-![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)
+![关注公众号](https://www-cdn.nebula-graph.com.cn/nebula-blog/WeChatOffical.png)
 

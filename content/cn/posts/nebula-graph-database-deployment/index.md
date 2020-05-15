@@ -6,7 +6,7 @@ tags: ["部署", "编译"]
 author: 伊兴路
 ---
 
-![deployment](https://nebula-blog.azureedge.net/nebula-blog/Deployment01.jpg)
+![deployment](https://www-cdn.nebula-graph.com.cn/nebula-blog/Deployment01.jpg)
 
 > [Nebula Graph](https://github.com/vesoft-inc/nebula)：一个开源的分布式图数据库。作为唯一能够存储万亿个带属性的节点和边的在线图数据库，Nebula Graph 不仅能够在高并发场景下满足毫秒级的低时延查询要求，还能够实现服务高可用且保障数据安全性。
 
@@ -33,7 +33,7 @@ author: 伊兴路
 
 ## Nebula Graph 整体架构
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Deployment02.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Deployment02.png)
 
 Nebula Graph 主要有三个服务进程：
 
@@ -45,7 +45,7 @@ Meta Service 是整个集群的元数据管理中心，采用 Raft 协议保证�
 
 ### Storage Service
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Deployment03.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Deployment03.png)
 
 Storage Service 负责 Graph 数据存储。图数据被切分成很多的分片 Partition，相同 ID 的 Partition 组成一个 Raft Group，实现多副本一致性。Nebula Graph 默认的存储引擎是 RocksDB 的 Key-Value 存储。
 

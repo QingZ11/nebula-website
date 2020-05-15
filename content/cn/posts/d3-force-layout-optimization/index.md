@@ -6,7 +6,7 @@ tags: ["特性讲解", "开发日志"]
 author: "Nico"
 ---
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/d303.jpeg)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/d303.jpeg)
 
 ## D3.js 
 
@@ -22,7 +22,7 @@ author: "Nico"
 
 下图就是最简单的关系网图，想要实现自己想要的关系网图，采用 D3.js 是个不错的选择。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/d302.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/d302.png)
 
 ## 构建 D3.js 力导向图
 
@@ -47,7 +47,7 @@ this.force = d3
 
 通过上述代码，我们可以得到下面这样一个可视化的节点和关系图。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/d303.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/d303.png)
 
 ### 实现拓展查询显示优化
 
@@ -57,7 +57,7 @@ D3.js 的 [enter()](https://www.d3js.org.cn/#enter%E5%92%8Cexit%E6%93%8D%E4%BD%
 
 但由于 `d3.forceSimulation().node()` 坐标随机分配导致了图形拓展出来位置的随机出现，在之前 d3-force 实例中我们设定好的 collide（碰撞力）和 links （引力）参数作用下，和新节点相关联的节点受到牵引力影响互相靠近，在靠近的过程中又会和其他节点发生碰撞。当力导图已存在节点的情况下，这些新增节点出现时会让整个力导向图在 collide 和 links 的作用下不停地碰撞，进行牵引，直到每个节点都找到自己合适的位置，即碰撞力和牵引力都满足要求时才停止移动，看看下图，像不像宇宙大爆炸 🌞。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/d304.gif)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/d304.gif)
 
 上述无序到有序熵减的过程，站在用户角度，每新增一个节点导致整个力导图的运动，除了有一种抽搐感，停止图形变化又需要长时间的等待，这是不能接受的。可 D3.js API [enter()](https://www.d3js.org.cn/#enter%E5%92%8Cexit%E6%93%8D%E4%BD%9C) 又是这样定义的，难道新增的节点和之前的节点的呈现处理需要开发者分开单独处理吗？如果是分开单独处理，每次节点渲染都要遍历判断是不是新增，在节点较多时反而更影响性能？那么如何优化这个新增节点呈现的问题呢？
 
@@ -140,13 +140,13 @@ export function setLinkNumbers(group) {
 
 按照我们上面描述的思路，给每条连接线分配 linknum 值后，接着在实现监听连接线的的 tick 事件函数里面判断 linknum 正负数判断设置 [path 路径的弯曲度和方向](https://www.w3school.com.cn/svg/svg_path.asp) 就行了，最终效果如下图
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/d305.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/d305.png)
 
 ## 结语
 
 好了，以上便是笔者使用 D3.js 力导向图实现关系网的优化思路和方法。其实要构建一个复杂的关系网，需要考虑的问题很多，需要优化的地方也很多，今天给大家分享两个最容易遇到的新节点呈现、多边处理问题，后续我们会继续产出 D3.js 优化系列文，欢迎订阅 Nebula Graph 博客。
 
-最后，你可以通过访问图数据库 Nebula Graph Studio：[Nebula-Graph-Studio](https://github.com/vesoft-inc/nebula-web-docker)，体验下 D3.js 是如何呈现关系的。本文中如有任何错误或疏漏欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/) 的 `建议反馈` 分类下提建议 👏；加入 Nebula Graph 交流群，请联系 Nebula Graph 官方小助手微信号：[NebulaGraphbot](https://nebula-blog.azureedge.net/nebula-blog/nbot.png)
+最后，你可以通过访问图数据库 Nebula Graph Studio：[Nebula-Graph-Studio](https://github.com/vesoft-inc/nebula-web-docker)，体验下 D3.js 是如何呈现关系的。本文中如有任何错误或疏漏欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/) 的 `建议反馈` 分类下提建议 👏；加入 Nebula Graph 交流群，请联系 Nebula Graph 官方小助手微信号：[NebulaGraphbot](https://www-cdn.nebula-graph.com.cn/nebula-blog/nbot.png)
 
 
 > 作者有话说：Hi，我是 Nico，是 Nebula Graph 的前端工程师，对数据可视化比较感兴趣，分享一些自己的实践心得，希望这次分享能给大家带来帮助，如有不当之处，欢迎帮忙纠正，谢谢~

@@ -6,7 +6,7 @@ tags: ["系统测试"]
 author: 王扶摇
 ---
 
-​![产品细节](https://nebula-blog.azureedge.net/nebula-blog/Jepsen01.png)
+​![产品细节](https://www-cdn.nebula-graph.com.cn/nebula-blog/Jepsen01.png)
 
 在本篇文章中主要介绍图数据库 Nebula Graph 在 Jepsen 这块的实践。
 
@@ -16,7 +16,7 @@ Jepsen 是一款用于系统测试的开源软件库，致力于提高分布式
 
 ## Jepsen 的测试流程
 
-![流程图](https://nebula-blog.azureedge.net/nebula-blog/Jepsen02.png)
+![流程图](https://www-cdn.nebula-graph.com.cn/nebula-blog/Jepsen02.png)
 
 Jepsen 测试推荐使用 Docker 搭建集群。默认情况下由 6 个 container 组成，其中一个是控制节点（control node），另外 5 个是数据库的节点（默认为 n1-n5）。控制节点在测试程序开始后会启用多个 worker 进程，并发地通过 SSH 登入数据库节点进行读写操作。
 
@@ -39,7 +39,7 @@ Jepsen 测试推荐使用 Docker 搭建集群。默认情况下由 6 个 contain
 
 分布式图数据库 Nebula Graph 主要由 3 部分组成，分别是 meta 层，graph 层和 storage 层。
 
-![architecture](https://nebula-blog.azureedge.net/nebula-blog/Jepsen03.png)
+![architecture](https://www-cdn.nebula-graph.com.cn/nebula-blog/Jepsen03.png)
 
 我们在使用 Jepsen 对 kv 存储接口进行的测试中，搭建了一个由 8 个 container 组成的集群：一个 Jepsen 的控制节点，一个 meta 节点，一个 graph 节点，和 5 个 storage 节点，集群由 Docker-compose 启动。需要注意的是，要建立一个集群的 subnet 网络，使集群可以连通，另外要安装 ssh 服务，并为 control node 与 5 个 storage 节点配置免密登入。
 
@@ -85,7 +85,7 @@ Nebula-Jepsen 的测试程序目前分为三种常见的测试模型和三种�
 
 以上片段是截取的测试中一小部分不同的读写操作示例，
 
-![format](https://nebula-blog.azureedge.net/nebula-blog/Jepsen04.png)
+![format](https://www-cdn.nebula-graph.com.cn/nebula-blog/Jepsen04.png)
 
 其中**最左边的数字是执行这次操作的 worker**，也就是**进程号**。每发起一次操作，标志都是 invoke，接下来一列会指出是 write 还是 read操作，而之后一列的中括号内，则显示了具体的操作，比如
 
@@ -145,7 +145,7 @@ Jepsen 会在测试过程中，多次随机将某一节点与其他节点网络�
 #### partition-random-halves
 在这种常见的网络分区情景下，Jepsen 控制节点会将 5 个 DB 节点随机分成两部分，一部分为两个节点，另一部分为三个。一定时间后恢复通信。如下图所示。
 
-![partition](https://nebula-blog.azureedge.net/nebula-blog/Jepsen05.png)
+![partition](https://www-cdn.nebula-graph.com.cn/nebula-blog/Jepsen05.png)
 
 ## 测试结束后
 
@@ -176,7 +176,7 @@ Everything looks good! ヽ(‘ー`)ノ
 
 Jepsen 在测试执行过程中会自动生成一个名为 timeline.html 文件，以下为本次实践生成的 timeline.html 文件部分截图
 
-![timeline](https://nebula-blog.azureedge.net/nebula-blog/Jepsen06.png)
+![timeline](https://www-cdn.nebula-graph.com.cn/nebula-blog/Jepsen06.png)
 
 
 上面的图片展示了测试中执行操作的时间轴片段，每个执行块有对应的执行信息，Jepsen 会将整个时间轴生成一个 HTML 文件。
@@ -186,11 +186,11 @@ Jepsen 就是这样按照顺序的历史操作记录进行 Linearizability 一
 ### Jepsen 生成的性能分析图
 下面是一些 Jepsen 生成的性能分析图表，本次实践项目名为「basic-test」各位读者阅读时请自行脑补为你项目名。
 
-![latency](https://nebula-blog.azureedge.net/nebula-blog/Jepsen07.png)
+![latency](https://www-cdn.nebula-graph.com.cn/nebula-blog/Jepsen07.png)
 
 可以看到，这一张图表展示了 Nebula Graph 的读写操作延时。其中上方灰色的区域是错误注入的时段，在本次测试我们注入了随机 kill node。
 
-![rate](https://nebula-blog.azureedge.net/nebula-blog/Jepsen08.png)
+![rate](https://www-cdn.nebula-graph.com.cn/nebula-blog/Jepsen08.png)
 
 而在这一张图展示了读写操作的成功率，我们可以看出，最下方红色集中突出的地方为出现失败的地方，这是因为 control node 在杀死节点时终止了某个 partition 的 leader 中的 nebula 服务。集群此时需要重新选举，在选举出新的 leader 之后，读写操作也恢复到正常了。
 

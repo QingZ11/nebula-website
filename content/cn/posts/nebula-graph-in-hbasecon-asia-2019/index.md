@@ -11,7 +11,7 @@ author: 陈恒
 ## 本篇导读
 HBaseCon Asia2019 活动于 2019 年 7 月 20 日于北京金隅喜来登酒店举办，应主办方邀请，Nebula Graph 技术总监-陈恒在活动中发表演讲 “Nebula: A Graph DB based on HBase” 。本篇文章是根据此次演讲所整理出的技术干货，全文阅读需要 30 分钟。 
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/HBase01.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/HBase01.png)
 
 
 大家下午好，我是陈恒，来自 VESoft，是开源图数据库 Nebula Graph 的开发者。同时，我也是 HBase 的 Commiter<del>（刚才在后面和各位大佬谈笑风生）</del>，今天和大家分享的，是我们最近刚开源的分布式图数据库 Nebula Graph。
@@ -21,17 +21,17 @@ HBaseCon Asia2019 活动于 2019 年 7 月 20 日于北京金隅喜来登酒店�
 
 NebulaGraph 是完全开源的，可以在 GitHub 上访问 [https://www.github.com/vesoft-inc/Nebula](https://github.com/vesoft-inc/nebula)
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/HBase02.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/HBase02.png)
 
 ## NoSQL 类数据库的发展趋势
 下面我们看一张图，是 DB-Engine 的统计，反映了从 2013 年到今年所有的 NoSQL 类数据库的发展趋势。横轴代表的是时间，纵轴可以认为是受众程度，或者社区里的讨论热烈程度。大家可以看到绿色的线就是图数据库。这些年一共翻了十倍，增长还是非常迅猛的。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/HBase03.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/HBase03.png)
 
 ## 图数据库的简要介绍
 在座的同事是 HBase 专家，部分可能对于图数据库有些不太了解，我这里简单介绍一下图数据库。它的主要应用场景其实是针对于各种各样的点和边组成的数据集合。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/HBase04.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/HBase04.png)
 
 ### 图数据库典型应用场景
 举几个例子来讲，典型图数据库的应用场景有以下几个。
@@ -49,14 +49,14 @@ IoT 物联网（Internet of Things）是目前非常火的。以前，每一个�
 
 **一般来说，图数据库并不是简单的关联关系查询，在图遍历的过程，通常要根据属性做一些计算**。所以一个单单的图关联是完全不能满足要求的。举个例子，这是一个股票新闻实时推荐的场景。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/HBase05.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/HBase05.png)
 
 大家知道一般散户炒股并不是高频这样事件驱动的，但是他们也会边看新闻边盯着 K线。所以在这个时候要给他们推荐一些什么新闻呢。一般常见的办法是爬虫获得新闻，清洗完毕后，NLP 分词，提取出关键词后，然后跟股票代码关联上。一般根据监管，可能还要加上一些编辑审核和推送。但大家知道中国股市好的时候，是线下口口相传的。所以有个思路是通过好友圈来推荐新闻：首先会去找用户的好友，然后这些好友可能浏览过一些文章，那么根据驻留时间等，好友对这个文章可能会有一个评分，这个评分用 WL 来表示。好友和好友之间也有一定的亲密度，用 WC 表示。这个亲密度可以来源于之前的聊天次数、转账次数等。同一个人到一篇文章之间可能会有多条路径。比如说到第二篇文章，可能会有几十条路径。所以说这么多条路径的权值之和代表了我和这篇文章的之间的评分。最终给用户推荐文章的时候，希望是把所有的计算结果做 Top N。从线上的结果来看，转化效率比其他几种都要高。
 
 ## 图数据库面临的挑战
 再回到技术底层，图数据库面临的技术挑战。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/HBase06.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/HBase06.png)
 
 
 ### 低延时高吞吐
@@ -73,7 +73,7 @@ IoT 物联网（Internet of Things）是目前非常火的。以前，每一个�
 
 ## Nebula Graph 的特点
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/HBase07.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/HBase07.png)
 
 ### **存储计算分离**
 对于 Nebula Graph 来讲，有这么几个技术特点：第一个就是采用了存储计算分离的架构。这样架构主要的考虑其实前面几个 Talk大家都已经讨论了很多，主要好处就是为了上云或者说 `弹性`  ， `方便单独扩容`  。上午的 Talk：HBase on Cloud 也有提到，业务水位总是很难预测的，一段时间存储不够了，有些时候计算不够了。在云上或者使用容器技术，计算存储分离的架构运维起来会比较方便，成本也更好控制。大家使用 HBase 那么久，这方面的感触肯定很多。
@@ -102,21 +102,21 @@ Nebula Graph 的第二个技术特点是它的查询语言，我们称为 nGQL�
 
 ### 基于原生存储的架构图
 这条虚线上面是计算层，下面是存储层。
-![基于原生存储的架构图](https://nebula-blog.azureedge.net/nebula-blog/HBase08.png)
+![基于原生存储的架构图](https://www-cdn.nebula-graph.com.cn/nebula-blog/HBase08.png)
 
 图 1：基于原生存储的架构图
 
 我们先看下计算层，计算层可以理解为把一个 query 翻译成真正需要的执行计划，产生执行计划之后，到下面存储层拿需要的数据。这和传统数据库非常类似，查询语言也很类似。这里面比较重要的事情是查询优化，除了前面提到的计算下推到存储层外，目前一个主要的实现是并发执行。
 
 ### 查询服务架构图
-![Query Service](https://nebula-blog.azureedge.net/nebula-blog/HBase09.png)
+![Query Service](https://www-cdn.nebula-graph.com.cn/nebula-blog/HBase09.png)
 
 图 2：Query Service
 
 举个例子，查好友的大于 18 岁的好友，可能好友有很多，没有必要等一度好友都返回后，再去查二度好友。当然应该异步来做，一度好友部分返回后，就立刻开始二度查询。有点类似图计算里面的 BSP 和 ASP。这个优化对提升性能有非常大作用。对于 Storage 层来说，又分为上面的 Storage Engine 和 KV Store。因为 Nebula Graph 是分布式系统，数据是分片的。目前的分片方法是静态哈希，和 HBase 不一样。主要是因为图查询基本都是特定 Prefix 的 Scan，Get 很少。比如一个人的好友这样，就是同一个 prefix 的 scan。每一个数据分片会通过 RAFT 协议来保证数据的强一致。这和 HBase 写到底层 HDFS 也不一样。3 台机器上的 Partition1 组成一个 Raft Group。Storage Engine 做的事情比较简单，就是把图语义的查询请求翻译成 KV 的查询请求。关于图右边的 Meta Service，它的主要作用是 schema 管理和集群管理。Nebula Graph 中的点和边都是有属性和版本的，那每个属性的类型和版本在 MetaService 中统一管理。集群管理主要用于运维和鉴权目的，负责机器上下线和对用户做 ACL。
 
 ### Nebula Graph 基于 HBase 的架构图
-![HBase](https://nebula-blog.azureedge.net/nebula-blog/HBase10.png)
+![HBase](https://www-cdn.nebula-graph.com.cn/nebula-blog/HBase10.png)
 
 图 3：基于 HBase 的架构图
 
@@ -125,7 +125,7 @@ Nebula Graph 的 HBase 版本略微有些不一样，可以看到虚线往下挪
 ## Nebula Graph 的数据模型和 Schema
 下面介绍下 Nebula Graph 的数据模型和 Schema（每种标签有一组相对应的属性，我们称之为 schema）。前面说到 Nebula Graph 是有向属性图，点和边都有各自属性。点有点属性，Nebula Graph 里面称为 Tag（类型），点可以有多种类型，或者叫多种 Tag。比如一个点既可以是 Tag  Person，有属性姓名、年龄；也是 Tag developer，属性是擅长的语言。Tag 是可以像类一样继承的，一个 Tag 继承自另外一个 Tag。边和点略微有点不一样，一条边只能有一种类型。但是两个点之间可以有多种类型的边。另外，像 TTL 这种功能，Nebula Graph 也是支持的。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/HBase11.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/HBase11.png)
 
 **Nebula Graph 的数据模型和 Schema**
 
@@ -134,14 +134,14 @@ Nebula Graph 的 HBase 版本略微有些不一样，可以看到虚线往下挪
 
 强 Schema 最大的好处，是知道这条数据什么时候结束的，一行有多少属性是知道的。所以在根据某个版本号取数据的时候，从某一行跳到下一行，不需要对每个属性都扫描一遍。但如果像 HBase 这样弱 Schema 系统，性能消耗是非常大。但相应的，问题就来了，如果要支持强 Schema，要变更 Schema 怎么办？更改 Schema 在 MySQL 里面，往往要锁表的。对于 Nebula Graph 来说，当更改 Schema 时，并不是在原来的数据上进行更改，而是先插入一个新的 Schema，当然这要求写入数据的时候就要记录版本号。这样的话在读的时候，才能知道要用版本。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/HBase12.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/HBase12.png)
 
 再解释一下关于 Key 的设计，点和边的 Key 设计是像上面两行这样，一个点是一个 Key，一条边是两个 Key，这样的目的是把起点和出边存在一起，对端的终点和入边存储在一起。这样在查询的时候，可以减少一次网络。另外，对于 Nebula Graph 原生存储和 HBase 存储，属性采用的存储方式也是不一样的。在 HBase 里面，一个属性放在一个 Column 里面。在原生存储里面，所有属性放在一个 Column 里面。这样设计的主要原因是，如果用户使用 HBase 作为底层存储，其实他更期望 HBase 这张表在别的系统里面也可以用，所以说我们考虑把它打散开了。
 
 ## Nebula Graph 查询语言 nGQL
 最后讲一下我们的 Query Language：nGQL
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/HBase13.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/HBase13.png)
 
 我们说它比较类似 SQL，比如说看这个例子，从某一个点开始向外拓展，用 nGQL 来写就是，GO FROM $id，起始点，然后 OVER edge，沿着某条边，还可以设置一些过滤条件，比如说，从这个点出发，沿着我的好友边，然后去拿，里面年龄大于十八岁的。
 

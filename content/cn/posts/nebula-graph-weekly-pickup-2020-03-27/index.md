@@ -6,7 +6,7 @@ tags: ["社区","产品动态"]
 author: 清蒸
 ---
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW.png)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW.png)
 
 > 每周五 Nebula 为你播报每周看点，每周看点由用户问答、Nebula 产品动态和推荐阅读构成。
 
@@ -20,7 +20,7 @@ Pick of the Week 每周会从 GitHub issue 及 pr 中选取重要的产品动态
 - 对于不支持的系统，会退出编译过程，(感谢社区小伙伴的 pr)  ，标签： `编译` ，pr 参见：[https://github.com/vesoft-inc/nebula/pull/1951](https://github.com/vesoft-inc/nebula/pull/1951)
 - job manager 支持提交 flush 任务，标签： `文档` ，示例如下，pr 参见：[https://github.com/vesoft-inc/nebula/pull/1957](https://github.com/vesoft-inc/nebula/pull/1957)
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW201301.png)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201301.png)
 
 
 ## 社区问答
@@ -39,7 +39,7 @@ Pick of the Week 每周会从官方论坛、微博、知乎、微信群、微信
 
 - @刘德林 提问
 > 请问github上的issue标注了defect-p2的标签是什么意思？
-> ![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW201302.png)
+> ![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201302.png)
 
 **Nebula**：p2 级别的 bug。我们把 bug 等级划分成了 3 档，每档可以获得对应的积分可用于兑换 Nebula 准备的礼品。
 
@@ -75,7 +75,7 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《NGC 1333: Stellar Nursery in Perseus：英仙座的恒星育婴室》
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW2013Nebula.jpeg)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2013Nebula.jpeg)
 
 
 在可见光波段 NGC 1333 是个反射星云，其特征性的泛蓝色泽，源自星际尘埃反射星光所致。此星云在英仙座方向，座落在一个庞大、正在形成恒星的分子云之边缘，距离我们只有 1,000 光年远。这幅精彩的特写影像，大约涵盖了 2 个满月宽度的天区，以 NGC 1313 的距离来换算，其跨幅略大于 15 光年。
@@ -84,4 +84,4 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 图片来源 | Astronomy Picture of the Day | 2019 March 27
 
 
-![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)
+![关注公众号](https://www-cdn.nebula-graph.com.cn/nebula-blog/WeChatOffical.png)

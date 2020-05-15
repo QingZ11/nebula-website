@@ -6,7 +6,7 @@ tags: ["Release-Note"]
 author: Jude
 ---
 
-![r2](https://nebula-blog.azureedge.net/nebula-blog/RC201.png)
+![r2](https://www-cdn.nebula-graph.com.cn/nebula-blog/RC201.png)
 
 > Nebula Graph 是开源的分布式图数据库，可应用于知识图谱、社交推荐、风控、IoT 等场景。
 

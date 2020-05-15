@@ -6,7 +6,7 @@ tags: ["特性讲解"]
 author: sky
 ---
 
-![](https://nebula-blog.azureedge.net/nebula-blog/Index01.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Index01.png)
 
 ## 导读
 
@@ -47,7 +47,7 @@ Nebula Graph 是一个图数据库系统，查询场景一般是由一个点出�
 
 ### 图数据库 Nebula Graph 存储架构
 
-![](https://nebula-blog.azureedge.net/nebula-blog/Index02.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Index02.png)
 
 从架构图可以看到，每个Storage Server 中可以包含多个 Storage Engine, 每个 Storage Engine中可以包含多个Partition, 不同的Partition之间通过 Raft 协议进行一致性同步。每个 Partition 中既包含了 data，也包含了 index，同一个点或边的 data 和 index 将被存储到同一个 Partition 中。
 
@@ -61,11 +61,11 @@ Nebula Graph 是一个图数据库系统，查询场景一般是由一个点出�
 
 ##### 点的 Data 结构
 
-![](https://nebula-blog.azureedge.net/nebula-blog/Index03.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Index03.png)
 
 ##### 点的 Index 结构
 
-![](https://nebula-blog.azureedge.net/nebula-blog/Index04.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Index04.png)
 
 Vertex 的索引结构如上表所示，下面来详细地讲述下字段：
 
@@ -103,11 +103,11 @@ INSERT VERTEX tag_1(col_t1_1, col_t1_2, col_t1_3), tag_2(col_t2_1, col_t2_2) \
 
 **此时点的 Data 结构**
 
-![](https://nebula-blog.azureedge.net/nebula-blog/Index05.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Index05.png)
 
 **此时点的 Index 结构**
 
-![](https://nebula-blog.azureedge.net/nebula-blog/Index06.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Index06.png)
 
 说明：index 中 row 和 key 是一个概念，为索引的唯一标识；
 
@@ -117,15 +117,15 @@ INSERT VERTEX tag_1(col_t1_1, col_t1_2, col_t1_3), tag_2(col_t2_1, col_t2_2) \
 
 ##### 边的 Data 结构
 
-![](https://nebula-blog.azureedge.net/nebula-blog/Index07.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Index07.png)
 
 ##### 边的 Index 结构
 
-![](https://nebula-blog.azureedge.net/nebula-blog/Index08.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Index08.png)
 
 ### Index binary 介绍
 
-![](https://nebula-blog.azureedge.net/nebula-blog/Index09.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Index09.png)
 
 Index binary 是 index 的核心字段，在 index binary 中区分定长字段和不定长字段，int、double、bool 为定长字段，string 则为不定长字段。由于 **index binary 是将所有 index column 的属性值编码连接存储**，为了精确地定位不定长字段，Nebula Graph 在 index binary 末尾用 int32 记录了不定长字段的长度。
 
@@ -142,7 +142,7 @@ index1 (c1:int, c2:string, c3:string)
 - length = sizeof("abc") = 3
 - length = sizeof("here") = 4
 
-![](https://nebula-blog.azureedge.net/nebula-blog/Index10.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Index10.png)
 
 所以 index1 该 row 对应的 key 则为 23abchere34；
 
@@ -159,11 +159,11 @@ index2 (c1:string, c2:string, c3:string)
 - row1 : ("ab", "ab", "ab")
 - row2: ("aba", "ba", "b")
 
-![](https://nebula-blog.azureedge.net/nebula-blog/Index11.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Index11.png)
 
 可以看到这两行的 prefix（上图红色部分）是相同，都是 "ababab"，这时候怎么区分这两个 row 的 index binary 的 key 呢？别担心，我们有 `Variable-length field lenght` 。
 
-![](https://nebula-blog.azureedge.net/nebula-blog/Index12.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Index12.png)
 
 若遇到 where c1 == "ab" 这样的条件查询语句，在 Variable-length field length 中可直接根据顺序读取出 c1 的长度，再根据这个长度取出 row1 和 row2 中 c1 的值，分别是 "ab" 和 "aba" ，这样我们就精准地判断出只有 row1 中的 "ab" 是符合查询条件的。
 

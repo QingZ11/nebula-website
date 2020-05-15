@@ -6,7 +6,7 @@ tags: ["Release-Note"]
 author: Jude
 ---
 
-![Release note](https://nebula-blog.azureedge.net/nebula-blog/RC301.png)
+![Release note](https://www-cdn.nebula-graph.com.cn/nebula-blog/RC301.png)
 
 本次 RC3 主要新增 `dump_tools` 工具，导出指定条件的数据；发布 GUI 工具 Nebula Graph Studio，支持可视化探索，数据导入等功能；新增扫描点边接口，对接 OLAP。
 
