@@ -6,7 +6,7 @@ tags: ["特性讲解", "开发日志","产品讲解"]
 author: shylock
 ---
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/codecov01.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/codecov01.png)
 
 对于一个持续开发的大型工程而言，足够的测试是保证软件行为符合预期的有效手段，而不是仅仅依靠 code review 或者开发者自己的技术素质。测试的编写理想情况下应该完全定义软件的行为，但是通常情况都是很难达到这样理想的程度。而测试覆盖率就是检验测试覆盖软件行为的情况，通过检查测试覆盖情况可以帮助开发人员发现没有被覆盖到的代码。
 
@@ -24,7 +24,7 @@ gcc/clang 都支持 gcov 式的测试覆盖率功能，使用起来也是非常�
 
 到这里测试覆盖信息已经搜集完毕，接下可以通过 genhtml 这样的工具生成 html，然后通过浏览器查看测试覆盖率，如下图所示：
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/codecov02.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/codecov02.png)
 
 但是这样是非常不方便的，因为在持续的开发过程，如果每次都要手动进行这样一套操作，那必然带来极大的人力浪费，所以现在的常用做法是将测试覆盖率写入 CI 并且和第三方平台（比如 [Codecov](https://codecov.io/)，[Coveralls](https://coveralls.io/)）集成，这样开发人员完全不必关心测试覆盖信息的收集整理和展示问题，只需要发布代码后直接到第三方平台上查看覆盖情况即可，而且现在的第三方平台也支持直接在 PR 上评论覆盖情况使得查看覆盖率的变更情况更加方便。
 
@@ -57,7 +57,7 @@ gcc/clang 都支持 gcov 式的测试覆盖率功能，使用起来也是非常�
 
 这里主要是测试报告的收集、合并以及上传到第三方平台，这个在前文中已经比较详细地叙述过，CI 的运行情况如下图所示：
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/codecov03.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/codecov03.png)
 
 ## 集成测试覆盖率平台 Codecov
 
@@ -67,19 +67,19 @@ Nebula Graph 选择的测试覆盖平台是 Codecov——一个测试结果分�
 
 比如可以通过这个饼状图查看不同目录代码的覆盖情况：
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/codecov04.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/codecov04.png)
 
 也可以点开一个具体的文件，查看哪些行被覆盖那些行没有被覆盖：
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/codecov05.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/codecov05.png)
 
 当然我们一般不会直接使用 Codecov 的 API，而是使用他提供的一个 cli 工具，比如上传报告使用 `bash <(curl -s https://codecov.io/bash) -Z -t <token> -f clean.info` ，这里的 token 就是 Codecov 提供的认证 token，一般来说作为环境变量 CODECOV_TOKEN 使用，而不是输入明文。
 
 通过上述操作呢就可以在 Codecov 平台上查看你的工程的测试覆盖情况，并且可以看到每次 pr 增加减少了多少覆盖率，方便逐渐提高测试覆盖率。最后的话还可以在你的 README 上贴上 Codecov 提供的测试覆盖率 badge，就像 Nebula Graph 一样：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula)。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/codecov06.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/codecov06.png)
 
-本文中如有错误或疏漏欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：https://discuss.nebula-graph.com.cn/ 的 `建议反馈` 分类下提建议 👏；加入 Nebula Graph 交流群，请联系 Nebula Graph 官方小助手微信号：[NebulaGraphbot](https://nebula-blog.azureedge.net/nebula-blog/nbot.png)
+本文中如有错误或疏漏欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：https://discuss.nebula-graph.com.cn/ 的 `建议反馈` 分类下提建议 👏；加入 Nebula Graph 交流群，请联系 Nebula Graph 官方小助手微信号：[NebulaGraphbot](https://www-cdn.nebula-graph.com.cn/nebula-blog/nbot.png)
 
 ## 推荐阅读
 

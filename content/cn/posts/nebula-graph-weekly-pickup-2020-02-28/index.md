@@ -6,7 +6,7 @@ tags: ["社区","产品动态"]
 author: 清蒸
 ---
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW.png)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW.png)
 
 > 每周五 Nebula 为你播报每周看点，每周看点由本周大事件、用户问答、Nebula 产品动态和推荐阅读构成。
 
@@ -18,7 +18,7 @@ author: 清蒸
 
 图数据库 Nebula Graph 2020 上半年 Roadmap 发布，现已同步到官方论坛 `公告` 板块。
 
-![](https://nebula-blog.azureedge.net/nebula-blog/PotW200901.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200901.png)
 
 - Nebula Graph 论坛正式上线
 
@@ -26,7 +26,7 @@ author: 清蒸
 
 此外，Nebula Graph 论坛在正式上线之后 7*24 有专门的 Dev 来第一时间解答你的提问，如果你有使用方面的问题，欢迎去 `用户问答` 分类下向我们的 Dev 们提问，在 `公告` 下你可以看最新的产品动态及 Roadmap，在 `博客` 分类下可以读到我们 Dev 最新力作，Enjoy it~ Link：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/)
 
-![](https://nebula-blog.azureedge.net/nebula-blog/PotW200902.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200902.png)
 
 最后，有任何建议和反馈， `Site Feedback` 我们在等你🎊
 
@@ -36,7 +36,7 @@ Pick of the Week 每周会从 GitHub issue 及 pr 中选取重要的产品动态
 
 - `Lookup` 提供 Storage Engine 的查询性能，标签： `benchmarking` ，示例如下，pr 参见链接： [https://github.com/vesoft-inc/nebula/pull/1738](https://github.com/vesoft-inc/nebula/pull/1738)
 
-![](https://nebula-blog.azureedge.net/nebula-blog/PotW200903.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200903.png)
 
 ```
 =====================================================
@@ -115,11 +115,11 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《Magnetic Orion 猎户座大星云的磁场》
 
-![](https://nebula-blog.azureedge.net/nebula-blog/PotW2009Nebula.jpeg)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2009Nebula.jpeg)
 
 影像中，隐约可见的猎户座克莱曼-楼星云，出现在中右上方，而四边形星团的亮星，则在中央偏左之处。 距离约 l,300 光年的猎户座大星云，是离太阳最近的大型恒星形成区。
 
 资料来源 | Robert Nemiroff (MTU) & Jerry Bonnell (UMCP), Phillip Newman (NASA);
 图片来源 | Astronomy Picture of the Day | 2019 February 27
 
-![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)
+![关注公众号](https://www-cdn.nebula-graph.com.cn/nebula-blog/WeChatOffical.png)

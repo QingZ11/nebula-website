@@ -6,7 +6,7 @@ tags: ["部署", "编译"]
 author: 伊兴路
 ---
 
-![Docker](https://nebula-blog.azureedge.net/nebula-blog/Docker01.jpg)
+![Docker](https://www-cdn.nebula-graph.com.cn/nebula-blog/Docker01.jpg)
 
 ## Nebula Graph 介绍
 

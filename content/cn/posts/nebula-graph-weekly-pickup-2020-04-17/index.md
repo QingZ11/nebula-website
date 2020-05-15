@@ -6,7 +6,7 @@ tags: ["社区","产品动态"]
 author: 清蒸
 ---
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW.png)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW.png)
 
 > 每周五 Nebula 为你播报每周看点，每周看点由本周大事件、用户问答、Nebula 产品动态和推荐阅读构成。
 
@@ -18,7 +18,7 @@ author: 清蒸
 
 Nebula Graph 启用了中文论坛，而原先的 [https://discuss.nebula-graph.io](https://discuss.nebula-graph.io) 域名对应的论坛为英文论坛。此外，中英文论坛都启用了全新的分类和标签系统，方便社区用户更好地找到他们所需的帖子。
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW201601.png)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201601.png)
 
 如果你对论坛的分类、标签有任何建议，欢迎前往论坛：[https://discuss.nebula-graph.com.cn](https://discuss.nebula-graph.com.cn) 的 `建议反馈` 提建议，以便更好地服务社区的其他小伙伴。<br />
 
@@ -38,7 +38,7 @@ CREATE TAG icecream(made timestamp, temperature int)
 
 -  Nebula Graph Github 上的文档迁移到独立的 repo，标签： `文档` ，迁移后访问链接参见：[https://github.com/vesoft-inc/nebula-docs](https://github.com/vesoft-inc/nebula-docs)
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW201602.png)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201602.png)
 
 - fix 对某个 tag（已有该类型的点），新增属性对属性创建索引，插入数据 storaged coredump 的 bug，标签： `storage` ，pr 参见：[https://github.com/vesoft-inc/nebula/pull/2073](https://github.com/vesoft-inc/nebula/pull/2073)
 
@@ -81,7 +81,7 @@ Partition 之间的交互主要是看 partition 的分布，如果不在一台�
   - [Pick of the Week'20 | 第 13 周看点--GitHub上的 defect-p2 标签](https://nebula-graph.io/cn/posts/nebula-graph-weekly-pickup-2020-03-27/)
 
 
-本期 Pick of the Week 就此完毕，如果你对本周看点或 Nebula Graph 有任何建议，欢迎前去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) 或者官方论坛：[https://discuss.nebula-graph.com.cn](https://discuss.nebula-graph.com.cn) 向我们提出。若你想加入图数据库交流群，请添加 Nebula 小助手微信：[NebulaGraphbot](https://nebula-blog.azureedge.net/nebula-blog/nbot.png)
+本期 Pick of the Week 就此完毕，如果你对本周看点或 Nebula Graph 有任何建议，欢迎前去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) 或者官方论坛：[https://discuss.nebula-graph.com.cn](https://discuss.nebula-graph.com.cn) 向我们提出。若你想加入图数据库交流群，请添加 Nebula 小助手微信：[NebulaGraphbot](https://www-cdn.nebula-graph.com.cn/nebula-blog/nbot.png)
 
 ## 星云·小剧场
 
@@ -91,11 +91,11 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《M81》
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW2016Nebula.jpeg)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2016Nebula.jpeg)
 
 M81 大小和我们的银河系相近，同时也是地球天空中最明亮的星系之一。这个位在北天大熊座方向的宏伟螺旋星系，亦名为 NGC 3031，另外也因它的 18 世纪发现者而有波德星系的称号。在影像的中左方，可见到有些尘埃带与其他旋臂结构反向而行，穿过了星系盘。
 
 资料来源 | Robert Nemiroff (MTU) & Jerry Bonnell (UMCP), Phillip Newman (NASA);
 图片来源 | Paolo De Salvatore (Zenit Observatory)
 
-![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)
+![关注公众号](https://www-cdn.nebula-graph.com.cn/nebula-blog/WeChatOffical.png)

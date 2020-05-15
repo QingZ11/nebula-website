@@ -6,7 +6,7 @@ tags: ["特性讲解"]
 author: pandasheep
 ---
 
-![](https://nebula-blog.azureedge.net/nebula-blog/TTL01.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/TTL01.png)
 
 ## 导读
 
@@ -111,13 +111,13 @@ TTL，全称 Time To Live，用来指定数据的生命周期，数据时效到�
 
 图数据库 Nebula Graph 底层存储使用的是 RocksDB，RocksDB 在磁盘上的文件是分为多层的，默认是 7 层，如下图所示：
 
-![](https://nebula-blog.azureedge.net/nebula-blog/TTL02.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/TTL02.png)
 
 SST文件在磁盘上的组织方式
 
 Level 0 层包含的文件，是由内存中的 Memtable flush 到磁盘，生成的 SST 文件，单个文件内部按 key 有序排列，文件之间无序。其它 Level 上的多个文件之间都是按照 key 有序排列，并且文件内也有序，如下图所示：
 
-![](https://nebula-blog.azureedge.net/nebula-blog/TTL03.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/TTL03.png)
 
 非Level 0 层的文件数据划分
 
@@ -132,13 +132,13 @@ RocksDB 时，会先将数据写入到一个 Memtable 中，当一个 Memtable �
 
 Level 0 与 Level 1 的 compaction 如下：
 
-![](https://nebula-blog.azureedge.net/nebula-blog/TTL04.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/TTL04.png)
 
 Level 0 与 Level 1 的 compaction
 
 其他 Level 的 compaction 规则一样，以 Level 1与 Level 2 的 compaction 为例进行说明，如下所示：
 
-![](https://nebula-blog.azureedge.net/nebula-blog/TTL05.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/TTL05.png)
 
 Level 1 与 Level 2 的 compaction
 

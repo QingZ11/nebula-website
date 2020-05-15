@@ -11,7 +11,7 @@ author: 徐飞
 Kubernetes 是一个开源的，用于管理云平台中多个主机上的容器化的应用，Kubernetes 的目标是让部署容器化的应用简单并且高效，Kubernetes 提供了应用部署，规划，更新，维护的一种机制。<br />Kubernetes 在设计结构上定义了一系列的构建模块，其目的是为了提供一个可以**部署、维护和扩展应用程序的机制**，组成 Kubernetes 的组件设计概念为**松耦合**和**可扩展**的，这样可以使之满足多种不同的工作负载。可扩展性在很大程度上由 Kubernetes
 API 提供，此 API 主要被作为扩展的内部组件以及 Kubernetes 上运行的容器来使用。
 
-![](https://nebula-blog.azureedge.net/nebula-blog/k8s01.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/k8s01.png)
 
 Kubernetes 主要由以下几个核心组件组成：
 
@@ -399,7 +399,7 @@ nebula-storaged-2                                1/1     Running            0   
 
 Ingress-controller 是 Kubernetes 的一个 Add-Ons。Kubernetes 通过 ingress-controller 将 Kubernetes 内部署的服务暴露给外部用户访问。Ingress-controller 还提供负载均衡的功能，可以将外部访问流量平摊给 k8s 中应用的不同的副本。
 
-![](https://nebula-blog.azureedge.net/nebula-blog/k8s02.png)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/k8s02.png)
 
 ### 选择一个节点部署 Ingress-controller
 

@@ -6,7 +6,7 @@ tags: ["产品讲解"]
 author: George
 ---
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/cdn01.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/cdn01.png)
 
 ## Discourse 介绍
 
@@ -48,7 +48,7 @@ Cloudflare 是一家覆盖全世界主要地区的 CDN 服务商，在提供基�
 
 先设定 DNS 记录可减少首次部署时无法通过 Let's encrypt 申请证书的概率。在 Cloudflare 的 DNS 配置中，添加类型为 A 的记录指向服务器的 IP 地址即可。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/cdn02.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/cdn02.png)
 
 这里需提醒下，不要将 Proxy status 设置为“Proxied”，这会导致页面因重定向次数过多而无法访问。我们将在完成正确的配置后开启 Proxy status 设置。
 
@@ -56,14 +56,14 @@ Cloudflare 是一家覆盖全世界主要地区的 CDN 服务商，在提供基�
 
 Full 和 Flexible 是 Cloudflare 上最常用的两种 SSL 模式，在正确的启用 CDN 前，需要对其进行设置。首先来到 SSL/TLS 设置面板，选择 Full 模式，这种方式会确保 CDN 回源时也可以通过 HTTPS 来访问源站，有效地提高了内容安全性。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/cdn03.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/cdn03.png)
 
 
 然后进入 Origin Server 标签，进行创建证书的操作，在私钥类型中选择 RSA，BTW，这是最具兼容性的证书类型，ECDSA 则具有更好的性能。
 
 在被证书保护的域名列表中输入论坛的域名，例如 Nebula Graph 论坛地址为：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/)，证书有效期选择 1 年即可。点击 Next 后将会获取到证书的公钥和私钥，分别保存为“ssl.crt”和“ssl.key”将其妥善保存，我们将在后续的步骤中用到他们。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/cdn04.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/cdn04.png)
 
 
 #### 配置和部署 Discourse
@@ -106,7 +106,7 @@ Let's Encrypt account email? (ENTER to skip) [me@example.com]: [自动更新证�
 
 大约等待 10 分钟后，可通过之前设定的域名：[https://discuss.nebula-graph.com.cn/](https://www.yuque.com/nebulagraph/ngnb/discuss.nebula-graph.com.cn/) 访问自己的 Discourse 论坛。如果首次访问时出现了 502 错误，这是由于服务还未完全初始化，通常情况下稍等片刻即可。 
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/cdn05.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/cdn05.png)
 
 #### 配置 Discourse
 

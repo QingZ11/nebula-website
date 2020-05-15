@@ -6,7 +6,7 @@ tags: ["Release-Note"]
 author: Jude
 ---
 
-![Release note](https://nebula-blog.azureedge.net/nebula-blog/rc4.png)
+![Release note](https://www-cdn.nebula-graph.com.cn/nebula-blog/rc4.png)
 
 本次 [RC4](https://github.com/vesoft-inc/nebula/releases/tag/v1.0.0-rc4) 上线 INDEX 功能，`LOOKUP ON` 对建立索引的数据进行查询；RC4 提供了基于 SPACE 层级的权限管理和 ACL 授权模式。在运维方面，新增 `Nebula Stats Exporter` 对接基于 Grafana 和 Prometheus 的监控系统；
 

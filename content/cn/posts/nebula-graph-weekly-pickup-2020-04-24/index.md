@@ -6,7 +6,7 @@ tags: ["社区","产品动态"]
 author: 清蒸
 ---
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW.png)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW.png)
 
 > 每周五 Nebula 为你播报每周看点，每周看点由固定模块：特性讲解、Nebula 产品动态、社区问答、推荐阅读，和随机模块：本周大事件构成。
 
@@ -66,7 +66,7 @@ Pick of the Week 每周会从官方论坛、微博、知乎、微信群、微信
   - [Pick of the Week'20 | 第 15 周看点--Studio v1.0.2-beta 发布](https://nebula-graph.io/cn/posts/nebula-graph-weekly-pickup-2020-04-10/)
   - [Pick of the Week'20 | 第 14 周看点--RC4 和官网 2.0 齐上线](https://nebula-graph.io/cn/posts/nebula-graph-weekly-pickup-2020-04-03/)
 
-本期 Pick of the Week 就此完毕，如果你对本周看点或 Nebula Graph 有任何建议，欢迎前去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) 或者官方论坛：[https://discuss.nebula-graph.com.cn](https://discuss.nebula-graph.com.cn) 向我们提出。若你想加入图数据库交流群，请添加 Nebula 小助手微信：[NebulaGraphbot](https://nebula-blog.azureedge.net/nebula-blog/nbot.png)
+本期 Pick of the Week 就此完毕，如果你对本周看点或 Nebula Graph 有任何建议，欢迎前去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) 或者官方论坛：[https://discuss.nebula-graph.com.cn](https://discuss.nebula-graph.com.cn) 向我们提出。若你想加入图数据库交流群，请添加 Nebula 小助手微信：[NebulaGraphbot](https://www-cdn.nebula-graph.com.cn/nebula-blog/nbot.png)
 
 ## 星云·小剧场
 
@@ -76,11 +76,11 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《大麦哲伦星系的星云》
 
-![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/PotW2017Nebula.jpeg)
+![关注公众号](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2017Nebula.jpeg)
 
 这个名为的 N11 的区域，出现在许多以它母星系─我们银河系近邻的大麦哲伦星系（LMC）─为主题的影像之右上方。在大麦哲伦星系里，大小仅次于蜘蛛星云。在这张影像里，到处可见到内部藏着即将现踪年轻恒星的紧实黝黑尘埃球。
 
 资料来源 | Robert Nemiroff (MTU) & Jerry Bonnell (UMCP), Phillip Newman (NASA);
 图片来源 | NASA Official
 
-![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)
+![关注公众号](https://www-cdn.nebula-graph.com.cn/nebula-blog/WeChatOffical.png)

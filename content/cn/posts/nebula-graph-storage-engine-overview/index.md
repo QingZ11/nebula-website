@@ -6,7 +6,7 @@ tags: ["架构剖析"]
 author: 陈恒
 ---
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Architecture0101.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Architecture0101.png)
 
 ## 摘要
 
@@ -16,7 +16,7 @@ Nebula 的 Storage 包含两个部分， 一是 meta 相关的存储， 我们�
 
 ## Architecture
 
-![storage service ](https://nebula-blog.azureedge.net/nebula-blog/Architecture0102.png)
+![storage service ](https://www-cdn.nebula-graph.com.cn/nebula-blog/Architecture0102.png)
 
 图一  storage service 架构图
 
@@ -32,7 +32,7 @@ Nebula 的 Storage 包含两个部分， 一是 meta 相关的存储， 我们�
 
 对于点来说，我们使用不同的 Tag 表示不同类型的点，同一个 VertexID 可以关联多个 Tag，而每一个 Tag 都有自己对应的属性。对应到 kv 存储里面，我们使用 vertexID + TagID 来表示 key,  我们把相关的属性编码后放在 value 里面，具体 key 的 format 如图2 所示：
 
-![Vertex Key Format](https://nebula-blog.azureedge.net/nebula-blog/Architecture0103.png)
+![Vertex Key Format](https://www-cdn.nebula-graph.com.cn/nebula-blog/Architecture0103.png)
 图二 Vertex Key Format
 
 - `Type` :  1 个字节，用来表示 key 类型，当前的类型有 data, index, system 等
@@ -45,7 +45,7 @@ Nebula 的 Storage 包含两个部分， 一是 meta 相关的存储， 我们�
 
 两个点之间可能存在多种类型的边，Nebula 用 Edge Type 来表示边类型。而同一类型的边可能存在多条，比如，定义一个 edge type "转账"，用户 A 可能多次转账给 B， 所以 Nebula 又增加了一个 Rank 字段来做区分，表示 A 到 B 之间多次转账记录。 Edge key 的 format 如图3 所示：
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Architecture0104.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Architecture0104.png)
 图三 Edge Key Format
 
 - `Type` :  1 个字节，用来表示 key 的类型，当前的类型有 data, index, system 等。
@@ -58,9 +58,9 @@ Nebula 的 Storage 包含两个部分， 一是 meta 相关的存储， 我们�
 
 针对 Edge Type 的值，若如果大于 0 表示出边，则对应的 edge key format 如图4 所示；若 Edge Type 的值小于 0，则对应的 edge key format 如图5 所示
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Architecture0105.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Architecture0105.png)
 图4 出边的 Key Format
-![image](https://nebula-blog.azureedge.net/nebula-blog/Architecture0106.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Architecture0106.png)
 图5 入边的 Key Format
 
 对于点或边的属性信息，有对应的一组 kv pairs，Nebula 将它们编码后存在对应的 value 里。由于 Nebula 使用强类型 schema，所以在解码之前，需要先去 Meta Service 中取具体的 schema 信息。另外，为了支持在线变更 schema，在编码属性时，会加入对应的 schema 版本信息，具体的编解码细节在这里不作展开，后续会有专门的文章讲解这块内容。

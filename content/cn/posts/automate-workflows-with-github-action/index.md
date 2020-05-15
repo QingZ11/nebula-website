@@ -7,13 +7,13 @@ tags: ["开发日志"]
 author: Yee
 ---
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/auto01.jpeg)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/auto01.jpeg)
 
 ## 缘起
 
 Nebula Graph 最早的自动化测试是使用搭建在 Azure 上的 [Jenkins](https://jenkins.io/zh/)，配合着 GitHub 的 Webhook 实现的，在用户提交 Pull Request 时，加个 `ready-for-testing` 的 label 再评论一句 `Jenkins go` 就可以自动的运行相应的 UT 测试，效果如下：
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/auto02.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/auto02.png)
 
 因为是租用的 Azure 的云主机，加上 nebula 的编译要求的机器配置较高，而且任务的触发主要集中在白天。所以上述的方案性价比较低，从去年团队就在考虑寻找替代的方案，准备下线 Azure 上的测试机，并且还要能提供多环境的测试方案。
 
@@ -54,11 +54,11 @@ Nebula Graph 作为托管在 GitHub 上的开源项目，首先要解决的测�
 
 对于要求 2，我们希望能同时在目前支持的几个系统上运行 Nebula 源码的编译验证。那么像之前在物理机上直接构建的方式就不再可取，毕竟一台物理机的价格已经高昂，何况一台还不足够。为了保证编译环境的一致性，还要尽可能的减少机器的性能损失，最终采用了 docker 的容器化构建方式。再借助 Action 的 [matrix 运行策略](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix)和对 [docker 的支持](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idcontainer)，还算顺利地将整个流程走通。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/auto03.svg)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/auto03.svg)
 
 运行的大概流程如上图所示，在 [vesoft-inc/nebula-dev-docker](https://github.com/vesoft-inc/nebula-dev-docker) 项目中维护 nebula 编译环境的 docker 镜像，当编译器或者 thirdparty 依赖升级变更时，自动触发 docker hub 的 Build 任务（见下图）。当新的 Pull Request 提交以后，Action 便会被触发开始拉取最新的编译环境镜像，执行编译。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/auto04.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/auto04.png)
 
 针对 PR 的 workflow 完整描述见文件 [pull_request.yaml](https://github.com/vesoft-inc/nebula/blob/master/.github/workflows/pull_request.yaml)。同时，考虑到并不是每个人提交的 PR 都需要立即运行 CI 测试，且自建的机器资源有限，对 CI 的触发做了如下限制：
 
@@ -74,7 +74,7 @@ jobs:
 
 在 PR 中执行完成后的效果如下所示：
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/auto05.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/auto05.png)
 
 Code Coverage 的说明见博文：[图数据库 Nebula Graph 的代码变更测试覆盖率实践](https://nebula-graph.io/cn/posts/integrate-codecov-test-coverage-with-nebula-graph/)。
 
@@ -110,7 +110,7 @@ on:
 
 GitHub Action 提供了 [artifacts](https://help.github.com/en/actions/configuring-and-managing-workflows/persisting-workflow-data-using-artifacts) 的功能，可以让用户持久化 workflow 运行过程中的数据，这些数据可以保留 90 天。对于 nightly 版本安装包的存储而言，已经绰绰有余。利用官方提供的 `actions/upload-artifact@v1`  action，可以方便的将指定目录下的文件上传到 artifacts。最后 nightly 版本的 nebula 的安装包如下图所示。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/auto06.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/auto06.png)
 
 上述完整的 workflow 文件见 [package.yaml](https://github.com/vesoft-inc/nebula/blob/master/.github/workflows/package.yaml)
 
@@ -199,7 +199,7 @@ GitHub Action 为 workflow 提供了一些[命令](https://help.github.com/en/ac
 
 self-hosted 的机器可以打上不同的 label，这样便可以通过[不同的标签](https://help.github.com/en/actions/hosting-your-own-runners/using-labels-with-self-hosted-runners)来将任务分发到特定的机器上。比如线下的机器安装有不同的操作系统，那么 job 就可以根据 `runs-on` 的 label [在特定的机器](https://help.github.com/en/actions/hosting-your-own-runners/using-self-hosted-runners-in-a-workflow)上运行。 `self-hosted` 也是一个特定的标签。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/auto07.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/auto07.png)
 
 ### 安全
 
@@ -341,7 +341,7 @@ make 本身即支持多个源文件的并行编译，在编译时配置 `-j $(np
 
 目前针对尽量多使用小任务的组合还是使用大任务的方式，社区也没有定论。不过小任务组合的方式可以方便地定位任务失败位置以及确定每步的执行时间。
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/auto08.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/auto08.png)
 
 4. Action 的一些历史记录目前无法清理，如果中途更改了 workflows 的名字，那么老的 check runs 记录还是会一直保留在 Action 页面，影响使用体验。
 
@@ -369,7 +369,7 @@ make 本身即支持多个源文件的并行编译，在编译时配置 `-j $(np
 
 ~~图数据库 Nebula Graph 1.0 GA 快要发布啦。欢迎大家来围观。~~
 
-本文中如有任何错误或疏漏欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/) 的 `建议反馈` 分类下提建议 👏；加入 Nebula Graph 交流群，请联系 Nebula Graph 官方小助手微信号：[NebulaGraphbot](https://nebula-blog.azureedge.net/nebula-blog/nbot.png)
+本文中如有任何错误或疏漏欢迎去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) issue 区向我们提 issue 或者前往官方论坛：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/) 的 `建议反馈` 分类下提建议 👏；加入 Nebula Graph 交流群，请联系 Nebula Graph 官方小助手微信号：[NebulaGraphbot](https://www-cdn.nebula-graph.com.cn/nebula-blog/nbot.png)
 
 > 作者有话说：Hi，我是 Yee，是[图数据 Nebula Graph](https://github.com/vesoft-inc/nebula) 研发工程师，对数据库查询引擎有浓厚的兴趣，希望本次的经验分享能给大家带来帮助，如有不当之处也希望能帮忙纠正，谢谢~
 

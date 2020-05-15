@@ -6,7 +6,7 @@ tags: ["社区","产品动态"]
 author: 清蒸
 ---
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW.png)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW.png)
 
 > 每周五 Nebula 为你播报每周看点，每周看点由本周大事件、用户问答、Nebula 产品动态和推荐阅读构成。
 
@@ -18,7 +18,7 @@ author: 清蒸
 
 Nebula Graph 根据社区用户在数据导入这块遇到的问题，整理了一份数据导入 Tips 清单以便其他社区用户导入的时候使用，可有效防止踩坑 👏。论坛帖子地址：[https://discuss.nebula-graph.com.cn/t/nebula-csv-go-importer/361](https://discuss.nebula-graph.com.cn/t/nebula-csv-go-importer/361)
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW201201.png)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201201.png)
 
 ## Nebula 产品动态
 
@@ -26,7 +26,7 @@ Pick of the Week 每周会从 GitHub issue 及 pr 中选取重要的产品动态
 
 - 支持 ACL，标签： `权限` ，pr 参见：[https://github.com/vesoft-inc/nebula/pull/1842](https://github.com/vesoft-inc/nebula/pull/1842)，角色及其对应操作权限示例如下，pr 参见：[https://github.com/vesoft-inc/nebula/pull/1929](https://github.com/vesoft-inc/nebula/pull/1929)
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW201202.png)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201202.png)
 
 -  新增生产环境中使用 Nebula 的建议配置 ，标签： `配置` ，pr 参见：[https://github.com/vesoft-inc/nebula/pull/1908](https://github.com/vesoft-inc/nebula/pull/1908)
 
@@ -72,11 +72,11 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《A Spiral Galaxy with a Strange Center：M106 有奇特核心的螺旋星系》
 
-![每周看点](https://nebula-blog.azureedge.net/nebula-blog/PotW2012Nebula.jpeg)
+![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2012Nebula.jpeg)
 
 M106 是个由螺旋盘状恒星和气体所聚成的星系，外观上的主要特征为两道明亮的螺旋臂及核心附近的黝黑尘埃带，如上面这张主题影像所示。 M106 的核心在无线电波和X射线波段都很明亮，更有 2 道源自核心、长度和星系宽度相当的喷流。
 
 资料来源 | Robert Nemiroff (MTU) & Jerry Bonnell (UMCP), Phillip Newman (NASA);
 图片来源 | Astronomy Picture of the Day | 2019 March 17
 
-![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)
+![关注公众号](https://www-cdn.nebula-graph.com.cn/nebula-blog/WeChatOffical.png)

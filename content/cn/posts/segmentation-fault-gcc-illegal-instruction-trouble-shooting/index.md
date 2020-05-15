@@ -6,7 +6,7 @@ tags: ["开发日志","编译"]
 author: 甘雨
 ---
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/GCC01.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/GCC01.png)
 
 ## 摘要
 
@@ -137,4 +137,4 @@ bash> cd nebula && ./build_dep.sh N
 - 知乎：[zhihu.com/org/nebulagraph/posts](https://www.zhihu.com/org/nebulagraph/posts)
 - 微博：[weibo.com/nebulagraph](https://weibo.com/nebulagraph)
 
-![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)
+![关注公众号](https://www-cdn.nebula-graph.com.cn/nebula-blog/WeChatOffical.png)

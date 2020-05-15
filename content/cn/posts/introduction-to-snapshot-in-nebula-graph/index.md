@@ -6,7 +6,7 @@ tags: ["特性讲解"]
 author: sky
 ---
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Snapshot01.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Snapshot01.png)
 
 ## 1 概述
 
@@ -31,11 +31,11 @@ Snapshot 功能需要预先提供集群在某个时间点 snapshot 的创建功
 
 ### 2.1 系统整体架构
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Snapshot02.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Snapshot02.png)
 
 ### 2.2 存储系统结构关系
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Snapshot03.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Snapshot03.png)
 
 ### 2.3 存储系统物理文件结构
 
@@ -105,7 +105,7 @@ Snapshot 功能需要预先提供集群在某个时间点 snapshot 的创建功
 
 ### 3.1 逻辑分析
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Snapshot04.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Snapshot04.png)
 
 `Create snapshot`  由 `client api`  或 `console`  触发， `graph server`  对 `create snapshot`  的 **AST **进行解析，然后通过 `meta client`  将创建请求发送到 `meta server` 。 `meta server`  接到请求后，首先会获取所有的 `active host` ，并创建 `adminClient`  所需的 `request` 。通过 `adminClient`  将创建请求发送到每个 `StorageEngine` ，`StorageEngine`  收到 create 请求后，会遍历指定 space 的全部 StorageEngine，并创建 `checkpoint` ，随后对 `StorageEngine`  中的全部 `partition`  的 **wal 做 hardlink**。在创建 checkpoint 和 wal hardlink 时，因为已经**提前向所有 leader partition 发送了 write blocking 请求**，所以**此时数据库是只读状态**的。
 
@@ -113,11 +113,11 @@ Snapshot 功能需要预先提供集群在某个时间点 snapshot 的创建功
 
 ### 3.2 Create Snapshot
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Snapshot05.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Snapshot05.png)
 
 ### 3.3 Create Checkpoint
 
-![image](https://nebula-blog.azureedge.net/nebula-blog/Snapshot06.png)
+![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Snapshot06.png)
 
 ## 4 关键代码实现
 
@@ -293,4 +293,4 @@ Got 3 rows (Time spent: 907/1495 us)
 - [分布式图数据库 Nebula Graph 的 Index 实践](https://nebula-graph.io/cn/posts/how-indexing-works-in-nebula-graph/)
 - [图数据库 Nebula Graph TTL 特性](https://nebula-graph.io/cn/posts/clean-stale-data-with-ttl-in-nebula-graph/)
 
-![关注公众号](https://nebula-blog.azureedge.net/nebula-blog/WeChatOffical.png)
+![关注公众号](https://www-cdn.nebula-graph.com.cn/nebula-blog/WeChatOffical.png)

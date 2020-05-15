@@ -6,7 +6,7 @@ tags: ["性能"]
 author: Jerry
 ---
 
-![Docker](https://nebula-blog.azureedge.net/nebula-blog/DockerImage01.png)
+![Docker](https://www-cdn.nebula-graph.com.cn/nebula-blog/DockerImage01.png)
 
 如果 2019 年技术圈有十大流行词，**容器化**肯定占有一席之地，随着 Docker 的风靡，前端领域应用到 Docker 的场景也越来越多，本文主要来讲述下开源的分布式图数据库 Nebula Graph 是如何将 Docker 应用到可视化界面中。
 
