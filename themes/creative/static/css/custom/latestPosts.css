@@ -31,6 +31,9 @@
 .first{
   height: 300px;
 }
+.first >img {
+    width: 450px;
+}
 #first-rihgt{
   position: relative;
   float: right;
@@ -98,7 +101,7 @@
   .first{
     height: 100%;
   }
-  .first img{
+  .first >img{
     width: 20%;
     margin: 10px 5%;
   }

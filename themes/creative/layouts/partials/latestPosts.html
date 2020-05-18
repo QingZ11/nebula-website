@@ -8,10 +8,10 @@
                     <div class="first">
                         {{ with .Resources }}
                             {{ with .GetMatch "{*.jpg,*.png,*.jpeg}" }}
-                                <img src="{{ .Permalink }}" style="width: 450px"/>      
+                                <img src="{{ .Permalink }}" class="firstImage"/>      
                             {{ else }}
                                 {{ with .GetMatch "{thumbnail.png}" }}
-                                    <img src="{{ .Permalink }}" style="width: 450px"/>      
+                                    <img src="{{ .Permalink }}"/>      
                                 {{ end }}
                             {{ end }}
                         {{ end }}
