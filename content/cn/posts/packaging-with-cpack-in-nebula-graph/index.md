@@ -223,9 +223,7 @@ sudo rpm -ivh example-1.0.0-Linux-Aprogram.rpm --prefix=/home/test/install
 
 ## 更多…
 
-CPack 有很多参数，不同版本参数有些差异，想要了解更多，可以去 CMake 官网查看，见 [CPack](https://cmake.org/cmake/help/latest/module/CPack.html)。或直接通过 `CPack --help` 获取参数描述。<br />
-
-## Cpack 在 Nebula Graph 中的应用
+CPack 有很多参数，不同版本参数有些差异，想要了解更多，可以去 CMake 官网查看，见 [CPack](https://cmake.org/cmake/help/latest/module/CPack.html)。或直接通过 `CPack --help` 获取参数描述。
 
 **Nebula Graph** 也是采用 CPack 进行打包成 rpm 和 deb 包，您可以通过 [https://github.com/vesoft-inc/nebula/releases](https://github.com/vesoft-inc/nebula/releases) 获取到 **Nebula Graph 每次 release 发布的包**。
 
