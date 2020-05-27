@@ -74,6 +74,7 @@ contentDir = "content/en"
     subtitle   = "Nebula Graph is an open-source graph database capable of hosting super large scale graphs with dozens of billions of vertices (nodes) and trillions of edges, with milliseconds of latency."
     buttonText = "Get Started"
     downloadText = "VIEW ON GITHUB"
+    githubLink = "https://github.com/vesoft-inc/nebula"
     class = "download"
     link = "https://docs.nebula-graph.io/manual-EN/1.overview/2.quick-start/1.get-started/#batch-inserting"
 
