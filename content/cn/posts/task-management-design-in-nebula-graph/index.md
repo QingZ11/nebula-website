@@ -6,7 +6,7 @@ tags: ["特性讲解"]
 author: lionel.liu
 ---
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM01.jpeg)
+![](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM01.png)
 
 讲解 Task Manager 之前，在这里先介绍一些 Task Manager 会使用到的概念术语。
 
@@ -21,7 +21,7 @@ author: lionel.liu
 上文说到 storaged 上的 Task Manager 控制的 Task 是 meta 控制的 Job 的子任务，那 Task Manager 它自己具体解决什么问题呢？在 Nebula Graph 中 Task Manager 主要解决了以下 2 个问题：
 
 - 将之前通过 HTTP 的传送方式改为 RPC（Thrift）
-一般用户在搭建集群时，知道 storaged 之间通信使用 Thrift 协议，会为 Thrift 所需端口开放防火墙，但是可    能意识不到 Nebula Graph 还需要使用 HTTP 端口，我们遇到过多次社区用户实践忘记开放 HTTP 端口的事情。
+一般用户在搭建集群时，知道 storaged 之间通信使用 Thrift 协议，会为 Thrift 所需端口开放防火墙，但是可能意识不到 Nebula Graph 还需要使用 HTTP 端口，我们遇到过多次社区用户实践忘记开放 HTTP 端口的事情。
 - storaged 对于 Task 有调度能力
 这块内容将在本文下面章节展开讲述。
 
