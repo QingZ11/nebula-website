@@ -1,7 +1,7 @@
 ---
 title: "Pick of the Week'20 | 第 22 周看点--图遍历实践"
 date: 2020-05-29
-description: "在本期 Pick of the Week 中你将了解到 Nebula Graph 长耗时任务的管理方法，及导入数据集对硬件的配置建议。"
+description: "图遍历新特性——返回指定步数范围的图遍历已上线，在社区的问答部分你将了解到生产、测试环境的配置要求。"
 tags: ["社区","产品动态"]
 author: 清蒸
 ---
