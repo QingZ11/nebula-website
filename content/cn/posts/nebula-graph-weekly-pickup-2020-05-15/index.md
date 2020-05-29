@@ -131,7 +131,7 @@ Pick of the Week 每周会从官方论坛、微博、知乎、微信群、微信
   - [Pick of the Week'20 | 第 17 周看点--字符比较运算符 CONTAINS](https://nebula-graph.io/cn/posts/nebula-graph-weekly-pickup-2020-04-24/)
   - [Pick of the Week'20 | 第 16 周看点--中文论坛上线](https://nebula-graph.io/cn/posts/nebula-graph-weekly-pickup-2020-04-17/)
 
-本期 Pick of the Week 就此完毕，如果你对本周看点或 Nebula Graph 有任何建议，欢迎前去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) 或者官方论坛：[https://discuss.nebula-graph.com.cn](https://discuss.nebula-graph.com.cn) 向我们提出。若你想加入图数据库交流群，请添加 Nebula 小助手微信：[NebulaGraphbot](https://nebula-blog.azureedge.net/nebula-blog/nbot.png)<br />
+本期 Pick of the Week 就此完毕，如果你对本周看点或 Nebula Graph 有任何建议，欢迎前去 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) 或者官方论坛：[https://discuss.nebula-graph.com.cn](https://discuss.nebula-graph.com.cn) 向我们提出。若你想加入图数据库交流群，请添加 Nebula 小助手微信：[NebulaGraphbot](https://nebula-blog.azureedge.net/nebula-blog/nbot.png)
 
 ## 星云·小剧场
 
@@ -141,7 +141,7 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《苍白的螺旋星系 NGC 492》
 
-![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/2020Nebula.jpeg)
+![nebula](https://www-cdn.nebula-graph.com.cn/nebula-blog/2020Nebula.jpeg)
 
 壮丽的星系 NGC 4921，因其低恒星产生速率和低表面亮度，被戏称是贫血苍白的星系。在上面这张主题影像里，从中心往外看，依序有可见到星系明亮的核心、明亮的核心棒、鲜明的暗尘埃环、数团刚诞生的蓝色恒星、数个小型伴星系、不相干宇宙深处的星系、与及位在我们银河系内的前景恒星。
 

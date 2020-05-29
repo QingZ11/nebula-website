@@ -17,11 +17,11 @@ author: 清蒸
 ### Nebula Graph UI 1.0 版本内测中
 在本版本中你可以使用 GUI 来连接图数据库 Nebula Graph 服务，进行创建 Schema，数据导入并进行图探索。内测体验地址：[https://github.com/vesoft-inc/nebula-web-docker](https://github.com/vesoft-inc/nebula-web-docker)，搭配使用文档使用更佳：[https://github.com/vesoft-inc/nebula-web-docker/blob/master/nebula-graph-studio-user-guide.md](https://github.com/vesoft-inc/nebula-web-docker/blob/master/nebula-graph-studio-user-guide.md)
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200201.png)
+![Nebula-Studio](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200201.png)
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200203.png)
+![Nebula-Studio](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200203.png)
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200202.png)
+![Nebula-Studio](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200202.png)
 
 BTW，欢迎联系 Nebula 小助手参与测试哟 😊 
 
@@ -80,7 +80,7 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《Astronomy Picture of the Day：船帆座超新星遗迹》
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2002Nebula.jpeg)
+![Nebula](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2002Nebula.jpeg)
 
 在这幅 16 度宽视野，由 200 张照片拼贴成，远眺船帆座西北缘缤纷恒星的影像，中心处有船帆座超新星遗迹的明亮云气丝，而这团气体是一颗大质量恒星爆炸死亡后所留下的扩张碎片云。产生船帆座遗迹的超新星爆炸亮闪，大约在 11,000 年前传到地球。这次的爆炸，除了激震出明亮的云气丝之外，也产生了一颗无比致密、高速旋转名为船帆座波霎的恒星核。
 

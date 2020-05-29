@@ -6,7 +6,7 @@ tags: ["特性讲解", "开发日志"]
 author: "Nico"
 ---
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/d303.jpeg)
+![d3](https://www-cdn.nebula-graph.com.cn/nebula-blog/d303.jpeg)
 
 ## D3.js 
 
@@ -16,13 +16,13 @@ author: "Nico"
 
 拿实现一个关系网为例，d3-force 力导向图是不二的选择。
 
-[d3-force ](https://d3js.org.cn/document/d3-force/#installing)是 D3.js 实现以模拟粒子物理运动的 [velocity Verlet](https://en.wikipedia.org/wiki/Verlet_integration) 数值积分器的模块，可用来控制粒子和边秩序。在[力导向图](https://d3js.org.cn/document/d3-force/#installing)中，d3-force 中的每个节点都可以看成是一个放电粒子，粒子间存在某种斥力（库仑斥力）。同时，这些粒子间被它们之间的“边”所牵连，从而产生牵引力。
+[d3-force](https://d3js.org.cn/document/d3-force/#installing) 是 D3.js 实现以模拟粒子物理运动的 [velocity Verlet](https://en.wikipedia.org/wiki/Verlet_integration) 数值积分器的模块，可用来控制粒子和边秩序。在[力导向图](https://d3js.org.cn/document/d3-force/#installing)中，d3-force 中的每个节点都可以看成是一个放电粒子，粒子间存在某种斥力（库仑斥力）。同时，这些粒子间被它们之间的“边”所牵连，从而产生牵引力。
 
 在 d3-force 中，粒子在斥力和牵引力的作用下，从随机无序的初态不断发生位移，逐渐趋于平衡有序。整个图只有点 / 边，图形实现[官方样例](https://observablehq.com/collection/@d3/d3-force)较少且自定义样式居多。
 
 下图就是最简单的关系网图，想要实现自己想要的关系网图，采用 D3.js 是个不错的选择。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/d302.png)
+![d3-force](https://www-cdn.nebula-graph.com.cn/nebula-blog/d302.png)
 
 ## 构建 D3.js 力导向图
 
@@ -47,7 +47,7 @@ this.force = d3
 
 通过上述代码，我们可以得到下面这样一个可视化的节点和关系图。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/d303.png)
+![vertex-relation](https://www-cdn.nebula-graph.com.cn/nebula-blog/d303.png)
 
 ### 实现拓展查询显示优化
 
@@ -57,7 +57,7 @@ D3.js 的 [enter()](https://www.d3js.org.cn/#enter%E5%92%8Cexit%E6%93%8D%E4%BD%
 
 但由于 `d3.forceSimulation().node()` 坐标随机分配导致了图形拓展出来位置的随机出现，在之前 d3-force 实例中我们设定好的 collide（碰撞力）和 links （引力）参数作用下，和新节点相关联的节点受到牵引力影响互相靠近，在靠近的过程中又会和其他节点发生碰撞。当力导图已存在节点的情况下，这些新增节点出现时会让整个力导向图在 collide 和 links 的作用下不停地碰撞，进行牵引，直到每个节点都找到自己合适的位置，即碰撞力和牵引力都满足要求时才停止移动，看看下图，像不像宇宙大爆炸 🌞。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/d304.gif)
+![d3](https://www-cdn.nebula-graph.com.cn/nebula-blog/d304.gif)
 
 上述无序到有序熵减的过程，站在用户角度，每新增一个节点导致整个力导图的运动，除了有一种抽搐感，停止图形变化又需要长时间的等待，这是不能接受的。可 D3.js API [enter()](https://www.d3js.org.cn/#enter%E5%92%8Cexit%E6%93%8D%E4%BD%9C) 又是这样定义的，难道新增的节点和之前的节点的呈现处理需要开发者分开单独处理吗？如果是分开单独处理，每次节点渲染都要遍历判断是不是新增，在节点较多时反而更影响性能？那么如何优化这个新增节点呈现的问题呢？
 
@@ -140,7 +140,7 @@ export function setLinkNumbers(group) {
 
 按照我们上面描述的思路，给每条连接线分配 linknum 值后，接着在实现监听连接线的的 tick 事件函数里面判断 linknum 正负数判断设置 [path 路径的弯曲度和方向](https://www.w3school.com.cn/svg/svg_path.asp) 就行了，最终效果如下图
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/d305.png)
+![nebula-studio](https://www-cdn.nebula-graph.com.cn/nebula-blog/d305.png)
 
 ## 结语
 

@@ -6,7 +6,7 @@ tags: ["特性讲解", "开发日志"]
 author: critical27
 ---
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/detect01.png)
+![jepsen](https://www-cdn.nebula-graph.com.cn/nebula-blog/detect01.png)
 
 Nebula Graph 是一个高性能、高可用、强一致的分布式图数据库。由于 Nebula Graph 采用的是存储计算分离架构，在存储层实际只是暴露了简单的 kv 接口，采用 RocksDB 作为状态机，通过 Raft 一致性协议来保证多副本数据一致的问题。Raft 协议虽然比 Paxos 更加容易理解，但在工程实现上还是有很多需要注意和优化的地方。
 
@@ -26,7 +26,7 @@ Nebula Graph 是一个高性能、高可用、强一致的分布式图数据库�
 
 以一个 Jepsen 测试的 timeline 为例，采用的模型为 **single-register**，也就是整个系统只有一个寄存器（初始值为空），客户端只能对该寄存器进行 read 或者 write 操作（所有操作均为满足原子性，不存在中间状态）。同时有 4 个客户端对这个系统发出请求，图中每一个方框的上沿和下沿代表发出请求的时间和收到响应的时间。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/detect02.png)
+![jepsen-timeline](https://www-cdn.nebula-graph.com.cn/nebula-blog/detect02.png)
 
 从客户端的角度来看，对于任何一次请求，服务端处理这个请求可能发生在从客户端发出请求到接收到对应的结果这段时间的任何一个时间点。可以看到在时间上，客户端 1/3/4 的三个操作 write 1/write 4/read 1 在时间上实际上是存在 overlap 的，但我们可以通过不同客户端所收到的响应，确定系统真正的状态。
 
@@ -44,7 +44,7 @@ Nebula Graph 是一个高性能、高可用、强一致的分布式图数据库�
 1. Follower 收到 log entry 后写入自己的 wal 中(不等待应用到状态机)，并返回成功。
 1. Leader 接收到至少一个 follower 返回成功后，应用到状态机，向 client 发送 response。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/detect03.png)
+![nebula-raft](https://www-cdn.nebula-graph.com.cn/nebula-blog/detect03.png)
 
 下面我将用示例来说明通过 Jepsen 测试在之前的Raft实现中发现的一致性问题：
 
@@ -60,7 +60,7 @@ Nebula Graph 是一个高性能、高可用、强一致的分布式图数据库�
 
 当某个节点被选为 leader 之后，该节点需要定期向其他节点发送心跳，如果心跳确认大多数节点已经收到，则获取一段时间的租约，并确保在这段时间内不会出现新的 leader，也就保证该节点的数据一定是最新的，从而在这段时间内可以正常处理读请求。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/detect04.png)
+![raft-heartbeat](https://www-cdn.nebula-graph.com.cn/nebula-blog/detect04.png)
 
 和 TiKV 的处理方法不同的是，我们没有采取心跳间隔乘以系数作为租约时间，主要是考虑到不同机器的时钟漂移不同的问题。而是保存了上一次成功的 heartbeat 或者 appendLog 所消耗的时间 cost，用心跳间隔减去 cost 即为租约时间长度。
 

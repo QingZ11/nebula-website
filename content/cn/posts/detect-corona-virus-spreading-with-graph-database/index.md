@@ -228,9 +228,6 @@ YIELD $$.person.ID
 
 在天津这个案例中，只选取了少数几个病例和场所作为示意，我们相信如果能够结合前述数据体系，并通过采用新的大数据和人工智能技术，能够极大提高定位和隔离疑似患者的速度，大大减少各种“有效人传人”和“超级毒王”的发生，减少一线医疗和社区工作人员的压力。也能降低全社会的全面隔离时间，尽快恢复经济活动。
 
-![table](https://www-cdn.nebula-graph.com.cn/nebula-blog/nCoV07.png)
-![news](https://www-cdn.nebula-graph.com.cn/nebula-blog/nCoV08.png)
-
 ## 参考资料
 - 堪比推理小说！天津百货大楼5病例“迷局”： [http://www.bjd.com.cn/a/202002/03/WS5e37d067e4b002ffe994092e.html](http://www.bjd.com.cn/a/202002/03/WS5e37d067e4b002ffe994092e.html)
 - 图数据库技术 [https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula)

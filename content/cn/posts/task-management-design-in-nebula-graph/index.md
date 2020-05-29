@@ -6,7 +6,7 @@ tags: ["特性讲解"]
 author: lionel.liu
 ---
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM01.png)
+![task-manager](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM01.png)
 
 讲解 Task Manager 之前，在这里先介绍一些 Task Manager 会使用到的概念术语。
 
@@ -25,21 +25,21 @@ author: lionel.liu
 - storaged 对于 Task 有调度能力
 这块内容将在本文下面章节展开讲述。
 
-## Task Manager 在 Nebula Graph 中的位置
+## Task Manager 体系
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM02.png)
+在 Task Manager 体系中,  metad（JobManager）的任务是根据 graphd 中传过来的一个 Job Request，选出对应的 storaged host，并拼组出 Task Request 发给对应的 storaged。
 
-## Task Manager 体系中的 meta 
+![task-manager-architecture](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM02.png)
 
-在 Task Manager 体系中,  metad（JobManager）的任务是根据 graphd 中传过来的一个 Job Request，选出对应的 storaged host，并拼组出 Task Request 发给对应的 storaged。不难发现，体系中 meta 接受 Job Request，拼组 Task Request , 发送 Task Request 及接受 Task 返回结果，这些逻辑的套路是稳定的。而如何拼组 TaskRequest，将 Task Request 发给哪些 storaged 则会根据不同的 Job 有所变化。JobManager 用 `模板策略`  + `简单工厂` 以应对未来的扩展。
+不难发现，体系中 meta 接受 Job Request，拼组 Task Request , 发送 Task Request 及接受 Task 返回结果，这些逻辑的套路是稳定的。而如何拼组 TaskRequest，将 Task Request 发给哪些 storaged 则会根据不同的 Job 有所变化。JobManager 用 `模板策略`  + `简单工厂` 以应对未来的扩展。
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM03.png)
+![factory-model](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM03.png)
 
 让未来的 Job 同样继承于 MetaJobExecutor，并实现 prepare() 和 execute() 方法即可。
 
 ## Task Manager 的调度控制
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM04.png)
+![task-manager](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM04.png)
 
 之前提到的，Task Manager 的调度控制希望做到 2 点：
 
@@ -87,13 +87,13 @@ Task Manager 将系统资源中自己持有的线程称之为 Worker。Task Mana
 
 但是可能会有问题, 比如说, 我有 3 个 Worker, 2 个 Task（蓝色为 Task 1，黄色为 Task 2）：
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM05.png)
+![round-robin](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM05.png)
 
 Round-robin 图 1
 
 假如 Task 2 中的 Sub Task 执行远快于 Task1 的, 那么好的并行策略应该是这样：
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM06.png)
+![subtask](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM06.png)
 
 Round-robin 图 2
 
@@ -103,11 +103,11 @@ Round-robin 图 2
 
 针对方法一可能会出现的情况，设定专门的 Worker 只处理指定的 Task，从而避免多个 Task 相互依赖问题。但是依然不够好, 比如说：
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM07.png)
+![task](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM07.png)
 
 很难保证每个 Sub Task 执行时间基本相同，假设 Sub Task 1 的执行明显慢于其他的 Sub Task，那么好的执行策略应该是这样的：
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM08.png)
+![task](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM08.png)
 
 这个方案还是避免不了 1 核有难，10 核围观的问题 👀。
 
@@ -117,7 +117,7 @@ Round-robin 图 2
 
 每个 Task 内部维护一个 Blocking Queue（下图的 Sub Task Queue），存放 Sub Task。Worker 在执行时，根据自己持有的 Handle 先找到 Task，再从 Task 的 Block Queue 中获取 Sub Task。
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM09.png)
+![sub-task-queue](https://www-cdn.nebula-graph.com.cn/nebula-blog/TM09.png)
 
 ## 设计补充说明
 

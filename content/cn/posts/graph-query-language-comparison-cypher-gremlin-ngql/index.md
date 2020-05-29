@@ -10,13 +10,13 @@ author: "清蒸, 张莹, Jude"
 
 虽然和关系型数据库存储的结构不同（关系型数据库为表结构，图数据库为图结构），但不计各自的性能问题，关系型数据库可以通过递归查询或者组合其他 SQL 语句（Join）完成图查询语言查询节点关系操作。得益于 1987 年 SQL 成为国际标准化组织（ISO）标准，关系型数据库行业得到了很好的发展。同 60、70 年代的关系型数据库类似，图数据库这个领域的查询语言目前也没有统一标准，虽然 19 年 9 月经过国际 SQL 标准委员会投票表决，决定将图查询语言（Graph Query Language）纳为一种新的数据库查询语言，但 GQL 的制定仍需要一段时间。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/GraphQueryLanguage01.png)
+![cypher-gremlin](https://www-cdn.nebula-graph.com.cn/nebula-blog/GraphQueryLanguage01.png)
 
 介于市面上没有统一的图查询语言标准，在本文中我们选取市面上主流的几款图查询语言来分析一波用法，由于篇幅原因本文旨在简单介绍图查询语言和常规用法，更详细的内容将在进阶篇中讲述。
 
 ## 图查询语言·介绍
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/GraphQueryLanguage02.png)
+![query-language](https://www-cdn.nebula-graph.com.cn/nebula-blog/GraphQueryLanguage02.png)
 
 ### 图查询语言 Gremlin
 
@@ -85,9 +85,9 @@ INSERT VERTEX tagName (propNameList) VALUES vid:(tagKey propValue)
 
 #### 点类型
 
-点允许有对应的类型，在 Gremlin 和 Cypher 叫 `label` ，在 nGQL 中为 `tag` 。点类型可对应有多种属性（Property），例如 _Person _可以有 _name_、_age _等属性。
+点允许有对应的类型，在 Gremlin 和 Cypher 叫 `label` ，在 nGQL 中为 `tag` 。点类型可对应有多种属性（Property），例如 _Person _可以有 _name_、_age_ 等属性。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/GraphQueryLanguage03.png)
+![vertex-type](https://www-cdn.nebula-graph.com.cn/nebula-blog/GraphQueryLanguage03.png)
 
 ##### 创建点类型
 
@@ -210,7 +210,7 @@ CREATE EDGE edgeTypeName(propNameList)
 
 可以看到和点的使用语法类似，只不过在 Cypher 和 nGQL 中分别使用 `-[]->` 和 `->` 来表示关系，而 Gremlin 则用 `to()` 关键词来标识指向关系，在使用这 3 种图查询语言的图数据库中的边均为有向边，下图左边为有向边，右边为无向边。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/GraphQueryLanguage04.png)
+![edge-direction](https://www-cdn.nebula-graph.com.cn/nebula-blog/GraphQueryLanguage04.png)
 
 
 ```shell
@@ -343,7 +343,7 @@ FIND ALL PATH FROM <vid> TO <vid> OVER *
 
 实操示例使用了 [Janus Graph](https://janusgraph.org/) 的示例图 [_The Graphs of Gods_](https://docs.janusgraph.org/#getting-started)。该图结构如下图所示，描述了罗马万神话中诸神关系。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/GraphQueryLanguage05.png)
+![graphs-of-gods](https://www-cdn.nebula-graph.com.cn/nebula-blog/GraphQueryLanguage05.png)
 
 ### 插入数据
 

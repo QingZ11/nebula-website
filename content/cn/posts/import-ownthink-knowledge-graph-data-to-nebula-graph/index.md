@@ -52,21 +52,21 @@ author: 王杰
 
 Nebula Graph 是一个开源的分布式图数据库（链接：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula)），相比 Neo4j 来说，它的主要特点是完全的分布式，因此**图数据库 Nebula Graph 适合处理数据量超过单机的场景**。
 
-![GitHub 主页](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink02.png)
+![github-nebula](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink02.png)
 
 图数据库**通常支持的数据模型为有向属性图（directed property graph）**。图中的每个顶点（vertex）可以用标签（tag）来表示类型（Neo4j 叫做 Label），顶点和顶点之间的关系用边（edge）连接起来。每种 tag 和 edge 还可以带有属性。——然而，这些功能对于知识图谱的三元组数据没什么意义:
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink03.png)
+![modeling](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink03.png)
 
 分析上图的三元组数据，发现无论是 `(实体, 属性, 值)` 形式的三元组数据，还是 `(实体, 关系, 实体)` 形式的三元组数据，每条三元组数据均可以建模成**两个点**和**一条边**的形式。前者三元组中的“**实体**”和“**值**”建模为**两个点**（起点、终点），“**属性**”建模为**一条边**，后者三元组中的两个“**实体**”也建模为**两个点**（起点、终点），“**关系**”建模为**一条边**.
 
 而且，所有的点都是相同类型（取名叫`entity` ），只需要一个属性（叫 `name` )，所有的边也都是同一类型(取名叫 `relation` ），边上也只有一个属性（叫 `name` ）。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink04.png)
+![modeling](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink04.png)
 
 比如 `(大龙湫,著名景点,芙蓉峰)` 可以表示成下图这个样子：
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink05.png)
+![modeling](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink05.png)
 
 ### 数据清洗和预处理
 
@@ -76,7 +76,7 @@ Nebula Graph 是一个开源的分布式图数据库（链接：[https://github.
 
 本文测试的时候，使用的操作系统是 CentOS 7.5，工具由 Golang 语言编写而成。
 
-你可以在这里 (链接：[https://github.com/jievince/rdf-converter](https://github.com/jievince/rdf-converter)) 下载这个简单的清洗工具源代码并编译使用。
+你可以在这里（链接：[https://github.com/jievince/rdf-converter](https://github.com/jievince/rdf-converter)）下载这个简单的清洗工具源代码并编译使用。
 
 该工具会把转换后的顶点的数据写入到 vertex.csv 文件、边数据写入到 edge.csv 文件。
 
@@ -119,7 +119,7 @@ Nebula Graph 是一个开源的分布式图数据库（链接：[https://github.
 
 ### 下载和安装
 
-登陆 GitHub 后，在这里 (链接：[https://github.com/vesoft-inc/nebula/actions](https://github.com/vesoft-inc/nebula/actions)) 找到 Nebula 的安装包。
+登陆 GitHub 后，在这里（链接：[https://github.com/vesoft-inc/nebula/actions](https://github.com/vesoft-inc/nebula/actions)）找到 Nebula 的安装包。
 
 ![action](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink06.png)
 
@@ -143,7 +143,7 @@ $ /usr/local/nebula/scripts/nebula.service start all
 
 命令执行结果如下：
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink08.png)
+![result](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink08.png)
 
 可以执行以下命令检查服务是否成功启动
 
@@ -153,7 +153,7 @@ $ /usr/local/nebula/scripts/nebula.service status all
 
 命令执行结果如下：
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink09.png)
+![result](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink09.png)
 
 ### 连接 Nebula Graph 服务
 
@@ -165,7 +165,7 @@ $ /usr/local/nebula/bin/nebula -u user -p password
 
 命令执行结果如下：
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink10.png)
+![result](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink10.png)
 
 ### 准备 schema 等元数据
 
@@ -207,7 +207,7 @@ nebula> DESCRIBE TAG entity;
 
 结果如下：
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink11.png)
+![result](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink11.png)
 
 **查看 relation 边类型的属性**：
 
@@ -217,7 +217,7 @@ nebula> DESCRIBE EDGE relation;
 
 结果如下：
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink12.png)
+![result](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink12.png)
 
 ## Step 3. 使用 nebula-importer 导入数据
 
@@ -282,7 +282,7 @@ go run importer.go --config ./config.yaml
 
 执行过程如下：
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink14.png)
+![result](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink14.png)
 
 可以看到, 本次导入 QPS 大约在 40 w/s。全部导入总耗时大约 15 min。
 
@@ -310,7 +310,7 @@ nebula> USE test;
 
 执行结果如下：
 
-![命令0](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink15.png)
+![command](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink15.png)
 
 可以看到：本次查询返回 51 条数据，耗时 3 ms 左右；
 
@@ -322,7 +322,7 @@ nebula> USE test;
 
 执行结果如下：
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink16.png)
+![command-result](https://www-cdn.nebula-graph.com.cn/nebula-blog/OwnThink16.png)
 
 当数据量较大时，查找全路径/最短经之类的操作会比较耗时。可以看到：本次查询返回 8 条数据，说明姚明和其妻子叶莉在三跳之内共有 8 条直接或间接的关系。
 

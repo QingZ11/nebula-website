@@ -6,7 +6,7 @@ tags: ["图数据库知识"]
 author: 清蒸
 ---
 
-![online](https://www-cdn.nebula-graph.com.cn/nebula-blog/Online01.png)
+![online-tech-talk](https://www-cdn.nebula-graph.com.cn/nebula-blog/Online01.png)
 
 Nebula Graph 的技术总监在 09.24 - 09.30 期间同 [开源中国·高手问答](https://www.oschina.net/question/4105562_2311761) 的小伙伴们以「图数据库的设计和实践」为切入点展开讨论，包括：「图数据库的存储设计」、「图数据库的计算设计」、「图数据库的架构设计」等方面内容，本文整理于他和开源中国小伙伴对图数据库的讨论内容~
 

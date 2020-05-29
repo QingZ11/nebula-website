@@ -18,7 +18,7 @@ author: 清蒸
 
 图数据库 Nebula Graph 2020 上半年 Roadmap 发布，现已同步到官方论坛 `公告` 板块。
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200901.png)
+![roadmap](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200901.png)
 
 - Nebula Graph 论坛正式上线
 
@@ -26,7 +26,7 @@ author: 清蒸
 
 此外，Nebula Graph 论坛在正式上线之后 7*24 有专门的 Dev 来第一时间解答你的提问，如果你有使用方面的问题，欢迎去 `用户问答` 分类下向我们的 Dev 们提问，在 `公告` 下你可以看最新的产品动态及 Roadmap，在 `博客` 分类下可以读到我们 Dev 最新力作，Enjoy it~ Link：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/)
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200902.png)
+![Nebula-discuss](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200902.png)
 
 最后，有任何建议和反馈， `Site Feedback` 我们在等你🎊
 
@@ -115,7 +115,7 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《Magnetic Orion 猎户座大星云的磁场》
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2009Nebula.jpeg)
+![Nebula](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2009Nebula.jpeg)
 
 影像中，隐约可见的猎户座克莱曼-楼星云，出现在中右上方，而四边形星团的亮星，则在中央偏左之处。 距离约 l,300 光年的猎户座大星云，是离太阳最近的大型恒星形成区。
 
