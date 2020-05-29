@@ -6,7 +6,7 @@ tags: ["开发日志","编译"]
 author: 甘雨
 ---
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/GCC01.png)
+![segmentation](https://www-cdn.nebula-graph.com.cn/nebula-blog/GCC01.png)
 
 ## 摘要
 

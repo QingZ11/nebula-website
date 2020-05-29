@@ -38,7 +38,7 @@ CHANGE PASSWORD user1 FROM password1 TO password2
 
 - [DB-Engine 5 月排名出炉](https://db-engines.com/en/ranking/graph+dbms)
 
-![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/201901.png)
+![db-engine](https://www-cdn.nebula-graph.com.cn/nebula-blog/201901.png)
 
 DB-Engine 5 月排名前十名的变化不大，可以看到排名 Top 5 的 DBMS 在 DB-Engine 得分都有所下降，而 5 月 Nebula Graph 表现不错，排名上升 2 位，而且得分增加了 0.07 分 👏
 
@@ -75,7 +75,7 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《船底座大星云》
 
-![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/2019Nebula.jpeg)
+![nebula](https://www-cdn.nebula-graph.com.cn/nebula-blog/2019Nebula.jpeg)
 
 该处的恒星不停的诞生与死亡，织成了一幅壮观的黝黑尘埃织锦。编录号为 NGC 3372 的船底座大星云，宽度超过 300 光年，位在船底座方向约 8,500 光年远之处。位在这团星云中心的活跃恒星海山二，曾是 1830 年代天空最明亮的恒星之一，不过之后亮度已大幅降低。
 

@@ -6,7 +6,7 @@ tags: ["产品讲解"]
 author: 清蒸
 ---
 
-![GitHub](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics01.png)
+![GitHub-statistics](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics01.png)
 
 V 站曾经有个热帖说为何我的开源项目只有 Fork 没有 Star，楼下有个热评说开源项目关注的不应该是 Commit 数据吗？先不论 Star、Fork 和 Commit，issue 、pr 也应是一个开源项目社区关注的数据。
 
@@ -18,20 +18,20 @@ V 站曾经有个热帖说为何我的开源项目只有 Fork 没有 Star，楼�
 
 顾名思义你可以通过 [Star History ](https://chrome.google.com/webstore/detail/star-history/iijibbcdddbhokfepbblglfgdglnccfn)这个项目看到一个项目的趋势增长，安装上此插件之后你可以直接在某个开源项目主页，如下图所示，一键操作看 star 增长趋势无烦恼。
 
-![q](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics02.gif)
+![star-history](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics02.gif)
 
 当然它也有在线版：[https://star-history.t9t.io/](https://star-history.t9t.io/) 可以戳这个链接体验。
 
 
 ### 在线版 —— StarTrack-js
 
-[StarTrack ](https://seladb.github.io/StarTrack-js/)和 Star History 类似也是一个 Star 统计工具，操作稍繁琐，需要填入该项目所有者的用户名及项目名，下图以 VEsoft-inc 的 Nebula 项目为例：
+[StarTrack](https://seladb.github.io/StarTrack-js/) 和 Star History 类似也是一个 Star 统计工具，操作稍繁琐，需要填入该项目所有者的用户名及项目名，下图以 VEsoft-inc 的 Nebula 项目为例：
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics03.png)
+![startrack](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics03.png)
 
 除了简单的 Star 趋势图，StarTrack 还为你统计了这个项目的 Star 总数、开源时间及每日获得 Star 数等维度数据。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics04.png)
+![startrack](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics04.png)
 
 ## GitHub 数据统计工具—— Github Statistics
 
@@ -45,41 +45,41 @@ Github Statistics 项目采用 React 框架，在图表显示上使用了 highC
 
 在 GitHub Statistics 输入某个项目名，并选中点击 `update` 即可查看该项目的相关数据，如果你需要比较多个项目的数据，记得勾选多个项目。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics05.png)
+![multi-repos](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics05.png)
 
 ### 项目信息总览
 
 Repository 可以查看到 GitHub 项目的 `创建时间` （可以理解为立项时间，并非开源时间）、 `项目年龄` （立项到现在的时间）、 `编程语言` 、 `最后一次更新时间` 、 `Watch` 数，数据显示 React 和 Vue 的关注者是一个量级的。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics06.png)
+![github-overview](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics06.png)
 
 ### Star 趋势图
 Star 可以看到这个项目的 `Star 数增长趋势` 、 `日增星` 和 `单日最高星量` 。可以从总 Star 数看出，Vue 和 React  不分伯仲，Vue 异军突起，在 2017 年 6 月 17 日，Vue 项目的 star 超过了 Angular，在 2018 年 6 月 12 日弯道超车甩掉了 React。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics07.png)
+![star-trending](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics07.png)
 
 除了总 star，GitHub Statistics 也可以看到**每日增长**，看看被淹没的 Angular 曾经也是 2k 起跑线的项目…再看看 Vue 和 React 在 2018 年 6 月 15 日获得 star，这一天的 star 可吊打 90% 的开源项目了（🍋 Nebula 敬上），小八卦了下这是那天的 Hacker News 热帖《Has Vue passed React yet? 》：[https://news.ycombinator.com/item?id=17316267](https://news.ycombinator.com/item?id=17316267)
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics08.png)
+![increment-trending](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics08.png)
 
 ### Fork 趋势图
 和 Star 趋势图类似，总趋势图可以看到这三个项目的 Fork 总数、每日平均数，看每日平均 Vue、React、Angular 相差不大，但是总量上来说，Angular 还是领先两位后起之秀的。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics09.png)
+![fork-trending](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics09.png)
 
 从每日 Fork 增量图来看，Angular 的 Fork 数比 Vue 和 React 多全靠先发优势，React 和 Vue 诞生之后，Angular 的增长大不如前，而 React 的 Fork 和 Vue 的 Fork 比较，二者是不相上下。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics10.png)
+![fork-increment-trending](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics10.png)
 
 ### Commit 趋势图
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics11.png)
+![commit-trending](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics11.png)
 
 虽然 star 上 Vue 和 React 是一个量级，但是在 Commit 或者说项目活跃度上，React 领跑这三个项目，🤔 当中的缘由就不揣测了。
 
 和总的趋势图类似，每日新增 Commit 趋势也是 React 一枝独秀。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics12.png)
+![commit-increment-trending](https://www-cdn.nebula-graph.com.cn/nebula-blog/Statistics12.png)
 
 ## 总结 GitHub Statistics
 

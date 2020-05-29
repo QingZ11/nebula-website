@@ -1,7 +1,7 @@
 ---
 title: "使用 Docker 构建 Nebula Graph 源码"
 date: 2019-09-06
-description: "由于 Nebula Graph 依赖较多，为了方便开发者本地编译项目源码， Nebula Graph 官方为大家提供了一个预安装所有依赖的 Docker 镜像"
+description: "由于 Nebula Graph 依赖较多，为了方便开发者本地编译项目源码，Nebula Graph 官方为大家提供了一个预安装所有依赖的 Docker 镜像"
 tags: ["部署", "编译"]
 author: 伊兴路
 ---
@@ -66,7 +66,7 @@ Linux 图友可在 `/etc/docker/daemon.json` 中加入如下内容（若文件�
 ```
 macOS 用户请点击 `Docker Desktop 图标 -> Preferences -> Daemon -> Registry mirrors`。 在列表中添加 `https://dockerhub.azk8s.cn` 和 `https://reg-mirror.qiniu.com` 。修改后，点击 Apply & Restart 按钮， 重启 Docker。
 
-![](https://pic3.zhimg.com/80/v2-6d2dd1b7e5999207ace1b590d31a15ea_hd.jpg)
+![docker-speed-up](https://pic3.zhimg.com/80/v2-6d2dd1b7e5999207ace1b590d31a15ea_hd.jpg)
 
 ## Nebula Graph 社区
 

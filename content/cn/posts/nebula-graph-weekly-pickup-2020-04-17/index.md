@@ -18,15 +18,15 @@ author: 清蒸
 
 Nebula Graph 启用了中文论坛，而原先的 [https://discuss.nebula-graph.io](https://discuss.nebula-graph.io) 域名对应的论坛为英文论坛。此外，中英文论坛都启用了全新的分类和标签系统，方便社区用户更好地找到他们所需的帖子。
 
-![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201601.png)
+![nebula-discuss-category](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201601.png)
 
 如果你对论坛的分类、标签有任何建议，欢迎前往论坛：[https://discuss.nebula-graph.com.cn](https://discuss.nebula-graph.com.cn) 的 `建议反馈` 提建议，以便更好地服务社区的其他小伙伴。<br />
 
 ## Nebula 产品动态
 
-Pick of the Week 每周会从 GitHub issue 及 pr 中选取重要的产品动态和大家分享，欢迎阅读本文的你关注我们的 GitHub：[https://github.com/vesoft-inc/nebula](https://0x7.me/zhihu2github) 及时了解产品新动态~<br />
+Pick of the Week 每周会从 GitHub issue 及 pr 中选取重要的产品动态和大家分享，欢迎阅读本文的你关注我们的 GitHub：[https://github.com/vesoft-inc/nebula](https://0x7.me/zhihu2github) 及时了解产品新动态~
 
-- 创建 TAG/EdgeType 时增加 ttl 示例，标签： `文档` ，示例如下，pr 参见：[https://github.com/vesoft-inc/nebula/pull/2015](https://github.com/vesoft-inc/nebula/pull/2015)
+- 创建 TAG / EdgeType 时增加 ttl 示例，标签： `文档` ，示例如下，pr 参见：[https://github.com/vesoft-inc/nebula/pull/2015](https://github.com/vesoft-inc/nebula/pull/2015)
 ```
 CREATE EDGE marriage(location string, since timestamp)
 	  TTL_DURATION = 0, TTL_COL = "since" -- 负值或 0 数据不会失效
@@ -38,13 +38,13 @@ CREATE TAG icecream(made timestamp, temperature int)
 
 -  Nebula Graph Github 上的文档迁移到独立的 repo，标签： `文档` ，迁移后访问链接参见：[https://github.com/vesoft-inc/nebula-docs](https://github.com/vesoft-inc/nebula-docs)
 
-![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201602.png)
+![nebula-documentation](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201602.png)
 
 - fix 对某个 tag（已有该类型的点），新增属性对属性创建索引，插入数据 storaged coredump 的 bug，标签： `storage` ，pr 参见：[https://github.com/vesoft-inc/nebula/pull/2073](https://github.com/vesoft-inc/nebula/pull/2073)
 
 ## 社区问答
 
-Pick of the Week 每周会从官方论坛、微博、知乎、微信群、微信公众号及 CSDN 等技术社区选取 3 - 5 个用户问题同你分享，欢迎阅读本文的你通过知乎、微信公众号后台或者添加 Nebula 小助手微信号：NebulaGraphbot 进群交流。<br />
+Pick of the Week 每周会从官方论坛、微博、知乎、微信群、微信公众号及 CSDN 等技术社区选取 3 - 5 个用户问题同你分享，欢迎阅读本文的你通过知乎、微信公众号后台或者添加 Nebula 小助手微信号：NebulaGraphbot 进群交流。
 
 > mike 提问：看了下论坛，有些问题没有，比如故障自动恢复， 扩容缩容， 读写流程方面， 有现成的帖子或文档吗?
 
@@ -91,7 +91,7 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《M81》
 
-![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2016Nebula.jpeg)
+![nebula](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2016Nebula.jpeg)
 
 M81 大小和我们的银河系相近，同时也是地球天空中最明亮的星系之一。这个位在北天大熊座方向的宏伟螺旋星系，亦名为 NGC 3031，另外也因它的 18 世纪发现者而有波德星系的称号。在影像的中左方，可见到有些尘埃带与其他旋臂结构反向而行，穿过了星系盘。
 

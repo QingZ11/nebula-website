@@ -96,7 +96,7 @@ nebula> GO FROM 1 OVER e1 YIELD e1._dst AS id, e1.prop1 AS left_1, $$.tag.prop2 
 - @菜鸡Freamer 提问
 > 你好，我有几个问题想请教一下：1. 客户端查询结束后打印的两个时间点分别是什么时间；2. 最短路径算法的实现方式是否就是根据谷歌 Pregel 模式实现的
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200301.png)
+![console-result](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200301.png)
 
 **Nebula**：前面一个参数 718 是指 query engine 收到 console 这条命令开始到存储获取数据并进行一系列计算之后再回复 console 之前整条链路花的时间，后面一个参数 1354 是 console 发送请求前到收到响应并将结果输出到控制台的时间。例子参考这篇文章：[https://zhuanlan.zhihu.com/p/98515952](https://zhuanlan.zhihu.com/p/98515952)。第二个问题，Nebula Graph 的最短路径算法实现是双向搜索的 floyd，后续会进行优化，最短路径以及全路径进行针对性实现。比如最短路径实现双向 BFS，双向 Dijkstra 等。
 
@@ -118,7 +118,7 @@ nebula> GO FROM 1 OVER e1 YIELD e1._dst AS id, e1.prop1 AS left_1, $$.tag.prop2 
 
 本文星云图讲解--《IC 342:The Hidden Galaxy 隐藏的星系》
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2003Nebula.png)
+![Nebula](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2003Nebula.png)
 
 大小和我们附近的明亮大螺旋星系相当的 IC 342，位于有长长脖子的鹿豹座之内，距离我们只有 1 千万光年远。IC 342 是个庞大的宇宙岛，所以本来应是我们夜空中一个很吸睛的星系，但因为受到银河系盘面的恒星、云气和尘埃之遮掩，只能隐约一窥其芳踪。
 

@@ -6,7 +6,7 @@ tags: ["架构剖析","特性讲解"]
 author: 陈恒
 ---
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Balance01.png)
+![data-migration](https://www-cdn.nebula-graph.com.cn/nebula-blog/Balance01.png)
 
 在文章[《Nebula 架构剖析系列（一）图数据库的存储设计》](https://zhuanlan.zhihu.com/p/86811459)中，我们提过分布式图存储的管理由 Meta Service 来统一调度，它记录了所有 partition 的分布情况，以及当前机器的状态。当 DBA 增减机器时，只需要通过 console 输入相应的指令，Meta Service 便能够生成整个 Balance 计划并执行。而之所以没有采用完全自动 Balance 的方式，主要是为了减少数据搬迁对于线上服务的影响，Balance 的时机由用户自己控制。
 
@@ -69,7 +69,7 @@ Got 3 rows (Time spent: 5886/6835 us)
 - _**Leader distribution**_：表示当前 leader 在每个 space 上的分布，目前尚未创建任何 space。( space 可以理解为一个独立的数据空间，类似 MySQL 的 Database）
 - _**Partition distribution**_：不同 space 中 partition 的数目。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Balance02.png)
+![cluster](https://www-cdn.nebula-graph.com.cn/nebula-blog/Balance02.png)
 
 可以看到  _Leader distribution_ 和 _Partition distribution_ 暂时都没有数据。
 
@@ -96,7 +96,7 @@ nebula> SHOW HOSTS
 ------------------------------------------------------------------------------------------------
 ```
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Balance03.png)
+![cluster](https://www-cdn.nebula-graph.com.cn/nebula-blog/Balance03.png)
 
 如上，创建包含 100 个 _partitio_n 和 3 个 _replica_ 图空间之后，3 个实例的 _Leader distribution_ 和 _Partition distribution _有了对应的数值，对应的 _Partition distribution _都为 100。当然，这样的 learder 分布还不均匀。
 
@@ -127,7 +127,7 @@ nebula> SHOW HOSTS
 ------------------------------------------------------------------------------------------------
 ```
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Balance04.png)
+![add-hosts-cluster](https://www-cdn.nebula-graph.com.cn/nebula-blog/Balance04.png)
 
 上新实例之后，集群由原来 3 个实例变成了 8 个实例。上图数据库 icon 为蓝色的图示为新增的 5 个实例，此时由于仅仅加入了集群，新实例的状态为 Online，但此时 _Leader distribution_ 和 _Partition distribution _并没有数值，说明还不会参与服务。
 
@@ -221,9 +221,9 @@ nebula> SHOW HOSTS
 Got 8 rows (Time spent: 5074/6488 us)
 ```
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Balance05.png)
+![partition-distribution](https://www-cdn.nebula-graph.com.cn/nebula-blog/Balance05.png)
 
-_Partition distribution _相近，partition 总数 300 不变且 partition 已均衡的分布至各个实例。
+_Partition distribution_ 相近，partition 总数 300 不变且 partition 已均衡的分布至各个实例。
 
 如果有运行失败的 task，可再次运行 `BALANCE DATA` 命令进行修复。如果多次运行仍无法修复，请与社区联系 [GitHub](https://github.com/vesoft-inc/nebula/issues)。
 
@@ -261,7 +261,7 @@ nebula> SHOW HOSTS
 Got 8 rows (Time spent: 5039/6346 us)
 ```
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Balance06.png)
+![balance-leader-result](https://www-cdn.nebula-graph.com.cn/nebula-blog/Balance06.png)
 
 如上， `BALANCE LEADER` 成功执行后，新增的实例和原来的实例（对应上图 icon 蓝色和黑色图示）的 _Leader distribution _相近， 所有实例已均衡，此外，也可以看到 **Balance 命令只涉及 leader 和 partition 在物理机器上的转移，并没有增加或者减少 leader 和 partition。**
 

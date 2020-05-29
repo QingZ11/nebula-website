@@ -76,7 +76,7 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《大麦哲伦星系的星云》
 
-![关注公众号](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2017Nebula.jpeg)
+![nebula](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2017Nebula.jpeg)
 
 这个名为的 N11 的区域，出现在许多以它母星系─我们银河系近邻的大麦哲伦星系（LMC）─为主题的影像之右上方。在大麦哲伦星系里，大小仅次于蜘蛛星云。在这张影像里，到处可见到内部藏着即将现踪年轻恒星的紧实黝黑尘埃球。
 

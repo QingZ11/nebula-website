@@ -16,7 +16,7 @@ author: 清蒸
 
 - [DB-Engine 2020 年 2 月图数据库趋势](https://db-engines.com/en/ranking/graph+dbms)
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200601.png)
+![DB-Engine-Graph-database](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW200601.png)
 
 整体上来说图数据库的排名变大并不大，前九名席位基本固定，新晋第十名是时态数据库 FaunaDB，而这次排名 Nebula Graph 表现也不错上升到了 21 名 👏👏
 
@@ -84,7 +84,7 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《Fox Fur, Unicorn, and Christmas Tree 狐皮、独角兽与圣诞树》
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2006Nebula.png)
+![Nebula](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2006Nebula.png)
 
 昏暗的麒麟座内，这片令人浮想联翩的多彩星野里，到处都是光亮的氢气云。这个距离约 2,700 光年远、由宇宙云气和尘埃聚成的恒星形成区，编录号为NGC 2264；它内部交织着被新恒星高能星光激发出的泛红发射星云与及黝黑的星际尘埃云。
 

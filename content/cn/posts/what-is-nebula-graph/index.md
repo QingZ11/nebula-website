@@ -6,7 +6,7 @@ tags: ["产品讲解"]
 author: Nebula
 ---
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Nebula01.jpeg)
+![nebula-graph](https://www-cdn.nebula-graph.com.cn/nebula-blog/Nebula01.jpeg)
 
 图数据库（英语：Graph Database）是一个使用图结构进行语义查询的数据库。该系统的关键概念是图，形式上是点 (Node 或者 Vertex) 和边 (Edge 或者 Relationship) 的集合。一个顶点代表一个实体，比如，某个人，边则表示两个实体间的关联关系，比如 “你关注 Nebula Graph”的关注关系。图广泛存在于现实世界中，从社交网络到风控场景、从知识图谱到智能推荐。
 
@@ -28,7 +28,7 @@ Nebula Graph 是一款开源的分布式图数据库，擅长处理千亿个顶�
 
 ## Nebula Graph 架构
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Nebula02.png)
+![architecture](https://www-cdn.nebula-graph.com.cn/nebula-blog/Nebula02.png)
 
 
 ## Nebula Graph 1.0 功能

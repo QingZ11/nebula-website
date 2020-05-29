@@ -14,7 +14,7 @@ author: 吴敏
 
 Nebula Graph 采用易理解的有向属性图来建模，也就是说，在逻辑上，图由两种图元素构成：顶点和边。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel01.png)
+![model](https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel01.png)
 
 ### 顶点 Vertex
 
@@ -37,17 +37,17 @@ Nebula Graph 采用易理解的有向属性图来建模，也就是说，在逻�
 
 由于超大规模关系网络的节点数量高达百亿到千亿，而边的数量更会高达万亿，即使仅存储点和边两者也远大于一般服务器的容量。因此需要有方法将图元素切割，并存储在不同逻辑分片 `partition` 上。Nebula Graph 采用边分割的方式，默认的分片策略为**哈希散列**，partition 数量为静态设置并不可更改。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel02.png)
+![partition](https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel02.png)
 
 ## 数据模型 DataModel
 
 在 Nebula Graph 中，每个顶点被建模为一个 `key-value` ，根据其 vertexID（或简称 vid）哈希散列后，存储到对应的 partition 上。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel03.png)
+![format](https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel03.png)
 
 一条逻辑意义上的边，在 Nebula Graph 中将会被建模为两个独立的 `key-value` ，分别称为 `out-key` 和 `in-key` 。out-key 与这条边所对应的起点存储在同一个 partition 上，in-key 与这条边所对应的终点存储在同一个 partition 上。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel04.png)
+![format](https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel04.png)
 
 关于数据模型的详细设计会在后续的系列文章中介绍。
 
@@ -55,7 +55,7 @@ Nebula Graph 采用易理解的有向属性图来建模，也就是说，在逻�
 
 Nebula Graph 包括四个主要的功能模块，分别是**存储层**、**元数据服务**、**计算层**和**客户端**。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel05.png)
+![nebula-architecture](https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel05.png)
 
 ### 存储层 Storage
 
@@ -66,7 +66,7 @@ Nebula Graph 包括四个主要的功能模块，分别是**存储层**、**元�
 1. Learner：基于异步复制的 learner。当集群中增加新的机器时，可以将其先标记为 learner，并异步从 `leader/follower` 拉取数据。当该 learner 追上 leader 后，再标记为 follower，参与 Raft 协议。
 1. Load-balance：对于部分访问压力较大的机器，将其所服务的 partition 迁移到较冷的机器上，以实现更好的负载均衡。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel06.png)
+![kv-storage](https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel06.png)
 
 ### 元数据服务层 Metaservice
 
@@ -82,7 +82,7 @@ Metaservice 对应的进程是 `nebula-metad` ，其主要的功能有：
 
 MetaService 层为有状态的服务，其状态持久化方法与 Storage 层一样通过 `KVStore` 方式存储。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel07.png)
+![meta-service](https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel07.png)
 
 ### 计算层 Query Engine & Query Language(nGQL)
 
@@ -92,7 +92,7 @@ MetaService 层为有状态的服务，其状态持久化方法与 Storage 层�
 1. 计算下沉：为避免存储层将过多数据回传到计算层占用宝贵的带宽，条件过滤 `where` 等算子会随查询条件一同下发到存储层节点。
 1. 执行计划优化：虽然在关系数据库 SQL 中执行计划优化已经经历了长时间的发展，但业界对图查询语言的优化研究较少。Nebula Graph 对图查询的执行计划优化进行了一定的探索，包括**执行计划缓存**和**上下文无关语句并发执行**。
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel08.png)
+![query-engine](https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel08.png)
 
 ### 客户端 API & Console
 

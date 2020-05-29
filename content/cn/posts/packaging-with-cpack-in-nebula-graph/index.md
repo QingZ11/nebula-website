@@ -6,14 +6,14 @@ tags: ["产品讲解"]
 author: Laura
 ---
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack01.png)
+![cpack](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack01.png)
 
 ## 背景
 CPack 是 CMake 2.4.2 之后的一个内置工具，用于创建软件的二进制包和源代码包。
 
 CPack 在整个 CMake 工具链的位置。
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack02.png)
+![cpack-position](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack02.png)
 
 CPack 支持打包的包格式有以下种类：
 
@@ -97,9 +97,9 @@ include(CPack)
 
 如果想要查看打包过程的详细输出，可以在命令后面添加 `--verbose`。CPack 是根据用户的配置生成_CPack_Packages/Linux/RPM/SPECS/example.spec 文件，然后让 rpm-build 用。
 
-上面配置生成的安装包 **example-1.0.0-Linux.rpm**里面包含的文件如下：
+上面配置生成的安装包 **example-1.0.0-Linux.rpm** 里面包含的文件如下：
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack03.png)
+![config-file](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack03.png)
 
 ⚠️注意：假如安装时出现 `file /home from install of example-1.0.0-1.x86_64 conflicts with file from package filesystem-3.2-25.el7.x86_64`，那么需要在配置文件里面添加以下配置，让生成的 rpm 文件不包含 /home 和 /home/vesoft 。
 
@@ -136,11 +136,11 @@ CPack 会将上面配置的脚本里面的内容写到生成的 SPEC 文件里�
 
 执行 `sudo rpm -ivh example-1.0.0-Linux.rpm` 命令会有以下输出
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack04.png)
+![sudo-result](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack04.png)
 
 执行 `sudo rpm -e example-1.0.0` 会有以下输出
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack05.png)
+![sudo-result](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack05.png)
 
 可以看到图片里面绿色和红色字样，就是四个脚本文件的打印输出，分别对应安装前后和卸载前后执行打印。所以用户可以在这四个脚本里面实现自己想要的功能。
 
@@ -152,15 +152,15 @@ CPack 会将上面配置的脚本里面的内容写到生成的 SPEC 文件里�
 
 以下为添加 **install** 的函数定义
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack06.png)
+![install-definition](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack06.png)
 
 以下为添加 **component** 的函数定义
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack07.png)
+![component-definition](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack07.png)
 
 以下为添加 **group** 的函数定义
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack08.png)
+![group-definition](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack08.png)
 
 以上述为例，假如我们要将 program A 和它的配置文件 A.conf 打成一个 rpm 包，将 program B 和它的配置文件 B.conf 打成一个 rpm 包，则需要在 CMakeLists.txt 里添加以下内容，把上述配置的 include(CPack) 移到下面配置的位置：
 
@@ -190,15 +190,15 @@ cpack_add_component_group(Bprogram)
 
 然后修改 src/CMakeLists.txt，看下图红框内容，将 program A 二进制文件配置为 AComponent，将 program B 二进制文件配置为 BComponent。
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack09.png)
+![bcomponent](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack09.png)
 
 修改 etc/CMakeLists.txt，看下图红框内容，将配置文件 A.conf 配置为 AComponent， 将配置文件 B.conf 配置为 BComponent。
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack10.png)
+![bcomponent](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack10.png)
 
 更新 CMakeLists.txt 的配置之后，重新执行下 cmake 命令生成新的 makefile 文件，并执行 `cpack -G RPM`，你可以在当前目录下面看到生成两个文件 **example-1.0.0-Linux-Aprogram.rpm** 和 **example-1.0.0-Linux-Bprogram.rpm**, 它们各自包含的文件如下：
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack11.png)
+![files](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack11.png)
 
 ### 其他常用参数
 
@@ -227,7 +227,7 @@ CPack 有很多参数，不同版本参数有些差异，想要了解更多，�
 
 **Nebula Graph** 也是采用 CPack 进行打包成 rpm 和 deb 包，您可以通过 [https://github.com/vesoft-inc/nebula/releases](https://github.com/vesoft-inc/nebula/releases) 获取到 **Nebula Graph 每次 release 发布的包**。
 
-![](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack12.png)
+![release-asset](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack12.png)
 
 
 Nebula Graph 一个开源的分布式图数据库，如果你在使用过程中遇到问题，你可以在论坛：[https://discuss.nebula-graph.com.cn/](https://discuss.nebula-graph.com.cn/) 和 GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) 得到帮助 :)

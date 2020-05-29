@@ -20,19 +20,20 @@ Nebula Graph Studio 是一款可视化的图数据库 Web 应用，集构图、�
 
 本次 Nebula Graph Studio 1.0.2-beta 加入了图探索增加边属性显示及点标记配置，功能更加丰富。
 
-![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201501.png)
+![nebula-studio](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201501.png)
 
 - [你在使用什么图查询语言](https://discuss.nebula-graph.com.cn/t/topic/433)
 
 在本周的 Nebula Graph 论坛有个主题贴：你所使用的图查询语言是什么？目前来看 Cypher 领先 Gremlin，如果你想给 Gremlin 投一票或者站队 Cypher 可以前往：[https://discuss.nebula-graph.com.cn/t/topic/433](https://discuss.nebula-graph.com.cn/t/topic/433) 给你使用的图查询语言投个票~
 
-![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201502.png)
+![gremlin-cypher](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW201502.png)
 
 ## Nebula 产品动态
 
-Pick of the Week 每周会从 GitHub issue 及 pr 中选取重要的产品动态和大家分享，欢迎阅读本文的你关注我们的 GitHub：[https://github.com/vesoft-inc/nebula](https://0x7.me/zhihu2github) 及时了解产品新动态~<br />
+Pick of the Week 每周会从 GitHub issue 及 pr 中选取重要的产品动态和大家分享，欢迎阅读本文的你关注我们的 GitHub：[https://github.com/vesoft-inc/nebula](https://0x7.me/zhihu2github) 及时了解产品新动态~
 
 - 新增了关键字和保留字，标签： `文档` ，示例如下，pr 参见：[https://github.com/vesoft-inc/nebula/pull/1930](https://github.com/vesoft-inc/nebula/pull/1930)
+
 ```
 # 非保留关键字无需引用可直接使用，且所有非保留字都会自动转换成小写，所以非保留字是不区分大小写。保留关键字需使用反引号标注方可使用，例如 `AND`。
 
@@ -48,7 +49,7 @@ Execution succeeded
 
 ## 社区问答
 
-Pick of the Week 每周会从官方论坛、微博、知乎、微信群、微信公众号及 CSDN 等技术社区选取 3 - 5 个用户问题同你分享，欢迎阅读本文的你通过知乎、微信公众号后台或者添加 Nebula 小助手微信号：NebulaGraphbot 进群交流。<br />
+Pick of the Week 每周会从官方论坛、微博、知乎、微信群、微信公众号及 CSDN 等技术社区选取 3 - 5 个用户问题同你分享，欢迎阅读本文的你通过知乎、微信公众号后台或者添加 Nebula 小助手微信号：NebulaGraphbot 进群交流。
 
 @RAINBOW：**对于 partition 数量有没有什么指导性建议吗？是应该根据内存大小来配置吗，以后可以更改？我看手册上是 10 个到 100 个，有什么区别吗。**
 
@@ -85,7 +86,7 @@ Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云�
 
 本文星云图讲解--《宇宙级玫瑰》
 
-![每周看点](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2015Nebula.png)
+![nebula](https://www-cdn.nebula-graph.com.cn/nebula-blog/PotW2015Nebula.png)
 
 
 玫瑰星云（NGC 2237；蔷薇星云）并不是宇宙中，唯一会和花产生联想的气体尘埃云，但它却是其中最著名的一个。位在 5,000 光年之外的麒麟座大分子云边缘的这朵宇宙玫瑰，里头的花瓣其实是恒星诞生区。这幅看起来清晰自然的玫瑰星云之望远镜影像，动用了宽与窄波段滤镜，因为玫瑰不尽然都是红色的。

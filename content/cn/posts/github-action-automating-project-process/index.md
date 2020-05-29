@@ -6,7 +6,7 @@ tags: ["开发日志"]
 author: Jerry
 ---
 
-![image.png](https://www-cdn.nebula-graph.com.cn/nebula-blog/Action01.png)
+![github-action](https://www-cdn.nebula-graph.com.cn/nebula-blog/Action01.png)
 
 ## 前言
 
@@ -24,7 +24,7 @@ author: Jerry
 
   - **免费**，Action 可与 GitHub 中的 Repo 进行绑定（下图所示，具体操作见下文），**开箱即用**：这就意味着我们不需要提供跑任务的机器，也不用管怎么把任务流对接起来，只要简单地熟悉规则，就能将项目 run 起来。而我们大部分觉得某个工具麻烦，是因为使用步骤繁琐，若要实现功能 A，还需做 B/C/D 操作才行，这时候我们要么放弃要么转向操作更简单的工具，毕竟省时省事才是开发第一要务~
   
-  ![image.png](https://www-cdn.nebula-graph.com.cn/nebula-blog/Action02.png)
+  ![github-action](https://www-cdn.nebula-graph.com.cn/nebula-blog/Action02.png)
 
   - **任务插件化**，持续丰富的插件开源市场：得益于 Github 定义了 Actions 规范，让我们使用的 Actions 时都是按某种已知规则开发，这使得 Actions 更易于装配复用，很多优秀的开发者在制作完成工作流后，将自己开发的 Actions 放到 GitHub 的 [Actions 集市](https://github.com/marketplace?type=actions)上去，这样尚未完成自己常规工作流的开发，不需要额外开发这些已有重复逻辑直接使用现成的他人 Actions 即可。在笔者的实践过程中，前端的构建部署工作流，就是用的各类现有的 Actions 组合实现的。
   - **和 GitHub 集成好**，可避免因为使用 Travis 等第三方工具引起额外的心智负担，在 GitHub 上可直接查看 CI/CD 的情况。
@@ -105,7 +105,7 @@ jobs:
 
  `.yml` 工作流配置文件中，不要出现私密信息，诸如：账号、密码、ip 等等，具体实操过程中你可将这类信息通通放到 Repo 的 secrets 设置中添加，并以 `${{ secrets.xxx }}` 的变量访问形式在配置文件中使用。<br /> 
 
-![image.png](https://www-cdn.nebula-graph.com.cn/nebula-blog/Action03.png)
+![github-setting](https://www-cdn.nebula-graph.com.cn/nebula-blog/Action03.png)
 
 #### 寻找合适 Action
 
