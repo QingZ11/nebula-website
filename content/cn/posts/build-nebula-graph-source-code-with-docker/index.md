@@ -16,7 +16,7 @@ author: 伊兴路
 
 ## 开发环境构建
 
-Nebula Graph 依赖较多，且一些第三方库需本地编译安装，为了方便开发者本地编译项目源码， Nebula Graph 官方为大家提供了一个预安装所有依赖的 [docker 镜像]([docker hub](https://hub.docker.com/r/vesoft/nebula-dev))。开发者只需如下的三步即可快速的编译 Nebula Graph 工程，参与 Nebula Graph 的开源贡献：
+Nebula Graph 依赖较多，且一些第三方库需本地编译安装，为了方便开发者本地编译项目源码，Nebula Graph 官方为大家提供了一个预安装所有依赖的 [docker 镜像]([docker hub](https://hub.docker.com/r/vesoft/nebula-dev))。开发者只需如下的三步即可快速的编译 Nebula Graph 工程，参与 Nebula Graph 的开源贡献：
 
 - 本地安装好 Docker
 
