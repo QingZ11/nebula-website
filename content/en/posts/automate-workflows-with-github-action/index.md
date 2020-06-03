@@ -58,7 +58,7 @@ Only if all the above requirements are met and there are at least two approvals,
 
 With the help of open source tools such as cpplint or clang-format, requirement #1 can be met easily. If Step1 fails, the following steps will be skipped automatically and the whole process will not be continued.
 
-For requirement #2, we hope to compile Nebula Graph source code on the currently supported systems. Thus, building directly on the physical machines is no longer a choice. After all, the price of one single machine is rather high, not to mention one machine is not enough. In order to ensure the consistency of the compilation environments and reduce the performance loss  as much as possible, we finnally chose Docker. The process went smoothly with GitHub Action's [job matrix](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix) and its support for [Docker](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idcontainer).
+For requirement #2, we hope to compile Nebula Graph source code on the currently supported systems. Thus, building directly on the physical machines is no longer a choice. After all, the price of one single machine is rather high, not to mention one machine is not enough. In order to ensure the consistency of the compilation environments and reduce the performance loss  as much as possible, we finally chose Docker. The process went smoothly with GitHub Action's [job matrix](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix) and its support for [Docker](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idcontainer).
 
 ![pr test processing flow](https://user-images.githubusercontent.com/57335825/81529003-c7dc0100-9312-11ea-9441-2fd611b65819.png)
 
@@ -68,7 +68,7 @@ Like shown above, Nebula Graph's compilation image is maintained in [our Docker 
 
 For a complete description of the PR workflow , see [pull_request.yaml](https://github.com/vesoft-inc/nebula/blob/master/.github/workflows/pull_request.yaml). Meanwhile, considering that not every PR needs to be tested immediately, and the self-hosted machine resources are limited, we've set the following constraints to the CI trigger:
 
-1. Only PRs that pass the lint verification will deliver the subsequent job to the self-hosted runner. The lint task  is relatively lightweighted, and can be executed in the machine hosted by GitHub Action, avoiding taking up our own resources.
+1. Only PRs that pass the lint verification will deliver the subsequent job to the self-hosted runner. The lint task  is relatively light-weighted, and can be executed in the machine hosted by GitHub Action, avoiding taking up our own resources.
 1. Only PRs labeled with `ready-for-testing` will trigger action execution. While labelling needs authority,  the runner can be triggered by certified pull requests only. See the code below for the PR label restriction:
 
 ```yaml
@@ -82,7 +82,7 @@ Here's how it looks when a PR passes all the tests:
 
 ![pr passes all checks](https://user-images.githubusercontent.com/57335825/81529179-243f2080-9313-11ea-9b9b-11b669f4336a.png)
 
-For details on how Code Coverage is conducted in Nebula Graph, please see [Integrating Codecov Test Coverage With Nebula Graph](https://nebula-graph.io/en/posts/integrate-codecov-test-coverage-with-nebula-graph/).
+For details on how Code Coverage is conducted in Nebula Graph, please see [Integrating Codecov Test Coverage With Nebula Graph](https://nebula-graph.io/posts/integrate-codecov-test-coverage-with-nebula-graph/).
 
 ## Nightly Building
 
@@ -120,7 +120,7 @@ GitHub Action provides [artifacts](https://help.github.com/en/actions/configurin
 
 ## Branch Releasing
 
-For better maitainence and bugfix, Nebula Graph adopts branch release, i.e. we freeze the code before each release and create a new release branch. Only bugfix is allowed on the release branch and feature development is not allowed. The bugfix will still be committed to the development branch, and finally be cherry picked to the release branch.
+For better maintenance and bug fix, Nebula Graph adopts branch release, i.e. we freeze the code before each release and create a new release branch. Only bug fix is allowed on the release branch and feature development is not allowed. The bug fix will still be committed to the development branch, and finally be cherry picked to the release branch.
 
 At each release, in addition to the source code, we hope to add the installation package to assets for users to download. Doing it manually is both error-prone and time-consuming. GitHub Action is perfect for this. What's more, the packaging and uploading use the internal GitHub network, which is faster.
 
@@ -303,9 +303,9 @@ It is  the container characteristics of GitHub Action that make it convenient to
 
 ## Compilation Acceleration
 
-The source code of Nebula Graph is written in C++, and the construction process is rather time consuming. Restarting CI   every time will cause waste of computing resources. So as long as the source code isn't updated, the compiled file will be cached for accelaration.  Currently we use the latest version of ccache for [cache](https://ccache.dev/) purpose. It also help identify whether a source file has been updated or not by looking precisely into the compiling process of the file.
+The source code of Nebula Graph is written in C++, and the construction process is rather time consuming. Restarting CI   every time will cause waste of computing resources. So as long as the source code isn't updated, the compiled file will be cached for acceleration.  Currently we use the latest version of ccache for [cache](https://ccache.dev/) purpose. It also help identify whether a source file has been updated or not by looking precisely into the compiling process of the file.
 
-Although GitHub Action itself provides the [cache](https://help.github.com/en/actions/configuring-and-managing-workflows/caching-dependencies-to-speed-up-workflows) function, we go for the local cache strategy because Nebula Graph currently uses static linking for unit test use cases and its size after compilation  exceeds the quota assaigned by GitHub Action cache.
+Although GitHub Action itself provides the [cache](https://help.github.com/en/actions/configuring-and-managing-workflows/caching-dependencies-to-speed-up-workflows) function, we go for the local cache strategy because Nebula Graph currently uses static linking for unit test use cases and its size after compilation  exceeds the quota assigned by GitHub Action cache.
 
 ### ccache
 
@@ -342,7 +342,7 @@ The make process itself supports parallel compilation of multiple source files. 
 
 ## Things to Improve
 
-We've talked a lot about the advantages and strongness of GitHub Action, but are there  drawbacks? After spending some time using it, below are some thoughts to share with you:
+We've talked a lot about the advantages of GitHub Action, but are there drawbacks? After spending some time using it, below are some thoughts to share with you:
 
 1. **Only support systems of newer versions**. Many actions are developed based on newer Node.js versions and cannot be used directly in old  Docker containers like CentOS 6.It will throw an error 'the library file that Nodejs depends on cannot be found'. Thus action cannot be started properly. Since Nebula Graph also supports CentOS 6, the tasks in this system have to be handled differently.
 1. **It is not easy to verify locally**. Although there is an open source project [act](https://github.com/nektos/act) in the community, there are still many restrictions according to our experiences. Sometimes you have to repeatedly commit  in your own repository to ensure the action modification is correct.
@@ -368,7 +368,7 @@ But overall, GitHub Action is an awesome CI/CD system. After all, as a product t
 
 A while ago, Docker has released its first [Action](https://www.docker.com/blog/first-docker-github-action-is-here/) to simplify the Docker related tasks. In the future, we will also customize our own actions dealing with the complex CI/CD requirements and enable them in all Nebula repositories.
 
-For some general ones like appending assets to the release function, we will put them in an independent repository and publish them in the action marketplace. The exclusive onces will be placed in the `.github/actions` directory of each repository.
+For some general ones like appending assets to the release function, we will put them in an independent repository and publish them in the action marketplace. The exclusive ones will be placed in the `.github/actions` directory of each repository.
 
 This simplifies the YAML configuration in workflows, you only need to use a customized action which has better flexibility and expandability.
 
@@ -382,8 +382,8 @@ Any ideas how to play around GitHun Action? Leave a comment below and let's tal
 
 ## You might also like:
 
-1. [Automating Your Project Processes with Github Actions](https://nebula-graph.io/en/posts/github-action-automating-project-process/)
-1. [Practice Jepsen Test Framework in Nebula Graph](https://nebula-graph.io/en/posts/practice-jepsen-test-framework-in-nebula-graph/)
-1. [Integrating Codecov Test Coverage With Nebula Graph](https://nebula-graph.io/en/posts/integrate-codecov-test-coverage-with-nebula-graph/)
+1. [Automating Your Project Processes with Github Actions](https://nebula-graph.io/posts/github-action-automating-project-process/)
+1. [Practice Jepsen Test Framework in Nebula Graph](https://nebula-graph.io/posts/practice-jepsen-test-framework-in-nebula-graph/)
+1. [Integrating Codecov Test Coverage With Nebula Graph](https://nebula-graph.io/posts/integrate-codecov-test-coverage-with-nebula-graph/)
 
 > Hi, I'm Yee, engineer at Nebula Graph. I'm interested in database query engine and would like to share my experiences in this regard. Hope my post is of help to you. Please let me know if you have any ideas about this. Thanks!

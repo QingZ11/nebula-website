@@ -59,5 +59,5 @@ If you have any thoughts or suggestions, please feel free to leave us a comment 
 
 ## You might also like
 
-- [Nebula Graph RC3 Release Note](https://nebula-graph.io/en/posts/nebula-graph-rc3-release-note/)
-- [Nebula Graph RC2 Release Note](https://nebula-graph.io/en/posts/nebula-graph-rc2-release-note/)
+- [Nebula Graph RC3 Release Note](https://nebula-graph.io/posts/nebula-graph-rc3-release-note/)
+- [Nebula Graph RC2 Release Note](https://nebula-graph.io/posts/nebula-graph-rc2-release-note/)

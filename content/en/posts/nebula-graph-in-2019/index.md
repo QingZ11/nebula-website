@@ -6,7 +6,7 @@ author: "Jamie"
 tags: ["community"]
 ---
 
-![2020](https://user-images.githubusercontent.com/56643819/72578182-4ea64180-3910-11ea-809e-eeb6ab537d89.png)
+![Nebula Graph in 2019: It’s Worth the Effort](https://user-images.githubusercontent.com/56643819/72578182-4ea64180-3910-11ea-809e-eeb6ab537d89.png)
 
 It's that time of a year when everyone is checking if their New Year Resolutions for 2019 have been met.
 
@@ -119,9 +119,10 @@ For  goals in 2020, we have the following in mind:
 Wish you all a happy new year!
 
 ## You might also like
-1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
-1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
-1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)
+
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/posts/nebula-graph-storage-engine-overview/)
+1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/posts/nebula-graph-query-engine-overview/)
 
 
  

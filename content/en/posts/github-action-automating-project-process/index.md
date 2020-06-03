@@ -6,9 +6,7 @@ author: "Jerry"
 tags: ["dev-log"]
 ---
 
-![image](https://user-images.githubusercontent.com/38887077/76831941-482a3c80-6863-11ea-9795-009eaa50fc0e.png)
-
-## Foreword
+![Automating Your Project Processes with Github Actions](https://user-images.githubusercontent.com/38887077/76831941-482a3c80-6863-11ea-9795-009eaa50fc0e.png)
 
 It's common in both company and personal projects to use tools to deal with replicated tasks  to improve efficiency.
 
@@ -141,6 +139,7 @@ Workflows free us from the tedious and repetitive jobs so that we can dedicate o
 Welcome to try our open source graph database [Nebula Graph](https://github.com/vesoft-inc/nebula).
 
 ## You might also like
-1. [Compiling Trouble Shooting: Segmentation Fault and GCC Illegal Instruction](https://nebula-graph.io/en/posts/segmentation-fault-gcc-illegal-instruction-trouble-shooting/)
-1. [Dev Log | How to Release jar Package to the Maven Central Repository](https://nebula-graph.io/en/posts/maven/)
-1. [How to Reduce Docker Image Size](https://nebula-graph.io/en/posts/how-to-reduce-docker-image-size/)
+
+1. [Compiling Trouble Shooting: Segmentation Fault and GCC Illegal Instruction](https://nebula-graph.io/posts/segmentation-fault-gcc-illegal-instruction-trouble-shooting/)
+1. [Dev Log | How to Release jar Package to the Maven Central Repository](https://nebula-graph.io/posts/maven/)
+1. [How to Reduce Docker Image Size](https://nebula-graph.io/posts/how-to-reduce-docker-image-size/)

@@ -51,5 +51,6 @@ Below is a list of details.
 - Nebula Graph Studio is the graphical user interface for working with Nebula. Query, visualize nebula and import CSV data to Nebula. Visualize and explore graph data via the interface; an editor with syntax highlighting feature enables users to design queries fast and view query results in a structured manner; support data import via GUI. Here's the repo of this tool (including documentation and deployment files): https://github.com/vesoft-inc/nebula-web-docker
 
 ## You might also like
-1. [Nebula Graph RC2 Release Note](https://nebula-graph.io/en/posts/nebula-graph-rc2-release-note/)
-1. [Nebula Graph RC4 Release Note](https://nebula-graph.io/en/posts/nebula-graph-rc4-release-note/)
+
+1. [Nebula Graph RC2 Release Note](https://nebula-graph.io/posts/nebula-graph-rc2-release-note/)
+1. [Nebula Graph RC4 Release Note](https://nebula-graph.io/posts/nebula-graph-rc4-release-note/)

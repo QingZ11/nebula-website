@@ -6,6 +6,8 @@ author: "Amber"
 tags: ["community"]
 ---
 
+![How to Be a GitHub Contributor in Five Minutes](https://user-images.githubusercontent.com/57335825/83609456-30de1f80-a533-11ea-8331-8772291191f6.png)
+
 Contribute to your first open source project in just five minutes with the help of **Nebula Graph**.
 
 ## Preface
@@ -146,6 +148,6 @@ Please refer to the [Documentation Toc](https://github.com/vesoft-inc/nebula/blo
 Last but not least, you are welcome to try **Nebula Graph** at our [GitHub Repository](https://github.com/vesoft-inc/nebula). If you have any problems or suggestions please raise us an issue.
 
 ## You might also like
-1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
-1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
-1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/posts/nebula-graph-storage-engine-overview/)
+1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/posts/nebula-graph-query-engine-overview/)

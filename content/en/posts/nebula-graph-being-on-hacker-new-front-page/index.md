@@ -6,11 +6,14 @@ author: "Jamie"
 tags: ["community"]
 ---
 
+![Being on Hacker News Front Page Brought Us Much More than Just 300+ Stars on GitHub within 24 hours](https://user-images.githubusercontent.com/57335825/83608473-d3959e80-a531-11ea-893d-b5a22b055161.png)
+
 Hacker News is said to be the Holy Grail for tech folks. There's one thing that a company, startups in particular, wants desparately: RIGHT traffic for free.
 
 I have never imagined that we would really make it to the  front page, especially when I am actually a new comer to the community.
 
 ## So what happened?
+
 On Jan.15, 2020, I saw a submission on the front page titled "[Thank HN: You helped me get a new job](https://news.ycombinator.com/item?id=22050802)" and thought it was great. By then it has already gotten quite a lot of points and comments and was sitting at No.1 on the front page.
 
 I followed the link and read the encouraging story. The submittor mentioned the "Show HN" tag could be an opportunity to tell the community about small or even unfinished projects. I thought it would be a great idea to try showing Nebula Graph to the Hackers of this community.
@@ -28,14 +31,16 @@ After lunch and a walk outside with my coworker, I went back to my desk and prep
 Then I realized that we made it to the front page! Yahoo!
 
 ## Why could we hit the front page?
+
 I have been thinking about the reasons why we could make it to the front page. To be honest, I don't know. 
 
 But the following factors to my knowldge can be taken into consideration:
 
 1. **The community is interested in graph database**
 
-To me this should be the No.1 reason we can sit on the front page for nearly 20 hours. People are interested in the topic, so they clicked on the link, hence the opportunity to upvote and comment.<br />
-<br />We received many comments in this regard:
+To me this should be the No.1 reason we can sit on the front page for nearly 20 hours. People are interested in the topic, so they clicked on the link, hence the opportunity to upvote and comment.
+
+We received many comments in this regard:
 
 ![image](https://user-images.githubusercontent.com/56643819/74310801-f8121300-4da8-11ea-9f8b-41f8d3b93d74.png)
 
@@ -54,6 +59,7 @@ I guess that's also a main reason why Hackers in the community wanted to leave c
 I didn't follow some wide-spread best practice to submit posts during 6:30 AM - 8:30 AM EST, which in turn MAYBE did good to us because there was not that much competition. However I did follow the advice to provide content of value BTW. <br />
 
 ## What has being on the front page brought us? 
+
 I shared the news with our team and they said that by then we have already gained 45 stars on GitHub! I started to get really excited about the good news.
 
 What happened next brought my knowledge of how powerful the Hacker News community can be to a new horizon:
@@ -80,19 +86,23 @@ Here are some results from the data point of view:
 - 5 issues on our GitHub project
 
 ## What's beyond the numbers?
+
 While we are more than happy about the numbers, the significance of being on the Hacker News front page is certainly beyond just the numbers.
 
 1. **Confidence**
 
-Being on the front page really gave us strong confidence that people are interested in graph database and Nebula Graph. This encourages us to move forward boldly and produce a good graph database solution for the community.<br />
+Being on the front page really gave us strong confidence that people are interested in graph database and Nebula Graph. This encourages us to move forward boldly and produce a good graph database solution for the community.
 
 2. **Real feedback**
 
-We received a lot of feedback from the commenters, positive or not, they are real thoughts. And we can benefit from them to be better.<br />For example, a strong need of performance benchmark has urged us to put the benchmark report on our agenda and a long thread of discussion about the definition of open source has encouraged us to reconsider our license.    
+We received a lot of feedback from the commenters, positive or not, they are real thoughts. And we can benefit from them to be better.
+
+For example, a strong need of performance benchmark has urged us to put the benchmark report on our agenda and a long thread of discussion about the definition of open source has encouraged us to reconsider our license.
 
 It felt so thrilling to be seen and accepted by a tech community. I hope our experience could encourage you to move forward and create something innovative to share with the community as well, especially when you think you are new. Because the community is nice.
 
 ## You might also like
-1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
-1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
-1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)
+
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/posts/nebula-graph-storage-engine-overview/)
+1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/posts/nebula-graph-query-engine-overview/)

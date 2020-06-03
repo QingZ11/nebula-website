@@ -1,11 +1,12 @@
 ---
 title: "Compare Multiple Projects with this GitHub Stats tool"
 date: 2019-12-05
-tags: [ "tool" ]
 description: "This post introduces a React based tool to help you get the stats of GitHub metrics like stars, forks, commits, etc. so that you can make an informed decision which project to follow."
 author: "Jamie"
 tags: ["tools"]
 ---
+
+![Compare Multiple Projects with this GitHub Stats tool](https://user-images.githubusercontent.com/57335825/83610262-09d41d80-a534-11ea-875a-5e696df2c6f0.png)
 
 If you have project code hosted on GitHub, chances are you might be interested in checking some numbers and stats such as stars, commits and rull requests.
 
@@ -16,6 +17,7 @@ We have the right tool for you: the simple and easy-to-use little tool called [
 Let's dive right in to what we can get out of it.
 
 ## Getting started
+
 This interative tool is really easy to use. Follow the three steps below and you'll get what you want in real-time:
 
 1. Head to the [GitHub repo](https://vesoft-inc.github.io/github-statistics/) of the tool
@@ -41,6 +43,7 @@ So basically these metrics can answer the following questions for you:
       tensorflow wins bwcause it has the most watchers.
 
 ## Popularity metrics
+
 It's common that you want to know which project gains the most popularity. 
 
 But how can you measure popularity?
@@ -60,6 +63,7 @@ See the screenshots below for the comparison results:
 Apparently tensorflow gets the strongest momentum during the entire life cycle.
 
 ## Maturity metrics
+
 Besides popularity, you might also care about the maturity of a project, which is worth considering. Generally speaking, the more mature a project is, the more powerful as well as stable it is.
 
 How to measure the maturity of a project?
@@ -69,20 +73,23 @@ By the most recent version, number of issues and number of pull requests.
 See the screenshots below for the comparison results:
 
 ### Release
+
 ![image](https://user-images.githubusercontent.com/38887077/75141348-b7f94b80-572b-11ea-81f2-8658ab9ecbc7.png)
 
 ### Issues
+
 ![image](https://user-images.githubusercontent.com/38887077/75141395-ce9fa280-572b-11ea-92fe-9f0980f51414.png)
 
 ### Pull Requests
-![image](https://user-images.githubusercontent.com/38887077/75141426-da8b6480-572b-11ea-8c4f-b32478af217a.png)
 
+![image](https://user-images.githubusercontent.com/38887077/75141426-da8b6480-572b-11ea-8c4f-b32478af217a.png)
 
 tensorflow and Pytorch have been maintained constantly while caffe is still at its 1.0 version with much fewer issues and pull requests than its two peers.
 
 It's your decision to make which to follow.
 
 ## Conclusion
+
 Data matters. And we hope this simple GitHub Stats tool can bring you the insight required. Also feel free to use it your own way.
 
 Submit an issue if you find any valuable metric is missing in the tool. Here's the project repo again: [https://vesoft-inc.github.io/github-statistics/](https://vesoft-inc.github.io/github-statistics/)
@@ -90,6 +97,7 @@ Submit an issue if you find any valuable metric is missing in the tool. Here's t
 Enjoy!
 
 ## You might also like
-1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
-1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
-1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)
+
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/posts/nebula-graph-storage-engine-overview/)
+1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/posts/nebula-graph-query-engine-overview/)

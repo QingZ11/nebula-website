@@ -6,6 +6,8 @@ author: "Sherman"
 tags: ["architecture"]
 ---
 
+![Nebula Graph Query Engine Architecture](https://user-images.githubusercontent.com/57335825/83608282-84e80480-a531-11ea-97d1-7c6fbb66c29f.png)
+
 The query engine is used to process the **Nebula Graph** Query Language (nGQL) statements. This article gives an architectural overview of the **Nebula Graph** query engine.
 
 ![image](https://user-images.githubusercontent.com/56643819/72578735-e6f0f600-3911-11ea-8726-0357034b4fad.png)
@@ -49,6 +51,7 @@ The last step in the query engine is to execute the optimized execution plan. It
 Depending on the action, the executor will communicate with the Meta Service or the Storage Engine via their clients.
 
 ## You might also like
-1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
-1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
-1. [The Review on Graph Database](https://nebula-graph.io/en/posts/review-on-graph-databases/)
+
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/posts/nebula-graph-storage-engine-overview/)
+1. [The Review on Graph Database](https://nebula-graph.io/posts/review-on-graph-databases/)

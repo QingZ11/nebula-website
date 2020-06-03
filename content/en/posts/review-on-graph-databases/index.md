@@ -233,7 +233,7 @@ MATCH (boss)-[:MANAGES*0..3]->(sub),
 WHERE boss.name = “Jeff”
 RETURN sub.name AS list, count(personid) AS Total
 ```
-GQL greatly reduced the query length which is essential for performance and debugging. For a comparison among Cypher, Gremlin and nGQL, refer to [this post](https://nebula-graph.io/en/posts/graph-query-language-comparison-cypher-gremlin-ngql/).
+GQL greatly reduced the query length which is essential for performance and debugging. For a comparison among Cypher, Gremlin and nGQL, refer to [this post](https://nebula-graph.io/posts/graph-query-language-comparison-cypher-gremlin-ngql/).
 
 ## Why Graph Databases Have Better Performance
 
@@ -387,7 +387,7 @@ A graph database may have many different infrastructure implementation but they 
 
 [7] Janus Graph Architecture [https://docs.janusgraph.org/getting-started/architecture/](https://docs.janusgraph.org/getting-started/architecture/)
 
-[8] Nebula Graph Architecture — A Bird's View [https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
+[8] Nebula Graph Architecture — A Bird's View [https://nebula-graph.io/posts/nebula-graph-architecture-overview/](https://nebula-graph.io/posts/nebula-graph-architecture-overview/)
 
 [9] database engine trending [https://db-engines.com/en/ranking_categories](https://db-engines.com/en/ranking_categories)
 
@@ -398,6 +398,6 @@ A graph database may have many different infrastructure implementation but they 
 > Johhan is currently working at Nebula Graph as Software Engineer Intern, researching and implementing large-scale graph query engine and storage engine components. As a contributor of Nebula Graph database, he aims to contribute openly available learning resources about databases, distributed systems and AI through blogs.
 
 ## You might also like
-1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
-1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
-1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/posts/nebula-graph-storage-engine-overview/)
+1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/posts/nebula-graph-query-engine-overview/)

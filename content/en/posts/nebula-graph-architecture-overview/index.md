@@ -6,6 +6,8 @@ author: "Sherman"
 tags: ["architecture"]
 ---
 
+![Overall Architecture - Nebula Graph](https://user-images.githubusercontent.com/57335825/83608720-24a59280-a532-11ea-9b42-d08b7787dcd0.jpg)
+
 Nebula Graph is an [open-source](https://en.wikipedia.org/wiki/Open-source_software) distributed graph database solution. So as an open-source project, we'd like those who are interested in graph databases to know as much as possible how Nebula Graph is designed and why it is a highly performant database.
 
 That's how this series of architecture articles have come into play. We are going to cover the following three areas in this series:
@@ -67,11 +69,11 @@ Now let's look at the Query Service.
 
 Each individual Query Service host runs a stateless query engine. The Query Service hosts will never communicate with each other. They only read the meta information from the Meta Service and interact with Storage Service.
 
-This design makes sure the Query Service cluster can be easily managed by Kubernetes (aka. k8s) or be deployed on the cloud, which by the way is already available for Nebula Graph. See [how to deploy Nebula Graph on Kubernetes](https://nebula-graph.io/en/posts/how-to-deploy-nebula-graph-in-kubernetes/).
+This design makes sure the Query Service cluster can be easily managed by Kubernetes (aka. k8s) or be deployed on the cloud, which by the way is already available for Nebula Graph. See [how to deploy Nebula Graph on Kubernetes](https://nebula-graph.io/posts/how-to-deploy-nebula-graph-in-kubernetes/).
 
 There are two ways to balance the Query Service load：
 
-1. The most common way is to place a [load balancer](https://nebula-graph.io/en/posts/nebula-graph-storage-banlancing-data-migration/) in front of Query Service.
+1. The most common way is to place a [load balancer](https://nebula-graph.io/posts/nebula-graph-storage-banlancing-data-migration/) in front of Query Service.
 1. The second way is to configure the client library with all Query Service hosts' IP addresses. The client will randomly pick one to connect.
 
 Each query engine takes the request from the client, parses the statement, and generates an Abstract Syntax Tree (AST). Then the AST will be handed over to the execution planner and the optimizer. The final AST will be passed to the executors.
@@ -80,7 +82,7 @@ Below is a flow chart of how Nebula Graph's query engine works.
 
 ![image](https://user-images.githubusercontent.com/38887077/78201029-28318480-74c3-11ea-90ed-03e9c2ca25d4.png)
 
-For a detailed explanation, please refer to [the introduction to the query engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/).
+For a detailed explanation, please refer to [the introduction to the query engine](https://nebula-graph.io/posts/nebula-graph-query-engine-overview/).
 
 ### Shared-nothing Distributed Storage Layer
 
@@ -97,15 +99,17 @@ The graph data (vertices and edges) are hashed into multiple partitions by the r
 A partition is a virtual set of data in Nebula Graph. These partitions are allocated to all storage hosts. The allocation information is stored in the Meta Service and can be accessed by storage hosts and query hosts.
 
 ## Conclusion
+
 This post aims to provide a bird's view on Nebula Graph's architecture so that you have a basic understanding of how a distributed graph database works. 
 
 For detailed introduction to the major components of the system, please refer to:
 
-- [An introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
-- [An Introduction to Nebula Graph's Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)
+- [An introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/posts/nebula-graph-storage-engine-overview/)
+- [An Introduction to Nebula Graph's Query Engine](https://nebula-graph.io/posts/nebula-graph-query-engine-overview/)
 
 If you have anything to share about distributed systems or graph databases, please feel free to leave us a comment below. We look forward to hear from you.
 
 ## You might also like
-1. [The Review on Graph Database](https://nebula-graph.io/en/posts/review-on-graph-databases/)
-1. [Graph Query Language Comparison Series - Gremlin vs Cypher vs nGQL](https://nebula-graph.io/en/posts/graph-query-language-comparison-cypher-gremlin-ngql/)
+
+1. [The Review on Graph Database](https://nebula-graph.io/posts/review-on-graph-databases/)
+1. [Graph Query Language Comparison Series - Gremlin vs Cypher vs nGQL](https://nebula-graph.io/posts/graph-query-language-comparison-cypher-gremlin-ngql/)

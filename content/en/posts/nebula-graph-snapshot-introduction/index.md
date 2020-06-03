@@ -6,9 +6,12 @@ author: "sky"
 tags: ["features"]
 ---
 
+![An Introduction to Snapshot in Nebula Graph](https://user-images.githubusercontent.com/57335825/83608128-363a6a80-a531-11ea-9284-49f9aa08d50b.jpeg)
+
 ## 1. Overview
 
 ### 1.1 Terms
+
 | Names | Descriptions |
 | --- | --- |
 | Storage Engine | **Nebula Graph**'s smallest physical storage unit, currently supports RocksDB and Hbase, this document is only for RocksDB. |
@@ -17,7 +20,6 @@ tags: ["features"]
 | checkpoint | Checkpoints can be used as a point in time snapshot for the storage engine. Checkpoint can be used for full backup. Checkpoint file is a hard link for the sst file. |
 | snapshot | The snapshot in this document refers to a snapshot that captures a point-in-time view of **Nebula Graph** cluster, i.e. a collection of the checkpoints for all the storage engines in the cluster. A cluster can be restored to the state when a certain snapshot is created via the snapshot. |
 | wal | Write-ahead Log (wal) is used by Raft to ensure the consistency between leaders and followers. |
-
 
 ### 1.2 Background
 
@@ -36,6 +38,7 @@ As a solution to this problem, **Nebula Graph** supports creating snapshot for t
 ![image](https://user-images.githubusercontent.com/56643819/70290034-99ad3f00-1811-11ea-97dd-f6a814c5624d.png)
 
 ### 2.3 Storage System File Structure
+
 ```bash
 [bright2star@hp-server storage]$ tree
 .
@@ -117,6 +120,7 @@ Because the snapshot names are generated automatically with the system timestamp
 ## 4. Key Code Implementation
 
 ### 4.1 Create Snapshot
+
 ```cpp
 folly::Future<Status> AdminClient::createSnapshot(GraphSpaceID spaceId, const std::string& name) {
     // Get all the hosts of storage engine
@@ -242,6 +246,7 @@ Now the deletes snapshot is not in the show snapshots list.
 - The current version does not support snapshot restore. Users need to write a shell script based on their actual productions to restore snapshots. The implementation logic is rather simple, you copy the snapshots of the engine servers to the specified folder, set this folder to `data_path/`, then start the cluster.
 
 ## You might also like
-1. [How Nebula Graph Automatically Cleans Stale Data with TTL](https://nebula-graph.io/en/posts/clean-stale-data-with-ttl-in-nebula-graph/)
-1. [How Indexing Works in Nebula Graph](https://nebula-graph.io/en/posts/how-indexing-works-in-nebula-graph/)
-1. [Storage Balance and Data Migration](https://nebula-graph.io/en/posts/nebula-graph-storage-banlancing-data-migration/)
+
+1. [How Nebula Graph Automatically Cleans Stale Data with TTL](https://nebula-graph.io/posts/clean-stale-data-with-ttl-in-nebula-graph/)
+1. [How Indexing Works in Nebula Graph](https://nebula-graph.io/posts/how-indexing-works-in-nebula-graph/)
+1. [Storage Balance and Data Migration](https://nebula-graph.io/posts/nebula-graph-storage-banlancing-data-migration/)

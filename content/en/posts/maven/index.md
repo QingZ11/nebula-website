@@ -6,7 +6,7 @@ author: "Jude"
 tags: ["dev-log"]
 ---
 
-## Summary
+![How to Release jar Package to the Maven Central Repository](https://user-images.githubusercontent.com/57335825/83608901-56b6f480-a532-11ea-95d5-4a3216877658.jpeg)
 
 The Maven Central Repository does not support uploading jar packages directly, so you need to release them to some designated third-party Maven repositories, such as the Sonatype OSSRH repository, and then synchronize the jar packages to Maven through this repository. This article details the entire release, synchronization process.
 
@@ -455,5 +455,6 @@ More details on **Nebula Graph** please refer to our GitHub [Repository](https:/
 
 
 ## You might also like
-1. [Automating Your Project Processes with Github Actions](https://nebula-graph.io/en/posts/github-action-automating-project-process/)
-1. [Compiling Trouble Shooting: Segmentation Fault and GCC Illegal Instruction](https://nebula-graph.io/en/posts/segmentation-fault-gcc-illegal-instruction-trouble-shooting/)
+
+1. [Automating Your Project Processes with Github Actions](https://nebula-graph.io/posts/github-action-automating-project-process/)
+1. [Compiling Trouble Shooting: Segmentation Fault and GCC Illegal Instruction](https://nebula-graph.io/posts/segmentation-fault-gcc-illegal-instruction-trouble-shooting/)
