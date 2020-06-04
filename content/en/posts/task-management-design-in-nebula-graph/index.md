@@ -73,22 +73,14 @@ Based on the above scenario, we can extract the essential requirements for the T
 
 Based on the above requirements, we have come to the following design thinking for the Task Manager:
 
-<<<<<<< HEAD
-1. Identify a task with the Task Handle (JobId and TaskId in Thrift).
-=======
 1. Identidy a task with the Task Handle (JobId and TaskId in Thrift).
->>>>>>> upstream/master
 1. The Blocking Queue in the Task Manager is responsible for queuing the Task Handles, which is similar to the Queue Management Machine in a bank. The Blocking Queue itself is thread safe.
 1. Blocking Queue supports scheduling tasks based on priorities, which is similar to VIPs jumping the queue.
 1. The Task Manager maintains the globally unique Map, with the Task Handle as its key and a specific task as its value (similar to a bank hall). In Nebula Graph, we have introduced a thread safe Map, i.e. the Concurrent Hash Map from folly.
 1. When a task is cancelled, the Task Manager will locate it in the Map according to the Handle, tagging cancellation to it while doing nothing to the Handles in the queue.
 1. If a storaged is shut down while there are still running sub tasks, the result will not be returned until all the sub tasks are completed.
 
-<<<<<<< HEAD
-### Executing Tasks within a Resource Threshold
-=======
 ### Exexuting Tasks within a Resource Threshold
->>>>>>> upstream/master
 
 It is  easy to ensure that the threshold is not exceeded because the Worker is a thread. Simply ensure that all the workers come from the same thread pool.
 
@@ -106,11 +98,7 @@ If the sub tasks of Task 2 execute much faster that those of Task 1, the followi
 
 ![Round Robin - 02](https://user-images.githubusercontent.com/57335825/83603271-01c2b080-a529-11ea-8d73-b7b6c97bea78.png)
 
-<<<<<<< HEAD
-The Round-robin solution makes the execution time of Task 2 dependent on Task 1.
-=======
 The Round-robin solution makes the execution time of Task 2 dependant on Task 1 (see Fig.1 Round-robin).
->>>>>>> upstream/master
 
 #### Solution Two: Handling One Task With a Group of Workers
 
@@ -140,11 +128,9 @@ Question 1: Why not put the Task directly into the Blocking Queue, but split it 
 
 > The main reason is that basic C++ multiple threads don't support such design. Tasks needs to support cancellation. If putting Task in the Blocking Queue, the Blocking Queue must support to locate the tasks. However, there is no such interfaces in the Blocking Queue of the present folly.
 
-
 Question 2: What kind of jobs enjoy the VIP priority?
 
 > The compaction / rebuild index currently supported by the Task Manager is not sensitive to the execution time. But it supports queries like count(*) in development. Considering that users expect count(*) is done in a relative short time, when storaged is operating multiple compactions, we hope the count(*) runs first instead of running after all the compactions are finished.
-
 
 Here comes to the end of Nebula Graph Task Manager introduction. If you encounter any problems in usage, please tell us on our [forum](https://discuss.nebula-graph.io/) or [GitHub](https://github.com/vesoft-inc/nebula).
 
