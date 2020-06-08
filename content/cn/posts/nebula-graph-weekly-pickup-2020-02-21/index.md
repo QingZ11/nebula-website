@@ -66,7 +66,7 @@ Pick of the Week 每周会从微博、知乎、微信群、微信公众号及 CS
 
 **为什么给图数据库取名 Nebula ？**
 
-Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云小姐姐。对了，Nebula的发音是：[ˈnɛbjələ]
+Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云小姐姐。对了，Nebula 的发音是：[ˈnɛbjələ]
 
 本文星云图讲解--《Reflections on vdB 9 反射星雲》
 

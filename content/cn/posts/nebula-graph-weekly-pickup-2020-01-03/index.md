@@ -66,9 +66,10 @@ Nebula：有不同语言的客户端，可以在代码里调用，一月份我�
 本期 Pick of the Week 就此完毕，如果你对本周看点有任何建议，欢迎在本文或者公众号后台及添加 Nebula 小助手微信号加群：NebulaGraphbot 
 
 ## 星云·小剧场
+
 **为什么给图数据库取名 Nebula ？**
 
-Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云小姐姐。对了，Nebula的发音是：[ˈnɛbjələ]
+Nebula 是星云的意思，很大嘛，也是漫威宇宙里面漂亮的星云小姐姐。对了，Nebula 的发音是：[ˈnɛbjələ]
 
 本文星云图讲解--《 The Orion Nebula in Infrared from WISE：WISE 卫星拍摄的猎户座红外光影像》
 
