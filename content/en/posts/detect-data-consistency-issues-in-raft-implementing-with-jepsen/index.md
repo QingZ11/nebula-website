@@ -9,17 +9,17 @@ tags: ["dev-log","features"]
 
 Data consistency is a global issue for all distributed systems. Nebula Graph is no exception as a distributed graph database.
 
-Thanks to the separation between query and storage layers, Nebula Graph only exposes simple kv interfaces in the storage layer. Using RocksDB as a backend kv library, Nebula Graph [ensures strong data consistency](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/) among multiple replicas via the Raft protocol.
+Thanks to the separation between query and storage layers, Nebula Graph only exposes simple kv interfaces in the storage layer. Using RocksDB as a backend kv library, Nebula Graph [ensures strong data consistency](https://nebula-graph.io/posts/nebula-graph-storage-engine-overview/) among multiple replicas via the Raft protocol.
 
 Although raft is meant to be more understandable than Paxos, the practice for it in a distributed system is tricky.
 
-Another challenging problem is how to test a Raft-based distributed system. Currently, Nebula Graph verifies data consistency with Jepsen. In our previous post [Practice Jepsen Test Framework in Nebula Graph](https://nebula-graph.io/en/posts/practice-jepsen-test-framework-in-nebula-graph/), we have introduced in detail how Jepsen test framework works, you may take a look at it to gain some basic understanding about Jepsen.
+Another challenging problem is how to test a Raft-based distributed system. Currently, Nebula Graph verifies data consistency with Jepsen. In our previous post [Practice Jepsen Test Framework in Nebula Graph](https://nebula-graph.io/posts/practice-jepsen-test-framework-in-nebula-graph/), we have introduced in detail how Jepsen test framework works, you may take a look at it to gain some basic understanding about Jepsen.
 
 In this post, we will explain how to verify data consistency of the distributed Nebula Graph kv stores.
 
 ## Strong Data Consistency Explained
 
-Let's start with the definition of strong data consistency.  Quote the book [_Designing Data-Intensive Applications_](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D/ref=sr_1_1?dchild=1&keywords=Designing+Data-Intensive+Applications&qid=1586310740&sr=8-1): 
+Let's start with the definition of strong data consistency.  Quote the book [_Designing Data-Intensive Applications_](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D/ref=sr_1_1?dchild=1&keywords=Designing+Data-Intensive+Applications&qid=1586310740&sr=8-1):
 
 >_In a linearizable system, as soon as one client successfully completes a write, all clients reading from the database must be able to see the value just written._
 
@@ -55,15 +55,12 @@ Read request processing is relatively simple as only the elected leader server c
 
 Write request processing is a bit more complex. The steps are shown in the Raft Group Figure below:
 
-
 1. The leader (the green circle) receives requests sent from the client and writes them into its WAL (write ahead log).
 1. The leader sends the corresponding log entry in the WAL to its followers and enters the waiting phase.
 1. The follower receives the log entry and writes it into its own WAL,  then returns success.
 1. When at least one follower returns success, the leader updates the state machine and sends responses to the client.
 
-
 ![Raft groups](https://user-images.githubusercontent.com/57335825/79217666-cccba300-7e81-11ea-81ac-b55cd84cbfcc.png)
-
 
 Now we will show you some Nebula Graph Raft implementing issues found in Jepsen test with examples below.
 
@@ -78,7 +75,7 @@ Shown in the above figure, A, B, C form a three-replica raft group. The circles 
 
 - Then C is elected as leader of term 2. However, since C has yet applied the log entry of write 2 to the state machine (the value is still 1 at the time being), 1 will be returned if C receives requests from the client. This absolutely violates the definition of strong data consistency because 2 has been successfully written while a stale value is returned.
 
-Such an issue occurs after C is elected as leader of term 2. It is necessary to send heartbeat to ensure the log entry of the previous term is accepted by the quorum for the cluster. No read is allowed before the heartbeat success. Otherwise stale data is likely to be returned. Please refer to Figure 8 and Session 5.4.2 in this[ Raft paper](https://raft.github.io/raft.pdf) if you want more details.
+Such an issue occurs after C is elected as leader of term 2. It is necessary to send heartbeat to ensure the log entry of the previous term is accepted by the quorum for the cluster. No read is allowed before the heartbeat success. Otherwise stale data is likely to be returned. Please refer to Figure 8 and Session 5.4.2 in this[Raft paper](https://raft.github.io/raft.pdf) if you want more details.
 
 ### Data consistency example 2: Leader ensures itself as a leader
 
@@ -106,6 +103,6 @@ In the future, we will introduce other chaos engineering tools to verify data co
 
 ## You might also like
 
-- [Practice Jepsen Test Framework in Nebula Graph](https://nebula-graph.io/en/posts/practice-jepsen-test-framework-in-nebula-graph/)
-- [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
+- [Practice Jepsen Test Framework in Nebula Graph](https://nebula-graph.io/posts/practice-jepsen-test-framework-in-nebula-graph/)
+- [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/posts/nebula-graph-storage-engine-overview/)
 

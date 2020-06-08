@@ -6,7 +6,7 @@ author: "Pandasheep"
 tags: ["features"]
 ---
 
-![image](https://user-images.githubusercontent.com/38887077/77512987-09256800-6eaf-11ea-9b41-e8b87ab51fe8.png)
+![How Nebula Graph Automatically Cleans Stale Data with TTL](https://user-images.githubusercontent.com/38887077/77512987-09256800-6eaf-11ea-9b41-e8b87ab51fe8.png)
 
 ## Introduction
 
@@ -242,6 +242,7 @@ Execution succeeded (Time spent: 5.945/7.492 ms)
 ```
 
 NOTE:
+
 1. If a field contains a ttl_col value, you can't make any changes to the field.
 You must drop the TTL value first, then alter the field.
 1. Note that a tag or an edge cannot have both the TTL attribute and index at the same time, even if the ttl_col column is different from that of the index.
@@ -249,8 +250,7 @@ You must drop the TTL value first, then alter the field.
 Here comes to the end of the TTL introduction. Share your thought on TTL by raising us an [issue](https://github.com/vesoft-inc/nebula) or post your feedback on our official [forum](https://discuss.nebula-graph.io/).
 
 ## You might also like
-1. [How Indexing Works in Nebula Graph](https://nebula-graph.io/en/posts/how-indexing-works-in-nebula-graph/)
-1. [Storage Balance and Data Migration](https://nebula-graph.io/en/posts/nebula-graph-storage-banlancing-data-migration/)
-1. [An Introduction to Snapshot in Nebula Graph](https://nebula-graph.io/en/posts/nebula-graph-snapshot-introduction/)
 
-
+1. [How Indexing Works in Nebula Graph](https://nebula-graph.io/posts/how-indexing-works-in-nebula-graph/)
+1. [Storage Balance and Data Migration](https://nebula-graph.io/posts/nebula-graph-storage-banlancing-data-migration/)
+1. [An Introduction to Snapshot in Nebula Graph](https://nebula-graph.io/posts/nebula-graph-snapshot-introduction/)

@@ -6,6 +6,8 @@ author: "FlyCat"
 tags: ["deployment"]
 ---
 
+![How to Deploy Nebula Graph on Kubernetes](https://user-images.githubusercontent.com/57335825/83609181-bf9e6c80-a532-11ea-8f6d-8132efb66198.png)
+
 ## What is Kubernetes
 
 Kubernetes (commonly stylized as k8s) is an open-source container-orchestration system, aiming to provide a simple yet efficient platform for automating deployment, scaling, and operations of application containers across clusters of hosts.
@@ -16,7 +18,7 @@ The components are designed to be **loosely coupled** and **scalable** so that t
 
 The scalability of the system is largely provided by the Kubernetes API which is used mainly as a scalable internal component and as a container running on Kubernetes.
 
-![](https://oscimg.oschina.net/oscnet/up-69f689e312c8968a3cbef1a5cb7d2075f0d.png)
+![Kubernetes API](https://oscimg.oschina.net/oscnet/up-69f689e312c8968a3cbef1a5cb7d2075f0d.png)
 
 Kubernetes consists mainly of the following core components:
 
@@ -746,7 +748,7 @@ Access **Nebula Graph** Cluster:
 Please refer to the [Official Doc](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/) on deployment of high-availability Kubernetes clusters.
 
 You can also refer to [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) on how to deploy local Kubernetes cluster with minikube.
->  How to modify the **Nebula Graph** cluster parameters?
+> How to modify the **Nebula Graph** cluster parameters?
 
 When using `helm install`, you can use `--set` to override the default variables in `values.yaml`. Please refer to [Helm](https://helm.sh/docs/intro/using_helm/) on details.
 > How to observe nebula cluster status?
@@ -763,6 +765,7 @@ Please refer to the [Storage Classes](https://kubernetes.io/zh/docs/concepts/sto
 - GitHub：[https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula)
 
 ## You might also like
-1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
-1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
-1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)
+
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/posts/nebula-graph-storage-engine-overview/)
+1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/posts/nebula-graph-query-engine-overview/)

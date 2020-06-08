@@ -6,7 +6,7 @@ author: "Heng Chen"
 tags: ["features"]
 ---
 
-![image](https://user-images.githubusercontent.com/56643819/73818163-b7098400-4827-11ea-90b9-239d4e1c1285.png)
+![Storage Balance and Data Migration](https://user-images.githubusercontent.com/56643819/73818163-b7098400-4827-11ea-90b9-239d4e1c1285.png)
 
 In our post [_Storage Design_](https://github.com/vesoft-inc/nebula/blob/master/docs/manual-EN/1.overview/3.design-and-architecture/2.storage-design.md) we mentioned the distributed kv store is managed by the meta service. Both the partition distribution and machine status can be found in the meta service. Users can ~~input~~ use commands in the console to add or remove machines to execute a balance plan for the storage service.
 
@@ -288,6 +288,6 @@ The red number indicates a change happend after a command is executed.
 This is the [GitHub Repo](https://github.com/vesoft-inc/nebula) for **Nebula Graph**. Welcome to try nebula. IF you have any problems please send us an [issue](https://github.com/vesoft-inc/nebula/issues).
 
 ## You might also like
-1. [How Nebula Graph Automatically Cleans Stale Data with TTL](https://nebula-graph.io/en/posts/clean-stale-data-with-ttl-in-nebula-graph/)
-1. [How Indexing Works in Nebula Graph](https://nebula-graph.io/en/posts/how-indexing-works-in-nebula-graph/)
-1. [An Introduction to Snapshot in Nebula Graph](https://nebula-graph.io/en/posts/nebula-graph-snapshot-introduction/)
+1. [How Nebula Graph Automatically Cleans Stale Data with TTL](https://nebula-graph.io/posts/clean-stale-data-with-ttl-in-nebula-graph/)
+1. [How Indexing Works in Nebula Graph](https://nebula-graph.io/posts/how-indexing-works-in-nebula-graph/)
+1. [An Introduction to Snapshot in Nebula Graph](https://nebula-graph.io/posts/nebula-graph-snapshot-introduction/)

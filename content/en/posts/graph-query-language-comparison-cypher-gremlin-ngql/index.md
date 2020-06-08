@@ -6,9 +6,11 @@ author: "Steam, Amber, Jude"
 tags: ["graph-database", "query-language"]
 ---
 
+![Graph Query Language Comparison Series - Gremlin vs Cypher vs nGQL](https://user-images.githubusercontent.com/57335825/83609880-b1048500-a533-11ea-9174-8b3f31150887.png)
+
 In September 2019, [Graph Query Language](https://www.gqlstandards.org/home) is accepted as a new database query language in a vote by the International SQL Standards Committee, the unification of GQL takes time.  
 
-![image](https://user-images.githubusercontent.com/38887077/75741236-f357d380-5d44-11ea-8c43-65283b49bbef.png)
+![GQL](https://user-images.githubusercontent.com/38887077/75741236-f357d380-5d44-11ea-8c43-65283b49bbef.png)
 
 In this post, we've selected some mainstream graph query languages and compared the CRUD usage in these languages respectively.
 
@@ -56,7 +58,6 @@ Before comparing the three graph query languages, let's take a look at their ter
 | Delete | drop | delete | delete / drop |
 | Update | setProperty | set | update |
 
-
 ## Syntax Comparison - CRUD
 
 After understanding the common terms in Gremlin, Cypher, and nGQL, let's take a look at the general syntax of these graph query languages.
@@ -64,6 +65,7 @@ After understanding the common terms in Gremlin, Cypher, and nGQL, let's take a 
 This section will walk you through the basic CRUD syntax for Gremlin, Cypher and nGQL respectively.
 
 ### Graph
+
 Refer to the following example on how to create a graph space. We omitted Cypher since you don't need to create a graph space before you can add any data to the graph databases.
 
 ```shell
@@ -349,7 +351,7 @@ This section introduces some demonstration queries.
 
 ### Demo model: The Graphs of Gods
 
-The examples in this section make extensive use of the toy graph distributed with [Janus Graph](https://janusgraph.org/) called _[The Graphs of Gods](https://docs.janusgraph.org/#getting-started), _as diagrammed below_._
+The examples in this section make extensive use of the toy graph distributed with [Janus Graph](https://janusgraph.org/) called _[The Graphs of Gods](https://docs.janusgraph.org/#getting-started)_ as diagrammed below。
 
 This example describes the relationships between the beings and places of the Roman pantheon.
 
@@ -568,5 +570,6 @@ RETURN bro.name, dst.name
 In addition to the basic operations in the three graph query languages, we will work on another piece of comparison of advanced operations in these languages. Stay tuned!
 
 ## You might also like
-1. [The Review on Graph Database](https://nebula-graph.io/en/posts/review-on-graph-databases/)
-1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
+
+1. [The Review on Graph Database](https://nebula-graph.io/posts/review-on-graph-databases/)
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/posts/nebula-graph-architecture-overview/)

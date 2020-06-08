@@ -43,7 +43,7 @@ What's more, some third-party tools support integrating the test report with pul
 
 ## Integrate with CI Github Action
 
-There are many mainstream CI platforms, such as Travis, azure-pipelines and GitHub Action. Nebula Graph selects GitHub Action. In our previous post [_Automating Your Project Processes with Github Actions_](https://nebula-graph.io/en/posts/github-action-automating-project-process/), we have introduced GitHub Action in detail, you may take a look at it to gain some basic understanding about Action.
+There are many mainstream CI platforms, such as Travis, azure-pipelines and GitHub Action. Nebula Graph selects GitHub Action. In our previous post [_Automating Your Project Processes with Github Actions_](https://nebula-graph.io/posts/github-action-automating-project-process/), we have introduced GitHub Action in detail, you may take a look at it to gain some basic understanding about Action.
 
 Compared with other CI platforms, GitHub Action integrates better with GitHub and supports many operating systems and CPUs.
 
@@ -107,9 +107,10 @@ Finally, you can also add the Codecov coverage badge in your README file just li
 ![add test coverage result to your repo](https://user-images.githubusercontent.com/57335825/79864632-50e6d300-840c-11ea-8a79-c7ad53bdd03f.png)
 
 ## You might also like
-1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
-1. [Automating Your Project Processes with Github Actions](https://nebula-graph.io/en/posts/github-action-automating-project-process/)
-1. [Compiling Trouble Shooting: Segmentation Fault and GCC Illegal Instruction](https://nebula-graph.io/en/posts/segmentation-fault-gcc-illegal-instruction-trouble-shooting/)
+
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/posts/nebula-graph-architecture-overview/)
+1. [Automating Your Project Processes with Github Actions](https://nebula-graph.io/posts/github-action-automating-project-process/)
+1. [Compiling Trouble Shooting: Segmentation Fault and GCC Illegal Instruction](https://nebula-graph.io/posts/segmentation-fault-gcc-illegal-instruction-trouble-shooting/)
 
 >_Hi, I'm Shylock. a software engineer at Nebula Graph. Hope my post is of help to you. Please let me know if you have any ideas about this. Thanks!_
 

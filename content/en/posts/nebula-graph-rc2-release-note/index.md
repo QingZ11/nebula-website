@@ -55,5 +55,6 @@ Below is a detailed rundown of the newly added features:
 See our [roadmap for RC3](https://github.com/vesoft-inc/nebula/wiki/Nebula-Graph-Roadmap-RC3) for the features coming soon.
 
 ## You might also like
-1. [Nebula Graph RC3 Release Note](https://nebula-graph.io/en/posts/nebula-graph-rc3-release-note/)
-1. [Nebula Graph RC4 Release Note](https://nebula-graph.io/en/posts/nebula-graph-rc4-release-note/)
+
+1. [Nebula Graph RC3 Release Note](https://nebula-graph.io/posts/nebula-graph-rc3-release-note/)
+1. [Nebula Graph RC4 Release Note](https://nebula-graph.io/posts/nebula-graph-rc4-release-note/)

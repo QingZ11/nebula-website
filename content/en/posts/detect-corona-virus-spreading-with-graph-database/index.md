@@ -6,7 +6,7 @@ author: "Min Wu"
 tags: ["use-cases"]
 ---
 
-![nCov.png](https://user-images.githubusercontent.com/56643819/74227656-e887c100-4cf9-11ea-94a0-8043e0bfc1be.png)
+![Detect Corona Virus Spreading With Graph Database Based on a Real Case](https://user-images.githubusercontent.com/56643819/74227656-e887c100-4cf9-11ea-94a0-8043e0bfc1be.png)
 
 ## Background
 
@@ -20,7 +20,15 @@ Evidences have shown the nCOV transmitted from person to person. I.e., if extrac
 
 Let us use Usr1, Usr2, Usr3, Usr4, Usr5 to refer to these five cases, and look at their tracks:
 
-Usr1: caught a fever on January 24, worked in  Area A of the shopping mall from January 22 to January 30, diagnosed on January 31.<br />Usr2: Usr2 is the husband of Usr1. He had diarrhea on January 25 and was diagnosed on February 1.<br />Usr3: Usr3 contacted  a suspected case on January 18, then worked in  Area B of the shopping mall. He started fever on January 24, and was diagnosed on February 1.<br />Usr4: Usr4 contacted with suspected cases on January 12 and 13, and then worked in Area C of the shopping mall. He started fever on January 21 and was diagnosed on February 1;<br />Usr5: Visited the shopping mall Area A, B, and C from 16 to 22 pm on January 23, then started to fever January 29. Diagnosis on February 2.
+Usr1: caught a fever on January 24, worked in  Area A of the shopping mall from January 22 to January 30, diagnosed on January 31.
+
+Usr2: Usr2 is the husband of Usr1. He had diarrhea on January 25 and was diagnosed on February 1.
+
+Usr3: Usr3 contacted  a suspected case on January 18, then worked in  Area B of the shopping mall. He started fever on January 24, and was diagnosed on February 1.
+
+Usr4: Usr4 contacted with suspected cases on January 12 and 13, and then worked in Area C of the shopping mall. He started fever on January 21 and was diagnosed on February 1;
+
+Usr5: Visited the shopping mall Area A, B, and C from 16 to 22 pm on January 23, then started to fever January 29. Diagnosis on February 2.
 
 ## Graph Model Extraction
 
@@ -139,7 +147,7 @@ GO FROM $PlaceThosePersonGoto.id FROM stay REVERSELY
     AND stay.end_time < $PlaceThosePersonGoto.end  -- have connected
 ```
 
-We found that Usr1 had connection with Usr2, Usr5 between 12:00 on January 23 and 8:00 on January 24. Both of the two were healthy at that time. But Usr5 had previously contacted the  patient Usr4 with a fever. 
+We found that Usr1 had connection with Usr2, Usr5 between 12:00 on January 23 and 8:00 on January 24. Both of the two were healthy at that time. But Usr5 had previously contacted the  patient Usr4 with a fever.
 
 **So far, we have found the spreading path:**
 
@@ -175,13 +183,13 @@ But such self-report mechanism is inefficient and unreliable, especially there 
 
 Fortunately, the development of big data has facilitated the construction of the data system in security, transportation, medical departments. In the above Tianjin case, we used a few cases to demonstrate how graph database helps to locate suspicious cases and decrease the risk of infection.
 
-
 ## References
 
 - [News on the Tianjin case](http://www.bjd.com.cn/a/202002/03/WS5e37d067e4b002ffe994092e.html)
 - [Graph DB Nebula Graph](https://github.com/vesoft-inc/nebula)
 
 ## You might also like
-1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
-1. [The Review on Graph Database](https://nebula-graph.io/en/posts/review-on-graph-databases/)
-1. [Graph Query Language Comparison Series - Gremlin vs Cypher vs nGQL](https://nebula-graph.io/en/posts/graph-query-language-comparison-cypher-gremlin-ngql/)
+
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/posts/nebula-graph-architecture-overview/)
+1. [The Review on Graph Database](https://nebula-graph.io/posts/review-on-graph-databases/)
+1. [Graph Query Language Comparison Series - Gremlin vs Cypher vs nGQL](https://nebula-graph.io/posts/graph-query-language-comparison-cypher-gremlin-ngql/)

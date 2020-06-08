@@ -6,7 +6,7 @@ author: "sky"
 tags: ["features"]
 ---
 
-![image](https://user-images.githubusercontent.com/38887077/76482821-4ec64780-6450-11ea-862e-da506f5cdae2.png)
+![How Indexing Works in Nebula Graph](https://user-images.githubusercontent.com/38887077/76482821-4ec64780-6450-11ea-862e-da506f5cdae2.png)
 
 ## Why indexing is needed in a graph database
 
@@ -71,9 +71,9 @@ Here's what we found required for indexing in a graph database:
 
 ## How indexes are stored in Nebula Graph
 
-Below is a diagram of how indexes are stored in Nebula Graph. Indexes are a part of Nebula Graph's Storage Service so we place them in the big picture of its [storage architecture](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/).
+Below is a diagram of how indexes are stored in Nebula Graph. Indexes are a part of Nebula Graph's Storage Service so we place them in the big picture of its [storage architecture](https://nebula-graph.io/posts/nebula-graph-storage-engine-overview/).
 
-![image](https://user-images.githubusercontent.com/38887077/76482853-6c93ac80-6450-11ea-8f9d-824adfa30c72.png)
+![How Indexing Works in Nebula Graph - 01](https://user-images.githubusercontent.com/38887077/76482853-6c93ac80-6450-11ea-8f9d-824adfa30c72.png)
 
 Seen from the above figure, each Storage Server can contain multiple Storage Engines, each Storage Engine can contain multiple Partitions.
 
@@ -89,11 +89,11 @@ In Nebula Graph, indexes and the (raw) data of vertices and edges are stored tog
 
 ##### Data Structure of Vertices
 
-![image](https://user-images.githubusercontent.com/38887077/76483833-08261c80-6453-11ea-964b-da781448c3b5.png)
+![How Indexing Works in Nebula Graph - 02](https://user-images.githubusercontent.com/38887077/76483833-08261c80-6453-11ea-964b-da781448c3b5.png)
 
 ##### Index Structure of Vertices
 
-![image](https://user-images.githubusercontent.com/38887077/76483856-15dba200-6453-11ea-9377-dc765ec46959.png)
+![How Indexing Works in Nebula Graph - 03](https://user-images.githubusercontent.com/38887077/76483856-15dba200-6453-11ea-9377-dc765ec46959.png)
 
 The index structure of vertex is shown in the table above, below is detailed explanations of the fields:
 
@@ -137,11 +137,11 @@ We can see that the VertexId is the hashed value of the specified ID. If the va
 
 Vertex data structure:
 
-![image](https://user-images.githubusercontent.com/38887077/76483873-24c25480-6453-11ea-8200-41b5bcd61268.png)
+![How Indexing Works in Nebula Graph - 04](https://user-images.githubusercontent.com/38887077/76483873-24c25480-6453-11ea-8200-41b5bcd61268.png)
 
 Vertex index structure:
 
-![image](https://user-images.githubusercontent.com/38887077/76483895-39065180-6453-11ea-8819-820a72c69cc0.png)
+![How Indexing Works in Nebula Graph - 05](https://user-images.githubusercontent.com/38887077/76483895-39065180-6453-11ea-8819-820a72c69cc0.png)
 
 Note: In index, row is the same as  key as the unique identifier of an index.
 
@@ -155,15 +155,15 @@ We use the vertex or edge ID to tell specific tag or edge type ID.
 
 ##### Data Structure of Edges
 
-![image](https://user-images.githubusercontent.com/38887077/76483912-48859a80-6453-11ea-9621-6211ede38953.png)
+![How Indexing Works in Nebula Graph - 06](https://user-images.githubusercontent.com/38887077/76483912-48859a80-6453-11ea-9621-6211ede38953.png)
 
 ##### Index Structure of Edges
 
-![image](https://user-images.githubusercontent.com/38887077/76483933-53d8c600-6453-11ea-9027-daeae58be38d.png)
+![How Indexing Works in Nebula Graph - 07](https://user-images.githubusercontent.com/38887077/76483933-53d8c600-6453-11ea-9027-daeae58be38d.png)
 
 ### Index Binary
 
-![image](https://user-images.githubusercontent.com/38887077/76483941-589d7a00-6453-11ea-967f-8cb07f74ead2.png)
+![How Indexing Works in Nebula Graph - 08](https://user-images.githubusercontent.com/38887077/76483941-589d7a00-6453-11ea-967f-8cb07f74ead2.png)
 
 Index binary is the core field of an index. In index binary, there are two types of fields, i.e. fixed-length fields and variable-length fields. Int, double, and bool types are fixed-length fields, and string type is a variable-length field.
 
@@ -180,7 +180,7 @@ Assume there is a row for index1 where the values of c1, c2, c3 are 23, "abc", 
 - length = sizeof("abc") = 3
 - length = sizeof("here") = 4
 
-![image](https://user-images.githubusercontent.com/38887077/76482902-9056f280-6450-11ea-8cb6-f18c0c779f8b.png)
+![How Indexing Works in Nebula Graph - 09](https://user-images.githubusercontent.com/38887077/76482902-9056f280-6450-11ea-8cb6-f18c0c779f8b.png)
 
 Thus the  value of this row is 23abchere34.
 
@@ -197,11 +197,11 @@ Suppose we now have two sets of values for c1, c2, and c3:
 - row1 : ("ab", "ab", "ab")
 - row2: ("aba", "ba", "b")
 
-![image](https://user-images.githubusercontent.com/38887077/76482907-93ea7980-6450-11ea-9b94-0c029e079d41.png)
+![How Indexing Works in Nebula Graph - 10](https://user-images.githubusercontent.com/38887077/76482907-93ea7980-6450-11ea-9b94-0c029e079d41.png)
 
 We can see that the prefix of the two rows  is the same. How do you distinguish the key of the index binary of the two rows? The answer is `Variable-length field length`.
 
-![image](https://user-images.githubusercontent.com/38887077/76482914-9947c400-6450-11ea-8e96-e97bdc541dad.png)
+![How Indexing Works in Nebula Graph - 11](https://user-images.githubusercontent.com/38887077/76482914-9947c400-6450-11ea-8e96-e97bdc541dad.png)
 
 If your query condition is where c1 == "ab", the length of c1 is directly read in the variable-length field length by orders. Based on the length, values of c1  in row1 and row2 are extracted, which are "ab" and "aba" respectively. In this way we can accurately determine that only "ab" in row1 fits the where clause.
 
@@ -310,6 +310,7 @@ YIELD lookup_tag_1.col1, lookup_tag_1.col2, lookup_tag_1.col3;
 This brings the end of the index post. Raise us an issue on [GitHub](https://github.com/vesoft-inc/nebula) or give us your feedback on our [forum](https://discuss.nebula-graph.io/) if you have any suggestions or requirements.
 
 ## You might also like
-1. [How Nebula Graph Automatically Cleans Stale Data with TTL](https://nebula-graph.io/en/posts/clean-stale-data-with-ttl-in-nebula-graph/)
-1. [Storage Balance and Data Migration](https://nebula-graph.io/en/posts/nebula-graph-storage-banlancing-data-migration/)
-1. [An Introduction to Snapshot in Nebula Graph](https://nebula-graph.io/en/posts/nebula-graph-snapshot-introduction/)
+
+1. [How Nebula Graph Automatically Cleans Stale Data with TTL](https://nebula-graph.io/posts/clean-stale-data-with-ttl-in-nebula-graph/)
+1. [Storage Balance and Data Migration](https://nebula-graph.io/posts/nebula-graph-storage-banlancing-data-migration/)
+1. [An Introduction to Snapshot in Nebula Graph](https://nebula-graph.io/posts/nebula-graph-snapshot-introduction/)

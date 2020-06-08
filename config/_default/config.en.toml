@@ -70,8 +70,8 @@ contentDir = "content/en"
   # Hero section
   [params.header]
     # To change the background of the header section, replace the 'header.jpg' at './static/img' with your own.
-    slogan     = "A distributed, scalable, lightning-fast graph database"
-    subtitle   = "Nebula Graph is an open-source graph database capable of hosting super large scale graphs with dozens of billions of vertices (nodes) and trillions of edges, with milliseconds of latency."
+    slogan     = "A Powerfully Distributed, Scalable, Lightning-Fast Graph Database"
+    subtitle   = "Nebula Graph is an open-source graph database unmatched in its ability to host super large-scale graphs using billions of vertices (nodes) and trillions of edges with milliseconds of latency. This empowers businesses to reveal untapped value buried in complex data."
     buttonText = "Get Started"
     downloadText = "VIEW ON GITHUB"
     githubLink = "https://github.com/vesoft-inc/nebula"
@@ -171,14 +171,14 @@ contentDir = "content/en"
         pic = "feature1.png"
         title = "Open Source"
         link = "https://discuss.nebula-graph.io/"
-        description1 = "We are looking forward to"
+        description1 = "We are continuing to"
         description2 = "collaborating with the community"
-        description3 = "to popularize and promote the graph database."
+        description3 = "to prepare, popularize and promote the graph database."
 
       [[params.features.list]]
         pic = "feature2.png"
         title = "High Performance"
-        description1 = "Nebula Graph provides low latency read and write, while still maintaining high throughput."
+        description1 = "Nebula Graph provides low latency read and write, while still maintaining high throughput to simplify the most complex data sets."
 
       [[params.features.list]]
         pic = "feature3.png"
@@ -191,15 +191,15 @@ contentDir = "content/en"
       [[params.features.list]]
         pic = "feature4.png"
         title = "Secure"
-        description1 = "With role-based access control, Nebula Graph only allows authenticated access."
+        description1 = "Nebula Graph only allows authenticated access via role-based access control."
 
       [[params.features.list]]
         pic = "feature5.png"
         title = "Scalable"
         link = "https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/"
-        description1 = "With shared-nothing "
+        description1 = "With a shared-nothing "
         description2 = "distributed architecture"
-        description3 = ", Nebula Graph offers linearly scalability."
+        description3 = ",Nebula Graph offers linear scalability."
 
       [[params.features.list]]
         pic = "feature6.png"
@@ -207,7 +207,7 @@ contentDir = "content/en"
         link = "https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/"
         description1 = "Nebula Graph supports multiple  "
         description2 = "storage engine"
-        description3 = " types. The query language can be extended to support new algorithms."
+        description3 = " types and the query language can be extended to support new algorithms."
 
       [[params.features.list]]
         pic = "feature7.png"
@@ -219,9 +219,9 @@ contentDir = "content/en"
         title = "Highly Available"
         description = "Nebula Graph guarantees high availability even in case of failures."
         link = "https://nebula-graph.io/en/posts/nebula-graph-snapshot-introduction/"
-        description1 = "With horizontal scalability and"
+        description1 = "With horizontal scalability and a "
         description2 = "snapshot"
-        description3 = " , Nebula Graph guarantees high availability even in case of failures."
+        description3 = "feature, Nebula Graph guarantees high availability even in case of failures."
     
   # [params.portfolio.modal]
   #       client = "Client"

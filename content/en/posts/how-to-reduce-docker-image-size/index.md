@@ -6,7 +6,7 @@ author: "Jerry"
 tags: ["performance"]
 ---
 
-![Docker](https://user-images.githubusercontent.com/56643819/74205747-8dcb7680-4cb3-11ea-97c0-7c8bf36dd0e1.png)
+![How to Reduce Docker Image Size](https://user-images.githubusercontent.com/56643819/74205747-8dcb7680-4cb3-11ea-97c0-7c8bf36dd0e1.png)
 
 If there are top ten buzzwords in the technology industry in the year of 2019, **container** is sure to be one of them. With the popularity of Docker, more and more scenarios are using Docker in the front-end field. This article shows how do we use Docker in the visualization interface of **Nebula Graph**, a distributed open source graph database.
 
@@ -101,11 +101,11 @@ RUN npm install && npm run build
 
 ### Regular Front-End Optimization
 
-- Compress ugly code and remove source code<br />
+- Compress ugly code and remove source code
 Finish this step when building image so that the image size is further reduced.
-- Only downloading code needed for production with node_modules<br />
+- Only downloading code needed for production with node_modules
 Finish this step when deploying, be sure to download only third party dependence code for production: `npm install --production`
-- Place public source on CDN<br />
+- Place public source on CDN
 If the image is expected to run in network environment, place large public files ( pictures and third party libraries, etc.) on the the CDN server so that some resources are separated and the image size is further reduced.
 - ...
 
@@ -122,6 +122,7 @@ The above is our experience on reducing the Docker image of the [Nebula Graph St
 - [Nebula Graph Studio](https://github.com/vesoft-inc/nebula-web-docker)
 
 ## You might also like
-1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/)
-1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/en/posts/nebula-graph-storage-engine-overview/)
-1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/en/posts/nebula-graph-query-engine-overview/)
+
+1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/posts/nebula-graph-architecture-overview/)
+1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/posts/nebula-graph-storage-engine-overview/)
+1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/posts/nebula-graph-query-engine-overview/)

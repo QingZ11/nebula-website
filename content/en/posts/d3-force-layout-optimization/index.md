@@ -30,7 +30,7 @@ The following is a popular network diagram I found that is realized with D3-forc
 
 ## Building D3-Force Directed Graph
 
-In Nebula Graph Studio, we use the D3-force directed graph to analyze data relationships because the nodes and edges show the data connections intuitively and it allows graph exploration via [graph query language](https://nebula-graph.io/en/posts/graph-query-language-comparison-cypher-gremlin-ngql/). Moreover, the graph data can be updated by synchronizing the operations on the DOM to the database, which deserves another article to cover.
+In Nebula Graph Studio, we use the D3-force directed graph to analyze data relationships because the nodes and edges show the data connections intuitively and it allows graph exploration via [graph query language](https://nebula-graph.io/posts/graph-query-language-comparison-cypher-gremlin-ngql/). Moreover, the graph data can be updated by synchronizing the operations on the DOM to the database, which deserves another article to cover.
 
 Let's build a simple D3-force directed graph to illustrate how D3.js displays data connections and share some layout optimization ideas based on this example.
 
@@ -177,5 +177,5 @@ Try Nebula Graph with [Nebula Graph Studio](https://github.com/vesoft-inc/nebula
 
 ## You might also like
 
-- [Automating Your Project Processes with Github Actions](https://nebula-graph.io/en/posts/github-action-automating-project-process/)
-- [How to Reduce Docker Image Size](https://nebula-graph.io/en/posts/how-to-reduce-docker-image-size/)
+- [Automating Your Project Processes with Github Actions](https://nebula-graph.io/posts/github-action-automating-project-process/)
+- [How to Reduce Docker Image Size](https://nebula-graph.io/posts/how-to-reduce-docker-image-size/)
