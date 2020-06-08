@@ -14,7 +14,7 @@ author: bright-starry-sky
 
 ![nebula-graph-architecture](https://www-cdn.nebula-graph.com.cn/nebula-blog/nebula-graph-architecture.png)
 
-由上图可知，Nebula Graph的主体架构分为三部分：Computation Layer、Storage Layer 和 Meta Service。Console 、API 和 Web Service 被统称为 Client API。 账户数据和权限数据将被存储在 Meta Engine中，当Query Engine 启动后，将会初始 Meta Client，Query Engine 将通过 Meta Client 与 Meta Service 进行通信。
+由上图可知，Nebula Graph的主体架构分为三部分：Computation Layer、Storage Layer 和 Meta Service。Console 、API 和 Web Service 被统称为 Client API。 账户数据和权限数据将被存储在 Meta Engine中，当 Query Engine 启动后，将会初始 Meta Client，Query Engine 将通过 Meta Client 与 Meta Service 进行通信。
 
 当用户通过 Client API 连接 Query Engine 时，Query Engine 会通过 Meta Client 查询 Meta Engine 的用户数据，并判断连接账户是否存在，以及密码是否正确。当验证通过后，连接创建成功，用户可以通过这个连接执行数据操作。当用户通过 Client API 发送操作指令后，Query Engine 首先对此指令做语法解析，识别操作类型，通过操作类型、用户角色等信息进行权限判断，如果权限无效，则直接在 Query Engine 阻挡操作，并返回错误信息至 Client API。 在整个权限检查的过程中，Nebula Graph 对 Meta data 进行了缓存，将在以下章节中介绍。
 
