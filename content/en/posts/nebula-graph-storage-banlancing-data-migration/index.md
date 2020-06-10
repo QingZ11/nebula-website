@@ -8,7 +8,7 @@ tags: ["features"]
 
 ![Storage Balance and Data Migration](https://user-images.githubusercontent.com/56643819/73818163-b7098400-4827-11ea-90b9-239d4e1c1285.png)
 
-In our post [_Storage Design_](https://github.com/vesoft-inc/nebula/blob/master/docs/manual-EN/1.overview/3.design-and-architecture/2.storage-design.md) we mentioned the distributed kv store is managed by the meta service. Both the partition distribution and machine status can be found in the meta service. Users can ~~input~~ use commands in the console to add or remove machines to execute a balance plan for the storage service.
+In our post [_Storage Design_](https://github.com/vesoft-inc/nebula/blob/master/docs/manual-EN/1.overview/3.design-and-architecture/2.storage-design.md) we mentioned the distributed kv store is managed by the meta service. Both the partition distribution and machine status can be found in the meta service. Users can use commands in the console to add or remove machines to execute a balance plan for the storage service.
 
 **Nebula Graph**'s service is composed of three parts: graph, storage and meta. In this post, we will introduce how to implement data (partition) and work-load balance in the storage service.
 
@@ -34,7 +34,7 @@ The storage service can be scaled in or out horizontally by the `BALANCE` comma
 
 ## Intro to the balance mechanism
 
-In **Nebula Graph** balance means to balance both the raft leader and partition data. But the balance** does not change the numbers of leaders or partitions**.
+In **Nebula Graph** balance means to balance both the raft leader and partition data. But the balance **does not change the numbers of leaders or partitions**.
 
 When you add a new machine with Nebula service, the (new) storage will automatically register to the Meta service. Meta calculates an equally partition distribution, and then uses **remove partition** and **add partition** to make those partitions distributed evenly. The corresponding command is `BALANCE DATA`. Usually, the data migration is a time-consuming process.
 
@@ -74,7 +74,9 @@ Got 3 rows (Time spent: 5886/6835 us)
 - **_Leader distribution_** shows how the leader distributed in each graph space. For now there are no spaces  created.  (You can regard space as an independent name space -- similar to the Database in MySQL.)
 - **_Partition distribution_** shows the partition number of different spaces.
 
-![image](https://user-images.githubusercontent.com/56643819/73815505-26c84080-4821-11ea-8cfa-46fa202462f5.png)<br />We can see there is no data in the _Leader distribution_ and _Partition distribution_ for the time.
+![image](https://user-images.githubusercontent.com/56643819/73815505-26c84080-4821-11ea-8cfa-46fa202462f5.png)
+
+We can see there is no data in the _Leader distribution_ and _Partition distribution_ for the time.
 
 #### Step 1.2 Create a graph space
 
@@ -99,7 +101,9 @@ nebula> SHOW HOSTS
 ------------------------------------------------------------------------------------------------
 ```
 
-![image](https://user-images.githubusercontent.com/56643819/73818168-bcff6500-4827-11ea-9924-b12919acd489.png)<br />After we created the space `test` with 100  _partitio_ns and 3 replicas, the host192.168.8.210:34600 serves NO leader, while 192.168.8.210:34700 serves 52 leaders and 192.168.8.210 serves 48 leaders。The leaders are not equilly distributed.
+![image](https://user-images.githubusercontent.com/56643819/73818168-bcff6500-4827-11ea-9924-b12919acd489.png)
+
+After we created the space `test` with 100  _partitio_ns and 3 replicas, the host192.168.8.210:34600 serves NO leader, while 192.168.8.210:34700 serves 52 leaders and 192.168.8.210 serves 48 leaders。The leaders are not equilly distributed.
 
 ### Step 2 Add five new instances
 
@@ -148,7 +152,9 @@ nebula> BALANCE DATA
 --------------
 ```
 
-This command will generate a new plan and start a migration process if the partitions are not equally distributed. For a balanced cluster, re-run `BALANCE DATA` will not cause any new operations.<br />You can check the running progress of the plan by command `BALANCE DATA $id`.
+This command will generate a new plan and start a migration process if the partitions are not equally distributed. For a balanced cluster, re-run `BALANCE DATA` will not cause any new operations.
+
+You can check the running progress of the plan by command `BALANCE DATA $id`.
 
 ```bash
 nebula> BALANCE DATA 1570761786
@@ -172,13 +178,10 @@ Got 190 rows (Time spent: 5454/11095 us)
 
 **_Explanations on the returned results:_**
 
-- The first column is a specific task. 
-
-     Take 1570761786, 1:88, 192.168.8.210:34700->192.168.8.210:35940 for example
-
-  - **1570761786** is the balance ID
-  - **1:88**, 1 is the spaceId (i.e., space `test`), 88 is the partition id which is now being moved
-  - **192.168.8.210:34700->192.168.8.210:3594**, moving data from the source instance to the destination instance. The useless data on the source instance will be garbage collected after the migration is finished.
+- The first column is a specific task. Take 1570761786, 1:88, 192.168.8.210:34700->192.168.8.210:35940 for example
+- **1570761786** is the balance ID
+- **1:88**, 1 is the spaceId (i.e., space `test`), 88 is the partition id which is now being moved
+- **192.168.8.210:34700->192.168.8.210:3594**, moving data from the source instance to the destination instance. The useless data on the source instance will be garbage collected after the migration is finished.
 - The second column shows the state (result) of the task, there are four states:
   - Succeeded
   - Failed
@@ -187,12 +190,11 @@ Got 190 rows (Time spent: 5454/11095 us)
 
 The last row is the summary of the tasks. Some partitions are yet to be migrated.
 
-### Step 4 If stop data balance halfway, ...
+### Step 4 If stop data balance halfway
 
-`BALANCE DATA STOP` command will stop the running plan and return this plan ID. If there is no running balance plan, an error is thrown. 
+`BALANCE DATA STOP` command will stop the running plan and return this plan ID. If there is no running balance plan, an error is thrown.
 
 > Since a balance plan includes several balance (sub)tasks, `BALANCE DATA STOP` doesn't stop the running tasks, but rather cancel the subsequent tasks. The running tasks will continue until the executions are completed.
-
 
 You can run `BALANCE DATA $id` to show the status of a stopped balance plan.
 
@@ -200,7 +202,9 @@ After all the running (sub)tasks are completed, you can re-run the `BALANCE DATA
 
 ### Step 5 Data Migration is Done
 
-In some cases, the data migration will take hours or even days. During the migration, **Nebula Graph** online services are not affected. Once migration is done, the progress will show 100%. You can retry `BALANCE DATA` to fix those failed tasks. If it can't be fixed after several attempts, please contact us at [GitHub](https://github.com/vesoft-inc/nebula/issues).<br />Finally, use the `SHOW HOSTS` to check the final partition distribution.
+In some cases, the data migration will take hours or even days. During the migration, **Nebula Graph** online services are not affected. Once migration is done, the progress will show 100%. You can retry `BALANCE DATA` to fix those failed tasks. If it can't be fixed after several attempts, please contact us at [GitHub](https://github.com/vesoft-inc/nebula/issues).
+
+Finally, use the `SHOW HOSTS` to check the final partition distribution.
 
 ```
 nebula> SHOW HOSTS
@@ -271,7 +275,9 @@ As the above picture indicates, when `BALANCE LEADER` runs successfully, the num
 
 ## Batch Scale in
 
-**Nebula Graph** also supports to go offline a host (and scale in the cluster) during service. The command is<br />`BALANCE DATA REMOVE $host_list`.<br />For example, command<br /> `BALANCE DATA REMOVE 192.168.0.1:50000,192.168.0.2:50000`<br />removes two hosts, i.e. 192.168.0.1:50000，192.168.0.2:50000, from the cluster.
+**Nebula Graph** also supports to go offline a host (and scale in the cluster) during service. The command is<br />`BALANCE DATA REMOVE $host_list`.
+
+For example, command `BALANCE DATA REMOVE 192.168.0.1:50000,192.168.0.2:50000` removes two hosts, i.e. 192.168.0.1:50000 and 192.168.0.2:50000, from the cluster.
 
 > If replica number cannot meet the quorum requirement after the remove (e.g., remote two machines from a three machine cluster), **Nebula Graph** will reject the request and return an error code.
 
@@ -288,6 +294,7 @@ The red number indicates a change happend after a command is executed.
 This is the [GitHub Repo](https://github.com/vesoft-inc/nebula) for **Nebula Graph**. Welcome to try nebula. IF you have any problems please send us an [issue](https://github.com/vesoft-inc/nebula/issues).
 
 ## You might also like
+
 1. [How Nebula Graph Automatically Cleans Stale Data with TTL](https://nebula-graph.io/posts/clean-stale-data-with-ttl-in-nebula-graph/)
 1. [How Indexing Works in Nebula Graph](https://nebula-graph.io/posts/how-indexing-works-in-nebula-graph/)
 1. [An Introduction to Snapshot in Nebula Graph](https://nebula-graph.io/posts/nebula-graph-snapshot-introduction/)
