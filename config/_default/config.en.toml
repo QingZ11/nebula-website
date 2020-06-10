@@ -172,7 +172,7 @@ contentDir = "content/en"
         title = "Open Source"
         link = "https://discuss.nebula-graph.io/"
         description1 = "We are continuing to"
-        description2 = "collaborating with the community"
+        description2 = "collaborate with the community"
         description3 = "to prepare, popularize and promote the graph database."
 
       [[params.features.list]]
@@ -199,7 +199,7 @@ contentDir = "content/en"
         link = "https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/"
         description1 = "With a shared-nothing "
         description2 = "distributed architecture"
-        description3 = ",Nebula Graph offers linear scalability."
+        description3 = ", Nebula Graph offers linear scalability."
 
       [[params.features.list]]
         pic = "feature6.png"
