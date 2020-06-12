@@ -186,24 +186,29 @@ contentDir = "content/cn"
             description1 = "我们致力于与"
             description2 = "社区合作"
             description3 = "普及及促进图数据库的发展。"
+          
+          [[params.features.list]]
+            pic = "feature4.png"
+            title = "安全"
+            link = "https://nebula-graph.com.cn/posts/access-control-design-code-nebula-graph/"
+            description1 = "具有基于角色的权限控制"
+            description2 = "权限控制"
+            description3 = "，授权才能访问。"
+
+          [[params.features.list]]
+            pic = "feature6.png"
+            title = "扩展性"
+            link = "https://nebula-graph.io/cn/posts/nebula-graph-storage-engine-overview/"
+            description1 = "Nebula Graph 支持多种类型"
+            description2 = "存储引擎。"
+            description3 = "查询语言也可以拓展支持新的算法。"
 
           [[params.features.list]]
             pic = "feature2.png"
             title = "高性能"
-            description1 = "Nebula Graph 在维持高吞吐量的同时依旧能做到低时延的读写。"
-
-          [[params.features.list]]
-            pic = "feature3.png"
-            title = "类SQL查询"
-            link = "https://github.com/vesoft-inc/nebula/blob/master/docs/manual-CN/1.overview/1.concepts/2.nGQL-overview.md"
-            description1 = "Nebula Graph的"
-            description2 = "类 SQL 查询语言"
-            description3 = "不仅易于理解，同时能满足各类复杂业务需求。"
-
-          [[params.features.list]]
-            pic = "feature4.png"
-            title = "安全"
-            description1 = "具有基于角色的权限控制，授权才能访问。"
+            link = "https://discuss.nebula-graph.com.cn/t/topic/782/5"
+            description1 = "Nebula Graph 在维持高吞吐量的同时依旧能做到"
+            description2 = "低时延的读写。"
 
           [[params.features.list]]
             pic = "feature5.png"
@@ -214,18 +219,13 @@ contentDir = "content/cn"
             description3 = "Nebula Graph 支持线性扩容。"
 
           [[params.features.list]]
-            pic = "feature6.png"
-            title = "扩展性"
-            link = "https://nebula-graph.io/cn/posts/nebula-graph-storage-engine-overview/"
-            description1 = "Nebula Graph 支持多种类型"
-            description2 = "存储引擎。"
-            description3 = "查询语言也可以拓展支持新的算法。"
- 
-          [[params.features.list]]
-            pic = "feature7.png"
-            title = "事务性"
-            description1 = "采用分布式 ACID 事务支持，以确保数据完整性。"
-
+            pic = "feature3.png"
+            title = "类SQL查询"
+            link = "https://github.com/vesoft-inc/nebula/blob/master/docs/manual-CN/1.overview/1.concepts/2.nGQL-overview.md"
+            description1 = "Nebula Graph的"
+            description2 = "类 SQL 查询语言"
+            description3 = "不仅易于理解，同时能满足各类复杂业务需求。"
+          
           [[params.features.list]]
             pic = "feature8.png"
             link = "https://nebula-graph.io/cn/posts/introduction-to-snapshot-in-nebula-graph/"
@@ -233,6 +233,15 @@ contentDir = "content/cn"
             description1 = "Nebula Graph 支持多种类型"
             description2 = "快照"
             description3 = "方式实现数据恢复，保证在局部失败的情况下服务的高可用性。"
+ 
+          [[params.features.list]]
+            pic = "feature7.png"
+            title = "1.0 GA"
+            link = "https://discuss.nebula-graph.com.cn/t/topic/789"
+            description1 = "一线互联网大厂诸如京东、美团、小红书在生产环境使用 Nebula Graph，"
+            description2 = "这是他们选择 Nebula Graph 的理由"
+            description3 = "。"
+
 
   # [params.portfolio.modal]
   #       client = "Client"
