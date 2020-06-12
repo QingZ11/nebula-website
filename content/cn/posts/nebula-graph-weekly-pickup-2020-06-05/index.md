@@ -1,5 +1,5 @@
 ---
-title: "Pick of the Week'20 | 第 22 周看点--图遍历实践"
+title: "Pick of the Week'20 | 第 23 周看点--INSERT 插入语法"
 date: 2020-06-05
 description: "6 月 DB-Engine 排行榜发布，在特性讲解部分将为你详解 INSERT 用法…"
 tags: ["社区","产品动态"]
