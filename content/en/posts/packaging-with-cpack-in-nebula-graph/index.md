@@ -215,11 +215,12 @@ sudo rpm -ivh example-1.0.0-Linux-Aprogram.rpm --prefix=/home/test/install
 You can use **CPACK_RPM_SPEC_MORE_DEFINE** option to add any `%define` lines to the generated spec file.
 
 ### More About CPack
+
 There are many parameters for CPack. And parameters in different versions may vary. Please refer to the [CPack Site](https://cmake.org/cmake/help/latest/module/CPack.html) for details or use `CPack --help` for more information.
 
 ## Applying CPack in Nebula Graph
 
-We use CPack to pack rpm and deb packages for **Nebula Graph**. Click [here](https://github.com/vesoft-inc/nebula/releases) to get **packages of each **release version.
+We use CPack to pack rpm and deb packages for **Nebula Graph**. Click [here](https://github.com/vesoft-inc/nebula/releases) to get **packages of each** release version.
 
 ![image](https://user-images.githubusercontent.com/57335825/82663194-0d86ac80-9be4-11ea-887d-27e1d2c4b693.png)
 
