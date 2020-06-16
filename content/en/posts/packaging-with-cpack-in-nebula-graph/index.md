@@ -5,8 +5,7 @@ description: "CPack is a powerful, easy to use, cross-platform software packagin
 author: "Laura"
 tags: ["features"]
 ---
-
-![Packaging with CPack in Nebula Graph](https://user-images.githubusercontent.com/57335825/83607832-c0360380-a530-11ea-8d34-2f77727e4357.png)
+![cpack](https://www-cdn.nebula-graph.com.cn/nebula-blog/Cpack01.png)
 
 [CPack](https://gitlab.kitware.com/cmake/community/-/wikis/doc/cpack/Packaging-With-CPack) is a powerful, easy to use, cross-platform software packaging tool distributed with CMake since version 2.4.2. It helps create binary package and source code package. The following figure shows where CPack locates in the whole CMake tool chain.
 
@@ -229,5 +228,4 @@ We use CPack to pack rpm and deb packages for **Nebula Graph**. Click [here](htt
 1. [Practice Jepsen Test Framework in Nebula Graph](https://nebula-graph.io/posts/practice-jepsen-test-framework-in-nebula-graph/)
 1. [Integrating Codecov Test Coverage With Nebula Graph](https://nebula-graph.io/posts/integrate-codecov-test-coverage-with-nebula-graph/)
 
-> Hi, I'm Laura, an engineer at Nebula Graph. Hope my post is of help to you. Please let me know if you have any ideas about this. Thanks~
-
+> Hi, I'm Laura, an engineer at Nebula Graph. Hope my post is of help to you. Please let me know if you have any ideas about this. Thanks
