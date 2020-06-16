@@ -172,34 +172,16 @@ contentDir = "content/en"
         title = "Open Source"
         link = "https://discuss.nebula-graph.io/"
         description1 = "We are continuing to"
-        description2 = "collaborating with the community"
+        description2 = "collaborate with the community"
         description3 = "to prepare, popularize and promote the graph database."
-
-      [[params.features.list]]
-        pic = "feature2.png"
-        title = "High Performance"
-        description1 = "Nebula Graph provides low latency read and write, while still maintaining high throughput to simplify the most complex data sets."
-
-      [[params.features.list]]
-        pic = "feature3.png"
-        title = "SQL-like"
-        link = "https://docs.nebula-graph.io/manual-EN/1.overview/1.concepts/2.nGQL-overview/"
-        description1 = "Nebula Graph's SQL-like "
-        description2 = "query language"
-        description3 = "is easy to understand and powerful enough to meet complex business needs."
 
       [[params.features.list]]
         pic = "feature4.png"
         title = "Secure"
-        description1 = "Nebula Graph only allows authenticated access via role-based access control."
-
-      [[params.features.list]]
-        pic = "feature5.png"
-        title = "Scalable"
-        link = "https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/"
-        description1 = "With a shared-nothing "
-        description2 = "distributed architecture"
-        description3 = ",Nebula Graph offers linear scalability."
+        link = "https://nebula-graph.io/posts/access-control-design-code-nebula-graph/"
+        description1 = "Nebula Graph only allows authenticated access via "
+        description2 = "role-based access control"
+        description3 = "."
 
       [[params.features.list]]
         pic = "feature6.png"
@@ -210,9 +192,29 @@ contentDir = "content/en"
         description3 = " types and the query language can be extended to support new algorithms."
 
       [[params.features.list]]
-        pic = "feature7.png"
-        title = "Transactional"
-        description1 = "With distributed ACID transaction support, Nebula Graph ensures data integrity."
+        pic = "feature2.png"
+        title = "Performant"
+        link = "https://discuss.nebula-graph.io/t/nebula-graph-1-0-benchmark-report/581"
+        description1 = "Nebula Graph provides "
+        description2 = "low latency read and write"
+        description3 = ", while still maintaining high throughput to simplify the most complex data sets."
+
+      
+      [[params.features.list]]
+        pic = "feature5.png"
+        title = "Scalable"
+        link = "https://nebula-graph.io/en/posts/nebula-graph-architecture-overview/"
+        description1 = "With a shared-nothing "
+        description2 = "distributed architecture"
+        description3 = ", Nebula Graph offers linear scalability."
+
+      [[params.features.list]]
+        pic = "feature3.png"
+        title = "SQL-like"
+        link = "https://docs.nebula-graph.io/manual-EN/1.overview/1.concepts/2.nGQL-overview/"
+        description1 = "Nebula Graph's SQL-like "
+        description2 = "query language"
+        description3 = "is easy to understand and powerful enough to meet complex business needs."
 
       [[params.features.list]]
         pic = "feature8.png"
@@ -222,7 +224,15 @@ contentDir = "content/en"
         description1 = "With horizontal scalability and a "
         description2 = "snapshot"
         description3 = "feature, Nebula Graph guarantees high availability even in case of failures."
-    
+
+      [[params.features.list]]
+        pic = "feature7.png"
+        title = "Production Ready"
+        link = "https://discuss.nebula-graph.io/t/what-customers-say-about-nebula-graph/580"
+        description1 = "Large Internet companies like JD, Meituan, and Xiaohongshu have deployed Nebula Graph in production environments."
+        description2 = " They chose Nebula Graph for some common reasons"
+        description3 = "."
+
   # [params.portfolio.modal]
   #       client = "Client"
   #       date = "Date"
