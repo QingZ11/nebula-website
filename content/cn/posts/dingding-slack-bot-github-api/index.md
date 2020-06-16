@@ -50,7 +50,7 @@ author: Jude
 
 ## 配置 Github 获取 Personal Access Tokens
 
-生成 Token，赋予相应权限。在此例中，读取了 Organization 下所有 Public 和 Private Repos，需要勾选repo。
+生成 Token，赋予相应权限。在此例中，读取了 Organization 下所有 Public 和 Private Repos，需要勾选 repo。
 
 ![generate-github-tokens](https://www-cdn.nebula-graph.com.cn/nebula-blog/generate-github-tokens.gif)
 
@@ -153,7 +153,7 @@ GithubPrList(self.org,
 
 #### 发送钉钉消息
 
-DingtalkChatbot 对钉钉消息类型进行了封装。本文使用此工具发送待 merge 的 pr 到钉钉群，可通过 `pip install pyDingtalkChatbot` 安装 DingtalkChatbot。
+DingtalkChatbot 对钉钉消息类型进行了封装。本文使用此工具发送待 merge 的 pr 到钉钉群，可通过 `pip install DingtalkChatbot` 安装 DingtalkChatbot。
 
 ```
 from dingtalkchatbot.chatbot import DingtalkChatbot
