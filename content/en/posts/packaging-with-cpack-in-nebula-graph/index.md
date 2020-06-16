@@ -230,5 +230,4 @@ We use CPack to pack rpm and deb packages for **Nebula Graph**. Click [here](htt
 1. [Practice Jepsen Test Framework in Nebula Graph](https://nebula-graph.io/posts/practice-jepsen-test-framework-in-nebula-graph/)
 1. [Integrating Codecov Test Coverage With Nebula Graph](https://nebula-graph.io/posts/integrate-codecov-test-coverage-with-nebula-graph/)
 
-> Hi, I'm Laura, an engineer at Nebula Graph. Hope my post is of help to you. Please let me know if you have any ideas about this. Thanks~
-
+> Hi, I'm Laura, an engineer at Nebula Graph. Hope my post is of help to you. Please let me know if you have any ideas about this. Thanks
