@@ -24,7 +24,6 @@ author: 王杰
 
 最近 Yener 开源了史上最大规模的中文知识图谱—— [OwnThink](https://www.ownthink.com/)（链接：[https://github.com/ownthink/KnowledgeGraphData](https://github.com/ownthink/KnowledgeGraphData)），数据量为 1.4 亿条。数据以 `(实体, 属性, 值)` 和 `(实体, 关系, 实体)` 混合的**三元组**形式存储，数据格式为 csv。
 
-可以点击这里下载：[https://nebula-graph.oss-accelerate.aliyuncs.com/ownthink/kg_v2.tar.gz](https://nebula-graph.oss-accelerate.aliyuncs.com/ownthink/kg_v2.tar.gz)
 
 ### 查看原始文件
 
