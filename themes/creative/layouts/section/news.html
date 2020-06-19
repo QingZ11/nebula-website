@@ -1,0 +1,46 @@
+{{ define "main" }}
+<main id="top" class="blog-list news-list">
+    <div class="wrapper">
+        <div class="inner">
+            <ul class="list">
+                {{ range .Site.Params.news.list }}
+                    <li class="blog-summary news-summary">
+                      <a href="{{.link}}" id="news-title">{{.title}}</a>
+                        <div class="content">
+                            <div class="text">
+                                <div class="row blog-metas news-metas">
+                                        <div class="meta">
+                                            <img src="/images/calendar.png" width="16px" height="16px">
+                                            <span>{{ .date}}</span>
+                                        </div>
+                                    {{ if .source }}
+                                        <div class="meta">
+                                            <img src="/images/source.png" width="16px" height="16px">
+                                            {{ .source }}
+                                        </div>
+                                    {{ end }}
+                                </div>
+                                {{ with .Description }}
+                                    <p class="pc-content ">{{ . | truncate 200 }}</p>
+                                    <p class="mobile-content">{{ . | truncate 200 }}</p>
+                                {{ end }}
+                                <a href="{{.link}}" id="news-readMore">{{ .readMore}}</a>
+                            </div>
+                        </div>
+                    </li>
+                {{ end }}
+            </ul>
+            <div class="media-kit">
+                <p class="media-kit-title">{{.Site.Params.news.title}}<p>
+                <p class="media-kit-content">{{.Site.Params.news.content1}}</p>
+                <p class="media-kit-content">{{.Site.Params.news.content2}}</p>
+                <img src="/images/{{ .Site.Params.news.pic }}" onclick="location.href='{{ .Site.Params.news.downloadLink }}';"/>
+            </div>
+        </div>
+        <img onclick="location.href='#top'" class="go-ahead" src="/images/up.png" >
+    </div>
+    {{ if .Site.Params.footer }}
+        {{ partial "footer.html" . }}
+    {{ end }}
+</main>
+{{ end }}

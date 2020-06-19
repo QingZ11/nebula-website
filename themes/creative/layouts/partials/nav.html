@@ -1,6 +1,6 @@
 {{ "<!-- NAVIGATION -->" | safeHTML }}
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="nav-popup" id="nav-popup"> <img src="/images/popup.png" /><img src="/images/popup.png" />  {{ .Site.Params.popupText  }} <a href={{ .Site.Params.popupLink }} onclick="{{.Site.Params.popupClick | safeJS}}" target="_blank">{{ $.Site.Params.popupLinkText }}</a> <img src="/images/shut.png" id="shut" onclick="shut()"/></div>
+    <div class="nav-popup" id="nav-popup"> <img src="/images/popup.png" /><img src="/images/popup.png" /><img src="/images/popup.png" />  {{ .Site.Params.popupText  }} <a href={{ .Site.Params.popupLink }} onclick="{{.Site.Params.popupClick | safeJS}}" target="_blank">{{ $.Site.Params.popupLinkText }}</a> <img src="/images/shut.png" id="shut" onclick="shut()"/></div>
     <div class="container-fluid">
         {{ "<!-- Brand and toggle get grouped for better mobile display -->" | safeHTML }}
         <div class="navbar-header">
@@ -84,7 +84,7 @@ function shut(){
     sessionStorage.setItem("popupIsRemove", true);
 }
 
-//if(!sessionStorage.getItem("popupIsRemove")){
- //   $("#nav-popup").css("display", "block")
-//}
+if(!sessionStorage.getItem("popupIsRemove")){
+    $("#nav-popup").css("display", "block")
+}
 </script>

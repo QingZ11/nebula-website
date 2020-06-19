@@ -1,4 +1,4 @@
   ###  导航栏提示框
-  popupText= "Nebula Graph RC4 is released!"
-  popupLinkText= "Get Started"
-  popupLink= "https://github.com/vesoft-inc/nebula/releases/tag/v1.0.0-rc4"
+  popupText= "Nebula Graph benchmark data is available now! "
+  popupLinkText= "View the Report"
+  popupLink= "https://discuss.nebula-graph.io/t/nebula-graph-1-0-benchmark-report/581"
