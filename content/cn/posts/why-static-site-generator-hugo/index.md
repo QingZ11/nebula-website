@@ -3,7 +3,7 @@ title: "Hugo 建站经验之谈"
 date: 2020-06-23
 description: "基于 Golang 语言的 Hugo 来作为 Nebula Graph 建站的技术方案，本文主要分享下前端工程师使用 Hugo 建站的一些个人思考和经验分享。"
 tags: ["产品讲解","开发日志"]
-author: Nebula
+author: Jerry
 ---
 
 ![static-site-generator-hugo](https://www-cdn.nebula-graph.com.cn/nebula-blog/static-site-generator-hugo.png)
