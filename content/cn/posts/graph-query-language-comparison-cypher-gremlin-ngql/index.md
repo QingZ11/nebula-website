@@ -32,7 +32,7 @@ Cypher 是一个描述性的图形查询语言，允许不必编写图形结构�
 
 ### 图查询语言 nGQL
 
-[nGQL](https://github.com/vesoft-inc/nebula/blob/master/docs/manual-CN/1.overview/1.concepts/2.nGQL-overview.md) 是一种类 SQL 的声明型的文本查询语言，nGQL 同样是关键词大小写不敏感的查询语言，目前支持模式匹配、聚合运算、图计算，可无嵌入组合语句。
+[nGQL](https://docs.nebula-graph.com.cn/manual-CN/1.overview/1.concepts/2.nGQL-overview/) 是一种类 SQL 的声明型的文本查询语言，nGQL 同样是关键词大小写不敏感的查询语言，目前支持模式匹配、聚合运算、图计算，可无嵌入组合语句。
 
 支持图数据库：Nebula Graph
 

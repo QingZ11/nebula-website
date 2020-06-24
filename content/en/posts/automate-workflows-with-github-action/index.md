@@ -62,7 +62,7 @@ For requirement #2, we hope to compile Nebula Graph source code on the currently
 
 ![pr test processing flow](https://user-images.githubusercontent.com/57335825/81529003-c7dc0100-9312-11ea-9441-2fd611b65819.png)
 
-Like shown above, Nebula Graph's compilation image is maintained in [our Docker image project](vesoft-inc/nebula-dev-docker). Changes or upgrade of the compiler or third party dependencies will automatically trigger the Build task of Docker hub (see the figure below). When a new Pull Request is committed, GitHub Action will be triggered to start pulling the latest compilation image and execute the compilation.
+Like shown above, Nebula Graph's compilation image is maintained in [our Docker image project](https://github.com/vesoft-inc/nebula-dev-docker). Changes or upgrade of the compiler or third party dependencies will automatically trigger the Build task of Docker hub (see the figure below). When a new Pull Request is committed, GitHub Action will be triggered to start pulling the latest compilation image and execute the compilation.
 
 ![image](https://user-images.githubusercontent.com/57335825/81529116-02459e00-9313-11ea-808d-2f6653173836.png)
 
