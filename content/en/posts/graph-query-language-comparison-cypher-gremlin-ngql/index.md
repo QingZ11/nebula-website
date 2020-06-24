@@ -36,7 +36,7 @@ The language was designed with the power and capability of SQL. The keywords of 
 
 ### nGQL
 
-**Nebula Graph** introduces its own query language, [nGQL](https://github.com/vesoft-inc/nebula/blob/master/docs/manual-EN/1.overview/1.concepts/2.nGQL-overview.md), which is a declarative, textual query language like SQL, but designed for graphs.
+**Nebula Graph** introduces its own query language, [nGQL](https://docs.nebula-graph.io/manual-EN/1.overview/1.concepts/2.nGQL-overview/), which is a declarative, textual query language like SQL, but designed for graphs.
 
 The keywords of the nGQL language are case sensitive and it support statement composition so that there's no need for statement embedding.
 
