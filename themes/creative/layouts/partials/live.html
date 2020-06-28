@@ -9,7 +9,7 @@
         </a>
       </h3>
       <p>{{.Site.Params.live.text}}</p>
-      <button type="button" onclick="ga('send', 'event', 'Engagement', 'Button Click', 'Promo via home'),"><a href={{.Site.Params.live.link}}>{{.Site.Params.live.btnText}}</a></button>
+      <button type="button" onclick = "gtag('event', 'Button Click', { event_category: 'Engagement', event_label: 'Promo via home'})"><a href={{.Site.Params.live.link}}>{{.Site.Params.live.btnText}}</a></button>
     </div>
   </div>
 </div>

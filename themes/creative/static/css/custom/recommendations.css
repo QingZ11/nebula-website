@@ -97,6 +97,7 @@
   position: absolute;
   bottom: -50px;
   list-style: none;
+  letter-spacing: 3px;
 }
 
 #company-recommendation-carousel .recommendation-indicators li {
