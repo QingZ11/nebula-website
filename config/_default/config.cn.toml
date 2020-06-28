@@ -32,6 +32,21 @@ contentDir = "content/cn"
     brand = "NebulaGraph"
 
     [[params.navigation.links]]
+      title = "应用场景"
+      class = "dropdown dropdown-left"
+        [[params.navigation.links.case]]
+          title = "实时推荐"
+          link = "/real-time-recommendation/"
+        [[params.navigation.links.case]]
+          title = "金融风控"
+          link = "/fraud-detection/"
+        [[params.navigation.links.case]]
+          title = "网络安全"
+          link = "/cyber-security/"
+        [[params.navigation.links.case]]
+          title = "知识图谱"
+          link = "/ai-and-machine-learning/"
+    [[params.navigation.links]]
       title = "文档"
       link = "https://docs.nebula-graph.com.cn/"
       target = "_blank"
@@ -47,11 +62,14 @@ contentDir = "content/cn"
       link = "https://discuss.nebula-graph.com.cn/"
       target = "_blank"
     [[params.navigation.links]]
-      title = "媒体报道"
-      link = "/news"
-    [[params.navigation.links]]
-      title = "联系我们"
-      id = "#contact_us"
+      title = "公司简介"
+      class = "dropdown dropdown-left"
+      [[params.navigation.links.case]]
+        title = "媒体报道"
+        link = "/news"
+      [[params.navigation.links.case]]
+        title = "联系我们"
+        link = "mailto:info@vesoft.com"
     [[params.navigation.links]]
       pic = "language120x120.png"
         [[params.navigation.links.links]]
@@ -275,27 +293,6 @@ contentDir = "content/cn"
   [params.rss]
     link = "https://nebula-graph.com.cn/posts/index.xml"
 
-  # News section
-  [params.news]
-      pic = "download-cn.png"
-      downloadLink = "/file/NebulaGraphMediaKit-CN.zip"
-      title="媒体资源包"
-      content1= "• 公司 Logo"
-      content2= "• 创始人宣传照"
-      [[params.news.list]]
-        pic = "feature1.png"
-        title = "开源图数据库研发商「欧若数网」开启全球商用化，获800万美元Pre-A轮融资"
-        link = "https://36kr.com/p/737314527110281"
-        date = "2020-06-05"
-        source = "36kr"
-        readMore = "Read More >>"
-        Description = "图数据库研发商欧若数网科技有限公司（以下简称“欧若数网”）已完成 800 万美元 Pre-A 轮融资，由红点创投中国基金、经纬中国投资。本轮融资将主要用于最新产品 2.0 版本开发，以及全球市场拓展。"
 
-      [[params.news.list]]
-        pic = "feature4.png"
-        title = "超大规模图数据库 Nebula Graph V1.0 发布，为数据分析处理提速"
-        link = "http://software.it168.com/a2020/0609/6223/000006223679.shtml"
-        date = "2020-06-09"
-        source = "IT168"
-        readMore = "Read More >>"
-        Description = "分布式图数据库 Nebula Graph V1.0 正式亮相，为深耕 AI、金融、政府、医疗、IoT 等多个垂直领域的 CIO、架构师、数据科学家提供了新型的数据分析和洞察能力。"
+
+      

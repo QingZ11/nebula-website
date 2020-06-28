@@ -12,14 +12,12 @@
 @import url('./asideLinks.css');
 @import url('./singleSideBar.css');
 @import url('./news.css');
-
-@font-face {
-    font-family: "PingFangSC-Regular,PingFang SC";
-    src: url('../fonts/PingFang-Medium.ttf')
-}
+@import url('./recommendations.css');
+@import url('./live.css');
+@import url('./useCase.css');
 
 * {
-  font-family:"PingFangSC-Regular,PingFang SC" !important;
+  font-family: sans-serif !important;
 }
 
 main {
