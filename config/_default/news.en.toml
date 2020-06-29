@@ -17,9 +17,53 @@ contentDir = "content/en"
         Description = "VEsoft raises $8M to meet China’s growing need for graph databases. The new capital will allow the startup to develop products and expand to markets in North America, Europe and other parts of Asia."
 
       [[params.news.list]]
+        pic = "feature1.png"
+        title = "Nebula Graph Database Raises $8M in Series Pre-A Funding"
+        link = "https://www.enterpriseai.news/2020/06/15/nebula-graph-database-raises-8m-in-series-pre-a-funding/"
+        date = "June 15, 2020"
+        source = "EnterpriseAI"
+        readMore = "Read More >>"
+        Description = "VEsoft Inc., the developer of the Nebula Graph database, announced it raised $8M in a series pre-A funding round. The lead investor is Redpoint China Ventures. "
+
+      [[params.news.list]]
+        pic = "feature1.png"
+        title = "Nebula Graph Joins Database Race"
+        link = "https://www.datanami.com/2020/06/15/nebula-graph-joins-database-race/"
+        date = "June 15, 2020"
+        source = "Datanami"
+        readMore = "Read More >>"
+        Description = "As the open source Nebula Graph database moves closer to commercial availability, the technology’s developer has announced an early funding round led by several Chinese investors."
+      
+      [[params.news.list]]
+        pic = "feature1.png"
+        title = "VEsoft receives $8 million in latest funding round to expand the Nebula Graph database"
+        link = "https://www.kmworld.com/Articles/News/News/VEsoft-receives-%248-million-in-latest-funding-round-to-expand-the-Nebula-Graph-database-141322.aspx"
+        date = "June 15, 2020"
+        source = "KMWorld"
+        readMore = "Read More >>"
+        Description = "VEsoft Inc., the developer of the Nebula Graph database, has raised $8 million in a series pre-A funding round, enabling the company to perform additional product management and expand its footprint."
+      
+      [[params.news.list]]
+        pic = "feature1.png"
+        title = "VESoft raises $8M to meet China's growing need for graph databases"
+        link = "https://news.yahoo.com/vesoft-raises-8m-meet-chinas-120044029.html"
+        date = "June 15, 2020"
+        source = "Yahoo! News"
+        readMore = "Read More >>"
+        Description = "VESoft is ready for further growth after closing an $8 million funding round led by Redpoint China Ventures, an investment firm launched by Silicon Valley-based Redpoint Ventures in 2005."
+      
+      [[params.news.list]]
         pic = "feature4.png"
         title = "Nebula Graph™ Database Raises $8 Million in Series Pre-A Funding"
         date = "June 15, 2020"
         readMore = "Read More >>"
         link = "https://nebula-graph.io/posts/nebula-graph-raises-8-million-dollars-in-series-pre-a-funding/"
         Description = "VEsoft Inc., the developer of the Nebula Graph™ database, today announced it raised $8M in a series pre-A funding round. The lead investor is Redpoint China Ventures. Matrix Partners China, who previously contributed as an angel investor, also contributed to this series pre-A round.a "
+
+      [[params.news.list]]
+        pic = "feature4.png"
+        title = "The World’s Most Capable Graph Database, Nebula Graph™, Debuts for Unmatched Big Data Analytics Discovery"
+        date = "June 29, 2020"
+        readMore = "Read More >>"
+        link = "https://nebula-graph.io/posts/nebula-graph-1.0-release/"
+        Description = "Nebula Graph™ is now commercially available as the only database that can store and process billions of data points with trillions of relational connections in a shared-nothing distributed architecture for the industry’s best business continuity."  
