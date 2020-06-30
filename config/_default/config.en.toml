@@ -36,7 +36,7 @@ contentDir = "content/en"
 
     [[params.navigation.links]]
       title = "Use Cases"
-      class = "dropdown dropdown-left"
+      class = "dropdown-left"
         [[params.navigation.links.case]]
           title = "Real-time Recommendation"
           link = "/real-time-recommendation/"
@@ -62,7 +62,7 @@ contentDir = "content/en"
       target = "_blank"
     [[params.navigation.links]]
       title = "Company"
-      class = "dropdown dropdown-left"
+      class = "dropdown-left"
       [[params.navigation.links.case]]
         title = "Newsroom"
         link = "/news"

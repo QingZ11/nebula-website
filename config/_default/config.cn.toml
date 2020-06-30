@@ -33,7 +33,7 @@ contentDir = "content/cn"
 
     [[params.navigation.links]]
       title = "应用场景"
-      class = "dropdown dropdown-left"
+      class = "dropdown-left"
         [[params.navigation.links.case]]
           title = "实时推荐"
           link = "/real-time-recommendation/"
@@ -63,7 +63,7 @@ contentDir = "content/cn"
       target = "_blank"
     [[params.navigation.links]]
       title = "公司简介"
-      class = "dropdown dropdown-left"
+      class = "dropdown-left"
       [[params.navigation.links.case]]
         title = "媒体报道"
         link = "/news"
@@ -72,6 +72,7 @@ contentDir = "content/cn"
         link = "mailto:info@vesoft.com"
     [[params.navigation.links]]
       pic = "language120x120.png"
+      class = "dropdown"
         [[params.navigation.links.links]]
           title = "English"
           link = "/en/"

@@ -17,7 +17,7 @@
                     aria-label="Star vesoft-inc/nebula on GitHub"
                 >Star</a>
             </div>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle panel-toggle collapsed" data-toggle="collapse" data-parent="#bs-example-navbar-collapse-1"  id="show-nav"  href="#navbar-nav">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -26,7 +26,7 @@
             <a class="navbar-brand page-scroll" href="{{"/" | relLangURL }}"></a>
         </div>
         {{ "<!-- Collect the nav links, forms, and other content for toggling -->" | safeHTML }}
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="panel-collapse" data-parent="#bs-example-navbar-collapse-1"  id="navbar-nav">
             <ul class="nav navbar-nav" id="nav">
                 <li 
                     class="github-star"
@@ -47,7 +47,7 @@
                                 <img src="/images/language120x120.png">
                                 <span class="caret"></span>
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu" role="menu">
                                 {{ range .links }}
                                     <li class="nav-item">
                                         <a class="dropdown-item" href="{{.link}}" target="{{.target}}">{{ .title }}</a>
@@ -69,7 +69,7 @@
                                     {{.title}}
                                     <span class="caret"></span>
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu" role="menu">
                                     {{ range .case }}
                                         <li class="nav-item">
                                             <a class="dropdown-item" href="{{.link}}" target="{{.target}}">{{ .title }}</a>
@@ -88,18 +88,25 @@
     {{ "<!-- /.container-fluid -->" | safeHTML }}
 </nav>
 <script>
-function contactUsClick() {
-    $('html,body').animate({scrollTop: document.documentElement.scrollHeight}, 800)
-    return false;
-}
-function shut(){
-    $('#nav-popup').remove();
-    $("#top").css("padding-top", "50px")
-    sessionStorage.setItem("popupIsRemove", true);
-}
+    function contactUsClick() {
+        $('html,body').animate({scrollTop: document.documentElement.scrollHeight}, 800)
+        return false;
+    }
+    function shut(){
+        $('#nav-popup').remove();
+        $("#top").css("padding-top", "50px")
+        sessionStorage.setItem("popupIsRemove", true);
+    }
 
-if(!sessionStorage.getItem("popupIsRemove")){
-    $("#nav-popup").css("display", "block")
-    $(".caseBanner-content").css("display", "block")
-}
+    window.onload=function (){
+        const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
+        if(isMobile){
+            $("#navbar-nav").addClass("collapse")
+        }
+        if(!sessionStorage.getItem("popupIsRemove")){
+            $("#nav-popup").css("display", "block")
+            $(".caseBanner-content").css("display", "block")
+        }
+    }
+
 </script>
