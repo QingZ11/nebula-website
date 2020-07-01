@@ -60,10 +60,10 @@
   right: auto;
 }
 .dropdown-menu>li>a:hover{
+  background: #000;
   border: 0 !important;
 }
 .dropdown-menu>li :hover {
-  background-color: #fff;
   text-decoration: underline;
 }
 #navbar-right {
@@ -124,15 +124,17 @@
   }
   .dropdown-menu li{
     cursor: pointer;
-    padding: 0;
+    padding: 0 10px;
     background: rgba(0, 128, 255, 1);
     height: 40px !important;
+    background: #000;
   }
   .dropdown-menu li a{
     color: #fff;
-    padding: 0;
+    padding: 0 10px;
     line-height: 40px;
     font-size: 16px;
+    text-align: left;
   }
 
   #nav > li>a {
@@ -140,7 +142,6 @@
     height: 60px;
     line-height: 30px;
     font-weight: 400;
-    font-family:"PingFangSC-Regular,PingFang SC";
     color:rgba(187, 188, 196, 1);
     padding-left: 0;
     padding-right: 0;
@@ -221,6 +222,11 @@
     z-index: 9;
     margin-top: -160px;
     margin-right: 50px;
+  }
+  .dropdown-left {
+      float: unset;
+      margin-top: 0;
+      margin-right: 0;
   }
   .dropdown .dropdown-menu{
     min-width: 85px;

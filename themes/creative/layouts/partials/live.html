@@ -1,0 +1,15 @@
+<div class="nebula-live">
+  <div class="live-wrap">
+    <img src="/images{{.Site.Params.live.poster}}" />
+    <div class="content">
+      <h3>
+        <a href={{.Site.Params.live.link}}>
+          <img src="/images/icon-blog.png">
+          <span>{{.Site.Params.live.title}}</span>
+        </a>
+      </h3>
+      <p>{{.Site.Params.live.text}}</p>
+      <button type="button" onclick = "gtag('event', 'Button Click', { event_category: 'Engagement', event_label: 'Promo via home'})"><a href={{.Site.Params.live.link}}>{{.Site.Params.live.btnText}}</a></button>
+    </div>
+  </div>
+</div>
