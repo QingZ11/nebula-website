@@ -95,10 +95,14 @@ Nebula 支持编译安装和通过打包好的 Package 安装。由于 Nebula �
     192.168.8.15 # cluster-15
     192.168.8.16 # cluster-16
 ```
-在每台机器上下载对应的[安装包](https://github.com/vesoft-inc/nebula/releases)：
+在每台机器上下载对应的[安装包](https://github.com/vesoft-inc/nebula/releases)，你可以在这里找到 [https://github.com/vesoft-inc/nebula/releases](https://github.com/vesoft-inc/nebula/releases)
+
 ```
-    $ wget -O nebula-1.0.0-beta.el7-5.x86_64.rpm https://github.com/vesoft-inc/nebula/releases/download/v1.0.0-beta/nebula-1.0.0-beta.el7-5.x86_64.rpm
+    $ wget -O nebula-1.0.0.el7-5.x86_64.rpm
+    https://github.com/vesoft-inc/nebula/releases/download/v1.0.0/nebula-1.0.0.el7-5.x86_64.rpm
 ```
+**提示**：由于Nebula 的版本一直在升级，请下载最新发布的安装包，避免出现低级错误。
+
 此外由于 Nebula 的服务之间通信需要开放一些端口，所以可以临时关掉所有机器上的防火墙:  （具体使用端口见 `/usr/local/nebula/etc/` 下面的配置文件)
 ```
     $ systemctl disable firewalld
