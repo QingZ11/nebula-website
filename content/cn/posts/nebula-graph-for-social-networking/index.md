@@ -103,7 +103,7 @@ alter edge friend max_version = 1592147484
 ## 参考文献
 
 1. Fu, Zhisong, Zhengwei Wu, Houyi Li, Yize Li, Min Wu, Xiaojie Chen, Xiaomeng Ye, Benquan Yu, and Xi Hu. "GeaBase: a high-performance distributed graph database for industry-scale applications." International Journal of High Performance Computing and Networking 15, no. 1-2 (2019): 12-21.
-1. [https://mp.weixin.qq.com/s?__biz=MzU0OTE4MzYzMw==&mid=2247489027&idx=3&sn=c149ce488cfc5231d4273d6da9dc8679&chksm=fbb29ffdccc516ebb8313b9202cfd78ea199da211c55b0a456a9e632a33e7d5b838d8da8bc6a&mpshare=1&scene=1&srcid=0614MWpeEsBc1RaBrl4htn3D&sharer_sharetime=1592106638907&sharer_shareid=a2497c4756f8bac1bcbef9edf86a86ac&rd2werd=1#wechat_redirect](https://mp.weixin.qq.com/s?__biz=MzU0OTE4MzYzMw==&mid=2247489027&idx=3&sn=c149ce488cfc5231d4273d6da9dc8679&chksm=fbb29ffdccc516ebb8313b9202cfd78ea199da211c55b0a456a9e632a33e7d5b838d8da8bc6a&mpshare=1&scene=1&srcid=0614MWpeEsBc1RaBrl4htn3D&sharer_sharetime=1592106638907&sharer_shareid=a2497c4756f8bac1bcbef9edf86a86ac&rd2werd=1#wechat_redirect)
+1. [https://mp.weixin.qq.com/s/FHpTSMNKGm7R-8xeknWxBA](https://mp.weixin.qq.com/s/FHpTSMNKGm7R-8xeknWxBA)
 1. [https://zhuanlan.zhihu.com/p/109401046](https://zhuanlan.zhihu.com/p/109401046)
 1. [https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula)
 1. [https://www.infoq.cn/article/SPYkxplsq7f36L1QZIY7](https://www.infoq.cn/article/SPYkxplsq7f36L1QZIY7)
