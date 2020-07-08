@@ -36,7 +36,7 @@ this.force = d3
 
 通过上述代码，我们可以得到下面这样一个可视化的节点和关系图。
 
-![Nebula Graph Studio](https://www-cdn.nebula-graph.com.cn/nebula-blog/Nebula Graph Studio.png)
+![Nebula Graph Studio](https://www-cdn.nebula-graph.com.cn/nebula-blog/Nebula-Graph-Studio.png)
 
 这里我们简单介绍下上图，上图为图数据库 Nebula Graph 可视化工具 Studio 的图探索功能截图，在业务上，图探索支持用户任意选中某个点进行拓展，找寻、显示同它存在某种关系的点，例如上图点 100 和 点 200 存在单向 follow 关系。
 
