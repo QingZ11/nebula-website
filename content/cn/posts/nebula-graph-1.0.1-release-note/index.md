@@ -6,7 +6,7 @@ tags: ["Release-Note"]
 author: Jude
 ---
 
-![Release-Note](https://www-cdn.nebula-graph.com.cn/nebula-blog/Release-note-v1.png.png)
+![Release-Note](https://www-cdn.nebula-graph.com.cn/nebula-blog/Release-note-v1.png)
 
 Nebula Graph 发布 1.0.1 版。相比 1.0.0 版本，该版本针对系统稳定性、性能上做了很多优化和改进。
 
