@@ -6,7 +6,7 @@ tags: ["架构剖析"]
 author: Sherman
 ---
 
-![nebula-architecture](https://www-cdn.nebula-graph.com.cn/nebula-blog/Architecture0001.png)
+![nebula-architecture](https://user-images.githubusercontent.com/57335825/87115631-a8852580-c228-11ea-877a-b48ba92fbb8b.png)
 
 Nebula Graph 是一个高性能的分布式开源图数据库，本文为大家介绍 Nebula Graph 的整体架构。
 

@@ -2,7 +2,7 @@
 title: "Nebula Graph v1.0.1 Release Note"
 date: 2020-07-09
 description: "Compared with v1.0.0, this release has made improvement in system stability and performance."
-tags: ["Release-Note"]
+tags: ["release-notes"]
 author: Jude
 ---
 
