@@ -6,7 +6,7 @@ author: "Heng Chen"
 tags: ["architecture"]
 ---
 
-![An Introduction to Nebula Graph's Storage Engine](https://www-cdn.nebula-graph.com.cn/nebula-blog/Architecture0101.png)
+![An Introduction to Nebula Graph's Storage Engine](https://user-images.githubusercontent.com/57335825/87172263-cf734400-c288-11ea-96d0-1bb800700d16.png)
 
 The Storage Service of Nebula Graph is composed of two parts. One is the `Meta Service` that stores the meta data. The other is `Storage Service` that stores the data. The two services are in two independent processes. The data and deployment are separated but their architectures are almost the same.
 
