@@ -66,7 +66,7 @@ contentDir = "content/cn"
       class = "dropdown-left"
       [[params.navigation.links.case]]
         title = "媒体报道"
-        link = "/news"
+        link = "/newsroom"
       [[params.navigation.links.case]]
         title = "联系我们"
         link = "mailto:info@vesoft.com"

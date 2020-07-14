@@ -2,45 +2,44 @@
 <section id="latest-posts">
     <div class="latest-posts">
         <p class="posts-title posts-bolg-title">{{ .Site.Params.postsTitle }}</p>
-        {{ range .Pages }}
             <div>
-            {{ range first 1  .Pages }}
-                    <div class="first">
-                        {{ with .Resources }}
-                            {{ with .GetMatch "{*.jpg,*.png,*.jpeg}" }}
-                                <img src="{{ .Permalink }}" class="firstImage"/>      
-                            {{ else }}
-                                {{ with .GetMatch "{thumbnail.png}" }}
-                                    <img src="{{ .Permalink }}"/>      
+            {{ with .Site.GetPage "posts" }}
+                {{ range first 1  .Pages }}
+                        <div class="first">
+                            {{ with .Resources }}
+                                {{ with .GetMatch "{*.jpg,*.png,*.jpeg}" }}
+                                    <img src="{{ .Permalink }}" class="firstImage"/>      
+                                {{ else }}
+                                    {{ with .GetMatch "{thumbnail.png}" }}
+                                        <img src="{{ .Permalink }}"/>      
+                                    {{ end }}
                                 {{ end }}
                             {{ end }}
-                        {{ end }}
-                        <div id="first-rihgt">
-                            <a class="title-content" href="{{.Permalink}}">{{.Title}} </a>
-                            {{ with .Description }}
-                                <p class="pc-content">{{ . | truncate 200 }} </p>
-                            {{ else }}
-                                <p class="pc-content">{{ .Summary | truncate 200 }}</p>
-                            {{ end }}
-                            <a id="read-content" href="{{.Permalink}}">{{.Site.Params.readAll}} </a>
+                            <div id="first-rihgt">
+                                <a class="title-content" href="{{.Permalink}}">{{.Title}} </a>
+                                {{ with .Description }}
+                                    <p class="pc-content">{{ . | truncate 200 }} </p>
+                                {{ else }}
+                                    <p class="pc-content">{{ .Summary | truncate 200 }}</p>
+                                {{ end }}
+                                <a id="read-content" href="{{.Permalink}}">{{.Site.Params.readAll}} </a>
+                            </div>
                         </div>
-                    </div>
+                {{ end }}
             {{ end }}
-        {{ end }}
-
-        {{ range .Pages }}
-                <div id="content">
-            {{ range first 2 (after 1 .Pages) }}
+        {{  with .Site.GetPage "releases"  }}
+            <div id="content">
+            {{ range first 3 .Pages }}
                     <div id="content-detail">        
-                    <div id="content-left">
-                        <a class="posts-title" href="{{.Permalink}}">{{.Title| truncate 120}}</a>
-                        {{ with .Description }}
-                            <p class="pc-content">{{ . | truncate 250 }} </p>
-                        {{ else }}
-                            <p class="pc-content">{{ .Summary | truncate 250 }}</p>
-                        {{ end }}
-                        <a id="read-all" href="{{.Permalink}}">{{.Site.Params.readAll}}</a>
-                    </div>
+                        <div id="content-left">
+                            <a class="posts-title" href="{{.Permalink}}">{{.Title| truncate 120}}</a>
+                            {{ with .Description }}
+                                <p class="pc-content">{{ . | truncate 250 }} </p>
+                            {{ else }}
+                                <p class="pc-content">{{ .Summary | truncate 250 }}</p>
+                            {{ end }}
+                            <a id="read-all" href="{{.Permalink}}">{{.Site.Params.readAll}}</a>
+                        </div>
                     </div>
                 <div>
             </div>

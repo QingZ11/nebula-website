@@ -173,7 +173,6 @@
 @media(max-width: 767px) {
   .navbar-brand {
     width: 150px;
-    height: 50px;
     background-image: url('../../img/logo-dart.png');
     background-size: cover;
   }
@@ -193,6 +192,8 @@
   }
   .navbar-header {
     text-align: right;
+    height: 60px;
+    padding-top: 5px;
   }
   .navbar-header > .github-star {
     display: inline-block;
@@ -208,7 +209,7 @@
   #navbar-right {
       float: none !important;
       height: 40px;
-      padding-top: 10px;
+      padding-top: 15px;
   }
   #navbar-right a {
       line-height: 0;

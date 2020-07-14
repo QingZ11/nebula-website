@@ -1,0 +1,49 @@
+{{ define "main" }}
+<main id="top" class="blog-list newsroom">
+    <div class="wrapper">
+        <div class="inner">
+            <div class="breadcrumb">
+                <p> <a href="/newsroom">Newsroom</a></p>
+                <img src="/images/mediaKit.png" onclick="location.href='{{ .Site.Params.news.downloadLink }}';"/>
+            </div>
+            <div class="newsroom-list">
+                <p class="newsroom-list-title">{{.Site.Params.news.title}}</p>
+                <a href="{{.Site.Params.news.link}}" class="newsroom-list-link">{{.Site.Params.news.readMore}}</a>
+                {{ range first 3 .Site.Params.news.list}}
+                    <div class="newsroom-list-content">    
+                        <a href="{{.link}}">
+                            <div class="newsroom-list-content-data">
+                                <p>{{.date}}</p>
+                                <p>{{.source}}</p>
+                            </div>
+                            <div class="newsroom-list-content-title">{{.title}}</div>
+                            <div class="newsroom-list-content-text">{{.Description}}</div>
+                        </a>
+                    </div>
+                {{ end }}
+            </div>
+             <div class="newsroom-list">
+                <p class="newsroom-list-title">{{.Site.Params.releases.title}}</p>
+                <a href="{{.Site.Params.releases.link}}" class="newsroom-list-link">{{.Site.Params.releases.readMore}}</a>
+                {{ with .Site.GetPage "releases" }}
+                    {{ range first 3  .Pages }}
+                        <div class="newsroom-list-content">  
+                            <a href="{{.Permalink}}">      
+                                <div class="newsroom-list-content-data">
+                                    <p>{{dateFormat "2006-01-02" .Params.date }}</p>
+                                    <p>{{.Params.source}}</p>
+                                </div>
+                                <div class="newsroom-list-content-title">{{.Title}}</div>
+                                <div class="newsroom-list-content-text">{{.Description}}</div>
+                            </a>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+    {{ if .Site.Params.footer }}
+        {{ partial "footer.html" . }}
+    {{ end }}
+</main>
+{{ end }}
