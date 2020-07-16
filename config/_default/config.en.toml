@@ -65,7 +65,7 @@ contentDir = "content/en"
       class = "dropdown-left"
       [[params.navigation.links.case]]
         title = "Newsroom"
-        link = "/news"
+        link = "/newsroom"
       [[params.navigation.links.case]]
         title = "Contact Us"
         link = "mailto:info@vesoft.com"

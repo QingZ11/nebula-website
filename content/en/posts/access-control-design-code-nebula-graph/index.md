@@ -6,7 +6,7 @@ author: "bright-starry-sky"
 tags: ["features"]
 ---
 
-![Access Control in Nebula Graph: Design, Code, and Operations](https://user-images.githubusercontent.com/57335825/84122202-ef46ec00-a9ec-11ea-8077-e4492cbf0b3a.png)
+![Access Control in Nebula Graph: Design, Code, and Operations](https://user-images.githubusercontent.com/57335825/87516680-9fce8e00-c632-11ea-9a6e-6bbc3bdad01a.png)
 
 Access Control List (ACL) is not alien to database users and it is a significant part of data security. Like other database vendors, Nebula Graph takes data security seriously and now supports role-based access control.
 

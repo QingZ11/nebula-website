@@ -1,0 +1,78 @@
+{{ define "main" }}
+<main id="top" class="blog-list news-list">
+    <div class="wrapper">
+        <div class="inner">
+            <div class="news-content">
+                <div class="breadcrumb">
+                    <p><a href="/newsroom">Newsroom</a> > <a href="/releases">Press Releases</a></p>
+                </div>
+                <ul class="list">
+                    {{ range (.Paginator 10).Pages }}
+                        <li class="blog-summary news-summary" onclick="location.href='{{.Permalink}}';">
+                            <a href="{{.Permalink}}" id="news-title">{{.Title}}</a>
+                            <div class="content">
+                                <div class="text">
+                                    <div class="row blog-metas news-metas">
+                                        {{ with .Params.date }}
+                                            <div class="meta">
+                                                <img src="/images/calendar.png" width="16px" height="16px">
+                                                <span>{{dateFormat "2006-01-02" .}}</span>
+                                            </div>
+                                        {{ end }}
+                                    </div>
+                                    {{ with .Description }}
+                                        <p class="pc-content">{{ . | truncate 200 }}</p>
+                                        <p class="mobile-content">{{ . | truncate 200 }}</p>
+                                    {{ else }}
+                                        <p class="pc-content">{{ .Summary | truncate 200 }}</p>
+                                        <p class="mobile-content">{{ .Summary | truncate 200 }}</p>
+                                    {{ end }}
+                                    <a href="{{.Permalink}}" id="news-readMore">{{.Params.readMore}}</a>
+                                </div>
+                            </div>
+                        </li>
+                    {{ end }}
+                    {{ if (gt $.Paginator.TotalPages 1) }}
+                        <ul class="pagination">
+                            {{ with .Paginator.Prev }}
+                                <li>
+                                    <a href="{{.URL}}" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                            {{ end }}
+                            {{ range (.Paginator 10).Pagers }}
+                                {{ $sub := (sub $.Paginator.PageNumber .PageNumber) }}
+                                {{ if and (le $sub 2) (ge $sub -2) }}
+                                    {{ if  (eq $sub 0) }}
+                                        <li class="active"><a href="{{.URL}}">{{ .PageNumber }}</a></li>
+                                    {{ else }}
+                                        <li><a href="{{.URL}}">{{ .PageNumber }}</a></li>
+                                    {{ end }}
+                                {{ end }}
+                            {{ end }}
+                            {{ with .Paginator.Next }}
+                                <li>
+                                    <a href="{{.URL}}" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="media-kit">
+                    <p class="media-kit-title">{{.Site.Params.news.title}}<p>
+                    <p class="media-kit-content">{{.Site.Params.news.content1}}</p>
+                    <p class="media-kit-content">{{.Site.Params.news.content2}}</p>
+                    <img src="/images/{{ .Site.Params.news.pic }}" onclick="location.href='{{ .Site.Params.news.downloadLink }}';"/>
+                </div>
+            <img onclick="location.href='#top'" class="go-ahead" src="/images/up.png" >
+        </div>
+    </div>
+    {{ if .Site.Params.footer }}
+        {{ partial "footer.html" . }}
+    {{ end }}
+</main>
+{{ end }}

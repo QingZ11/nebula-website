@@ -1,0 +1,107 @@
+{{ define "title" }}
+  {{ .Title }}
+{{ end }}
+
+{{ define "twitter" }}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@NebulaGraph">
+  <meta name="twitter:creator" content="@NebulaGraph">
+  <meta name="twitter:domain" content="nebula-graph.io">
+  <meta name="twitter:title" content="{{.Title}}">
+  <meta property="twitter:title" content="{{.Title}}">
+  {{ with .Description }}
+    <meta name="twitter:description" content="{{.}}">
+    <meta name="og:description" content="{{.}}">
+    {{ with $.Resources }}
+      {{ with .GetMatch "{*.jpg,*.png,*.jpeg}" }}
+          {{ $cover := .Resize "600x" }}
+          {{ with $cover }}
+              <meta name="twitter:image" content="{{ .Permalink }}"/>
+              <meta name="og:image" content="{{ .Permalink }}"/>
+          {{ end }} 
+      {{ end }}
+    {{ end }}
+  {{ else }}
+    <meta name="twitter:description" content="{{.Site.Params.description}}">
+    <meta name="og:description" content="{{.Site.Params.description}}">
+    {{ with .Resources }}
+      {{ with .GetMatch "{*.jpg,*.png,*.jpeg}" }}
+          {{ $cover := .Resize "600x" }}
+          {{ with $cover }}
+              <meta name="twitter:image" content="{{ .Permalink }}"/>      
+              <meta name="og:image" content="{{ .Permalink }}"/>
+          {{ end }} 
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ define "description" }}
+  {{ with .Description }}
+    <meta name="description" content="{{.}}">
+  {{ else }}
+    <meta name="description" content="{{.Site.Params.description}}">
+  {{ end }}
+{{ end }}
+
+{{ define "main" }}
+  <main id="top" class="blog-detail">
+    <div class="wrapper">
+      <div class="inner inner-breadcrumb inner-releases">
+        <div class="breadcrumb">
+            <p><a href="/newsroom">Newsroom</a> > <a href="/releases">Press Releases</a></p>
+            <img src="/images/mediaKit.png" onclick="location.href='{{ .Site.Params.news.downloadLink }}';"/>
+        </div>
+        <section class="blog-content">
+          <h1>{{ .Title }}</h1>
+          {{- .Content }}
+        </section>
+          <div class="release-aside">
+          <div class="social-share" id="J_Share">
+            <h3>{{.Site.Params.share.title }}: </h3>
+            <div class="nebula-share-buttons">
+              {{ if eq $.Site.Language.Lang "en" }}
+                <div class="st-custom-button st-remove-label" data-network="twitter">
+                  <img alt="twitter-white sharing button" src="https://platform-cdn.sharethis.com/img/twitter-white.svg">
+                </div>
+                <div class="st-custom-button st-remove-label" data-network="linkedin">
+                  <img alt="linkedin-white sharing button" src="https://platform-cdn.sharethis.com/img/linkedin-white.svg">
+                </div>
+                <div class="st-custom-button st-remove-label" data-network="facebook">
+                  <img alt="facebook-white sharing button" src="https://platform-cdn.sharethis.com/img/facebook-white.svg">
+                </div>
+                <div class="st-custom-button st-remove-label" data-network="hackernews">
+                  <img alt="hackernews-white sharing button" src="https://platform-cdn.sharethis.com/img/hackernews-white.svg">
+                </div>
+                <div class="st-custom-button st-remove-label" data-network="reddit">
+                  <img alt="reddit-white sharing button" src="https://platform-cdn.sharethis.com/img/reddit-white.svg">
+                </div>
+                <div class="st-custom-button st-remove-label" data-network="sharethis">
+                  <img alt="reddit-white sharing button" src="https://platform-cdn.sharethis.com/img/sharethis-white.svg">
+                </div>
+              {{ else }}
+                <div class="st-custom-button st-remove-label" data-network="wechat">
+                  <img alt="wechat-white sharing button" src="https://platform-cdn.sharethis.com/img/wechat-white.svg">
+                </div>
+                <div class="st-custom-button st-remove-label" data-network="weibo">
+                  <img alt="weibo-white sharing button" src="https://platform-cdn.sharethis.com/img/weibo-white.svg">
+                </div>
+                <div class="st-custom-button st-remove-label" data-network="twitter">
+                  <img alt="twitter-white sharing button" src="https://platform-cdn.sharethis.com/img/twitter-white.svg">
+                </div>
+                <div class="st-custom-button st-remove-label" data-network="sharethis">
+                  <img alt="reddit-white sharing button" src="https://platform-cdn.sharethis.com/img/sharethis-white.svg">
+                </div>
+              {{ end }}
+            </div>
+            <img src="/images/mediaKit.png" onclick="location.href='{{ .Site.Params.news.downloadLink }}';" class="share-media-kit"/>
+          </div>
+        </div>
+      </div>
+      <img onclick="location.href='#top'" class="go-ahead" src="/images/up.png" >
+    </div>
+    {{ if .Site.Params.footer }}
+      {{ partial "footer.html" . }}
+    {{ end }}
+  </main>
+{{ end }}

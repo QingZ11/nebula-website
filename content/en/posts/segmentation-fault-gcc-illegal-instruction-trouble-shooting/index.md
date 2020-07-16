@@ -9,6 +9,7 @@ tags: ["dev-log"]
 Recently I have been re-organizing and re-compiling all third-party dependencies of Nebula Graph, an open-source distributed graph database. And I have come across two interesting issues and would like to share with you.
 
 ## Flex Segmentation Fault——Segmentation fault (core dumped)
+
 Segmentation fault happened upon compiling Flex：
 
 ```bash
@@ -50,11 +51,11 @@ Dump of assembler code for function allocate_array:
 End of assembler dump.
 ```
 
-We can see from the assembly code above that the issue was caused by the `allocate_array` function.  `reallocarray` returned a pointer, which should be saved in the 64-bit register `rax`. However,  `allocate_array` called `reallocarray` and returned the 32-bit register `eax`. Meanwhile it used instruction `cltq`  to extend `eax` to `rax`.
+We can see from the assembly code above that the issue was caused by the `allocate_array` function. `reallocarray` returned a pointer, which should be saved in the 64-bit register `rax`. However,  `allocate_array` called `reallocarray` and returned the 32-bit register `eax`. Meanwhile it used instruction `cltq`  to extend `eax` to `rax`.
 
-The  possible reason could be that the prototype of `reallocarray` that `allocate_array` saw was different than the real prototype.
+The possible reason could be that the prototype of `reallocarray` that `allocate_array` saw was different than the real prototype.
 
-When looking at the compiing log, I did find such a warning, like _implicit declaration of function _`_reallocarray'_`.
+When looking at the compiling log, I did find such a warning, like _implicit declaration of function_ `_reallocarray'_`.
 
 This issue can be resolved by adding `CFLAGS=-D_GNU_SOURCE` at the configure stage.
 
@@ -63,10 +64,11 @@ Please note that this issue is not supposed to appear every time. However, enabl
 **Takeaways:**
 
 1. The return  type of an implicit declarative function is `int` in C
-1. Pay attention to compilor warnings with `-Wall` and `-Wextra` enabled. Better enable `-Werror` under development mode.
+1. Pay attention to compiler warnings with `-Wall` and `-Wextra` enabled. Better enable `-Werror` under development mode.
 
 ## GCC Illegal Instruction——internal compiler error: Illegal instruction
-<br />A while ago I've received feedback from Nebula Graph users that they encountered a compiler error: illeggal instruction. See the details in this pull request: [https://github.com/vesoft-inc/nebula/issues/978](https://github.com/vesoft-inc/nebula/issues/978).
+
+A while ago I have received feedback from Nebula Graph users that they encountered a compiler error: illegal instruction. See the details in this pull request: [https://github.com/vesoft-inc/nebula/issues/978](https://github.com/vesoft-inc/nebula/issues/978).
 
 Below is the error message:
 
@@ -85,7 +87,7 @@ Please submit a full bug report,
 with preprocessed source if appropriate.
 ```
 
-Since it's an _**internal compiler error, **_my assumption would be that an illegal instruction was encountered in g++ itself. To locate the specific illegal instruction set and the component it belongs to, we need to reproduce the error. 
+Since it's an **_internal compiler error_**, my assumption would be that an illegal instruction was encountered in g++ itself. To locate the specific illegal instruction set and the component it belongs to, we need to reproduce the error.
 
 Luckily, the code snippet below can do the magic:
 
@@ -97,9 +99,9 @@ int main()
 }
 ```
 
-Illegal instrucion is sure to trigger  SIGIL. Since g++ acts only as the entrance of the compiler, the real compiler is  cc1plus. 
+Illegal instruction is sure to trigger  SIGIL. Since g++ acts only as the entrance of the compiler, the real compiler is  cc1plus.
 
-We can use gdb to permorm the compiling process and catch the illegal instruction on spot:
+We can use gdb to perform the compiling process and catch the illegal instruction on spot:
 
 ```bash
 $ gdb --args /opt/nebula/gcc/bin/g++ test.cpp
@@ -119,19 +121,20 @@ gdb> disas
 
 Bingo！
 
-`mulx` belongs to  BMI2 instruction set and the CPU of the machine in error doesn't support this instruction set.
+`mulx` belongs to BMI2 instruction set and the CPU of the machine in error doesn't support this instruction set.
 
-After a thorough investigation, I found that it was GMP, which is one of GCC's dependencies, that introduced this instruction set. By default, GMP would detect the CPU type of the host machine at the configure stage to make use of the most recent instruction sets, which improves performance while sacrificing the protability of the binary. 
+After a thorough investigation, I found that it was GMP, which is one of GCC's dependencies, that introduced this instruction set. By default, GMP would detect the CPU type of the host machine at the configure stage to make use of the most recent instruction sets, which improves performance while sacrificing the portability of the binary.
 
-To solve the issue, you can try to override two files in the GMP source tree, i.e. _config.guess_ and _config.sub_ with _configfsf.guess_ and _configfsf.sub_ respectively before** `configure` .**
+To solve the issue, you can try to override two files in the GMP source tree, i.e. _config.guess_ and _config.sub_ with _configfsf.guess_ and _configfsf.sub_ respectively before `configure`.
 
 ## Conclusion
 
 - GCC won't adopt new instruction set due to compatibility issue by default.
 - To balance compability and performance, you need to do some extra work. For example, select and bind a specific instance for gllibc when it is running.
 
-Finally, if you are interested in compiling the source code of Nebula Graph, please refer to [here]([https://github.com/vesoft-inc/nebula/blob/master/docs/manual-EN/3.build-develop-and-administration/1.build/1.build-source-code.md](https://github.com/vesoft-inc/nebula/blob/master/docs/manual-EN/3.build-develop-and-administration/1.build/1.build-source-code.md))
+Finally, if you are interested in compiling the source code of Nebula Graph, please refer to the instructions [here](https://docs.nebula-graph.io/manual-EN/3.build-develop-and-administration/1.build/1.build-source-code/)
 
 ## You might also like
+
 1. [Automating Your Project Processes with Github Actions](https://nebula-graph.io/posts/github-action-automating-project-process/)
 1. [Dev Log | How to Release jar Package to the Maven Central Repository](https://nebula-graph.io/posts/maven/)

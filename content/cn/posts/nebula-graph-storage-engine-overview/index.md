@@ -6,7 +6,7 @@ tags: ["架构剖析"]
 author: 陈恒
 ---
 
-![image](https://www-cdn.nebula-graph.com.cn/nebula-blog/Architecture0101.png)
+![image](https://user-images.githubusercontent.com/57335825/87172263-cf734400-c288-11ea-96d0-1bb800700d16.png)
 
 ## 摘要
 

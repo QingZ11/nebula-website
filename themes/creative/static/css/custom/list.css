@@ -1,6 +1,6 @@
 .blog-list {
   height: 100%;
-  padding-top: 50px;
+  padding-top: 60px;
   background-image: url('../../img/header.png');
 }
 
@@ -224,13 +224,14 @@
   .blog-summary .blog-metas {
     display: none;
   }
+  .blog-list {
+      padding-top: 60px;
+  }
 }
 
 @media(min-width:960px) {
   .blog-list .wrapper .inner {
     width: 960px;
-  }
-  .blog-list .list {
   }
 }
 
