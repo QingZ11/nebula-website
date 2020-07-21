@@ -27,9 +27,9 @@
                         </div>
                 {{ end }}
             {{ end }}
-        {{  with .Site.GetPage "releases"  }}
+        {{  with .Site.GetPage "posts"  }}
             <div id="content">
-            {{ range first 3 .Pages }}
+            {{ range first 2 (after 1 .Pages) }}
                     <div id="content-detail">        
                         <div id="content-left">
                             <a class="posts-title" href="{{.Permalink}}">{{.Title| truncate 120}}</a>
