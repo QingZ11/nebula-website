@@ -11,6 +11,24 @@ contentDir = "content/en"
       readMore = "Read More >>"
       [[params.news.list]]
         pic = "feature1.png"
+        title = "Nebula Graph Debuts for Big Data Analytics Discovery"
+        link = "https://www.datanami.com/this-just-in/nebula-graph-debuts-for-big-data-analytics-discovery/"
+        date = "June 29, 2020"
+        source = "Datanami"
+        readMore = "Read More >>"
+        Description = "Nebula Graph is now commercially available as the only database that can store and process billions of data points with trillions of relational connections in a shared-nothing distributed architecture for the industry’s best business continuity."
+
+      [[params.news.list]]
+        pic = "feature1.png"
+        title = "Nebula Graph is now available from VEsoft"
+        link = "https://www.kmworld.com/Articles/News/News/Nebula-Graph-is-now-available-from-VEsoft-141573.aspx"
+        date = "June 29, 2020"
+        source = "KMWorld"
+        readMore = "Read More >>"
+        Description = "Nebula Graph is now available, providing a graph database that can store and process billions of data points with trillions of relational connections."
+
+      [[params.news.list]]
+        pic = "feature1.png"
         title = "VESoft raises $8M to meet China’s growing need for graph databases"
         link = "https://techcrunch.com/2020/06/15/vesoft-china-graph-database-8m-funding/"
         date = "June 15, 2020"
