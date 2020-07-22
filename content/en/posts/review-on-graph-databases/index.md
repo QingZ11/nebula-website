@@ -355,7 +355,7 @@ A graph database may have many different infrastructure implementations but they
 
 [1] An Overview Of Neo4j And The Property Graph Model Berkeley, CS294, Nov 2015 [https://people.eecs.berkeley.edu/~istoica/classes/cs294/15/notes/21-neo4j.pdf](https://people.eecs.berkeley.edu/~istoica/classes/cs294/15/notes/21-neo4j.pdf)
 
-[2] several original data sources from talk made by Duen Horng (Polo) Chau (Geogia tech) [www.selectscience.net](www.selectscience.net), [www.phonedog.com](www.phonedog.com), [www.mediabistro.com](www.mediabistro.com), [www.practicalecommerce.com/](www.practicalecommerce.com/)
+[2] several original data sources from talk made by Duen Horng (Polo) Chau (Geogia tech) [https://www.selectscience.net](www.selectscience.net), [https://www.phonedog.com](www.phonedog.com), [https://www.mediabistro.com](www.mediabistro.com), [https://www.practicalecommerce.com/](www.practicalecommerce.com/)
 
 [3] Graphs / Networks Basics, how to build & store graphs, laws, etc. Centrality, and algorithms you should know   Duen Horng (Polo) Chau(Georgia tech)
 
