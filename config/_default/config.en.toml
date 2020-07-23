@@ -36,18 +36,22 @@ contentDir = "content/en"
 
     [[params.navigation.links]]
       title = "Use Cases"
-      class = "dropdown-left"
+      class = "dropdown-left nav-case"
         [[params.navigation.links.case]]
           title = "Real-time Recommendation"
+          class="item-real"
           link = "/real-time-recommendation/"
         [[params.navigation.links.case]]
           title = "Fraud Detection"
+          class="item-fraud"
           link = "/fraud-detection/"
         [[params.navigation.links.case]]
           title = "Cyber Security"
+          class="item-cyber"
           link = "/cyber-security/"
         [[params.navigation.links.case]]
           title = "AI and Machine Learning"
+          class="item-ai"
           link = "/ai-and-machine-learning/"
     [[params.navigation.links]]
       title = "Docs"
@@ -62,12 +66,14 @@ contentDir = "content/en"
       target = "_blank"
     [[params.navigation.links]]
       title = "Company"
-      class = "dropdown-left"
+      class = "dropdown-left nav-company"
       [[params.navigation.links.case]]
         title = "Newsroom"
+        class="item-newsroom"
         link = "/newsroom"
       [[params.navigation.links.case]]
         title = "Contact Us"
+        class="item-contact"
         link = "mailto:info@vesoft.com"
       # [[params.navigation.links.links]]
       # 	title = "Use cases"

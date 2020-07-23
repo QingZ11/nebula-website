@@ -1,7 +1,6 @@
 {{ define "title" }}
   {{ .Title }}
 {{ end }}
-
 {{ define "twitter" }}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@NebulaGraph">
@@ -35,7 +34,6 @@
     {{ end }}
   {{ end }}
 {{ end }}
-
 {{ define "description" }}
   {{ with .Description }}
     <meta name="description" content="{{.}}">
@@ -43,7 +41,11 @@
     <meta name="description" content="{{.Site.Params.description}}">
   {{ end }}
 {{ end }}
-
+{{ define "canonical" }}
+  {{ if .Params.canonical }}
+    <link rel="canonical" href={{.Params.canonical}} />
+  {{ end }}
+{{end}}
 {{ define "main" }}
   <main id="top" class="blog-detail">
     <div class="wrapper">

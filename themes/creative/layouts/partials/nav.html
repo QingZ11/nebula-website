@@ -71,8 +71,8 @@
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                     {{ range .case }}
-                                        <li class="nav-item">
-                                            <a class="dropdown-item" href="{{.link}}" target="{{.target}}">{{ .title }}</a>
+                                        <li class="nav-item ">
+                                            <a class="dropdown-item {{.class}}" href="{{.link}}" target="{{.target}}">{{ .title }}</a>
                                         </li>
                                     {{ end }}
                                 </ul>
@@ -104,8 +104,38 @@
             $("#navbar-nav").addClass("collapse")
         }
         if(!sessionStorage.getItem("popupIsRemove")){
-            $("#nav-popup").css("display", "block")
+            $("#nav-popup").css("display", "block");
+            $(".use-case .case").removeClass("case");
         }
+        let arr=window.location.href.split('/');
+        if(arr.length>=2){
+            switch(arr[arr.length-2]){
+                case "newsroom":
+                    $(".nav-company").addClass("active");
+                    $(".item-newsroom").addClass("activeitem");
+                    break;
+                case "real-time-recommendation":
+                    $(".nav-case").addClass("active");
+                    $(".item-real").addClass("activeitem");
+                    break;
+                case "fraud-detection":
+                    $(".nav-case").addClass("active");
+                    $(".item-fraud").addClass("activeitem");
+                    break;
+                case "cyber-security":
+                    $(".nav-case").addClass("active");
+                    $(".item-cyber").addClass("activeitem");
+                    break;
+                case "ai-and-machine-learning":
+                    $(".nav-case").addClass("active");
+                    $(".item-ai").addClass("activeitem");
+                    break;
+                default: 
+                    $(".dropdown-left").removeClass("active");
+                    break;
+            }
+        }
+        
     }
 
 </script>
