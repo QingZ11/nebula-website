@@ -33,18 +33,22 @@ contentDir = "content/cn"
 
     [[params.navigation.links]]
       title = "应用场景"
-      class = "dropdown-left"
+      class = "dropdown-left nav-case"
         [[params.navigation.links.case]]
           title = "实时推荐"
+          class="item-real"
           link = "/real-time-recommendation/"
         [[params.navigation.links.case]]
           title = "金融风控"
+          class="item-fraud"
           link = "/fraud-detection/"
         [[params.navigation.links.case]]
           title = "网络安全"
+          class="item-cyber"
           link = "/cyber-security/"
         [[params.navigation.links.case]]
           title = "知识图谱"
+          class="item-ai"
           link = "/ai-and-machine-learning/"
     [[params.navigation.links]]
       title = "文档"
@@ -63,12 +67,14 @@ contentDir = "content/cn"
       target = "_blank"
     [[params.navigation.links]]
       title = "公司简介"
-      class = "dropdown-left"
+      class = "dropdown-left nav-company"
       [[params.navigation.links.case]]
         title = "媒体报道"
         link = "/newsroom"
+        class="item-newsroom"
       [[params.navigation.links.case]]
         title = "联系我们"
+        class="item-contact"
         link = "mailto:info@vesoft.com"
     [[params.navigation.links]]
       pic = "language120x120.png"

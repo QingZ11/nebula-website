@@ -4,6 +4,7 @@ date: 2020-06-29
 description: "With $8 Million in Recent Funding, Nebula Graph Emerges as Ideal for CIOs, Data Architects and Data Scientists in AI, Finance, Government, Healthcare, IoT, and More"
 author: "Rafael"
 tags: ["press-release"]
+# canonical: ""
 ---
 
 HANGZHOU, China – June  29, 2020 – Nebula Graph™ is now commercially available as the only database that can store and process billions of data points with trillions of relational connections in a shared-nothing distributed architecture for the industry’s best business continuity. This makes it the highest performing graph database in the world. It is designed to meet the biggest data information discovery needs of the world’s largest businesses.
