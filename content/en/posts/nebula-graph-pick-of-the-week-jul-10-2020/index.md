@@ -8,7 +8,7 @@ author: "Steam"
 
 ![Pick of the Week](https://user-images.githubusercontent.com/57335825/87520320-a4e20c00-c637-11ea-8053-7222b9c4f00a.png)
 
-Normally the weekly issue covers Feature Explanation, Community Q&As, and Weekly Nebula. If something major happens, it will also be covered in the additional Events of the Week section.
+Normally the weekly issue covers Feature Explanation and Community Q&As. If something major happens, it will also be covered in the additional Events of the Week section.
 
 ## Events of the Week
 
@@ -153,11 +153,8 @@ Take AWS EC2 c5d.xlarge as an example:
 - Number of partitions in the graph space: the number of hard drives in the entire cluster * (2 to 10--the better the hard drive, the greater the value).
 - Reserve a 20% buffer for memory and hard disk.
 
-## Weekly Nebula - The Tails of Comet NEOWISE
+## You Might Also Like
 
-![Weekly Nebula - The Tails of Comet NEOWISE](https://user-images.githubusercontent.com/57335825/87522026-fa1f1d00-c639-11ea-861b-f5922ab2db03.png)
+1. [Pick of the Week 29 at Nebula Graph - SQL vs nGQL & Job Manager in Nebula Graph](https://nebula-graph.io/posts/nebula-graph-pick-of-the-week-jul-17-2020/)
+2. [Pick of the Week 30 at Nebula Graph - FETCH Syntax Goes Further with New Features](https://nebula-graph.io/posts/nebula-graph-pick-of-the-week-jul-24-2020/)
 
-Comet NEOWISE (C/2020 F3) is now sweeping through northern skies. Its developing tails stretch some six degrees across this telescopic field of view, recorded from Brno, Czech Republic before daybreak on July 10. Pushed out by the pressure of sunlight itself, the comet's broad, yellowish dust tail is easiest to see. But the image also captures a fainter, more bluish tail too, separate from the reflective comet dust. The fainter tail is an ion tail, formed as ions from the cometary coma are dragged outward by magnetic fields in the solar wind and fluoresce in the sunlight. In this sharp portrait of our new visitor from the outer Solar System, the tails of comet NEOWISE are reminiscent of the even brighter tails of Hale Bopp, the Great Comet of 1997.
-
-Resource | NASA Official
-Image Credit & Copyright: Miloslav Druckmuller (Brno University of Technology)
