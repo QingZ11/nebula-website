@@ -8,7 +8,7 @@ author: "Steam"
 
 ![Pick of the Week](https://user-images.githubusercontent.com/57335825/88050180-373c5100-cb0b-11ea-9d75-d02303846f3b.png)
 
-Normally the weekly issue covers Feature Explanation, Community Q&As, and Weekly Nebula. If something major happens, it will also be covered in the additional Events of the Week section.
+Normally the weekly issue covers Feature Explanation and Community Q&As. If something major happens, it will also be covered in the additional Events of the Week section.
 
 ## Events of the Week
 
@@ -61,11 +61,7 @@ Q: The LOOKUP query is quite slow. What can I do to optimize the performance?
 
 A: The slow query speed may be caused by the unordered data. The LOOKUP statement needs schema indexes to work well, but the indexes can retrieve data efficiently only when the data are in order. If a large amount of data is imported, we recommend that you do a Compact operation on the data to make them in order. By doing so, the LOOKUP query speed can be improved.
 
-## Weekly Nebula - Comet NEOWISE over Stonehenge
+## You Might Also Like
 
-![Weekly Nebula - The Tails of Comet NEOWISE](https://user-images.githubusercontent.com/57335825/88052001-6c966e00-cb0e-11ea-92fe-5eb40df36e6a.png)
-
-Have you ever seen a comet? Tonight -- and likely the next few nights -- should be a good chance. Go outside just at sunset and look to your northwest. The lower your horizon, the better. Binoculars may help, but if your sky is cloudless and dark, all you should need is your unaided eyes and patience. As the Sun sets, the sky will darken, and there will be an unusual faint streak pointing diagonally near the horizon. That is Comet NEOWISE. It is a 5-kilometer-wide evaporating dirty iceberg visiting from -- and returning to -- the outer Solar System. As the Earth turns, the comet will soon set, so you might want to take a picture. In the featured image, Comet C/2020 F3 (NEOWISE) was captured two mornings ago rising over Stonehenge in the UK. Discovered with the NASA satellite NEOWISE toward the end of March, Comet NEOWISE has surprised many by surviving its closest approach to the Sun, brightening dramatically, and developing impressive (blue) ion and (white) dust tails.
-
-Resource | NASA Official
-Image Credit & Copyright: Miloslav Druckmuller (Brno University of Technology)
+1. [Pick of the Week 28 at Nebula Graph - Running Configuration Explained in Detail](https://nebula-graph.io/posts/nebula-graph-pick-of-the-week-jul-10-2020/)
+2. [Pick of the Week 30 at Nebula Graph - FETCH Syntax Goes Further with New Features](https://nebula-graph.io/posts/nebula-graph-pick-of-the-week-jul-24-2020/)

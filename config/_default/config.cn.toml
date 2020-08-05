@@ -249,7 +249,7 @@ contentDir = "content/cn"
           [[params.features.list]]
             pic = "feature3.png"
             title = "类SQL查询"
-            link = "https://github.com/vesoft-inc/nebula/blob/master/docs/manual-CN/1.overview/1.concepts/2.nGQL-overview.md"
+            link = "https://docs.nebula-graph.com.cn/manual-CN/1.overview/1.concepts/2.nGQL-overview/"
             description1 = "Nebula Graph的"
             description2 = "类 SQL 查询语言"
             description3 = "不仅易于理解，同时能满足各类复杂业务需求。"
