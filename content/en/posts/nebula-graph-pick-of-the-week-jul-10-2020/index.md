@@ -1,5 +1,5 @@
 ---
-title: "Pick of the Week 28 at Nebula Graph - Running Configuration Explained in Detail"
+title: "Pick of the Week at Nebula Graph - Running Configuration Explained in Detail"
 date: 2020-07-10
 description: "In this weekly issue, we are covering TTL and recommended configurations to run Nebula Graph in both production and testing environments."
 tags: ["community"]

@@ -1,5 +1,5 @@
 ---
-title: "Pick of the Week 30 at Nebula Graph - FETCH Syntax Goes Further with New Features"
+title: "Pick of the Week at Nebula Graph - FETCH Syntax Goes Further with New Features"
 date: 2020-07-24
 description: "In this weekly issue, we are covering the new features of the FETCH syntax in nGQL and how to speed your data import to Nebula Graph."
 tags: ["community"]
