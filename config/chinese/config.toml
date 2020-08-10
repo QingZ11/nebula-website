@@ -1,5 +1,5 @@
 baseurl = "https://nebula-graph.com.cn"
-title = "Nebula Graph  - An Open Source, Distributed and High Performant Graph Database"
+title = "Nebula Graph 开源分布式图数据库"
 theme = "creative"
 googleAnalytics = ""
 DefaultContentLanguage = "cn"

@@ -15,7 +15,7 @@ contentDir = "content/cn"
 
   # To provide some metadata for search engines feel free to add some
   # information about you and your website.
-  description = "水平扩展特性，强数据一致性，高可用，类SQL查询语言。Nebula让你洞察数据之间的联系。赶快免费使用它吧。"
+  description = "Nebula Graph 是一款开源的分布式图数据库，具有水平扩展、强数据一致性、高可用、类 SQL 查询语言等特性"
   name = "Nebula Graph"
 
   # The path must be relative to the static folder

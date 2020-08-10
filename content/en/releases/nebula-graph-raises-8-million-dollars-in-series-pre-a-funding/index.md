@@ -4,6 +4,7 @@ date: 2020-06-15
 description: "VEsoft Inc., the developer of the Nebula Graph™ database, today announced it raised $8M in a series pre-A funding round. "
 author: "Rafael"
 canonical: "https://nebula-graph.io/posts/nebula-graph-raises-8-million-dollars-in-series-pre-a-funding/"
+tags: ["press-release"]
 ---
 ![Nebula Graph™ Database Raises $8 Million in Series Pre-A Funding](https://user-images.githubusercontent.com/57335825/84646147-7f39d980-aeb6-11ea-8d3d-6609fe02ff4b.png)
 

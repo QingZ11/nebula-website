@@ -1,17 +1,25 @@
 [recommendations]
   title = "Customer Testimonials"
   [[recommendations.logos]]
-    url = "/companies/logo-jd-sm.png"
+    url = "/companies/jd-logo-bg.png"
   [[recommendations.logos]]
-    url = "/companies/logo-meituan-sm.png"
+    url = "/companies/meituan-logo-bg.png"
   [[recommendations.logos]]
-    url = "/companies/logo-youzan-sm.png"
+    url = "/companies/youzan-logo-bg.png"
   [[recommendations.logos]]
-    url = "/companies/logo-qcc-sm.png"
+    url = "/companies/redbook-logo-bg.png"
   [[recommendations.logos]]
-    url = "/companies/logo-redbook-sm.png"
+    url = "/companies/logo-wifiwn-bg.png"
   [[recommendations.logos]]
-    url = "/companies/logo-tencent-sm.png"
+    url = "/companies/tencent-logo-bg.png"
+  [[recommendations.logos]]
+    url = "/companies/logo-webank-bg.png"
+  [[recommendations.logos]]
+    url = "/companies/logo-vivo-bg.png"
+  [[recommendations.logos]]
+    url = "/companies/qcc-logo-bg.png"
+  [[recommendations.logos]]
+    url = "/companies/logo-kuaishou-bg.png"
   [[recommendations.statements]]
     who = "Qian Yong, Graph Tech team leader at JD Digits"
     figure = "/companies/logo-jd-bg.png"

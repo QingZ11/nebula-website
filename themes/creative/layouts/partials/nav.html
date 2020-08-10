@@ -1,7 +1,10 @@
 {{ "<!-- NAVIGATION -->" | safeHTML }}
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="nav-popup" id="nav-popup"> <img src="/images/popup.png" /><img src="/images/popup.png" /><img src="/images/popup.png" />  {{ .Site.Params.popupText  }} <a href={{ .Site.Params.popupLink }} onclick="{{.Site.Params.popupClick | safeJS}}" target="_blank">{{ $.Site.Params.popupLinkText }}</a> <img src="/images/shut.png" id="shut" onclick="shut()"/></div>
-    <div class="container-fluid">
+    {{ if eq $.Site.Language.Lang "cn" }}
+        <div class="J-simple-alert"><div class="J-alert-body"><div class="alert-close" onclick="closeAdBox()"><img src="/images/adAlertCloseIcon.png"></div><p class="pop-face">=(^.^)=</p><p class="pop-text">来都来了</p><p class="alert-content">去 GitHub 给我们点个<img src="/images/starIcon.png" >star 呗</p><a class="alert-btn" href="https://0x7.me/zh08112github" onclick="closeAdBox()"><img src="/images/gitHub-icon.png"> 感谢大佬</a></div></div>
+    {{ end }}
+        <div class="container-fluid">
         {{ "<!-- Brand and toggle get grouped for better mobile display -->" | safeHTML }}
         <div class="navbar-header">
             <div 
@@ -97,7 +100,10 @@
         $("#top").css("padding-top", "60px")
         sessionStorage.setItem("popupIsRemove", true);
     }
-
+    function closeAdBox(){
+        $('.J-alert-body').remove();
+        sessionStorage.setItem("adPopBoxIsRemove", true);
+    }
     window.onload=function (){
         const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
         if(isMobile){
@@ -106,6 +112,11 @@
         if(!sessionStorage.getItem("popupIsRemove")){
             $("#nav-popup").css("display", "block");
             $(".use-case .case").removeClass("case");
+        }
+        if(!sessionStorage.getItem("adPopBoxIsRemove")){
+            setTimeout(()=>{
+                $(".J-simple-alert").css("display", "block");
+            },3000)
         }
         let arr=window.location.href.split('/');
         if(arr.length>=2){
