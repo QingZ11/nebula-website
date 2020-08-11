@@ -1,5 +1,5 @@
 ---
-title: "超大规模图数据库 Nebula Graph v1.0 发布，为数据分析处理提速"
+title: "欧若数网完成 800 万美元 Pre-A 轮融资"
 date: 2020-06-08
 description: "近日，图数据库 Nebula Graph 研发商欧若数网科技有限公司已完成 800 万美元 Pre-A 轮融资，由红点创投中国基金、经纬中国投资。本轮融资将主要用于产品开发，以及全球市场拓展。"
 author: "Steam"
