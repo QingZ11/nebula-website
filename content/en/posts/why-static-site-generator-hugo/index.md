@@ -1,7 +1,7 @@
 ---
 title: "Why Using Hugo as Static Site Generator - Hands-on Experience at Nebula Graph"
 date: 2020-07-21
-description: "In this weekly issue, we are covering TTL and recommended configurations to run Nebula Graph in both production and testing environments."
+description: "This article explains the reason why Nebula Graph chooses Hugo as the static site generator."
 tags: ["dev-log"]
 author: "Jerry"
 ---

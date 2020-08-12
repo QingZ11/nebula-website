@@ -1,7 +1,7 @@
 .customer-recommendations {
   overflow: hidden;
   height: 682px;
-  background: #fff;
+  background: #FAFBFC;
 }
 
 .customer-recommendations > ul {
@@ -11,15 +11,22 @@
   align-items: center;
   display: flex;
   list-style: none;
+  width: 945px;
+  /* height: 137px; */
+  flex-wrap: wrap;
 }
 
 .customer-recommendations > ul > li {
-  margin: 0 10px;
+  margin: 2.5px 2.5px;
+  width: 184px;
+  height: 66px;
+  text-align: center;
 }
 
-
 .customer-recommendations > ul > li > img {
-  height: 54px;
+  height: 100%;
+  width: 100%;
+  /* margin: 6px auto; */
 }
 
 .customer-recommendations > h3 {
@@ -159,17 +166,18 @@
   }
 
   .customer-recommendations {
-    height: 760px;
+    height: 1050px;
   }
 
   .customer-recommendations > ul {
     margin: 26px auto;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .customer-recommendations > ul > li {
-    width: 25%;
-    margin: 5%;
+    width: 41%;
+    margin: 1%;
   }
 
   .customer-recommendations > ul > li > img {

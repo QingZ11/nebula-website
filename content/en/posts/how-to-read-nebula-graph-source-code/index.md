@@ -1,7 +1,7 @@
 ---
 title: "New Players: Something You Should Know When Reading Nebula Graph Source Code"
 date: 2020-08-04
-description: "This post shows you several ways to reduce Docker image size. These tips helped Nebula Graph devs reduce the image from 1.3G to 0.3G."
+description: "This article teaches you how to read the Nebula Graph source code by explaining how a graph query is executed in Nebula Graph in detail."
 author: "Ming Quan"
 tags: ["graph-database"]
 ---
@@ -98,7 +98,7 @@ gServer->setInterface(std::move(interface));
 gServer->setAddress(localIP, FLAGS_port);
 ```
 
-From these codes, we know that the `GraphService` object is the one that prcesses the connection and request sent from the client, so we can set a breakpoint at the `GraphService.cpp:future_execute` line to trace the execution.
+From these codes, we know that the `GraphService` object is the one that processes the connection and request sent from the client, so we can set a breakpoint at the `GraphService.cpp:future_execute` line to trace the execution.
 
 Now, let's launch another terminal and change the path to the nebula installation directory. Run `./nebula -u=root -p=nebula` to connect to the nebula services. And then, run the `SHOW SPACES` statement. You will see that no result is returned. It is because the services are blocked for debugging on the server side. Let's go back to the server side and run the `continue` command, and the following lines are returned.
 
@@ -161,7 +161,7 @@ auto *runner = ectx()->rctx()->runner();
 std::move(future).via(runner).thenValue(cb).thenError(error);
 ```
 
-From the intructions above, we see that Query Service obtained the `spaces` data through the communications between metaClient and Meta Service, and then used the `cb` callbak to return the data. Till now, the `SHOW SPACES` statement is executed completely. Other nGQL statements, even those more complicated ones, are executed in the similar way.
+From the instructions above, we see that Query Service obtained the `spaces` data through the communications between metaClient and Meta Service, and then used the `cb` callback to return the data. Till now, the `SHOW SPACES` statement is executed completely. Other nGQL statements, even those more complicated ones, are executed in the similar way.
 
 - For a running service, it is recommended that you have the process ID and then run the `gdb attach PID` command to debug this process. 
 - If you don't want to launch both the server and the client for debugging, you can use the `test` directory. Each function under the `src` directory has its own `test` directory. It contains all the code for unit testing of the applicable function or module. These codes can be used to compile the functional module, and the execution can be traced. The `test` directory can be used as follows: 

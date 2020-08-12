@@ -1,5 +1,5 @@
 ---
-title: "Pick of the Week 29 at Nebula Graph - SQL vs nGQL & Job Manager in Nebula Graph"
+title: "Pick of the Week at Nebula Graph - SQL vs nGQL & Job Manager in Nebula Graph"
 date: 2020-07-17
 description: "In this weekly issue, we are covering Job Manager and how to optimize the LOOKUP query in Nebula Graph. We have also prepared a guide for DBAs to compare SQL and nGQL."
 tags: ["community"]
