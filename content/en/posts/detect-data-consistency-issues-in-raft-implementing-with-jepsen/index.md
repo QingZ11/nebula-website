@@ -21,7 +21,7 @@ In this post, we will explain how to verify data consistency of the distributed 
 
 Let's start with the definition of strong data consistency.  Quote the book [_Designing Data-Intensive Applications_](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D/ref=sr_1_1?dchild=1&keywords=Designing+Data-Intensive+Applications&qid=1586310740&sr=8-1):
 
->_In a linearizable system, as soon as one client successfully completes a write, all clients reading from the database must be able to see the value just written._
+> In a linearizable system, as soon as one client successfully completes a write, all clients reading from the database must be able to see the value just written._
 
 The basic idea of strong data consistency or linearizability is to make a distributed system appear as if there were only one copy of the data, and all operations on it are atomic. Any read request from any client gets the latest data written to the system.
 
@@ -99,7 +99,7 @@ You need long-term pressure tests and failure simulations to discover problems i
 
 In the future, we will introduce other chaos engineering tools to verify data consistency in Nebula Graph. This way we can continuously improve performance while ensuring high data reliability.
 
->_Hi, I’m critical27, a software engineer in Nebula Graph. Currently I am involved in the storage engine development. I hope this article is helpful and let me know if you have any thoughts and suggestions. Thanks!_
+> Hi, I’m critical27, a software engineer in Nebula Graph. Currently I am involved in the storage engine development. I hope this article is helpful and let me know if you have any thoughts and suggestions. Thanks!_
 
 ## You might also like
 
