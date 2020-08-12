@@ -193,7 +193,7 @@ Now you have your own Discourse forum with global CDN acceleration. Benefiting f
 
 That's pretty much how we have self hosted the Nebula Graph [forum](https://discuss.nebula-graph.io/) with global CDN. If you have any thoughts or suggestions, feel free to leave us comments below.
 
->_Hi, I'm George and I work as Implementation Engineer at Nebula Graph. I've been working in the devops field for years and would like to share what I've learn with you. Hope my post is helpful to you. Do let me know about your thoughts. Appreciate that!
+> Hi, I'm George and I work as Implementation Engineer at Nebula Graph. I've been working in the devops field for years and would like to share what I've learn with you. Hope my post is helpful to you. Do let me know about your thoughts. Appreciate that!
 
 ## You might also like
 1. [Automating Your Project Processes with Github Actions](https://nebula-graph.io/posts/github-action-automating-project-process/)
