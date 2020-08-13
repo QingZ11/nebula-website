@@ -98,9 +98,9 @@ Please refer to the table below for the statements of each operation:
 
 Similar to  most databases, Nebula Graph fetches access control information from the meta server and authenticates users from the perspectives of the graph space, roles and operations.  Once receiving the connection request from the client, Nebula Graph server will first check the existence of the requesting account and the correctness of the password.
 
-When the login succeeds, Nebula Graph server will initialize the session ID for the connection, loading the session ID, user information, previliges and graph space information into the session. Each subsequent operation will be authorized based on the session information. The session will not be destroyed until the user logs out or session timeout.
+When the login succeeds, Nebula Graph server will initialize the session ID for the connection, loading the session ID, user information, privileges and graph space information into the session. Each subsequent operation will be authorized based on the session information. The session will not be destroyed until the user logs out or session timeout.
 
-In addition, the meta server syndicates the access control information to the meta client periodically so that it can cach the authentication data, thus greatly reducing the network consumption of each connection.
+In addition, the meta server syndicates the access control information to the meta client periodically so that it can cache the authentication data, thus greatly reducing the network consumption of each connection.
 
 ### The Access Control Code Snippets
 
@@ -255,7 +255,7 @@ Got 2 rows (Time spent: 22.692/38.138 ms)
 
 Here comes  the end of Nebula Graph ACL introduction. If you encounter any problems in usage, please tell us on our [forum](https://discuss.nebula-graph.io/) or [GitHub](https://github.com/vesoft-inc/nebula) to get help.
 
-> Hi, I'm bright-starry-sky, engineer at Nebula Graph. I'm interested in database storage and would like to share my experiences in this regard. Hope my post is of help to you. Please let me know if you have any ideas about this. Thanks.
+> _Hi, I'm bright-starry-sky, engineer at Nebula Graph. I'm interested in database storage and would like to share my experiences in this regard. Hope my post is of help to you. Please let me know if you have any ideas about this. Thanks!_
 
 ## You might also like
 

@@ -130,7 +130,7 @@ To solve the issue, you can try to override two files in the GMP source tree, i.
 ## Conclusion
 
 - GCC won't adopt new instruction set due to compatibility issue by default.
-- To balance compability and performance, you need to do some extra work. For example, select and bind a specific instance for gllibc when it is running.
+- To balance compatibility and performance, you need to do some extra work. For example, select and bind a specific instance for gllibc when it is running.
 
 Finally, if you are interested in compiling the source code of Nebula Graph, please refer to the instructions [here](https://docs.nebula-graph.io/manual-EN/3.build-develop-and-administration/1.build/1.build-source-code/)
 

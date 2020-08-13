@@ -165,7 +165,7 @@ From the instructions above, we see that Query Service obtained the `spaces` da
 
 - For a running service, it is recommended that you have the process ID and then run the `gdb attach PID` command to debug this process. 
 - If you don't want to launch both the server and the client for debugging, you can use the `test` directory. Each function under the `src` directory has its own `test` directory. It contains all the code for unit testing of the applicable function or module. These codes can be used to compile the functional module, and the execution can be traced. The `test` directory can be used as follows: 
-   1. Under a diretory for a functional module, find its `CMakeLists.txt` file and find the module name in this file. 
+   1. Under a directory for a functional module, find its `CMakeLists.txt` file and find the module name in this file. 
    1. In the `build` directory, run the `make <module name>` command. The applicable binary program is generated in the `build/bin/test` directory. 
    1. Start GDB to debug and trace the execution.
 

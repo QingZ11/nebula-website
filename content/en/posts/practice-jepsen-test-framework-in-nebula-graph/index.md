@@ -11,19 +11,19 @@ tags: ["system-testing"]
 This article introduces how Nebula Graph uses Jepsen test framework to ensure system linearizability.
 
 ## Why Jepsen?
-Linearizability here specifically means consistency in the CAP theory. In Nebula Graph, we gurantee strong data consistency in our key-value store.
+Linearizability here specifically means consistency in the CAP theory. In Nebula Graph, we guarantee strong data consistency in our key-value store.
 
 So under such a consistency policy, we need to make sure:
 
 - A read happens BEFORE a write operation ends must read the previous write
-- A read happens AFTER a write operation ends must read the current write     
+- A read happens AFTER a write operation ends must read the current write
 
 Strong data consistency relies on a solid chaos testing plan which can affect a distributed system in many unplanned ways, which in turn  helps uncover corner cases that are hard to detect in development.
 
 This is how Jepsen comes into play.
 
 ## What is Jepsen?
-Jepsen is an open source software library for system testing. It is an effort to improve the saftey of distributed databases, queues, consensus systems, etc.
+Jepsen is an open source software library for system testing. It is an effort to improve the safety of distributed databases, queues, consensus systems, etc.
 
 Jepsen's author Kyle Kingsbury writes the test framework with Clojure, a functional programming language. He has then performed linearizability tests on some well known distributed systems and databases.
 
@@ -42,6 +42,7 @@ The beginning, ending, and results of each operation will be documented in Jepse
 When the test ends, the checker will analyze the history accuracy to verify if the results are linearizable. For the checker, you can use either the built-in validation model provided by [Jepsen knossos](https://github.com/jepsen-io/knossos), or you can define custom model per your own business requirements.
 
 ## Things to Consider Before the Test
+
 To make sure the Jepsen test runs smoothly, please be sure to complete the following configuration before you start the test:
 
 1. **Define operations in the DB API: download, install, start, and end**
@@ -60,11 +61,12 @@ For example, Jepsen will generate a chart for latency and the entire test proces
 
 Specify the  types of faults you want to inject to the system in the Nemesis component. Some common ones include partition-random-halves and kill-node.
 
-5. **Configure worker thread paramters**
+5. **Configure worker thread parameters**
 
-Configure the operations within the worker thread in the generator process, as well as the time interval of each operation and each fault injection.   
+Configure the operations within the worker thread in the generator process, as well as the time interval of each operation and each fault injection.
 
 ## Running Jepsen Test on Nebula Graph
+
 Nebula Graph has three  components: meta layer, graph layer, and storage layer. The three layers work as a whole for Nebula Graph service to run normally. 
 
 The Jepsen test is mainly on the storage layer.  
@@ -84,19 +86,21 @@ The cluster is built in Docker and started by Docker-compose. Bear in mind the f
 1. Install SSH service and enable passwordless login to the five storage nodes for the Jepsen control node.  
 
 
-We have generated a jar package with the Java client and added it to the Clojure dependencies. Then the client can perform operations (put, get, cas, etc.) against the database. In addition, auto retry logic has been added to the Java client so that proper retry mechnism is enabled to make sure the operations have been successfully completed. 
+We have generated a jar package with the Java client and added it to the Clojure dependencies. Then the client can perform operations (put, get, cas, etc.) against the database. In addition, auto retry logic has been added to the Java client so that proper retry mechanism is enabled to make sure the operations have been successfully completed. 
 Nebula-Jepsen, the test program developed by Nebula Graph, has three test models and three common chaos injections.
 
 ### Jepsen Test Models
 
 #### single-register
-A single-register  stores only the value of one key. While the test program reads and writes the database simultaneously, each sucessful write  changes the value stored in the register. 
+
+A single-register  stores only the value of one key. While the test program reads and writes the database simultaneously, each successful write  changes the value stored in the register. 
 
 Then compare the read value from the database with the value in the register to see if they are consistent, which can validate whether the system is linearizable. 
 
 Since it's a one-key register, the key is the same during the test and the value of the key is randomly generated upon operations.  
 
 #### multi-register
+
 A multi-register however stores values of multiple keys. The validation process is the same as single-register, only that the keys are also randomly generated in multi-register.
 
 Below is a sample of  read and write operations during the test:
@@ -140,6 +144,7 @@ You may also notice a nemesis operation in the sample above.
 - `:nemesis   :info   :start  nil` This row records the beginning of a nemesis operation.  The next record indicates that  nemesis intends to isolate n5 from the cluster so that it's unable to communicate with other nodes within the cluster.
 
 #### cas-register
+
 Besides the read and write, there's a cas-register  to validate cas (compare-and-set) operations. 
 
 Below is a sample code from the test:
@@ -175,16 +180,20 @@ Let's take a look at some examples:
 - `:invoke	:cas  [1 2]` This row records the initiation of cas operation, i.e. update the value to 2 if the read result is 1. 
 
 ### Introducing Failures in Jepsen
+
 Below are the three types of failures Nebula Graph has injected to the cluster for chaos testing purpose.
 
 #### kill-node
+
 The control node of Jepsen will randomly kill a certain database service on a node several times during the entire test. When a node is killed, the available nodes decreased by one in the cluster. After a certain time, the database service of the node is started and the node will rejoin the cluster.
 
 #### partition-random-node
+
 Jepsen will randomly isolate a node from others during the test, so that there is no communication between this node and other nodes. Then Jepsen will repair this network isolation after a certain time to restore the cluster to its original state.
 
 #### partition-random-halves
-In this common network partition, the Jepsen control node randomly cuts the five databse nodes into two parts, one of which has two nodes and the other has three. Communication will be resumed after a certain period of time as shown below.
+
+In this common network partition, the Jepsen control node randomly cuts the five database nodes into two parts, one of which has two nodes and the other has three. Communication will be resumed after a certain period of time as shown below.
 
 ![partition](https://user-images.githubusercontent.com/56643819/72118867-869c0a80-338d-11ea-878d-15ea79811a8b.png)
 
@@ -223,6 +232,7 @@ After the test is completed, you will get an auto-generated timeline.html file. 
 The above picture shows the timeline of operations. Each execution block has the corresponding execution information.Jepsen verifies the linearizability based on this operation order. This also acts as Jepsen's core. We can also track faults with the HTML file.
 
 ### Performance Analysis Generated With Jepsen
+
 Following are some performance analysis charts generated with Jepsen. This project name is basic test, please note that your project name may be different.
 
 ![latency](https://user-images.githubusercontent.com/56643819/72118934-c5ca5b80-338d-11ea-9603-ca65a36baf1b.png)
@@ -250,6 +260,7 @@ Currently, we are using Jepsen to test Nebula Graph on daily basis. We release t
 - Nebula Graph GitHub: [https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula)
 
 ## You might also like
+
 1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/posts/nebula-graph-architecture-overview/)
 1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/posts/nebula-graph-storage-engine-overview/)
 1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/posts/nebula-graph-query-engine-overview/)

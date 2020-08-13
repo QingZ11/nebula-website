@@ -48,7 +48,7 @@ mysql> SHOW CREATE TABLE person;
 1 row in set (0.00 sec)
 ```
 
-This is a table named person, where the _inserttime_ column is a datetime type. And we use the _inserttime_ column to store the generatition time of the data.
+This is a table named person, where the _inserttime_ column is a datetime type. And we use the _inserttime_ column to store the generation time of the data.
 
 Next, we create a stored procedure that deletes this table:
 

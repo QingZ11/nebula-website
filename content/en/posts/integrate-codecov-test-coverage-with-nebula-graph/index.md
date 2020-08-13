@@ -100,7 +100,7 @@ However, we use a CLI tool provided by Codecov instead of the APIs.
 
 For example we use `bash <(curl -s https://codecov.io/bash) -Z -t <token>- f clean.info` to upload reports. The token here is the authentication token provided by Codecov. Set it as an environment variable `CODECOV_TOKEN` instead of inputting the plaintext token here.
 
-Through the above operations, you can not only view the test coverage of your project on Codecov, but also see the coverage change if this pr is merged, which is convenient for gradually increasing test coverage. 
+Through the above operations, you can not only view the test coverage of your project on Codecov, but also see the coverage change if this pr is merged, which is convenient for gradually increasing test coverage.
 
 Finally, you can also add the Codecov coverage badge in your README file just like [Nebula Graph](https://github.com/vesoft-inc/nebula).
 
@@ -112,5 +112,4 @@ Finally, you can also add the Codecov coverage badge in your README file just li
 1. [Automating Your Project Processes with Github Actions](https://nebula-graph.io/posts/github-action-automating-project-process/)
 1. [Compiling Trouble Shooting: Segmentation Fault and GCC Illegal Instruction](https://nebula-graph.io/posts/segmentation-fault-gcc-illegal-instruction-trouble-shooting/)
 
-> Hi, I'm Shylock. a software engineer at Nebula Graph. Hope my post is of help to you. Please let me know if you have any ideas about this. Thanks!_
-
+> _Hi, I'm Shylock. a software engineer at Nebula Graph. Hope my post is of help to you. Please let me know if you have any ideas about this. Thanks!_

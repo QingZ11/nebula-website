@@ -30,7 +30,7 @@ Overall, these products are friendly. There are some restrictions on open source
 
 Given the previous experience of using GitLab CI, we realized that the first choice is a product with deep integration with GitHub, meaning that you can share the entire open source ecosystem of GitHub and call the APIs natively.
 
-Coincidently, GitHub Action 2.0 was released in 2019. So Nebula Graph became the explorer.
+Coincidentally, GitHub Action 2.0 was released in 2019. So Nebula Graph became the explorer.
 
 For us, GitHub Action is awesome in the following ways:
 
@@ -207,7 +207,7 @@ Similar to `set-output`, you can create  an environment variable for subsequent 
 ::add-path::{path}
 ```
 
-This command is to prepend a directory to the system PATH variable for all subsequent steps in the current job. Syntax: `echo "::add-path::{path}"`.<br />
+This command is to perpend a directory to the system PATH variable for all subsequent steps in the current job. Syntax: `echo "::add-path::{path}"`.
 
 ## Self-Hosted Runner
 
@@ -235,7 +235,7 @@ We have isolated all the virtual machines that hold the runner from the office n
 
 #### Choose the Right Action
 
-Try to choose actions from well-known companies or official releases. If you are using the works of individual developers, you'd better check their implementation code to avoid being victims of [privacy keys leakage ](https://julienrenaux.fr/2019/12/20/github-actions-security-risk/).
+Try to choose actions from well-known companies or official releases. If you are using the works of individual developers, you'd better check their implementation code to avoid being victims of [privacy keys leakage](https://julienrenaux.fr/2019/12/20/github-actions-security-risk/).
 
 Here is the [list](https://github.com/actions) of official actions provided by GitHub.
 

@@ -14,7 +14,7 @@ tags: ["features"]
 
 | Names | Descriptions |
 | --- | --- |
-| Storage Engine | **Nebula Graph**'s smallest physical storage unit, currently supports RocksDB and Hbase, this document is only for RocksDB. |
+| Storage Engine | **Nebula Graph**'s smallest physical storage unit, currently supports RocksDB and HBase, this document is only for RocksDB. |
 | Partition | **Nebula Graph**'s smallest logical storage unit. A StorageEngine contains multiple partitions. A partition is divided into a leader and multiple followers, and Raft protocol is used to ensure data consistency between the leader and the followers. |
 | Graph Space | Each graph space is an isolated graph unit that has its own tags and edges. A **Nebula Graph** cluster contains many graph spaces. |
 | checkpoint | Checkpoints can be used as a point in time snapshot for the storage engine. Checkpoint can be used for full backup. Checkpoint file is a hard link for the sst file. |

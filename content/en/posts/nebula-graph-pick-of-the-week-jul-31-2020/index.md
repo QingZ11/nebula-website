@@ -1,7 +1,7 @@
 ---
 title: "Pick of the Week at Nebula Graph - GO with int Type"
 date: 2020-07-31
-description: "In this weekly issue, we are exicited to announce that the GO statement in nGQL now supports the int data type."
+description: "In this weekly issue, we are excited to announce that the GO statement in nGQL now supports the int data type."
 tags: ["community"]
 author: "Steam"
 ---

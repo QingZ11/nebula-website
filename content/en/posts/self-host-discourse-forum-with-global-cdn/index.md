@@ -16,7 +16,7 @@ As an open source forum project, Discourse has the following highlights compared
 
 - **Highly customized**: Discourse lists 25 major setting items that including 300+ sub items. Even if everyone is using Discourse to build their forums, each forum can have its own unique style.
 - **Rich plugins**: Together with its active community, Discourse provides a big variety of plugins for  users to customize their forums such as the navi bar and banner image.
-- **Integrations**: Discourse can be fully integrated with other third-party tools like Google Analytics, Slack and Wordpress.
+- **Integrations**: Discourse can be fully integrated with other third-party tools like Google Analytics, Slack and WordPress.
 - **Free**: Discourse has an option to host the forum at $100/Month for you. However, you can totally deploy the service on your own without spending a penny.
 - **Easy to get started**: Discobot is a customizable bot  that teaches new users in an interactive way how to use  features like bookmarking a topic, oneboxing links (embedded previews), adding emoji, name mentions, simple formatting, adding a picture to a reply, flagging posts and the search function.
 
@@ -38,6 +38,7 @@ As mentioned above, Discourse provides hosting service, but we decided to self-h
 We have customized the internet settings and modified some plugins on the self-hosted forum so that our community members across the globe get to access it faster.
 
 ### Self-Hosting Prerequisites
+
 Below is a list of what's required for self-host a Discourse forum:
 
 - Linux servers with more than 2G memory, if your server memory is 1G, you need to enable the SWAP partition
@@ -193,8 +194,9 @@ Now you have your own Discourse forum with global CDN acceleration. Benefiting f
 
 That's pretty much how we have self hosted the Nebula Graph [forum](https://discuss.nebula-graph.io/) with global CDN. If you have any thoughts or suggestions, feel free to leave us comments below.
 
-> Hi, I'm George and I work as Implementation Engineer at Nebula Graph. I've been working in the devops field for years and would like to share what I've learn with you. Hope my post is helpful to you. Do let me know about your thoughts. Appreciate that!
+> _Hi, I'm George and I work as Implementation Engineer at Nebula Graph. I've been working in the devops field for years and would like to share what I've learn with you. Hope my post is helpful to you. Do let me know about your thoughts. Appreciate that!_
 
 ## You might also like
+
 1. [Automating Your Project Processes with Github Actions](https://nebula-graph.io/posts/github-action-automating-project-process/)
 1. [Compiling Trouble Shooting: Segmentation Fault and GCC Illegal Instruction](https://nebula-graph.io/posts/segmentation-fault-gcc-illegal-instruction-trouble-shooting/)

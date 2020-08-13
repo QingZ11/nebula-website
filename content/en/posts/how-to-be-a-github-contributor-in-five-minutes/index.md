@@ -94,7 +94,9 @@ Switch to the **Nebula Graph** repository directory and create a new branch name
 
 You can implement/fix your feature, comment your code in your `myfeature` branch now. Please follow the  [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) style and [Documentation Style Guide](https://github.com/vesoft-inc/nebula/blob/master/docs/manual-CN/4.contributions/developer-documentation-style-guide.md).
 
-We are using the [clang-format](https://clang.llvm.org/docs/ClangFormatStyleOptions.html) to format the code. It is recommended that you configure it according to the IDE/editor you use. The following links show how to configure clang-format with vim/emacs/vscode.<br />vim:
+We are using the [clang-format](https://clang.llvm.org/docs/ClangFormatStyleOptions.html) to format the code. It is recommended that you configure it according to the IDE/editor you use. The following links show how to configure clang-format with vim/emacs/vscode.
+
+vim:
 
 [https://github.com/rhysd/vim-clang-format](https://github.com/rhysd/vim-clang-format)
 
@@ -148,6 +150,7 @@ Please refer to the [Documentation Toc](https://github.com/vesoft-inc/nebula/blo
 Last but not least, you are welcome to try **Nebula Graph** at our [GitHub Repository](https://github.com/vesoft-inc/nebula). If you have any problems or suggestions please raise us an issue.
 
 ## You might also like
+
 1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/posts/nebula-graph-architecture-overview/)
 1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/posts/nebula-graph-storage-engine-overview/)
 1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/posts/nebula-graph-query-engine-overview/)

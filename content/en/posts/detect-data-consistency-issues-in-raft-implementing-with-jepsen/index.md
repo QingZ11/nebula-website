@@ -21,7 +21,7 @@ In this post, we will explain how to verify data consistency of the distributed 
 
 Let's start with the definition of strong data consistency.  Quote the book [_Designing Data-Intensive Applications_](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D/ref=sr_1_1?dchild=1&keywords=Designing+Data-Intensive+Applications&qid=1586310740&sr=8-1):
 
-> In a linearizable system, as soon as one client successfully completes a write, all clients reading from the database must be able to see the value just written._
+> _In a linearizable system, as soon as one client successfully completes a write, all clients reading from the database must be able to see the value just written._
 
 The basic idea of strong data consistency or linearizability is to make a distributed system appear as if there were only one copy of the data, and all operations on it are atomic. Any read request from any client gets the latest data written to the system.
 
@@ -43,7 +43,7 @@ Although seen from the above figure, request read 1 is sent first, it's the last
 
 The entire process does not violate the rules of strong data consistency, so the verification is passed.
 
-If the read request by client 3 returns the older value 4, then the system is not strongly consistent. Based on the previous analysis, the last successful write value is 1. If client 3 gets the stale value 4, then linearlizability of the system is broken.
+If the read request by client 3 returns the older value 4, then the system is not strongly consistent. Based on the previous analysis, the last successful write value is 1. If client 3 gets the stale value 4, then linearizability of the system is broken.
 
 Actually, Jepsen verifies strong data consistency of distributed systems with similar algorithms.
 
@@ -95,7 +95,7 @@ When network is partitioned, the old leader still processes read requests (write
 
 ## Conclusion
 
-You need long-term pressure tests and failure simulations to discover problems in a distributed system. Jespen is a great helper for its ability to verify distributed systems under various failures. 
+You need long-term pressure tests and failure simulations to discover problems in a distributed system. Jespen is a great helper for its ability to verify distributed systems under various failures.
 
 In the future, we will introduce other chaos engineering tools to verify data consistency in Nebula Graph. This way we can continuously improve performance while ensuring high data reliability.
 
@@ -105,4 +105,3 @@ In the future, we will introduce other chaos engineering tools to verify data co
 
 - [Practice Jepsen Test Framework in Nebula Graph](https://nebula-graph.io/posts/practice-jepsen-test-framework-in-nebula-graph/)
 - [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/posts/nebula-graph-storage-engine-overview/)
-

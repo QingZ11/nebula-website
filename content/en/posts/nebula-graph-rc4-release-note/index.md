@@ -18,7 +18,8 @@ Below is a list of features and tools in detail:
 
 - Support Index to make searches of related data more efficient. An index on a property/properties combination can be created with CREATE INDEX. `DROP INDEX` is to drop an index [#1776](https://github.com/vesoft-inc/nebula/pull/1776).  `REBUILD INDEX` is to reindex the data [#1566](https://github.com/vesoft-inc/nebula/pull/1566).
 - Support `LOOKUP ON`  to query on index [#1705](https://github.com/vesoft-inc/nebula/pull/1705). See [#1738](https://github.com/vesoft-inc/nebula/pull/1738) for the performance of Storage Engine when inserting data with an index.
-- Account management_ _and access control [#1842](https://github.com/vesoft-inc/nebula/pull/1842), [#1873](https://github.com/vesoft-inc/nebula/pull/1873)_.  _All users may perform only the operations permitted to them. For roles available in Nebula Graph and their privileges please refer to  [#1929](https://github.com/vesoft-inc/nebula/pull/1929). Add `--enable_authorize=true`  to nebula-graphd.conf and restart the services to enable  authentication.
+- Account management and access control [#1842](https://github.com/vesoft-inc/nebula/pull/1842), [#1873](https://github.com/vesoft-inc/nebula/pull/1873) 
+- All users may perform only the operations permitted to them. For roles available in Nebula Graph and their privileges please refer to  [#1929](https://github.com/vesoft-inc/nebula/pull/1929). Add `--enable_authorize=true`  to nebula-graphd.conf and restart the services to enable  authentication.
 - Support TTL to  remove items  after a certain amount of time automatically [#1584](https://github.com/vesoft-inc/nebula/pull/1584), [#422](https://github.com/vesoft-inc/nebula/pull/422), [#1934](https://github.com/vesoft-inc/nebula/pull/1934)
 - Enhance `DELETE VERTEX`  to support deleting a batch of vertices. And supports `hash()` and `uuid()`  functions for VertexID [#1317](https://github.com/vesoft-inc/nebula/pull/1317), [#1759](https://github.com/vesoft-inc/nebula/pull/1759)
 - Introduce Job Manager to manage the  jobs that take a long time of Storage Engine. At present, it supports `flush`  and `compact` operations. `SUBMIT JOB`  is to submit a job.  `STOP JOB` stops the running jobs. SHOW JOB shows the detailed info of a job. `RECOVER JOB` is to put back the failed job to the queue. [#1424](https://github.com/vesoft-inc/nebula/pull/1424)
@@ -32,8 +33,8 @@ Below is a list of features and tools in detail:
 
 ## Tools
 
--  Support Deploying Nebula Graph on Kubernetes with Helm [#1473](https://github.com/vesoft-inc/nebula/pull/1473)
--  Introduce `Nebula Stats Exporter` (for Prometheus) to collect database metrics and expose metrics to Prometheus. And Grafana is integrated for metrics Visualization and Alerting. [https://github.com/vesoft-inc/nebula-stats-exporter/pull/2](https://github.com/vesoft-inc/nebula-stats-exporter/pull/2)
+- Support Deploying Nebula Graph on Kubernetes with Helm [#1473](https://github.com/vesoft-inc/nebula/pull/1473)
+- Introduce `Nebula Stats Exporter` (for Prometheus) to collect database metrics and expose metrics to Prometheus. And Grafana is integrated for metrics Visualization and Alerting. [https://github.com/vesoft-inc/nebula-stats-exporter/pull/2](https://github.com/vesoft-inc/nebula-stats-exporter/pull/2)
 
 ## Changes
 
@@ -44,6 +45,7 @@ Below is a list of features and tools in detail:
 ## Upgrade from RC3 to RC4
 
 If you are currently using a previous version of Nebula Graph and would like to try the new features in RC4, please follow the steps below for an upgrade:
+
 1. Stop all Nebula services
     1. Execute scripts/nebula.service stop all on each machine
     1. Execute scripts/nebula.service status all to confirm all services are stopped

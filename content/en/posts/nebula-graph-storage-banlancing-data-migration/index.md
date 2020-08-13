@@ -103,7 +103,7 @@ nebula> SHOW HOSTS
 
 ![image](https://user-images.githubusercontent.com/56643819/73818168-bcff6500-4827-11ea-9924-b12919acd489.png)
 
-After we created the space `test` with 100  _partitio_ns and 3 replicas, the host192.168.8.210:34600 serves NO leader, while 192.168.8.210:34700 serves 52 leaders and 192.168.8.210 serves 48 leaders。The leaders are not equilly distributed.
+After we created the space `test` with 100  _partitio_ns and 3 replicas, the host192.168.8.210:34600 serves NO leader, while 192.168.8.210:34700 serves 52 leaders and 192.168.8.210 serves 48 leaders。The leaders are not equally distributed.
 
 ### Step 2 Add five new instances
 
@@ -137,7 +137,7 @@ nebula> SHOW HOSTS
 
 ![image](https://user-images.githubusercontent.com/56643819/73815823-12387800-4822-11ea-8ee9-f0071d60fd7c.png)
 
-In the above picture, the five blue icons are the newly added ones. However, since we just add them, they serve no parititons.
+In the above picture, the five blue icons are the newly added ones. However, since we just add them, they serve no partitions.
 
 ### Step 3 Data migration
 
@@ -232,7 +232,7 @@ Got 8 rows (Time spent: 5074/6488 us)
 
 ![image](https://user-images.githubusercontent.com/56643819/73815873-33996400-4822-11ea-8ad4-eb6072faee94.png)
 
-As you can tell from the `Partition pistribution` column, The numbers are close to each other (37 or 38 for an instance), and total partition number is 300. But ...
+As you can tell from the `Partition distribution` column, The numbers are close to each other (37 or 38 for an instance), and total partition number is 300. But ...
 
 ### Step 6 Balance leader
 
@@ -275,7 +275,7 @@ As the above picture indicates, when `BALANCE LEADER` runs successfully, the num
 
 ## Batch Scale in
 
-**Nebula Graph** also supports to go offline a host (and scale in the cluster) during service. The command is<br />`BALANCE DATA REMOVE $host_list`.
+**Nebula Graph** also supports to go offline a host (and scale in the cluster) during service. The command is `BALANCE DATA REMOVE $host_list`.
 
 For example, command `BALANCE DATA REMOVE 192.168.0.1:50000,192.168.0.2:50000` removes two hosts, i.e. 192.168.0.1:50000 and 192.168.0.2:50000, from the cluster.
 
@@ -287,7 +287,7 @@ In this post, we showed how to balance data and balance work load on a raft-clus
 
 ![image](https://user-images.githubusercontent.com/56643819/73818243-e4563200-4827-11ea-815f-178ccdcc19ae.png)
 
-The red number indicates a change happend after a command is executed.
+The red number indicates a change has happened after a command is executed.
 
 ## Appendix
 
