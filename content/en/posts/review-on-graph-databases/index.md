@@ -378,6 +378,7 @@ A graph database may have many different infrastructure implementations but they
 > Johhan is currently a Software Engineer Intern at Nebula Graph, researching and implementing large-scale graph query engine and storage engine components. As a contributor to the Nebula Graph database, he aims to add openly available learning resources about databases, distributed systems, and AI through blog posts and article publishing.
 
 ## You might also like
+
 1. [Nebula Graph Architecture — A Bird’s View](https://nebula-graph.io/posts/nebula-graph-architecture-overview/)
 1. [An Introduction to Nebula Graph's Storage Engine](https://nebula-graph.io/posts/nebula-graph-storage-engine-overview/)
 1. [An Introduction to Nebula Graph’s Query Engine](https://nebula-graph.io/posts/nebula-graph-query-engine-overview/)

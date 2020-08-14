@@ -20,9 +20,13 @@ During the last month, no big changes happened to the ranking of Graph DBMS. How
 
 Here are some updates in the last week:
 • Supports using the `FETCH PROP ON` statement to retrieve the properties of multiple tags for more than one vertex. When this syntax is used together with another syntax in one statement, the pipe (`|`) can be used to pass the output of the previous syntax as the input of the `FETCH PROP ON` syntax. The `FETCH PROP ON *` statement supports retrieving the properties for multiple vertices. For more information, check the following pull requests: https://github.com/vesoft-inc/nebula/pull/2222  https://github.com/vesoft-inc/nebula-docs/pull/117
+
 • Supports exposing RocksDB statistics through Webservice. For more information, check this pull request: https://github.com/vesoft-inc/nebula/pull/2262
+
 • Removed the lock for FunctionManager, improving the performance of frequent invocation by multiple threads. For more information, check this pull request: https://github.com/vesoft-inc/nebula/pull/2273
+
 • Fixed the issue that Leader vote may fail during the BALANCE LEADER execution. For more information, check this pull request: https://github.com/vesoft-inc/nebula/pull/2232
+
 • Restructured VertexHolder::getDefaultProp, improving the performance of retrieving the default value of a property. For more information, check this pull request: https://github.com/vesoft-inc/nebula/pull/2249
 
 ## Community Q&A
