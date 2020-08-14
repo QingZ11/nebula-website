@@ -61,6 +61,10 @@ The results are as below:
 
 Seen from the above table, in terms of data import, Nebula Graph is a bit slower than Neo4j when the data size is small. However, when the data size is large, Nebula Graph is much faster than the other two. For the three graph queries, Nebula Graph shows clearly better performance compared to Neo4j and HugeGraph.
 
+Here is a chart overview of the comparison:
+
+![Graph Database Performance Comparison Chart](https://user-images.githubusercontent.com/57335825/90246630-dfcb9100-dde9-11ea-8ddc-3334e6614c8e.png)
+
 ### Graph Query Language Comparison
 
 #### Neo4j Cypher
