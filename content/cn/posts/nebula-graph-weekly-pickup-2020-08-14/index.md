@@ -1,5 +1,5 @@
 ---
-title: "Pick of the Week'20 | 第 32 周看点--多个 pr 提高 Nebula Graph性能和稳定性"
+title: "Pick of the Week'20 | 第 33 周看点--多方图数据库测试性能发布"
 date: 2020-08-14
 description: "在本周大事件中你将了解到 Nebula Graph 和其他图数据库的性能测试对比，此外在 Go 查询方面研发人员提升了查询性能"
 tags: ["社区","产品动态"]
