@@ -392,7 +392,7 @@ Declare skip deploy in example module's `pom.xml` file.
 </plugins>
 ```
 
-Q: Why is `maven-gpg-plugin` placed in the parent's `pom.xml`, while<br />`maven-javadoc-plugin` and `maven-source-plugin` plugins are placed in the client's `pom.xml`?
+Q: Why is `maven-gpg-plugin` placed in the parent's `pom.xml`, while `maven-javadoc-plugin` and `maven-source-plugin` plugins are placed in the client's `pom.xml`?
 
 A: Because all the uploaded components need to be encrypted, including the parent's `pom.xml`; and only the client needs to upload javadoc and source, so `maven-javadoc-plugin` and `maven-source-plugin` plugins are put in Client.
 

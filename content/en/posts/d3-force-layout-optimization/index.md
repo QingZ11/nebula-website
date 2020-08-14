@@ -86,7 +86,7 @@ Although such solution still affects the nodes within a small range, it will not
 # Set the new nodes coordinates as the source node center or the entire graph center
 addVertexes.map(d => {
   d.x = _.meanBy(selectVertexes, 'x') || svg.style('width') / 2;
-  d.y = _.meanBy(selectVertexes, 'y') || svg.style('heigth') / 2;
+  d.y = _.meanBy(selectVertexes, 'y') || svg.style('height') / 2;
 });
 ```
 
@@ -173,7 +173,7 @@ In this article we shared the two most common scenarios, i.e. presenting new nod
 
 Try Nebula Graph with [Nebula Graph Studio](https://github.com/vesoft-inc/nebula-web-docker) to experience the D3.js visualization. Leave us a comment below or head over to our [forum](https://discuss.nebula-graph.io/) if there are any questions.
 
-> Hi, I'm Nico, the front-end engineer at Nebula Graph. I'm interested in data visualization and would like to share my experiences in this regard. Hope my post is of help to you. Please let me know if you have any ideas about this. Thanks!
+> _Hi, I'm Nico, the front-end engineer at Nebula Graph. I'm interested in data visualization and would like to share my experiences in this regard. Hope my post is of help to you. Please let me know if you have any ideas about this. Thanks!_
 
 ## You might also like
 

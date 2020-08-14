@@ -22,7 +22,7 @@ This week let's talk about the Job Manager feature.
 
 There are some time-consuming tasks running at the storage layer of Nebula Graph. For such tasks, we provide Job Manager, a management tool, for releasing, managing, and querying the jobs.
 
-We currently provie Compact and Flush for task releasing. Compact is usually used to clear data that has been marked for deletion from the storage layer, and flush is used to write back the memfile in memory to the hard disk.
+We currently provide Compact and Flush for task releasing. Compact is usually used to clear data that has been marked for deletion from the storage layer, and flush is used to write back the memfile in memory to the hard disk.
 
 **Scenario #1: Release RocksDB Compact Task.**
 To release a RocksDB compact task, you can run the `SUBMIT JOB COMPACT;` command and a Job ID is returned, as shown in the following figure:
@@ -35,7 +35,7 @@ To write the RocksDB memfile in the memory to the hard disk, you can run the `SU
 
 **Scenarios #2: Query Tasks.**
 
-In terms of task query, we support to list a single job or all jobs for task quering.
+In terms of task query, we support to list a single job or all jobs for task querying.
 
 To find all the jobs, you can run the `SHOW JOBS;` statement to do the full job query. All the job IDs are returned, as shown in the following figure：
 

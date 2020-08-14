@@ -8,7 +8,7 @@ tags: ["tools"]
 
 ![Compare Multiple Projects with this GitHub Stats tool](https://user-images.githubusercontent.com/57335825/83610262-09d41d80-a534-11ea-875a-5e696df2c6f0.png)
 
-If you have project code hosted on GitHub, chances are you might be interested in checking some numbers and stats such as stars, commits and rull requests.
+If you have project code hosted on GitHub, chances are you might be interested in checking some numbers and stats such as stars, commits and pull requests.
 
 You might also want to compare some similar projects in terms of the above mentioned stats, for whatever reasons that interest you.
 
@@ -18,7 +18,7 @@ Let's dive right in to what we can get out of it.
 
 ## Getting started
 
-This interative tool is really easy to use. Follow the three steps below and you'll get what you want in real-time:
+This interactive tool is really easy to use. Follow the three steps below and you'll get what you want in real-time:
 
 1. Head to the [GitHub repo](https://vesoft-inc.github.io/github-statistics/) of the tool
 1. Enter as many projects as you need to check on
@@ -40,7 +40,7 @@ So basically these metrics can answer the following questions for you:
 
 2. Which project gets the most attention?
 
-      tensorflow wins bwcause it has the most watchers.
+      tensorflow wins because it has the most watchers.
 
 ## Popularity metrics
 

@@ -73,14 +73,14 @@ Based on the above scenario, we can extract the essential requirements for the T
 
 Based on the above requirements, we have come to the following design thinking for the Task Manager:
 
-1. Identidy a task with the Task Handle (JobId and TaskId in Thrift).
+1. Identify a task with the Task Handle (JobId and TaskId in Thrift).
 1. The Blocking Queue in the Task Manager is responsible for queuing the Task Handles, which is similar to the Queue Management Machine in a bank. The Blocking Queue itself is thread safe.
 1. Blocking Queue supports scheduling tasks based on priorities, which is similar to VIPs jumping the queue.
 1. The Task Manager maintains the globally unique Map, with the Task Handle as its key and a specific task as its value (similar to a bank hall). In Nebula Graph, we have introduced a thread safe Map, i.e. the Concurrent Hash Map from folly.
 1. When a task is cancelled, the Task Manager will locate it in the Map according to the Handle, tagging cancellation to it while doing nothing to the Handles in the queue.
 1. If a storaged is shut down while there are still running sub tasks, the result will not be returned until all the sub tasks are completed.
 
-### Exexuting Tasks within a Resource Threshold
+### Executing Tasks within a Resource Threshold
 
 It is  easy to ensure that the threshold is not exceeded because the Worker is a thread. Simply ensure that all the workers come from the same thread pool.
 

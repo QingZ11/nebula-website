@@ -14,7 +14,7 @@ If there are top ten buzzwords in the technology industry in the year of 2019, *
 
 Docker is widely used in daily front-end development. [Nebula Graph Studio](https://github.com/vesoft-inc/nebula-web-docker/blob/master/README.md) (A visualization tool for **Nebula Graph**) uses Docker based on the following considerations:
 
-- **Unified operating environment**: There are several services behind our tools, such as existing services from different technology stacks, and pure front-end static resources.<br />
+- **Unified operating environment**: There are several services behind our tools, such as existing services from different technology stacks, and pure front-end static resources.
 - **Low user cost**: Currently, cloud services are under development. We want a smooth experience of the combined services, and Docker makes this possible with the ability of starting and applying all the services locally just in one step.
 - **Quick deployment**: This front-end project is inspired by the [Nebula Graph Docker Image](https://github.com/vesoft-inc/nebula-docker-compose).
 

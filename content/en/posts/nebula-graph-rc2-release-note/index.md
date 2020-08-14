@@ -16,7 +16,7 @@ Below is a detailed rundown of the newly added features:
 
 ## Query engine
 
-- Support `GROUP BY ` to group items that have the same values, often used with aggregate functions (COUNT, MAX, MIN, SUM, AVG, etc.) to group the result-set by one or more property field. [#749](https://github.com/vesoft-inc/nebula/issues/749)
+- Support `GROUP BY` to group items that have the same values, often used with aggregate functions (COUNT, MAX, MIN, SUM, AVG, etc.) to group the result-set by one or more property field. [#749](https://github.com/vesoft-inc/nebula/issues/749)
 - UPDATE CONFIGS supports expression  [#1273](https://github.com/vesoft-inc/nebula/issues/1273)
 - Support changing log severity level and verbose level from console  [#1273](https://github.com/vesoft-inc/nebula/issues/1273)
 - Support IF...RETURN... to return the result if a specified condition is true [#1233](https://github.com/vesoft-inc/nebula/issues/1233) 、[#1246](https://github.com/vesoft-inc/nebula/issues/1246)
@@ -29,11 +29,11 @@ Below is a detailed rundown of the newly added features:
 
 - Support SHOW PARTS to fetch the partition information of current space [#1086](https://github.com/vesoft-inc/nebula/issues/1086)
 - Support BALANCE STOP to stop load balance process [#1238](https://github.com/vesoft-inc/nebula/issues/1238)
-- Support triggering the compaction and flush manually [#677](https://github.com/vesoft-inc/nebula/issues/677)、[ #1240](https://github.com/vesoft-inc/nebula/issues/1240)
+- Support triggering the compaction and flush manually [#677](https://github.com/vesoft-inc/nebula/issues/677), [#1240](https://github.com/vesoft-inc/nebula/issues/1240)
 - Change BlockBasedTable default block cache size from 4MB to 1024MB  [#1248](https://github.com/vesoft-inc/nebula/issues/1248)
 - Change default partition from 1024 number to 100 [#1330](https://github.com/vesoft-inc/nebula/issues/1330)
 - Add max_edge_returned_per_vertex gflags option to limit the return size of supper vertex [#1221](https://github.com/vesoft-inc/nebula/issues/1221)
-- Add cache for vertex [ #1294](https://github.com/vesoft-inc/nebula/issues/1294) [#1268](https://github.com/vesoft-inc/nebula/issues/1268)
+- Add cache for vertex [#1294](https://github.com/vesoft-inc/nebula/issues/1294) [#1268](https://github.com/vesoft-inc/nebula/issues/1268)
 - Upgrade dependencies folly and fbthrift [#1161](https://github.com/vesoft-inc/nebula/issues/1161)
 
 ## Tools

@@ -195,7 +195,7 @@ After that, re-run `cmake` command to generate a new makefile. Then call `cpack
 
 ### More Common Parameters
 
-- Cutomized installation directory: The package will be installed to the directory configured by `CPACK_INSTALL_PREFIX`, which is `/home/vesoft/install`in the configuration above. To build a relocatable RPM,, add the following configuration before **include(CPack)**.
+- Customized installation directory: The package will be installed to the directory configured by `CPACK_INSTALL_PREFIX`, which is `/home/vesoft/install`in the configuration above. To build a relocatable RPM,, add the following configuration before **include(CPack)**.
 
 ```markdown
 # Set CPACK_SET_DESTDIR to OFF

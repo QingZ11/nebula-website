@@ -12,7 +12,7 @@ Site generators are no longer a novel topic. Various programming languages have 
 
 To clarify, there is not much difference in the frameworks written in various languages. It is personal preferences and aesthetics that matter, which is not the topic covered in this post.
 
-## Website Requitements at Nebula Graph
+## Website Requirements at Nebula Graph
 
 ### Blog Content Management
 
@@ -20,7 +20,7 @@ The Nebula Graph team frequently shares [technical articles](https://nebula-grap
 
 ### Product Proliferation
 
-Commonly seen product proliferation pages include a home page, a newsroom page, and a company page, etc. This requires that the Conent Management System supports various types of pages. These pages may share the same components such as the navi bar and footer. Details will be covered later as well.
+Commonly seen product proliferation pages include a home page, a newsroom page, and a company page, etc. This requires that the Content Management System supports various types of pages. These pages may share the same components such as the navi bar and footer. Details will be covered later as well.
 
 ### SEO
 
@@ -150,9 +150,9 @@ Hugo will package your content to a static resource package so that you can depl
 
 The above are my experiences on using the Hugo framework to build [Nebula Graph Website](https://nebula-graph.io/). I hope that this article provides some ideas and references to those who need to quickly build sites. I have customized our site based on the existing themes. If you are curious about it, please go to the [GitHub Repository](https://github.com/vesoft-inc/nebula-website) for the details. Welcome to visit our graph database [Nebula Graph](https://github.com/vesoft-inc/nebula), thank you.
 
+> _Hi, I’m Jerry, the front-end engineer at Nebula Graph. I would like to share my experiences in the front-end development. Hope my post is of help to you. Please let me know if you have any ideas about this. Thanks!_
+
 ## You might also like
 
 1. [Automating Your Project Processes with Github Actions](https://nebula-graph.io/posts/github-action-automating-project-process/)
 1. [How to Reduce Docker Image Size](https://nebula-graph.io/posts/how-to-reduce-docker-image-size/)
-
-> Hi, I’m Jerry, the front-end engineer at Nebula Graph. I would like to share my experiences in the front-end development. Hope my post is of help to you. Please let me know if you have any ideas about this. Thanks!
