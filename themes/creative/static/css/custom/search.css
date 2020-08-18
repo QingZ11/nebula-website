@@ -1,0 +1,40 @@
+#___gcse_0 .gsc-control-cse{
+    width: 138px ;
+    height: 34px ;
+    margin-top: 13px;
+    padding: 0px ;
+    border: none ;
+    border-radius: 6px;
+}
+.gsc-input .gsc-input-box{
+    height: 34px;
+    width: 77px;
+    border: none;
+}
+#gs_tti50{
+    border: none ;
+    border-radius: 6px;
+}
+.gsc-input{
+    /* Hack: use imporant to overrider the inline style of the Google search box */
+    height: 34px!important;  
+    margin: 0 0 0 10px !important;  
+}
+#gs_id50 .gsib_a{
+    padding: 0px ;
+    border: none ;
+}
+.gsc-search-button .gsc-search-button-v2{
+    width: 42px;
+    height: 34px;
+    padding: none;
+}
+.gsc-tabData.gsc-tabdActive{
+    text-align: left;
+}
+.gsc-adBlock iframe{
+    display: none;
+}
+#baidu-search{
+    display: none;
+}

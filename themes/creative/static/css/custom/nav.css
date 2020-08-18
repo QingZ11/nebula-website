@@ -66,10 +66,25 @@
 .dropdown-menu>li :hover {
   text-decoration: underline;
 }
-#navbar-right {
-  float: right !important;
+#navbar-left {
+  float: left;
 }
-#navbar-right a{
+#nav #navbar-left a{
+  width:100%;
+  height:30px ;
+  line-height: 0 ;
+  margin-top: 15px;
+  padding-left: 15px ;
+  padding-right: 15px ;
+  background:rgba(15, 15, 15, 1);
+  box-shadow:0px 0px 0px 1px rgba(0, 128, 255, 1);
+  border-radius:15px;
+  border:1px solid rgba(0, 128, 255, 1);
+}
+.navbar-right{
+  margin: 0 15px;
+}
+#navbar-left a{
   width:100%;
   height:30px !important;
   line-height: 0 !important;
@@ -80,9 +95,6 @@
   box-shadow:0px 0px 0px 1px rgba(0, 128, 255, 1);
   border-radius:15px;
   border:1px solid rgba(0, 128, 255, 1);
-}
-.navbar-right{
-  margin: 0 15px;
 }
 .J-simple-alert{
   position: fixed;
@@ -149,6 +161,9 @@
   color: #fff;
   text-decoration: none;
   border: 2px solid #f40;
+}
+#search-box{
+  float: right;
 }
 @media(min-width: 768px) {
   .navbar {
@@ -280,6 +295,19 @@
       padding-top: 15px;
   }
   #navbar-right a {
+      line-height: 0;
+      margin-top: 0;
+      background: #fff;
+      box-shadow: none;
+      border: none;
+  }
+  #navbar-left {
+    float: none ;
+    height: 40px;
+    padding-top: 15px;
+  }
+
+  #nav #navbar-left a {
       line-height: 0;
       margin-top: 0;
       background: #fff;

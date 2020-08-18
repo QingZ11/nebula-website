@@ -59,6 +59,9 @@
                             </ul>
                             <!-- <a class="page-scroll" href="#about">{{ .title }}</a> -->
                         </li>
+                        <li id="search-box">
+                            {{ partial "search.html" . }}
+                        </li>
                     {{ else }}
                         {{ $blogLink := replace $.Permalink "/tags/" "/posts/"}}
                         <li id="{{.calss}}" class="{{if (or (in $.Permalink .link) (in $blogLink .link)) }}active{{end}}{{.class}}">
