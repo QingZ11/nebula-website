@@ -6,10 +6,10 @@
         },
         attachEvent(){
             $('#search-btn').click(function(){
-                $('#bdcs-frame-box').css("display","block"); 
+                $('.baidu-iframe').css("display","block"); 
             });
             $('#close-icon').click(function(){
-                $('#bdcs-frame-box').css("display","none");
+                $('.baidu-iframe').css("display","none");
             })
         },
         renderGoogleSearch(){
@@ -29,7 +29,7 @@
                     reject();
                 },4000)
                 image.onerror = reject;
-                image.src = "http://google.com/favicon.ico?" + Math.random();
+                image.src = "https://google.com/favicon.ico?" + Math.random();
             });
         },
         render:function() {

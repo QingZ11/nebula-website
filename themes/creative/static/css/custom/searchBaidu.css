@@ -60,5 +60,9 @@ iframe .s_nav{
     outline: none ;
     box-shadow:none;
 }
-
-
+.baidu-iframe{
+    position: absolute;
+    top:110%;
+    right: 30%;
+    display: none;
+}

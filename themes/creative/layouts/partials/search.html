@@ -4,16 +4,9 @@
         <input id="search-btn" type="submit" value="🔍">
         <input type="hidden" name="cc" value="nebula-graph.com.cn">
     </form>
-    <div id="bdcs-frame-box"><img id="close-icon" src="/images/closeIcon.png"></div>
-    <script type="text/javascript">
-    // The following variables are the configuration parameters needed by Baidu search iframe.js
-        var bdcsFrameSid="10587511514294368879";
-        var bdcsFrameWidth = 1000;
-        var bdcsFrameHeight =800;
-        var bdcsFrameWt = 1;
-        var bdcsFrameHt = 1;
-        var bdcsFrameResultNum = 5;
-        var bdcsFrameBgColor = "#ffffff";
-    </script>
+    <div class="baidu-iframe">
+        <iframe id="bdcsFrame" name="bdcsFrame" frameborder="0" height="800" width="1000"></iframe>
+        <img id="close-icon" src="/images/closeIcon.png">
+    </div>
 </div>
 <div id="google-search"></div>
