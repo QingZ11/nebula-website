@@ -60,7 +60,11 @@
                             <!-- <a class="page-scroll" href="#about">{{ .title }}</a> -->
                         </li>
                         <li id="search-box">
-                            {{ partial "search.html" . }}
+                            {{ if eq $.Site.Language.Lang "en" }}
+                                {{ partial "search.html" . }}
+                            {{ else }}
+                                {{ partial "searchCN.html" . }}
+                            {{ end }}
                         </li>
                     {{ else }}
                         {{ $blogLink := replace $.Permalink "/tags/" "/posts/"}}

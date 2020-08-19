@@ -32,8 +32,8 @@
 .gsc-tabData.gsc-tabdActive{
     text-align: left;
 }
-.gsc-adBlock iframe{
-    display: none;
+#___gcse_0 .gsc-adBlock iframe{
+    display: none !important;
 }
 #baidu-search{
     display: none;
