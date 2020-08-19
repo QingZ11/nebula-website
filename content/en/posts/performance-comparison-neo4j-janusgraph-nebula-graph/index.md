@@ -6,7 +6,7 @@ author: "Tencent Cloud Team"
 tags: ["user-review"]
 ---
 
-![Performance Comparison: Neo4j vs Nebula Graph vs JanusGraph](https://user-images.githubusercontent.com/57335825/90241167-5ca53d80-dddf-11ea-8e28-ca9a6b6b1ad5.png)
+![Performance Comparison: Neo4j vs Nebula Graph vs JanusGraph](https://user-images.githubusercontent.com/57335825/90609288-acf21600-e1b8-11ea-92d0-5638a45fc6c8.png)
 
 ## Who Did the Comparison
 

@@ -1,12 +1,12 @@
 ---
-title: "Analyzing Relationships in Game of Thrones With NetworkX, Gelphi, and Nebula Graph (Part One)"
+title: "Analyzing Relationships in Game of Thrones With NetworkX, Gephi, and Nebula Graph (Part One)"
 date: 2020-08-19
 description: "This article show you how to analyze the complex and intertwined character relationships in Game of Thrones with NetworkX, Gephi, and Nebula Graph."
 author: "Wang Jie"
 tags: ["dev-log"]
 ---
 
-![Analyzing Relationships in Game of Thrones With NetworkX, Gelphi, and Nebula Graph](https://user-images.githubusercontent.com/57335825/90602643-f2114a80-e1ae-11ea-9fea-0516b8bf71e1.png)
+![Analyzing Relationships in Game of Thrones With NetworkX, Gephi, and Nebula Graph](https://user-images.githubusercontent.com/57335825/90602643-f2114a80-e1ae-11ea-9fea-0516b8bf71e1.png)
 
 The hit series _Game of Thrones_ by HBO is popular all over the world. Besides the unexpected plot twists and turns, the series is also known for its complex and highly intertwined character relationships. In this post, we will access the open source graph database [Nebula Graph](https://github.com/vesoft-inc/nebula) with [NetworkX](https://networkx.github.io/) and visualize the complex character connections in _Game of Thrones_ with [Gephi](https://gephi.org/).
 
