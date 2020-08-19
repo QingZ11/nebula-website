@@ -1,0 +1,68 @@
+#bdcs{
+    margin-top: 13px;
+}
+#bdcs-frame-box{
+    position: absolute;
+    top: 110%;
+    right: 0;
+    box-shadow: 0 3px 25px 0 rgba(0,0,0,0.8);
+}
+.bdcs-container .bdcs-search-form-input:focus{
+    border: none;
+}
+#close-icon{
+    position: absolute;
+    top:4%;
+    right: 5%;
+    z-index: 99;
+}
+#close-icon:hover{
+    cursor: pointer;
+}
+iframe{
+    background-color: #fff;
+    height: 600px;
+}
+iframe .s_nav{
+    display: none !important;
+}
+#bdcs-frame-box{
+    display: none;
+}
+#search-box form{
+    margin-top: 13px;
+    width: 138px;
+}
+#search-box input[type="text"]{
+    width: 103px;
+    padding-left: 10px;
+    border: 0;
+    height: 34px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+#search-box input[type="text"]:focus{
+    outline: none ;
+    box-shadow:none; 
+}
+#search-box input[type="submit"]{
+    background-color: #fff;
+    border:none;
+    width: 35px;
+    height: 34px;
+    position: absolute;
+    top: 13px;
+    right: 0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+#search-box input[type="submit"]:focus{
+    outline: none ;
+    box-shadow:none;
+}
+.baidu-iframe{
+    position: absolute;
+    top:110%;
+    right: 30%;
+    display: none;
+}

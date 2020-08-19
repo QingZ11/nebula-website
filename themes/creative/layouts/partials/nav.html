@@ -59,6 +59,13 @@
                             </ul>
                             <!-- <a class="page-scroll" href="#about">{{ .title }}</a> -->
                         </li>
+                        <li id="search-box">
+                            {{ if eq $.Site.Language.Lang "en" }}
+                                {{ partial "search.html" . }}
+                            {{ else }}
+                                {{ partial "searchCN.html" . }}
+                            {{ end }}
+                        </li>
                     {{ else }}
                         {{ $blogLink := replace $.Permalink "/tags/" "/posts/"}}
                         <li id="{{.calss}}" class="{{if (or (in $.Permalink .link) (in $blogLink .link)) }}active{{end}}{{.class}}">
