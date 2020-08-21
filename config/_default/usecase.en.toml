@@ -3,6 +3,8 @@ contentDir = "content/en"
    
    #  Real-time Recommendation section
   [params.realTimeRecommendation]
+      title="Graph Database Use Case | Real-Time Recommendation | Nebula Graph"
+      description="Real-time resommendation is a typical use case of graph databases.  Nebula Graph's native graph data structure and the shared-nothing architecture enables highly relevant real-time recommendations."
       pic = "realTimeRecommendation.png"
       bannerTtile = "Real-Time Recommendations"
       bannerText="Social media, online retailers, streaming media, news outlets and similar businesses want to provide users with valuable in-the-moment recommendations."
@@ -32,6 +34,8 @@ contentDir = "content/en"
   
   #  Fraud Detection section
   [params.fraudDetection]
+      title="Graph Database Use Case | Fraud Detection | Nebula Graph"
+      description="Fraud detection is a typical use case of graph databases. Nebula Graph's capability of dealing with super large datasets can help uncover the most complex fraud paths."
       pic = "fraudDetection.png"
       bannerTtile = "Anti-Money Laundering & Fraud Detection"
       bannerText="Fraudulent activities are more abundant than ever: money laundering, credit card fraud, skimming, and so on. Millions of fraudulent activities are reported to banks alone each year and account for billions of dollars in losses."
@@ -62,6 +66,8 @@ contentDir = "content/en"
   
   #  Cyber Security section
   [params.cyberSecurity]
+      title="Graph Database Use Case | Cyber Security | Nebula Graph"
+      description="Cyber security is a typical use case of graph databases. Nebula Graph is able to uncover the most sophisticated cyberattacks. "
       pic = "cyberSecurity.png"
       bannerTtile = "Combatting Cybersecurity Threats"
       bannerText="Cybersecurity has been called by many in the federal government as the next big threat to a country’s national security. For businesses, everything from corporate espionage to elaborate hacking schemes are daily threats."
@@ -91,6 +97,8 @@ contentDir = "content/en"
 
   # ai-and-machine-learning section
   [params.aiAndMachineLearning]
+      title="Graph Database Use Case | AI and Machine Learning | Nebula Graph"
+      description="Machine learning and knowledge graph are typical use cases of graph databases. Nebula Graph's capability of dealing with super large datasets can help rapidly deliver more accurate AI results."
       pic = "aiAndMachineLearning1.png"
       bannerTtile = "Machine Learning and AI Data Sets"
       bannerText="A main goal behind machine learning is to implement artificial intelligence to automatically have systems learn from experience to gain accuracy without needing to program in that knowledge."

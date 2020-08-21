@@ -1,3 +1,9 @@
+{{ define "title" }}
+    {{ .Site.Params.newsRoom.title }}
+{{end}}
+{{ define "description" }}
+    <meta name="description" content="{{.Site.Params.newsRoom.description}}">
+{{ end }}
 {{ define "main" }}
 <main id="top" class="blog-list newsroom">
     <div class="wrapper">

@@ -1,5 +1,9 @@
 contentDir = "content/cn"
 [params]
+    # NewsRoom section
+  [params.newsRoom]
+    title="Nebula Graph - 媒体报道"
+    description="对话媒体，知晓厂商、业界对 Nebula Graph 的看法态度。"
 
     # News section
   [params.news]
@@ -9,6 +13,8 @@ contentDir = "content/cn"
       content1= "• 公司 Logo"
       content2= "• 创始人宣传照"
       readMore = "Read More >>"
+      newsTitle="Nebula Graph - 新闻动态"
+      newsDescription="最新产品规划、发展路径、开发进度、企业动态，了解图数据库 Nebula Graph 的内部动态。"
       [[params.news.list]]
         pic = "feature1.png"
         title = "开源图数据库研发商「欧若数网」开启全球商用化，获800万美元Pre-A轮融资"

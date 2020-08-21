@@ -1,3 +1,9 @@
+{{ define "title" }}
+    {{ .Site.Params.cyberSecurity.title }}
+{{end}}
+{{ define "description" }}
+    <meta name="description" content="{{.Site.Params.cyberSecurity.description}}">
+{{ end }}
 {{ define "main" }}
 <main id="top" class="use-case">
     <div class="case">

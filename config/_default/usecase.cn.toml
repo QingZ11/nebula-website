@@ -3,6 +3,8 @@ contentDir = "content/cn"
 
   #  Real-time Recommendation section
   [params.realTimeRecommendation]
+      title="Nebula Graph - 应用场景 - 实时推荐"
+      description="实时推荐是典型的图数据库应用场景之一，Nebula Graph 原生图存储和 shared-nothing 架构设计助力在线业务实现高度相关的实时推荐，助力在线业务增长。"
       pic = "realTimeRecommendation.png"
       bannerTtile = "实时推荐"
       bannerText="实时推荐是在线业务的新增长点，电商巨头亚马逊称其35%的销售额来自于商品交叉推荐。"
@@ -33,6 +35,8 @@ contentDir = "content/cn"
   
   #  Fraud Detection section
   [params.fraudDetection]
+      title="Nebula Graph - 应用场景 - 金融风控"
+      description="层出不穷的金融欺诈手段对金融行业的健康发展造成了严重的威胁，使用 Nebula Graph 分析交易行为识别欺诈交易特征，实现在交易中实时探测欺诈特征，阻断可疑交易。"
       pic = "fraudDetection.png"
       bannerTtile = "金融风控"
       bannerText="风险控制对金融行业的重要性不言而喻，其中层出不穷的金融欺诈手段对金融行业的健康发展造成了严重的威胁。"
@@ -65,6 +69,8 @@ contentDir = "content/cn"
   
   #  Cyber Security section
   [params.cyberSecurity]
+      title="Nebula Graph - 应用场景 - 网络安全"
+      description="网络安全是典型的图数据库应用场景之一，Nebula Graph 原声图存储和数据备份、快速恢复功能，协助识别网络威胁模型，保证网络安全。 "
       pic = "cyberSecurity.png"
       bannerTtile = "网络安全"
       bannerText="数据库是企业最为核心的数据保护对象，其中敏感信息保护、潜在威胁检测更是重中之重。"
@@ -95,6 +101,8 @@ contentDir = "content/cn"
 
   # ai-and-machine-learning section
   [params.aiAndMachineLearning]
+      title="Nebula Graph - 应用场景 - 知识图谱"
+      description="知识图谱是图数据库的典型应用场景之一，Nebula Graph 的属性图结构能提高知识图谱表达实际场景的能力，存储与计算分离的架构方便图谱数据按需扩缩容。"
       pic = "aiAndMachineLearning1.png"
       bannerTtile = "知识图谱"
       bannerText="知识图谱广泛应用于聊天机器人、大数据风控、证券投资、智能医疗、自适应教育、推荐系统等场景，并覆盖泛互联网、金融、政务、医疗等众多领域。"

@@ -1,3 +1,9 @@
+{{ define "title" }}
+    {{ .Site.Params.releases.releaseTitle }}
+{{end}}
+{{ define "description" }}
+    <meta name="description" content="{{.Site.Params.releases.description}}">
+{{ end }}
 {{ define "main" }}
 <main id="top" class="blog-list news-list">
     <div class="wrapper">

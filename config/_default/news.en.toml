@@ -1,5 +1,8 @@
 contentDir = "content/en"
 [params]
+  [params.newsRoom]
+    title="Nebula Graph Media Coverage"
+    description="Media coverage on the Nebula Graph database, ranging from fundraising, feature updates, product releases, to community events. "
   # News section
   [params.news]
       pic = "download.png"
@@ -9,6 +12,8 @@ contentDir = "content/en"
       content2= "• Founder headshot"
       link = "/news"
       readMore = "Read More >>"
+      newsTitle="Nebula Graph Media Coverage | News Coverage"
+      newsDescription="News coverage on the Nebula Graph database from external media platforms like TechCrunch."
       [[params.news.list]]
         pic = "feature1.png"
         title = "Nebula Graph Debuts for Big Data Analytics Discovery"
