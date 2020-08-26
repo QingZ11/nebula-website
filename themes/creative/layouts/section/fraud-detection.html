@@ -1,3 +1,9 @@
+{{ define "title" }}
+    {{ .Site.Params.fraudDetection.title }}
+{{end}}
+{{ define "description" }}
+    <meta name="description" content="{{ .Site.Params.fraudDetection.description }}">
+{{ end }}
 {{ define "main" }}
 <main id="top" class="use-case">
     <div class="case">

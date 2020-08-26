@@ -1,0 +1,63 @@
+contentDir = "content/en"
+[params]
+  # posts section
+  [params.posts]
+    title="Nebula Graph Blog | Articles about Nebula Graph and the Graph Database Industry"
+    description="The Nebula Graph official blog shares everything about the database, the dev team, the community, and the graph database industry. "
+  [params.tags]
+    [[params.tags.list]]
+        tag="architecture"
+        title="Nebula Graph Blog | Articles about Nebula Graph Architecture"
+        description="The Architecture tag lists all the articles in the Nebula Graph blog about the overall design and architecture of Nebula Graph as a graph database solution."
+    [[ params.tags.list]]
+        tag="community"
+        title="Nebula Graph Blog | Articles about the Nebula Graph Community Building"
+        description="The Community tag lists all the articles in the Nebula Graph blog about the community building efforts in Nebula Graph."
+    [[ params.tags.list]]
+        tag="deployment"
+        title="Nebula Graph Blog | Articles about the Nebula Graph Database Deployment"
+        description="The Deployment tag lists all the articles in the Nebula Graph blog about how to deploy the Nebula Graph database in various enviroments."
+    [[ params.tags.list]]
+        tag="dev-log"
+        title="Nebula Graph Blog | Articles Shared by the Nebula Graph Dev Team"
+        description="The Dev-Log tag lists all the articles in the Nebula Graph blog that the dev team have written about their daily coding life and thoughts."
+    [[ params.tags.list]]
+        tag="features"
+        title="Nebula Graph Blog | Articles about the Features of Nebula Graph Database"
+        description="The Features tag lists all the articles in the Nebula Graph blog about the features of the Nebula Graph database, for example, TTL, snapshot, etc."
+    [[ params.tags.list]]
+        tag="graph-database"
+        title="Nebula Graph Blog | Articles about the Graph Database Industry"
+        description="The Graph Database tag lists all the articles in the Nebula Graph blog written by the team about their thoughts on the graph database industry."
+    [[ params.tags.list]]
+        tag="performance"
+        title="Nebula Graph Blog | Articles about Graph Database Performance "
+        description="The Performance tag lists all the articles in the Nebula Graph blog about graph database performance improvement and comparison."
+    [[ params.tags.list]]
+        tag="press-release"
+        title="Nebula Graph Blog | Articles about the Nebula Graph Press Release"
+        description="The Press Release tag in the Nebula Graph blog lists all press releases of the Nebula Graph database, mainly about product releases and feature updates."
+    [[ params.tags.list]]
+        tag="query-language"
+        title="Nebula Graph Blog | Articles about Graph Query Languages"
+        description="The Graph Query Language tag lists all the articles in the Nebula Graph blog about nGQL, the graph query language developed by the Nebula Graph team, and other query languages."
+    [[ params.tags.list]]
+        tag="release-notes"
+        title="Nebula Graph Blog | Articles about the Nebula Graph Release Notes"
+        description="The Release Notes tag lists all the articles in the Nebula Graph blog about what's new in each release of the Nebula Graph database."
+    [[ params.tags.list]]
+        tag="system-testing"
+        title="Nebula Graph Blog | Articles about System Testing Methods and Tools"
+        description="The System Testing tag lists all the articles in the Nebula Graph blog about the system testing methods and tools adopted by the  Nebula Graph dev team."
+    [[ params.tags.list]]
+        tag="tools"
+        title="Nebula Graph Blog | Articles about Tools used by the Nebula Graph Dev Team"
+        description="The Tools tag lists all the articles in the Nebula Graph blog about all tools that are adopted by the Nebula Graph dev team."
+    [[ params.tags.list]]
+        tag="use-cases"
+        title="Nebula Graph Blog | Articles about the Use of Nebula Graph in Production"
+        description="The Use Cases tag lists all the articles in the Nebula Graph blog how the Nebula Graph database is used in production by our customers."
+    [[ params.tags.list]]
+        tag="user-review"
+        title="Nebula Graph Blog | Articles about  Nebula Graph user-review"
+        description="The user-review tag lists all  the articles in the Nebula Graph blog about user review"

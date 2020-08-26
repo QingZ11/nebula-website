@@ -1,3 +1,9 @@
+{{ define "title" }}
+    {{ .Site.Params.realTimeRecommendation.title }}
+{{end}}
+{{ define "description" }}
+    <meta name="description" content="{{.Site.Params.realTimeRecommendation.description}}">
+{{ end }}
 {{ define "main" }}
 <main id="top" class="use-case">
     <div class="case">

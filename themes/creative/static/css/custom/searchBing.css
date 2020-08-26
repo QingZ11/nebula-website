@@ -52,7 +52,7 @@ iframe .s_nav{
     height: 34px;
     position: absolute;
     top: 13px;
-    right: 0;
+    right: 20px;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
@@ -60,7 +60,7 @@ iframe .s_nav{
     outline: none ;
     box-shadow:none;
 }
-.baidu-iframe{
+.bing-box{
     position: absolute;
     top:110%;
     right: 30%;

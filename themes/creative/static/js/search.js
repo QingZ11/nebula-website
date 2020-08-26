@@ -6,10 +6,14 @@
         },
         attachEvent(){
             $('#search-btn').click(function(){
-                $('#bdcs-frame-box').css("display","block"); 
+                $('#splice-query').val($('#query-param').val() + ' site:nebula-graph.com.cn');
+                $('.bing-box').css("display","block");
             });
             $('#close-icon').click(function(){
-                $('#bdcs-frame-box').css("display","none");
+                $('.bing-box').css("display","none");
+            });
+            $('#query-param').keyup(function(){
+                $('#splice-query').val($('#query-param').val() + ' site:nebula-graph.com.cn')
             })
         },
         renderGoogleSearch(){
@@ -17,11 +21,10 @@
             var googleCNHtml="<div class='gcse-search'></div><script src='https://cse.google.com/cse.js?cx=b97c3704ba815b2bb'>";
             $('#google-search').append(googleHtml);
             $('#google-searchCN').append(googleCNHtml);
-            $('#baidu-search').css('display','none');
+            $('#bing-search').css('display','none');
         },
-        renderBaiduSearch(){
-            $('#baidu-search').css('display','block');
-            $('#bdcsFrame').attr("scrolling","yes");
+        renderBingSearch(){
+            $('#bing-search').css('display','block');
         },
         checkGoogleSearchUsable(){
             return new Promise((resolve, reject) =>{
@@ -38,7 +41,7 @@
             this.checkGoogleSearchUsable().then(res=>{
                 this.renderGoogleSearch();
             }).catch(err=>{
-                this.renderBaiduSearch();
+                // this.renderBingSearch();
             })
         },
     }

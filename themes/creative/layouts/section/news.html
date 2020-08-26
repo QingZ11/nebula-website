@@ -1,3 +1,9 @@
+{{ define "title" }}
+    {{ .Site.Params.news.newsTitle }}
+{{end}}
+{{ define "description" }}
+    <meta name="description" content="{{.Site.Params.news.newsDescription}}">
+{{ end }}
 {{ define "main" }}
 <main id="top" class="blog-list news-list">
     <div class="wrapper">

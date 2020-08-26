@@ -7,6 +7,8 @@ contentDir = "content/en"
       title="Press Releases"
       readMore = "Read More >>"
       link = "/news"
+      releaseTitle="Nebula Graph Media Coverage | Press Releases"
+      description="Press releases on the Nebula Graph database, mainly about product releases and feature updates."
       [[params.releases.list]]
         pic = "feature4.png"
         title = "Nebula Graph™ Database Raises $8 Million in Series Pre-A Funding"

@@ -1,3 +1,39 @@
+{{ define "title" }}
+    {{if in $.Permalink "post"}}
+        {{.Site.Params.posts.title}}
+    {{else}}
+        {{ $tagsList := .Site.Params.tags.list }}
+        {{ range $key, $value := .Site.Taxonomies.tags }}
+            {{ $urlKey := urlize $key }}
+            {{if in $.Permalink $urlKey}}
+                {{ range $tagsList}}
+                    {{ $urlTag := urlize .tag }}
+                    {{ if in $urlKey $urlTag }}
+                        {{.title}}
+                    {{end}}
+                {{end}}
+            {{ end }}
+        {{ end }}
+    {{end}}
+{{end}}
+{{ define "description" }}
+    {{if in $.Permalink "post"}}
+        <meta name="description" content="{{.Site.Params.posts.description}}">
+    {{else}}
+        {{ $tagsList := .Site.Params.tags.list }}
+        {{ range $key, $value := .Site.Taxonomies.tags }}
+            {{ $urlKey := urlize $key }}
+            {{if in $.Permalink $urlKey}}
+                {{ range $tagsList}}
+                    {{ $urlTag := urlize .tag }}
+                    {{ if in $urlKey $urlTag }}
+                        <meta name="description" content="{{.description}}">
+                    {{end}}
+                {{end}}
+            {{ end }}
+        {{ end }}
+    {{end}}
+{{ end }}
 {{ define "main" }}
 <main id="top" class="blog-list">
     <div class="wrapper">

@@ -1,0 +1,77 @@
+contentDir = "content/cn"
+[params]
+
+  # posts section
+  [params.posts]
+    title="Nebula Graph - 博客"
+    description="了解图数据库 Nebula Graph 的技术特性、最佳实践、用户案例等资讯"
+  [params.tags]
+    [[params.tags.list]]
+        tag="press-release"
+        title="Nebula Graph - 博客标签 - 新闻动态"
+        description="新闻动态标签，包含：图数据库 Nebula Graph 产品 RoadMap、版本更新、企业动态等资讯"
+    [[params.tags.list]]
+        tag="release-note"
+        title="Nebula Graph - 博客标签 - release note"
+        description="release note 标签，包括：图数据库 Nebula Graph 新版本的新增功能、bug fix、技术实现优化等内容"
+    [[params.tags.list]]
+        tag="产品动态"
+        title="Nebula Graph - 博客标签 - 产品动态"
+        description="产品动态标签，包括：图数据库 Nebula Graph 产品阶段性新功能、新特性等开发内容"
+    [[params.tags.list]]
+        tag="产品讲解"
+        title="Nebula Graph - 博客标签 - 产品讲解"
+        description="产品讲解标签，详细讲解图数据库 Nebula Graph 的某项功能特性的设计、代码实现、代码片段等"
+    [[params.tags.list]]
+        tag="图数据库知识"
+        title="Nebula Graph - 博客标签 - 图数据库知识"
+        description="图数据库知识标签，深入浅出剖析图数据库这一领域的技术知识"
+    [[params.tags.list]]
+        tag="应用场景"
+        title="Nebula Graph - 博客标签 - 应用场景"
+        description="应用场景标签，图数据库 Nebula Graph 的业务实践及最佳实践"
+    [[params.tags.list]]
+        tag="应用实践"
+        title="Nebula Graph - 博客标签 - 应用实践"
+        description="应用实践标签，图数据库 Nebula Graph 的功能实践及技术实践"
+    [[params.tags.list]]
+        tag="开发日志"
+        title="Nebula Graph - 博客标签 - 开发日志"
+        description="开发日志标签，收录图数据库 Nebula Graph 研发人员在开发过程中解决问题的思路及技术思考"
+    [[params.tags.list]]
+        tag="性能" 
+        title="Nebula Graph - 博客标签 - 性能"
+        description="性能标签，收录各大互联网厂商使用各自业务数据对各图数据库方案进行对比测评的结果"
+    [[params.tags.list]]
+        tag="技术演讲"
+        title="Nebula Graph - 博客标签 - 技术演讲"
+        description="技术演讲标签，收录图数据库 Nebula Graph 团队参加各种技术峰会、线下沙龙时发表的技术演讲稿"
+    [[params.tags.list]]
+        tag="架构剖析"
+        title="Nebula Graph - 博客标签 - 架构剖析"
+        description="架构剖析标签，了解图数据库 Nebula Graph 的整体产品、功能架构"
+    [[params.tags.list]]
+        tag="查询语言"
+        title="Nebula Graph - 博客标签 - 查询语言"
+        description="查询语言标签，图数据库 Nebula Graph 查询语言 nGQL 的实践以及图查询语言的行业资讯"
+    [[params.tags.list]]
+        tag="特性讲解"
+        title="Nebula Graph - 博客标签 - 特性讲解"
+        description="特性讲解标签，分享图数据库 Nebula Graph 功能特性背后的原理及技术思考"
+    [[params.tags.list]]
+        tag="社区"
+        title="Nebula Graph - 博客标签 - 社区"
+        description="社区标签，分享图数据库 Nebula Graph 开源社区的动态"
+    [[params.tags.list]]
+        tag="系统测试"
+        title="Nebula Graph - 博客标签 - 系统测试"
+        description="系统测试标签，收录图数据库 Nebula Graph 系统测试相关内容"
+    [[params.tags.list]]
+        tag="编译"
+        title="Nebula Graph - 博客标签 - 编译"
+        description="编译标签，收录图数据库 Nebula Graph 编译方式及背后的技术思考"
+    [[params.tags.list]]
+        tag="部署"
+        title="Nebula Graph - 博客标签 - 部署"
+        description="部署标签，收录图数据库 Nebula Graph 的部署相关内容"
+        

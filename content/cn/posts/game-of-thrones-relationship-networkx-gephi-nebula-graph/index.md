@@ -157,10 +157,15 @@ Force Atlas 为力引导布局，力引导布局方法能够产生相当优美�
 ## Reference
 
 [1] [https://www.kaggle.com/mmmarchetti/game-of-thrones-dataset](https://www.kaggle.com/mmmarchetti/game-of-thrones-dataset)
+
 [2] [https://github.com/vesoft-inc/nebula](https://github.com/vesoft-inc/nebula)
+
 [3] [https://networkx.github.io/](https://networkx.github.io/)
+
 [4] [https://gephi.org/](https://gephi.org/)
+
 [5] [https://github.com/jievince/nx2gephi](https://github.com/jievince/nx2gephi)
+
 [6] [https://www.lyonwj.com/2016/06/26/graph-of-thrones-neo4j-social-network-analysis/](https://www.lyonwj.com/2016/06/26/graph-of-thrones-neo4j-social-network-analysis/)
 
 喜欢这篇文章？来来来，给我们的 [GitHub](https://github.com/vesoft-inc/nebula) 点个 star 表鼓励啦~~ 🙇‍♂️🙇‍♀️ [手动跪谢]
