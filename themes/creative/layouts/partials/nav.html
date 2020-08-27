@@ -125,6 +125,13 @@
         //         $(".J-simple-alert").css("display", "block");
         //     },3000)
         // }
+        $(".ics-icon").click(function(){
+            sessionStorage.setItem("dialogPopBox",true);
+            $(".J-dialog-box").remove();
+        })
+        if(!sessionStorage.getItem("dialogPopBox")){
+            $(".J-dialog-box").css("display","block");
+        }
         let arr=window.location.href.split('/');
         if(arr.length>=2){
             switch(arr[arr.length-2]){
