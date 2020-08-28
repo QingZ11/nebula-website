@@ -97,3 +97,49 @@ main {
   width: 16px;
   height: 16px;
 }
+
+.ics-icon{
+  background-image: none !important;
+}
+
+.ics-icon img{
+  width: 60px !important;
+}
+
+.J-dialog-box{
+  position: fixed;
+  bottom: 21%;
+  right: 80px;
+  display: none;
+}
+
+.J-dialog-box .dialog-wrapper{
+  width: 272px;
+  height: 76px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,.4);
+}
+
+.dialog-wrapper .dialog-content{
+  padding: 20px;
+  
+}
+
+.dialog-wrapper .dialog-content span{
+  font-size: 1.5rem;
+}
+
+.J-dialog-box .dialog-corner{
+  display: block;
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  right: -10px;
+  bottom: 10px;
+  background-color: inherit;
+  transform: translateX(-6px) rotate(45deg);
+  pointer-events: none;
+  box-shadow: 2px -2px 2px 0 rgba(0,0,0,.2);
+}

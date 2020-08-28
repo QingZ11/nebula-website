@@ -2,3 +2,6 @@
   popupText= "Nebula Graph benchmark data is available now! "
   popupLinkText= "View the Report"
   popupLink= "https://discuss.nebula-graph.io/t/nebula-graph-1-0-benchmark-report/581"
+
+  ###  帮助对话提示框
+  helpDialog="Hi，Welcome to Nebula Graph.Need help?"

@@ -117,24 +117,20 @@
         <!-- {{ template "_internal/google_analytics.html" . }} -->
         {{- block "extraJs" .}}{{- end}}
 
-        <!-- this is chat button code，It is not open for the time being -->
-        <!-- {{ if eq $.Site.Language.Lang "en" }} -->
-            <!-- English Site -->
-            <!--chat button Begin Comm100 Live Chat Code-->
-            <!-- <div id="comm100-button-f87c9787-cf25-4f2b-b92a-b14da3805db6"></div>
+        {{ if eq $.Site.Language.Lang "cn" }}
+            <div class="J-dialog-box">
+                <div class="dialog-wrapper">
+                    <span class="dialog-corner"></span>
+                    <div class="dialog-content">
+                        <span>{{ .Site.Params.helpDialog}}</span>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript" src="https://bot.4paradigm.com/web/assets/ics-web-sdk-js.js"></script>
             <script type="text/javascript">
-            var Comm100API=Comm100API||{};(function(t){function e(e){var a=document.createElement("script"),c=document.getElementsByTagName("script")[0];a.type="text/javascript",a.async=!0,a.src=e+t.site_id,c.parentNode.insertBefore(a,c)}t.chat_buttons=t.chat_buttons||[],t.chat_buttons.push({code_plan:"f87c9787-cf25-4f2b-b92a-b14da3805db6",div_id:"comm100-button-f87c9787-cf25-4f2b-b92a-b14da3805db6"}),t.site_id=40000004,t.main_code_plan="f87c9787-cf25-4f2b-b92a-b14da3805db6",e("https://vue.comm100.com/livechat.ashx?siteId="),setTimeout(function(){t.loaded||e("https://standby.comm100vue.com/livechat.ashx?siteId=")},5e3)})(Comm100API||{})
-            </script> -->
-            <!--End Comm100 Live Chat Code-->
-        <!-- {{else}} -->
-            <!-- Chinese Site -->
-            <!--chat button Begin Comm100 Live Chat Code-->
-            <!-- <div id="comm100-button-e6b45dd0-5190-407f-9a24-99adc938fd84"></div>
-            <script type="text/javascript">
-            var Comm100API=Comm100API||{};(function(t){function e(e){var a=document.createElement("script"),c=document.getElementsByTagName("script")[0];a.type="text/javascript",a.async=!0,a.src=e+t.site_id,c.parentNode.insertBefore(a,c)}t.chat_buttons=t.chat_buttons||[],t.chat_buttons.push({code_plan:"e6b45dd0-5190-407f-9a24-99adc938fd84",div_id:"comm100-button-e6b45dd0-5190-407f-9a24-99adc938fd84"}),t.site_id=40000004,t.main_code_plan="e6b45dd0-5190-407f-9a24-99adc938fd84",e("https://vue.comm100.com/livechat.ashx?siteId="),setTimeout(function(){t.loaded||e("https://standby.comm100vue.com/livechat.ashx?siteId=")},5e3)})(Comm100API||{})
-            </script> -->
-            <!--End Comm100 Live Chat Code-->
-        <!-- {{ end }} -->
+                IcsWebSdkJs.init('https://bot.4paradigm.com/web/chat/24766/eced5adc-ef87-4da7-aed1-d268f6da6f0b')
+            </script>
+        {{end}}
     </body>
 </html>
 <script>

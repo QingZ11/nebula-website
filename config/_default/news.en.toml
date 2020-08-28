@@ -1,5 +1,6 @@
 contentDir = "content/en"
 [params]
+  # NewsRoom section
   [params.newsRoom]
     title="Nebula Graph Media Coverage"
     description="Media coverage on the Nebula Graph database, ranging from fundraising, feature updates, product releases, to community events. "

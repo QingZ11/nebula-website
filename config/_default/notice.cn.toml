@@ -4,3 +4,6 @@ popupText= "Nebula Graph 性能基准测试报告发布啦！"
 popupLinkText= "查看报告"
 popupLink= "https://discuss.nebula-graph.com.cn/t/topic/782"
 popupClick="gtag('event', 'Link Click', { event_category: 'Engagement', event_label: 'Banner Ad - RC4'})"
+
+### 帮助对话提示框
+helpDialog="欢迎来到 Nebula Graph！有什么可以帮您的吗?"
