@@ -1,7 +1,7 @@
 ---
 title: "浅析图数据库 Nebula Graph 数据导入工具——Spark Writer"
 date: 2020-07-15
-description: "在本文中，我们将借助 D3.js 的灵活性这一优势，去新增一些 D3.js 本身并不支持但我们想要的一些常见的功能：Nebula Graph 图探索的删除节点和缩放功能"
+description: "本文主要讲解 Spark Writer 这个基于 Spark 的分布式数据导入工具的实现原理及使用方法。"
 tags: ["开发日志","产品讲解"]
 author: darion
 ---
