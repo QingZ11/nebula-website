@@ -1,6 +1,6 @@
 ---
-title: "Pick of the Week at Nebula Graph - Release of Nebula Graph Studio v1.1.0-beta"
-date: 2020-08-21
+title: "Pick of the Week at Nebula Graph - Import data from Neo4J or JanusGraph to Nebula Graph"
+date: 2020-08-28
 description: "In this weekly issue, we are covering the release of Nebula Graph Exchange which enables you to import data from Neo4j and JanusGraph to Nebula Graph, and other Nebula Graph updates."
 tags: ["community"]
 author: "Steam"
