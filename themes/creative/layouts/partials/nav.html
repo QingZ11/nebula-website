@@ -89,8 +89,18 @@
                             {{end}}
                           {{end}}
                         </li>
-                    {{ end }}
+                    {{ end }}                    
                 {{ end }}
+                <li class="cloud-trial-link">
+                    <a
+                        href="https://cloud.nebula-graph.com.cn"
+                        target="_blank"
+                        onclick="gtag('event', 'Link Click', { event_category: 'Engagement', event_label: 'Nebula Cloud Free Trial'})"
+                    >
+                        Cloud Service免费试用!
+                        <img src="https://www-cdn.nebula-graph.com.cn/nebula-website/images/new@2x.png" height="12px" width="26px" >
+                    </a>                            
+                </li>
             </ul>
         </div>
         {{ "<!-- /.navbar-collapse -->" | safeHTML }}
@@ -106,6 +116,10 @@
         $('#nav-popup').remove();
         $("#top").css("padding-top", "60px")
         sessionStorage.setItem("popupIsRemove", true);
+        gtag && gtag('event', 'Link Click', {
+            event_category: 'Engagement',
+            event_label: 'Banner Close'
+        })
     }
     // function closeAdBox(){
     //     $('.J-alert-body').remove();
