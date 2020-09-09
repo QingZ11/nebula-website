@@ -248,8 +248,8 @@
   }
 
   #nav > li.cloud-trial-link > a {
-    -webkit-animation: cloud-word-breath 2s cubic-bezier(.5,0,1,1) infinite;
-    animation: cloud-word-breath 2s cubic-bezier(.5,0,1,1) infinite;
+    -webkit-animation: cloud-word-breath 1.5s cubic-bezier(.5,0,1,1) infinite;
+    animation: cloud-word-breath 1.5s cubic-bezier(.5,0,1,1) infinite;
   }
 
   @keyframes cloud-word-breath {
@@ -283,6 +283,8 @@
   #nav > li.cloud-trial-link > a > img {
     position: relative;
     bottom: 5px;
+    width: 26px;
+    height: 12px;
   }
 }
 
