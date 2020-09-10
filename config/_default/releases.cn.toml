@@ -6,7 +6,7 @@ contentDir = "content/en"
       downloadLink = "/file/NebulaGraphMediaKit.zip"
       title="Press Releases"
       readMore = "Read More >>"
-      link = "/news"
+      link = "/releases"
       releaseTitle="Nebula Graph Media Coverage | Press Releases"
       description="Press releases on the Nebula Graph database, mainly about product releases and feature updates."
       [[params.releases.list]]

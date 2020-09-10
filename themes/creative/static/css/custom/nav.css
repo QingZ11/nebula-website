@@ -246,6 +246,46 @@
   .github-star > span {
     height: 28px;
   }
+
+  #nav > li.cloud-trial-link > a {
+    -webkit-animation: cloud-word-breath 1.5s cubic-bezier(.5,0,1,1) infinite;
+    animation: cloud-word-breath 1.5s cubic-bezier(.5,0,1,1) infinite;
+  }
+
+  @keyframes cloud-word-breath {
+    100% {
+      color: #1890FF;
+    }
+    50% {
+      color: rgba(187, 188, 196);
+    }
+    0% {
+      color: #1890FF;
+    }
+  }
+
+  @-webkit-keyframes coloud-word-breath {
+    100% {
+      color: #1890FF;
+    }
+    50% {
+      color: rgba(187, 188, 196);
+    }
+    0% {
+      color: #1890FF;
+    }
+  }
+
+  #nav > li.cloud-trial-link > a:hover, #nav > li.cloud-trial-link > a.active{
+    border-bottom: none;
+  }
+
+  #nav > li.cloud-trial-link > a > img {
+    position: relative;
+    bottom: 5px;
+    width: 26px;
+    height: 12px;
+  }
 }
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
@@ -253,7 +293,11 @@
   color: #fff;
 }
 
+
 @media(max-width: 767px) {
+  .cloud-trial-link {
+    display: none;
+  }
   .navbar-brand {
     width: 150px;
     background-image: url('../../img/logo-dart.png');
